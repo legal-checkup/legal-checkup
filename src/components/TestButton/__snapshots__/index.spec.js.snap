@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:TestButton renders the TestButton and CSS properties properly 1`] = `
+<button>
+  Run test
+</button>
+`;

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:Header renders the Header and CSS properties properly 1`] = `
+<header>
+  Header
+</header>
+`;
