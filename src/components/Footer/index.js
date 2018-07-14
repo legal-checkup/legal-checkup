@@ -1,14 +1,13 @@
 import React from 'react'
-import { StyledFooter, StyledLink } from '../styled'
+import { StyledFooter, StyledFooterLink } from '../styled'
 
 export default function Footer () {
   return (
     <StyledFooter>
-      <div>
-        <StyledLink href='/privacy-policy'>Privacy Policy</StyledLink>
-        {` `}
-        <StyledLink href='/terms-of-use'>Terms of Use</StyledLink>
-      </div>
+      <h3>Footer</h3>
+      <StyledFooterLink href='/privacy-policy'>Privacy Policy</StyledFooterLink>
+      {` `}
+      <StyledFooterLink href='/terms-of-use'>Terms of Use</StyledFooterLink>
     </StyledFooter>
   )
 }
