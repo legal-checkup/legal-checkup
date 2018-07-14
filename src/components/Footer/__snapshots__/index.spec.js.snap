@@ -1,7 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components:Footer renders the Footer and CSS properties properly 1`] = `
-<footer>
-  Footer
-</footer>
+<StyledFooter>
+  <div>
+    <StyledLink
+      href="/privacy-policy"
+    >
+      Privacy Policy
+    </StyledLink>
+     
+    <StyledLink
+      href="/terms-of-use"
+    >
+      Terms of Use
+    </StyledLink>
+  </div>
+</StyledFooter>
 `;
