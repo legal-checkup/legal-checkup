@@ -1,6 +1,6 @@
 import Layout from './Layout'
 import Footer from './Footer'
-import FooterLink from './Link'
+import FooterLink from './FooterLink'
 
 export {
   Layout as StyledLayout,
