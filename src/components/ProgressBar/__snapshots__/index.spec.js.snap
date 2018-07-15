@@ -1,44 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components:ProgressBar renders the ProgressBar and CSS properties properly 1`] = `
-.c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: gray;
-}
-
-<nav
-  className="c0"
->
-  <NavButtonActive>
-    &lt;
-  </NavButtonActive>
-  <StyledProgressBar>
-    <QuestionAnswered
-      key="1"
-    >
-      1
-    </QuestionAnswered>
-    <QuestionAnswered
-      key="2"
-    >
-      2
-    </QuestionAnswered>
-    <QuestionActive
-      key="3"
-    >
-      3
-    </QuestionActive>
-    <StyledQuestion
-      key="4"
-    >
-      4
-    </StyledQuestion>
-  </StyledProgressBar>
-  <StyledNavButton>
-    &gt;
-  </StyledNavButton>
-</nav>
+<StyledProgressBar>
+  <StyledQuestion
+    answered={2}
+    current={2}
+    key="1"
+  >
+    1
+  </StyledQuestion>
+  <StyledQuestion
+    answered={2}
+    current={2}
+    key="2"
+  >
+    2
+  </StyledQuestion>
+  <StyledQuestion
+    answered={2}
+    current={2}
+    key="3"
+  >
+    3
+  </StyledQuestion>
+</StyledProgressBar>
 `;
