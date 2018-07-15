@@ -14,7 +14,7 @@ exports[`components:Footer renders the Footer and CSS properties properly 1`] = 
   <StyledFooterLink
     href="/terms-of-use"
   >
-    Terms of Use
+    Terms and Conditions
   </StyledFooterLink>
 </StyledFooter>
 `;
