@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:Question renders the Question and CSS properties properly when active 1`] = `
+<StyledQuestion
+  active={true}
+  key="2"
+>
+  2
+</StyledQuestion>
+`;
+
+exports[`components:Question renders the Question and CSS properties properly when answered 1`] = `
+<StyledQuestion
+  answered={true}
+  key="1"
+>
+  1
+</StyledQuestion>
+`;
+
+exports[`components:Question renders the Question and CSS properties properly when not current or answered 1`] = `
+<StyledQuestion
+  disabled={true}
+  key="3"
+>
+  3
+</StyledQuestion>
+`;
