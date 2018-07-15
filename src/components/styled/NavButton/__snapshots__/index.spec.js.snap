@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:NavButton renders the NavButton and CSS properties properly when no type 1`] = `
+.c0 {
+  background: gainsboro;
+  color: inherit;
+  padding: .5rem 1.5rem;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.c0:hover {
+  background-color: darkgray;
+}
+
+.c0:disabled {
+  cursor: default;
+  color: gray;
+}
+
+<button
+  className="c0"
+>
+  StyledNavButton
+</button>
+`;
+
+exports[`components:styled:NavButton renders the NavButton and CSS properties properly when type is back 1`] = `
+.c0 {
+  background: gainsboro;
+  color: inherit;
+  padding: .5rem 1.5rem;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border-top-left-radius: .2rem;
+  border-bottom-left-radius: .2rem;
+}
+
+.c0:hover {
+  background-color: darkgray;
+}
+
+.c0:disabled {
+  cursor: default;
+  color: gray;
+}
+
+<button
+  className="c0"
+  type="back"
+>
+  StyledNavButton
+</button>
+`;
+
+exports[`components:styled:NavButton renders the NavButton and CSS properties properly when type is forward 1`] = `
+.c0 {
+  background: gainsboro;
+  color: inherit;
+  padding: .5rem 1.5rem;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border-top-right-radius: .2rem;
+  border-bottom-right-radius: .2rem;
+}
+
+.c0:hover {
+  background-color: darkgray;
+}
+
+.c0:disabled {
+  cursor: default;
+  color: gray;
+}
+
+<button
+  className="c0"
+  type="forward"
+>
+  StyledNavButton
+</button>
+`;

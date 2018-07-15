@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:Question renders the Question and CSS properties properly when answered question 1`] = `
+.c0 {
+  margin: .2rem .1rem;
+  padding: .3rem .5rem;
+  border-radius: .2rem;
+  color: black;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+.c0:hover {
+  background-color: gray;
+  color: black;
+}
+
+.c0:disabled {
+  color: gray;
+}
+
+<li
+  className="c0"
+>
+  StyledQuestion
+</li>
+`;
+
+exports[`components:styled:Question renders the Question and CSS properties properly when current question 1`] = `
+.c0 {
+  margin: .2rem .1rem;
+  padding: .3rem .5rem;
+  border-radius: .2rem;
+  color: whitesmoke;
+  background-color: gray;
+  cursor: pointer;
+}
+
+.c0:hover {
+  background-color: gray;
+  color: black;
+}
+
+.c0:disabled {
+  color: gray;
+}
+
+<li
+  className="c0"
+>
+  StyledQuestion
+</li>
+`;
+
+exports[`components:styled:Question renders the Question and CSS properties properly when not current or answered 1`] = `
+.c0 {
+  margin: .2rem .1rem;
+  padding: .3rem .5rem;
+  border-radius: .2rem;
+  color: black;
+  background-color: inherit;
+  cursor: default;
+}
+
+.c0:disabled {
+  color: gray;
+}
+
+<li
+  className="c0"
+>
+  StyledQuestion
+</li>
+`;
