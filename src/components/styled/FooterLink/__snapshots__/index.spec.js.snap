@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:FooterLink renders the FooterLink and CSS properties properly 1`] = `
+.c0 {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: black;
+}
+
+.c0:hover {
+  color: red;
+}
+
+<a
+  className="c0"
+>
+  FooterLink
+</a>
+`;
