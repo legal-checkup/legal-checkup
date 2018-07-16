@@ -2,28 +2,34 @@ import styled from 'styled-components'
 
 const NavButton = styled.button`
   background: gainsboro;
-  color: inherit;
   padding: 0.5rem 1.5rem;
   border: 0;
   outline: none;
-  cursor: pointer;
 
   ${({ type }) => {
-    if (!type) return
+    if (type === 'back') {
+      return `
+        border-top-left-radius: .2rem;
+        border-bottom-left-radius: .2rem;
+      `
+    }
 
-    return type === 'back'
-      ? `border-top-left-radius: .2rem;
-      border-bottom-left-radius: .2rem;`
-      : `border-top-right-radius: .2rem;
-      border-bottom-right-radius: .2rem;`
-  }} &:hover {
-    background-color: darkgray;
-  }
-
-  &:disabled {
-    cursor: default;
-    color: gray;
-  }
+    if (type === 'forward') {
+      return `
+        border-top-right-radius: .2rem;
+        border-bottom-right-radius: .2rem;
+      `
+    }
+  }} ${({ disabled }) => {
+  return disabled
+    ? `color: gray;`
+    : `
+      color: black;
+      cursor: pointer;
+      &:hover {
+        background-color: darkgray;
+      }`
+}};
 `
 
 NavButton.displayName = 'StyledNavButton'
