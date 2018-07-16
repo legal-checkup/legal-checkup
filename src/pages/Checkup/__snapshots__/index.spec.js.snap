@@ -2,6 +2,6 @@
 
 exports[`components:Checkup renders the Checkup page 1`] = `
 <Layout>
-  This is the Checkup page
+  <QuestionBox />
 </Layout>
 `;
