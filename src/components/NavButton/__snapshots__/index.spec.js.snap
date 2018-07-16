@@ -33,3 +33,5 @@ exports[`components:NavButton renders NavButton and CSS properties properly for 
   &gt;
 </StyledNavButton>
 `;
+
+exports[`components:NavButton renders NavButton and CSS properties properly for no type 1`] = `<StyledNavButton />`;

@@ -4,6 +4,12 @@ import { shallow } from 'enzyme'
 import NavButton from '.'
 
 describe('components:NavButton', () => {
+  it('renders NavButton and CSS properties properly for no type', () => {
+    expect(
+      toJson(shallow(<NavButton answered={2} current={2} type='' />))
+    ).toMatchSnapshot()
+  })
+
   it('renders NavButton and CSS properties properly for active back button', () => {
     expect(
       toJson(shallow(<NavButton answered={2} current={2} type='back' />))

@@ -4,27 +4,18 @@ import { times } from 'ramda'
 import { Question } from '..'
 import { StyledProgressBar } from '../styled'
 
-function makeQuestions (answered, current, total) {
+function makeQuestions (total) {
   return times(idx => {
     const question = ++idx
 
     return (
-      <Question
-        key={question}
-        answered={answered}
-        current={current}
-        question={question}
-      >
+      <Question key={question} question={question}>
         {question}
       </Question>
     )
   }, total)
 }
 
-export default function ProgressBar ({ answered = 2, current = 2, total = 3 }) {
-  return (
-    <StyledProgressBar>
-      {makeQuestions(answered, current, total)}
-    </StyledProgressBar>
-  )
+export default function ProgressBar ({ total }) {
+  return <StyledProgressBar>{makeQuestions(total)}</StyledProgressBar>
 }
