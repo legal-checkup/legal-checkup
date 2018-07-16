@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:QuestionBox renders the Layout and CSS properties properly 1`] = `
+.c0 {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  border-width: 2px;
+  margin: auto;
+  width: 60vh;
+  border: 2px solid #f5f5ef;
+}
+
+<div
+  className="c0"
+>
+  StyledQuestionBox
+</div>
+`;
