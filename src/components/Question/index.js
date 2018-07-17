@@ -2,26 +2,30 @@ import React from 'react'
 
 import { StyledQuestion } from '../styled'
 
-export default function Question ({ answered, current, question }) {
-  if (question === current) {
+export default function Question ({
+  answeredTotal,
+  currentNumber,
+  questionNumber
+}) {
+  if (questionNumber === currentNumber) {
     return (
-      <StyledQuestion key={question} active>
-        {question}
+      <StyledQuestion key={questionNumber} active>
+        {questionNumber}
       </StyledQuestion>
     )
   }
 
-  if (question <= answered) {
+  if (questionNumber <= answeredTotal) {
     return (
-      <StyledQuestion key={question} answered>
-        {question}
+      <StyledQuestion key={questionNumber} answered>
+        {questionNumber}
       </StyledQuestion>
     )
   }
 
   return (
-    <StyledQuestion key={question} disabled>
-      {question}
+    <StyledQuestion key={questionNumber} disabled>
+      {questionNumber}
     </StyledQuestion>
   )
 }

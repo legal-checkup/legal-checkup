@@ -6,11 +6,11 @@ import { StyledProgressBar } from '../styled'
 
 function makeQuestions (total) {
   return times(idx => {
-    const question = ++idx
+    const num = idx + 1
 
     return (
-      <Question key={question} question={question}>
-        {question}
+      <Question key={num} question={num}>
+        {num}
       </Question>
     )
   }, total)
