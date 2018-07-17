@@ -7,12 +7,6 @@ export default class AnswerBar extends React.Component {
     this.handleOptionChange = this.handleOptionChange.bind(this)
   }
 
-  getInitialState () {
-    return {
-      selectedOption: 'option1'
-    }
-  }
-
   handleOptionChange (changeEvent) {
     this.setState({
       selectedOption: changeEvent.target.value
