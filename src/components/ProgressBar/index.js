@@ -1,5 +1,10 @@
 import React from 'react'
+import styled from 'styled-components'
 
 export default function ProgressBar () {
-  return <nav>Progress Bar</nav>
+  return (
+    <div>
+      <h1>YO</h1>
+    </div>
+  )
 }
