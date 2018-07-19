@@ -1,31 +1,14 @@
 import React from 'react'
-import styled from 'styled-components'
-
-const StyledNavButton = styled.button`
-  color: red;
-  font-size: 16px;
-  border: none;
-  padding: 4px 10px;
-  background-color: pink;
-  margin: 2px;
-`
-StyledNavButton.defaultName = 'StyledNavButton'
-
-const StyledHeader = styled.div`
-  display: flex;
-  fex-direction: horizontal;
-  justify-content: space-between;
-  background-color: purple;
-  padding: 10px;
-`
-StyledHeader.defaultName = 'StyledHeader'
+import { StyledHeader, StyledNavButton } from '../styled'
 
 export default function Header () {
   return (
     <header>
       <StyledHeader>
-        <StyledNavButton>Home</StyledNavButton>
+        <img src='./images/cl_logo.png' alt='' />
+        <h1>Legal Health Checkup</h1>
         <div>
+          <StyledNavButton href='/'>Home</StyledNavButton>
           <StyledNavButton>page1</StyledNavButton>
           <StyledNavButton>page2</StyledNavButton>
           <StyledNavButton>page3</StyledNavButton>
@@ -34,12 +17,3 @@ export default function Header () {
     </header>
   )
 }
-
-// function getListOfLinks() {
-//   return [
-//     {label: "page1",
-//      link: "#"},
-//     {},
-//     {},
-//   ]
-// }

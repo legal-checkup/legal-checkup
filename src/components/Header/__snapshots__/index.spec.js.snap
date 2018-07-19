@@ -3,19 +3,28 @@
 exports[`components:Header renders the Header and CSS properties properly 1`] = `
 <header>
   <styled.div>
-    <styled.button>
-      Home
-    </styled.button>
+    <img
+      alt=""
+      src="./images/cl_logo.png"
+    />
+    <h1>
+      Legal Health Checkup
+    </h1>
     <div>
-      <styled.button>
+      <styled.a
+        href="/"
+      >
+        Home
+      </styled.a>
+      <styled.a>
         page1
-      </styled.button>
-      <styled.button>
+      </styled.a>
+      <styled.a>
         page2
-      </styled.button>
-      <styled.button>
+      </styled.a>
+      <styled.a>
         page3
-      </styled.button>
+      </styled.a>
     </div>
   </styled.div>
 </header>

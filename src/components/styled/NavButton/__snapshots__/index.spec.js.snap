@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:NavButton renders the NavButton and CSS properties properly 1`] = `
+.c0 {
+  color: red;
+  font-size: 16px;
+  border: none;
+  padding: 4px 10px;
+  background-color: rgb(219,219,212);
+  margin: 2px;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:hover {
+  color: white;
+  background-color: red;
+}
+
+<a
+  className="c0"
+>
+  NavButton
+</a>
+`;
