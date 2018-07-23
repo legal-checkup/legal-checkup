@@ -1,7 +1,6 @@
 # Legal Checkup client application
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
 [![Waffle.io - Columns and their card count](https://badge.waffle.io/c6327c11255634e325e1062c382df83f809dbcf36c16e580efc98e9fea75996d.svg?columns=all)](https://waffle.io/PaperHat/legal-checkup-client)
 
 ## Installation
