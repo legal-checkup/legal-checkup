@@ -1,4 +1,4 @@
-import { RootReducer } from '.'
+import { rootReducer } from '.'
 import { INITIAL_STATE, testCount, TEST_COUNT } from '..'
 
 describe('state:reducers', () => {
