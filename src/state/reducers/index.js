@@ -1,10 +1,6 @@
-import { TEST_COUNT } from '..'
+import { INITIAL_STATE, TEST_COUNT } from '..'
 
-const initialState = {
-  count: 0
-}
-
-function rootReducer (state = initialState, { payload = {}, type }) {
+function rootReducer (state = INITIAL_STATE, { payload = {}, type }) {
   switch (type) {
     case TEST_COUNT:
       return {
@@ -16,4 +12,4 @@ function rootReducer (state = initialState, { payload = {}, type }) {
   }
 }
 
-export { initialState, rootReducer }
+export { rootReducer }
