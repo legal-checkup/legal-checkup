@@ -1,10 +1,10 @@
-import { initialState, rootReducer } from '.'
-import { testCount, TEST_COUNT } from '..'
+import { RootReducer } from '.'
+import { INITIAL_STATE, testCount, TEST_COUNT } from '..'
 
 describe('state:reducers', () => {
   describe('rootReducer', () => {
-    it('defaults to the initialState', () => {
-      expect(rootReducer(undefined, {})).toMatchObject(initialState)
+    it('defaults to the INITIAL_STATE', () => {
+      expect(rootReducer(undefined, {})).toMatchObject(INITIAL_STATE)
     })
 
     it('handles an unknown action type by returning the state unchanged', () => {

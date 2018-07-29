@@ -18,7 +18,7 @@ import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 
 import baseStyles from './styles'
-import { initialState, rootEpic } from './state'
+import { INITIAL_STATE, rootEpic } from './state'
 import { rootReducer } from './state/reducers'
 import registerServiceWorker from './registerServiceWorker'
 
@@ -28,10 +28,12 @@ const history = createBrowserHistory()
 const epicMiddleware = createEpicMiddleware()
 const store = createStore(
   connectRouter(history)(rootReducer),
-  initialState,
+  INITIAL_STATE,
   compose(
     applyMiddleware(routerMiddleware(history), epicMiddleware),
-    window && window.devToolsExtension && window.devToolsExtension()
+    typeof window !== 'undefined' &&
+      window.__REDUX_DEVTOOLS_EXTENSION__ &&
+      window.__REDUX_DEVTOOLS_EXTENSION__()
   )
 )
 

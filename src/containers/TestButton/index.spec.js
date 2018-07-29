@@ -3,13 +3,13 @@ import { shallow } from 'enzyme'
 import configureStore from 'redux-mock-store'
 
 import TestButton from '.'
-import { initialState, TEST_COUNT } from '../../state'
+import { INITIAL_STATE, TEST_COUNT } from '../../state'
 
 const mockStore = configureStore()
 
 describe('containers:Square', () => {
   it(`maps handleClick to dispatch ${TEST_COUNT} action`, () => {
-    const store = mockStore(initialState)
+    const store = mockStore(INITIAL_STATE)
 
     store.dispatch = jest.fn()
 
