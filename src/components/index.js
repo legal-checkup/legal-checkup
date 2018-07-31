@@ -5,7 +5,7 @@ import NavButton from './NavButton'
 import AnswerBar from './AnswerBar'
 import ProgressBar from './ProgressBar'
 import ProgressNav from './ProgressNav'
-import Question from './Question'
+import QuestionNumber from './QuestionNumber'
 import QuestionBox from './QuestionBox'
 import TestButton from './TestButton'
 
@@ -17,7 +17,7 @@ export {
   AnswerBar,
   ProgressBar,
   ProgressNav,
-  Question,
+  QuestionNumber,
   QuestionBox,
   TestButton
 }

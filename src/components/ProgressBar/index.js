@@ -1,7 +1,7 @@
 import React from 'react'
 import { times } from 'ramda'
 
-import { Question } from '..'
+import { QuestionNumber } from '..'
 import { StyledProgressBar } from '../styled'
 
 function makeQuestions (total) {
@@ -9,9 +9,9 @@ function makeQuestions (total) {
     const num = idx + 1
 
     return (
-      <Question key={num} question={num}>
+      <QuestionNumber key={num} question={num}>
         {num}
-      </Question>
+      </QuestionNumber>
     )
   }, total)
 }

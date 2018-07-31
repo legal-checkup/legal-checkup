@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:Question renders the Question and CSS properties properly when active 1`] = `<StyledActiveQuestionNumber />`;
+
+exports[`components:Question renders the Question and CSS properties properly when answered 1`] = `<StyledActiveQuestionNumber />`;
+
+exports[`components:Question renders the Question and CSS properties properly when not current or answered 1`] = `<StyledActiveQuestionNumber />`;

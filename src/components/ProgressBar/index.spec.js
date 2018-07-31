@@ -10,9 +10,10 @@ describe('components:ProgressBar', () => {
 
   it('renders the ProgressBar and correct number of Question components', () => {
     const total = 4
+    const componentName = 'QuestionNumber'
 
     expect(
-      shallow(<ProgressBar total={total} />).find('Question')
+      shallow(<ProgressBar total={total} />).find(componentName)
     ).toHaveLength(total)
   })
 })

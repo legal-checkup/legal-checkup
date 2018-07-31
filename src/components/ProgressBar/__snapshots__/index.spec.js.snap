@@ -2,23 +2,23 @@
 
 exports[`components:ProgressBar renders the ProgressBar and CSS properties properly 1`] = `
 <StyledProgressBar>
-  <Question
+  <QuestionNumber
     key="1"
     question={1}
   >
     1
-  </Question>
-  <Question
+  </QuestionNumber>
+  <QuestionNumber
     key="2"
     question={2}
   >
     2
-  </Question>
-  <Question
+  </QuestionNumber>
+  <QuestionNumber
     key="3"
     question={3}
   >
     3
-  </Question>
+  </QuestionNumber>
 </StyledProgressBar>
 `;
