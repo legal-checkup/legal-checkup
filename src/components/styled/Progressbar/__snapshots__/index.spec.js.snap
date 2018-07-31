@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:ProgressBar renders the ProgressBar and CSS properties properly 1`] = `
+.c0 {
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: gainsboro;
+  margin: 0 0.2rem;
+  padding: 0;
+}
+
+<ul
+  className="c0"
+>
+  StyledProgressbar
+</ul>
+`;

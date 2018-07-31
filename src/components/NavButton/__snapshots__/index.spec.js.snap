@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:NavButton renders NavButton and CSS properties properly for active back button 1`] = `
+<StyledNavButton
+  type="back"
+>
+  &lt;
+</StyledNavButton>
+`;
+
+exports[`components:NavButton renders NavButton and CSS properties properly for active forward button 1`] = `
+<StyledNavButton
+  type="forward"
+>
+  &gt;
+</StyledNavButton>
+`;
+
+exports[`components:NavButton renders NavButton and CSS properties properly for disabled back button 1`] = `
+<StyledNavButton
+  disabled={true}
+  type="back"
+>
+  &lt;
+</StyledNavButton>
+`;
+
+exports[`components:NavButton renders NavButton and CSS properties properly for disabled forward button 1`] = `
+<StyledNavButton
+  disabled={true}
+  type="forward"
+>
+  &gt;
+</StyledNavButton>
+`;
+
+exports[`components:NavButton renders NavButton and CSS properties properly for no type 1`] = `<StyledNavButton />`;

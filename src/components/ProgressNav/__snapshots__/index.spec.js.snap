@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:ProgressNav renders the Progressnav and CSS properties properly 1`] = `
+<StyledProgressNav>
+  <NavButton
+    type="back"
+  />
+  <ProgressBar />
+  <NavButton
+    type="forward"
+  />
+</StyledProgressNav>
+`;

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`styled:UnlockedQuestionNumber renders the UnlockedQuestionNumber and CSS properties properly 1`] = `
+<li
+  className=""
+/>
+`;
