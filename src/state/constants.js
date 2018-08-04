@@ -1,1 +1,2 @@
 export const TEST_COUNT = 'TEST_COUNT'
+export const RECIEVE_QUESTIONS = 'RECIEVE_QUESTIONS'

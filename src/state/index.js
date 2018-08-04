@@ -1,5 +1,5 @@
 import { testCount } from './actions'
-import { TEST_COUNT } from './constants'
+import { TEST_COUNT, RECIEVE_QUESTIONS } from './constants'
 import rootEpic from './epics'
 import { initialState, rootReducer } from './reducers'
 import { getTestCount } from './selectors'
@@ -10,5 +10,6 @@ export {
   initialState,
   rootReducer,
   TEST_COUNT,
-  testCount
+  testCount,
+  RECIEVE_QUESTIONS
 }
