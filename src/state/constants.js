@@ -1,3 +1,5 @@
+export const NEXT_QUESTION = 'NEXT_QUESTION'
+export const PREVIOUS_QUESTION = 'PREVIOUS_QUESTION'
 export const TEST_COUNT = 'TEST_COUNT'
 
 export const INITIAL_STATE = {
