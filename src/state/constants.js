@@ -1,7 +1,4 @@
-export const TEST_COUNT = 'TEST_COUNT'
-
 export const INITIAL_STATE = {
-  count: 0,
   activeQuestion: 1,
   questions: {
     1: {
