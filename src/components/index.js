@@ -4,5 +4,14 @@ import Layout from './Layout'
 import AnswerBar from './AnswerBar'
 import ProgressBar from './ProgressBar'
 import QuestionBox from './QuestionBox'
+import QuestionCounter from './QuestionCounter'
 
-export { Footer, Header, Layout, AnswerBar, ProgressBar, QuestionBox }
+export {
+  Footer,
+  Header,
+  Layout,
+  AnswerBar,
+  ProgressBar,
+  QuestionBox,
+  QuestionCounter
+}
