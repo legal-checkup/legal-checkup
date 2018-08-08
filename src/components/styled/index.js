@@ -1,4 +1,9 @@
+import CurrentTopic from './CurrentTopic'
 import Layout from './Layout'
 import NavButton from './NavButton'
 
-export { Layout as StyledLayout, NavButton as StyledNavButton }
+export {
+  CurrentTopic as StyledCurrentTopic,
+  Layout as StyledLayout,
+  NavButton as StyledNavButton
+}
