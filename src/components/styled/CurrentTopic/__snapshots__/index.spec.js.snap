@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:CurrentTopic renders the CurrentTopic and CSS properties properly 1`] = `
+<div
+  className=""
+>
+  This Topic
+</div>
+`;

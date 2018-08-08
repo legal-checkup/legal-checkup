@@ -1,3 +1,4 @@
+import NavButton from './NavButton'
 import TestButton from './TestButton'
 
-export { TestButton }
+export { NavButton, TestButton }
