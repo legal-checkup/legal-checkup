@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:styled:NavButton renders the NavButton and CSS properties properly 1`] = `
+exports[`conponents:NavButton renders the NavButton and CSS properties properly 1`] = `
 .c0 {
   background-color: #ededed;
-  border-radius: 0;
+  border-radius: 5px 0 0 5px;
   color: #c0c0c0;
   height: 42px;
   outline: none;
@@ -12,6 +12,7 @@ exports[`components:styled:NavButton renders the NavButton and CSS properties pr
 
 <button
   className="c0"
+  direction="back"
 >
   ◀
 </button>

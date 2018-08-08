@@ -5,6 +5,6 @@ import NavButton from '.'
 
 describe('components:styled:NavButton', () => {
   it('renders the NavButton and CSS properties properly', () => {
-    expect(toJson(shallow(<NavButton />))).toMatchSnapshot()
+    expect(toJson(shallow(<NavButton>&#x25C0;</NavButton>))).toMatchSnapshot()
   })
 })
