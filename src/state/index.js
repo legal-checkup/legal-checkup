@@ -7,11 +7,17 @@ import {
 } from './constants'
 import rootEpic from './epics'
 import { rootReducer } from './reducers'
-import { getActiveQuestion, getCount, getTestCount } from './selectors'
+import {
+  getActiveQuestion,
+  getCount,
+  getCurrentTopic,
+  getTestCount
+} from './selectors'
 
 export {
   getActiveQuestion,
   getCount,
+  getCurrentTopic,
   getTestCount,
   INITIAL_STATE,
   NEXT_QUESTION,

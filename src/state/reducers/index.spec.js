@@ -21,21 +21,21 @@ describe('state:reducers', () => {
       expect(rootReducer(state, {})).toBe(state)
     })
 
-    it(`updates the count on a ${NEXT_QUESTION} action`, () => {
-      const count = 0
-      const state = { count }
+    it(`updates the activeQuestion on a ${NEXT_QUESTION} action`, () => {
+      const activeQuestion = 1
+      const state = { activeQuestion }
 
       expect(rootReducer(state, nextQuestion())).toMatchObject({
-        count: count + 1
+        activeQuestion: activeQuestion + 1
       })
     })
 
-    it(`updates the count on a ${PREVIOUS_QUESTION} action`, () => {
-      const count = 1
-      const state = { count }
+    it(`updates the activeQuestion on a ${PREVIOUS_QUESTION} action`, () => {
+      const activeQuestion = 2
+      const state = { activeQuestion }
 
       expect(rootReducer(state, previousQuestion())).toMatchObject({
-        count: count - 1
+        activeQuestion: activeQuestion - 1
       })
     })
 

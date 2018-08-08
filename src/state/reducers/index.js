@@ -5,12 +5,12 @@ function rootReducer (state = INITIAL_STATE, { payload = {}, type }) {
     case NEXT_QUESTION:
       return {
         ...state,
-        count: state.count + 1
+        activeQuestion: state.activeQuestion + 1
       }
     case PREVIOUS_QUESTION:
       return {
         ...state,
-        count: state.count - 1
+        activeQuestion: state.activeQuestion - 1
       }
     case TEST_COUNT:
       return {
