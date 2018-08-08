@@ -1,19 +1,16 @@
 import styled from 'styled-components'
-const NavButton = styled.a`
-  width: 55px;
-  height: 27px;
-  opacity: 0.53;
-  padding: 30px;
+const NavTitle = styled.span`
+  width: 156px;
+  height: 54px;
   font-family: Avenir;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 32px;
+  font-weight: 900;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
+  line-height: 0.84;
   letter-spacing: normal;
-  text-align: center;
-  color: #ffffff;
-  margin-left: 120px;
+  color: #8f8f8f;
+  display: inline-block;
 `
 
 // const NavButton = styled.a`
@@ -30,6 +27,6 @@ const NavButton = styled.a`
 //     background-color: red;
 //   }
 // `
-NavButton.defaultName = 'StyledNavButton'
+NavTitle.defaultName = 'StyledNavTitle'
 
-export default NavButton
+export default NavTitle
