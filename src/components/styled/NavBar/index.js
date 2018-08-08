@@ -1,23 +1,14 @@
 import styled from 'styled-components'
-const NavBar = styled.div`
+const NavBar = styled.span`
   margin-left: 150px;
   display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 22px;
+  padding-top: 17px;
+  padding-bottom: 14px;
+  height: 100px;
 `
 
-// const NavButton = styled.a`
-//   color: red;
-//   font-size: 16px;
-//   border: none;
-//   padding: 4px 10px;
-//   background-color: rgb(219, 219, 212);
-//   margin: 2px;
-//   text-decoration: none;
-
-//   &:hover {
-//     color: white;
-//     background-color: red;
-//   }
-// `
 NavBar.defaultName = 'StyledNavBar'
 
 export default NavBar

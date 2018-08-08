@@ -13,6 +13,9 @@ const Logo = styled.div`
   letter-spacing: normal;
   color: #ffffff;
   display: inline-block;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 22px;
 `
 Logo.defaultName = 'StyledLogo'
 

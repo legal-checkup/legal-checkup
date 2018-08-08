@@ -1,4 +1,6 @@
 import React from 'react'
+// import LogoImage from '../../../public/images/cl_logo.png';
+
 import {
   StyledHeader,
   StyledNavTitle,
@@ -10,8 +12,8 @@ import {
 export default function Header () {
   return (
     <StyledHeader>
-      <StyledLogo>Logo</StyledLogo>
-      <StyledNavTitle>Legal Health Checkup</StyledNavTitle>
+      <StyledLogo>LOGO</StyledLogo>
+      <StyledNavTitle>LEGAL CHECKUP</StyledNavTitle>
       <StyledNavBar>
         <StyledNavButton href='/'>Home</StyledNavButton>
         <StyledNavButton>Checkup</StyledNavButton>

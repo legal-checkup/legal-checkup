@@ -11,6 +11,9 @@ const NavTitle = styled.span`
   letter-spacing: normal;
   color: #8f8f8f;
   display: inline-block;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 22px;
 `
 
 // const NavButton = styled.a`
