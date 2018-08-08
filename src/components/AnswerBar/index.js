@@ -1,5 +1,10 @@
 import React from 'react'
+import Button from '../Button'
 
 export default function AnswerBar () {
-  return <nav>Nav Bar</nav>
+  return (
+    <Button color='red' importance='sueperImportant'>
+      Yeet
+    </Button>
+  )
 }

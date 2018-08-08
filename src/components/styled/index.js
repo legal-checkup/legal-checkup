@@ -1,3 +1,4 @@
 import Layout from './Layout'
+import Button from './Button'
 
-export { Layout as StyledLayout }
+export { Button as StyledButton, Layout as StyledLayout }
