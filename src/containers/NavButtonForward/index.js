@@ -2,11 +2,15 @@ import { connect } from 'react-redux'
 
 import WithOnClickIfUnlocked from '../../components/WithOnClickIfUnlocked'
 import StyledNavButtonForward from '../../components/styled/NavButton/Forward'
-import { getActiveQuestion, getCount, nextQuestion } from '../../state'
+import {
+  getActiveQuestion,
+  nextQuestion,
+  getResponsesLength
+} from '../../state'
 
 function mapStateToProps (state) {
   return {
-    unlocked: getActiveQuestion(state) < getCount(state) + 1
+    unlocked: getActiveQuestion(state) < getResponsesLength(state) + 1
   }
 }
 

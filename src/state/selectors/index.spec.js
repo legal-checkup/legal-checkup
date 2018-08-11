@@ -1,21 +1,11 @@
-import { getActiveQuestion, getCount, getCurrentTopic, getTestCount } from '.'
+import {
+  getActiveQuestion,
+  getCurrentTopic,
+  getResponses,
+  getResponsesLength
+} from '.'
 
 describe('state:selectors', () => {
-  describe('getTestCount', () => {
-    it('should return the list of completed badges', () => {
-      const count = 3
-      const state = { rootReducer: { count } }
-
-      expect(getTestCount(state)).toBe(count)
-    })
-
-    it('should return undefined if no count value', () => {
-      const state = {}
-
-      expect(getTestCount(state)).toBeUndefined()
-    })
-  })
-
   describe('getActiveQuestion', () => {
     it('should return the active question', () => {
       const activeQuestion = 1
@@ -31,18 +21,34 @@ describe('state:selectors', () => {
     })
   })
 
-  describe('getCount', () => {
-    it('should return the count of answered questions', () => {
-      const count = 1
-      const state = { count }
+  describe('getResponses', () => {
+    it('should return the responses', () => {
+      const responses = { 1: 'Yes', 2: 'No', 3: "Don't know" }
+      const state = { responses }
 
-      expect(getCount(state)).toBe(count)
+      expect(getResponses(state)).toBe(responses)
     })
 
-    it('should return undefined if no count value', () => {
+    it('should return undefined if no responses', () => {
       const state = {}
 
-      expect(getCount(state)).toBeUndefined()
+      expect(getResponses(state)).toBeUndefined()
+    })
+  })
+
+  describe('getResponsesLength', () => {
+    it('should return the length of the responses', () => {
+      const responses = { 1: 'Yes', 2: 'No', 3: "Don't know" }
+      const state = { responses }
+
+      expect(getResponsesLength(state)).toBe(3)
+    })
+
+    it('should return 0 when no responses', () => {
+      const responses = {}
+      const state = { responses }
+
+      expect(getResponsesLength(state)).toBe(0)
     })
   })
 
