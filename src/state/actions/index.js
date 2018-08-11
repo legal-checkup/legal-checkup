@@ -1,4 +1,4 @@
-import { NEXT_QUESTION, PREVIOUS_QUESTION, TEST_COUNT } from '../constants'
+import { NEXT_QUESTION, PREVIOUS_QUESTION } from '../constants'
 
 function nextQuestion () {
   return {
@@ -12,10 +12,4 @@ function previousQuestion () {
   }
 }
 
-function testCount () {
-  return {
-    type: TEST_COUNT
-  }
-}
-
-export { nextQuestion, previousQuestion, testCount }
+export { nextQuestion, previousQuestion }

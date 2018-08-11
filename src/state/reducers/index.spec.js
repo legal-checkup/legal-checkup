@@ -4,9 +4,7 @@ import {
   nextQuestion,
   NEXT_QUESTION,
   previousQuestion,
-  PREVIOUS_QUESTION,
-  testCount,
-  TEST_COUNT
+  PREVIOUS_QUESTION
 } from '..'
 
 describe('state:reducers', () => {
@@ -36,15 +34,6 @@ describe('state:reducers', () => {
 
       expect(rootReducer(state, previousQuestion())).toMatchObject({
         activeQuestion: activeQuestion - 1
-      })
-    })
-
-    it(`updates the count on a ${TEST_COUNT} action`, () => {
-      const count = 3
-      const state = { count }
-
-      expect(rootReducer(state, testCount())).toMatchObject({
-        count: count + 1
       })
     })
   })

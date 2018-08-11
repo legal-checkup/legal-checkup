@@ -5,7 +5,6 @@ import AnswerBar from './AnswerBar'
 import ProgressBar from './ProgressBar'
 import QuestionBox from './QuestionBox'
 import { StyledNavButtonBack, StyledNavButtonForward } from './styled'
-import TestButton from './TestButton'
 import WithOnClickIfUnlocked from './WithOnClickIfUnlocked'
 
 export {
@@ -17,6 +16,5 @@ export {
   QuestionBox,
   StyledNavButtonBack,
   StyledNavButtonForward,
-  TestButton,
   WithOnClickIfUnlocked
 }

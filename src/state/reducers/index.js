@@ -1,4 +1,4 @@
-import { INITIAL_STATE, NEXT_QUESTION, PREVIOUS_QUESTION, TEST_COUNT } from '..'
+import { INITIAL_STATE, NEXT_QUESTION, PREVIOUS_QUESTION } from '..'
 
 function rootReducer (state = INITIAL_STATE, { payload = {}, type }) {
   switch (type) {
@@ -11,11 +11,6 @@ function rootReducer (state = INITIAL_STATE, { payload = {}, type }) {
       return {
         ...state,
         activeQuestion: state.activeQuestion - 1
-      }
-    case TEST_COUNT:
-      return {
-        ...state,
-        count: state.count + 1
       }
     default:
       return state
