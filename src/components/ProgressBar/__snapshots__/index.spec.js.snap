@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components:ProgressBar renders the ProgressBar and CSS properties properly 1`] = `
-<nav>
-  Progress Bar
-</nav>
+<StyledProgressBar>
+  <Connect(Component)>
+    ◀
+  </Connect(Component)>
+  <Connect(CurrentTopic) />
+  <Connect(Component)>
+    ▶
+  </Connect(Component)>
+</StyledProgressBar>
 `;

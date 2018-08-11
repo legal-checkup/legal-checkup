@@ -6,6 +6,7 @@ const CurrentTopic = styled.div`
   font-weight: bold;
   height: 42px;
   line-height: 42px;
+  margin: 0 2px;
   text-align: center;
   width: 191px;
 `
