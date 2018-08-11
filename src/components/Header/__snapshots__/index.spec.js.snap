@@ -2,6 +2,21 @@
 
 exports[`components:Header renders the Header and CSS properties properly 1`] = `
 <header>
-  Header
+  <styled.div>
+    <styled.button>
+      Home
+    </styled.button>
+    <div>
+      <styled.button>
+        page1
+      </styled.button>
+      <styled.button>
+        page2
+      </styled.button>
+      <styled.button>
+        page3
+      </styled.button>
+    </div>
+  </styled.div>
 </header>
 `;
