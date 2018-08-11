@@ -16,3 +16,21 @@ exports[`components:styled:NavButton renders the NavButton and CSS properties pr
   ◀
 </button>
 `;
+
+exports[`components:styled:NavButton renders the NavButton and CSS properties properly with onClick prop 1`] = `
+.c0 {
+  background-color: #ededed;
+  border: none;
+  color: #000;
+  height: 42px;
+  outline: none;
+  width: 48px;
+}
+
+<button
+  className="c0"
+  onClick={[Function]}
+>
+  ◀
+</button>
+`;
