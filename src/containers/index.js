@@ -1,4 +1,6 @@
-import NavButton from './NavButton'
+import CurrentTopic from './CurrentTopic'
+import NavButtonBack from './NavButtonBack'
+import NavButtonForward from './NavButtonForward'
 import TestButton from './TestButton'
 
-export { NavButton, TestButton }
+export { CurrentTopic, NavButtonBack, NavButtonForward, TestButton }
