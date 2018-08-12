@@ -1,31 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components:Header renders the Header and CSS properties properly 1`] = `
-<header>
+<StyledHeader>
   <styled.div>
-    <img
-      alt=""
-      src="./images/cl_logo.png"
-    />
-    <h1>
-      Legal Health Checkup
-    </h1>
-    <div>
-      <styled.a
-        href="/"
-      >
-        Home
-      </styled.a>
-      <styled.a>
-        page1
-      </styled.a>
-      <styled.a>
-        page2
-      </styled.a>
-      <styled.a>
-        page3
-      </styled.a>
-    </div>
+    LOGO
   </styled.div>
-</header>
+  <styled.span>
+    LEGAL CHECKUP
+  </styled.span>
+  <styled.span>
+    <styled.a
+      href="/"
+    >
+      Home
+    </styled.a>
+    <styled.a>
+      Checkup
+    </styled.a>
+    <styled.a>
+      About
+    </styled.a>
+    <styled.a>
+      Help
+    </styled.a>
+  </styled.span>
+</StyledHeader>
 `;

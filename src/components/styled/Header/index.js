@@ -5,6 +5,6 @@ const Header = styled.header`
   height: 100px;
   background-color: #202020;
 `
-Header.defaultName = 'StyledHeader'
+Header.displayName = 'StyledHeader'
 
 export default Header

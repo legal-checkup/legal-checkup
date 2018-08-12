@@ -1,5 +1,7 @@
-import styled from 'styled-components'
-const NavTitle = styled.span`
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:NavTitle renders the NavTitle and CSS properties properly 1`] = `
+.c0 {
   width: 156px;
   height: 54px;
   font-family: Avenir;
@@ -8,14 +10,20 @@ const NavTitle = styled.span`
   font-style: normal;
   font-stretch: normal;
   line-height: 0.84;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
   letter-spacing: normal;
   color: #8f8f8f;
   display: inline-block;
   margin-top: 20px;
   margin-left: 10px;
   margin-bottom: 22px;
-`
+}
 
-NavTitle.defaultName = 'StyledNavTitle'
-
-export default NavTitle
+<span
+  className="c0"
+>
+  NavButton
+</span>
+`;
