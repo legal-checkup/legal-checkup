@@ -22,7 +22,7 @@ import { INITIAL_STATE /*, rootEpic */ } from './state'
 import { rootReducer } from './state/reducers'
 import registerServiceWorker from './registerServiceWorker'
 
-import { Checkup, Home, PrivacyPolicy, TermsOfUse } from './pages'
+import { Checkup, Home, PrivacyPolicy, Results, TermsOfUse } from './pages'
 
 const history = createBrowserHistory()
 // const epicMiddleware = createEpicMiddleware()
@@ -57,6 +57,7 @@ function renderApp () {
             <Route exact path='/' component={Home} />
             <Route path='/checkup' component={Checkup} />
             <Route path='/privacy-policy' component={PrivacyPolicy} />
+            <Route path='/results' component={Results} />
             <Route path='/terms-of-use' component={TermsOfUse} />
           </Switch>
         </ConnectedRouter>
