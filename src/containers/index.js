@@ -1,5 +1,5 @@
+import ConnectedNavButtonBack from './NavButtonBack'
+import ConnectedNavButtonForward from './NavButtonForward'
 import CurrentTopic from './CurrentTopic'
-import NavButtonBack from './NavButtonBack'
-import NavButtonForward from './NavButtonForward'
 
-export { CurrentTopic, NavButtonBack, NavButtonForward }
+export { ConnectedNavButtonBack, ConnectedNavButtonForward, CurrentTopic }

@@ -20,6 +20,10 @@ function mapDispatchToProps (dispatch) {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(
+const ConnectedNavButtonForward = connect(mapStateToProps, mapDispatchToProps)(
   WithOnClickIfUnlocked(StyledNavButtonForward)
 )
+
+ConnectedNavButtonForward.displayName = 'ConnectNavButtonForward'
+
+export default ConnectedNavButtonForward

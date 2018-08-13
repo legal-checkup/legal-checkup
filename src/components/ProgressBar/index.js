@@ -1,14 +1,18 @@
 import React from 'react'
 
 import { StyledProgressBar } from '../styled'
-import { CurrentTopic, NavButtonBack, NavButtonForward } from '../../containers'
+import {
+  CurrentTopic,
+  ConnectedNavButtonBack,
+  ConnectedNavButtonForward
+} from '../../containers'
 
 export default function ProgressBar () {
   return (
     <StyledProgressBar>
-      <NavButtonBack>&#x25C0;</NavButtonBack>
+      <ConnectedNavButtonBack>&#x25C0;</ConnectedNavButtonBack>
       <CurrentTopic />
-      <NavButtonForward>&#x25B6;</NavButtonForward>
+      <ConnectedNavButtonForward>&#x25B6;</ConnectedNavButtonForward>
     </StyledProgressBar>
   )
 }

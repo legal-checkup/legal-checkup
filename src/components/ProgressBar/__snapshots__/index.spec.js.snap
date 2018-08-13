@@ -2,12 +2,12 @@
 
 exports[`components:ProgressBar renders the ProgressBar and CSS properties properly 1`] = `
 <StyledProgressBar>
-  <Connect(Component)>
+  <ConnectedNavButtonBack>
     ◀
-  </Connect(Component)>
+  </ConnectedNavButtonBack>
   <Connect(CurrentTopic) />
-  <Connect(Component)>
+  <ConnectNavButtonForward>
     ▶
-  </Connect(Component)>
+  </ConnectNavButtonForward>
 </StyledProgressBar>
 `;

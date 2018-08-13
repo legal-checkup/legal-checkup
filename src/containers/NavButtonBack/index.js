@@ -16,6 +16,10 @@ function mapDispatchToProps (dispatch) {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(
+const ConnectedNavButtonBack = connect(mapStateToProps, mapDispatchToProps)(
   WithOnClickIfUnlocked(StyledNavButtonBack)
 )
+
+ConnectedNavButtonBack.displayName = 'ConnectedNavButtonBack'
+
+export default ConnectedNavButtonBack
