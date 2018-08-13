@@ -1,10 +1,17 @@
 import React from 'react'
 import { StyledQuestionCounter } from '../styled'
+import { keysIn, length } from 'ramda'
+import { isNotNil } from 'ramda-adjunct'
 
-export default function QuestionCounter ({ questions, activeQuestion }) {
+export default function QuestionCounter ({ questions = {}, activeQuestion }) {
+  const questionCount = length(keysIn(questions))
+
   return (
-    <StyledQuestionCounter>
-      {activeQuestion + '/' + Object.keys(questions).length}
-    </StyledQuestionCounter>
+    isNotNil(activeQuestion) &&
+    questionCount > 0 && (
+      <StyledQuestionCounter>
+        {`${activeQuestion} / ${questionCount}`}
+      </StyledQuestionCounter>
+    )
   )
 }
