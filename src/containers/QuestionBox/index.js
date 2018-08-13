@@ -4,10 +4,10 @@ import { QuestionBox } from '../../components'
 import { getActiveQuestion, getQuestions } from '../../state'
 
 function mapStateToProps (state) {
-  const activeQuestion = getActiveQuestion(state)
-  const questions = getQuestions(state)
-
-  return { activeQuestion, questions }
+  return {
+    activeQuestion: getActiveQuestion(state),
+    questions: getQuestions(state)
+  }
 }
 
 export default connect(mapStateToProps)(QuestionBox)
