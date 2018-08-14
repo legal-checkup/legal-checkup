@@ -1,29 +1,19 @@
 import React from 'react'
 import styled from 'styled-components'
+import { keysIn } from 'ramda'
 
-const bar = styled.bar`
-width: ${props => props.progress} 
-height: 10px;
-background-color: #4CAF50;
-`
-export default class ProgressBar extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      progress: 0,
-      question_number: ''
-    }
-    this.checkProgress = this.checkProgress.bind(this)
-    this.renderProgressBar = this.renderProgressBar.bind(this)
-  }
+import { INITIAL_STATE } from '../../state/constants.js'
 
-  checkProgress (question_number) {
-    let progress = 0
+const { questions } = INITIAL_STATE
+const order = keysIn(questions)
 
-    if (question_number > 0) {
-      return (progress += 1)
-    }
-  }
+const f = (a, b) => a - b
 
-  render () {}
+// const bar = styled.bar`
+// width: ${props => props.progress}
+// height: 10px;
+// background-color: #4CAF50;
+
+export default function ProgressBar ({}) {
+  // return <span>{sort (f, order)}</span>
 }
