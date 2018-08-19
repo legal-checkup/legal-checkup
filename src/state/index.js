@@ -1,6 +1,12 @@
-import { testCount } from './actions'
-import { INITIAL_STATE } from './constants'
+import { nextQuestion, questionAnswered } from './actions'
+import { INITIAL_STATE, NEXT_QUESTION, QUESTION_ANSWERED } from './constants'
 import { rootReducer } from './reducers'
-import { getTestCount } from './selectors'
 
-export { getTestCount, INITIAL_STATE, rootReducer, testCount }
+export {
+  INITIAL_STATE,
+  NEXT_QUESTION,
+  QUESTION_ANSWERED,
+  rootReducer,
+  nextQuestion,
+  questionAnswered
+}
