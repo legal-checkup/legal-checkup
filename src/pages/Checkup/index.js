@@ -1,7 +1,23 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 import { Layout } from '../../components'
+import { questionAnswered } from '../../state'
 
-export default function Checkup () {
-  return <Layout>This is the Checkup page</Layout>
+function Checkup ({ handleClick }) {
+  return (
+    <Layout>
+      <div>
+        <button onClick={handleClick}>Yes</button>
+      </div>
+    </Layout>
+  )
 }
+
+function mapDispatchToProps (dispatch) {
+  return {
+    handleClick: () => dispatch(questionAnswered(1, 'Yes'))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Checkup)
