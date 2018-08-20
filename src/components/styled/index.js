@@ -1,4 +1,11 @@
 import Layout from './Layout'
-import Button from './Button'
+import { YesButton, NoButton, NotSureButton } from './Button'
+import AnswerBar from './AnswerBar'
 
-export { Button as StyledButton, Layout as StyledLayout }
+export {
+  YesButton as StyledYesButton,
+  NoButton as StyledNoButton,
+  NotSureButton as StyledNotSureButton,
+  Layout as StyledLayout,
+  AnswerBar as StyledAnswerBar
+}
