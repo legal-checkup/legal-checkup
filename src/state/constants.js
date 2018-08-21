@@ -236,10 +236,9 @@ export const INITIAL_STATE = {
     }
   },
   responses: {
-    /* Example responses: question key (number) is response key
+    /* Example responses: question key (number) is response key */
     1: 'Yes',
     2: 'No',
     3: 'Unknown'
-  */
   }
 }

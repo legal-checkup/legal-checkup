@@ -7,7 +7,7 @@ export default function Home () {
   return (
     <Layout>
       <p>This is the Home page</p>
-      {/* <ProgressBar/> */}
+      <ProgressBar />
     </Layout>
   )
 }

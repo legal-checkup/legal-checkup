@@ -1,13 +1,13 @@
 import Layout from './Layout'
-// import ActiveQuestion from './ActiveQuestion'
-// import NextQuestion from './NextQuestion'
-// import PreviousQuestion from './PreviousQuestion'
-// import UnclockedQuestion from './UnlockedQuestion'
+import AnsweredQuestionNumber from './AnsweredQuestionNumber'
+import ActiveQuestionNumber from './ActiveQuestionNumber'
+import UnansweredQuestionNumber from './UnansweredQuestionNumber'
+import UnlockedQuestionNumber from './UnlockedQuestionNumber'
 
 export {
-  Layout as StyledLayout
-  // ActiveQuestion as StyledActiveQuestion,
-  // NextQuestion as StyledNextQuestion,
-  // PreviousQuestion as StyledPreviousQuestion,
-  // UnclockedQuestion as StyledUnlockedQuestion
+  Layout as StyledLayout,
+  ActiveQuestionNumber as StyledActiveQuestionNumber,
+  AnsweredQuestionNumber as StyledAnsweredQuestionNumber,
+  UnansweredQuestionNumber as StyledUnansweredQuestionNumber,
+  UnlockedQuestionNumber as StyledUnlockedQuestionNumber
 }
