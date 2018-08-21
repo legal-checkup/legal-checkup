@@ -12,8 +12,6 @@ const StyledDesktopHeaderLogo = styled.div`
   height: 60px;
   border-radius: 5px;
   background-color: #474747;
-  width: 96px;
-  height: 27px;
   opacity: 0.39;
   font-family: Avenir;
   font-size: 32px;
