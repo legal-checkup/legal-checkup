@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { Helmet } from 'react-helmet'
 
-import { Header, Footer } from '..'
+import { DesktopHeader, Footer } from '..'
 import { StyledLayout } from '../styled'
 
 export default function Layout ({ children }) {
@@ -10,7 +10,7 @@ export default function Layout ({ children }) {
       <Helmet>
         <title>Legal Checkup</title>
       </Helmet>
-      <Header />
+      <DesktopHeader />
       <StyledLayout>{children}</StyledLayout>
       <Footer />
     </Fragment>
