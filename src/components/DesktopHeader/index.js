@@ -12,7 +12,7 @@ export default function DesktopHeader () {
     <StyledDesktopHeader>
       <StyledDesktopHeaderLogo>LOGO</StyledDesktopHeaderLogo>
 
-      <StyledDesktopHeaderLegal>Legal Checkup</StyledDesktopHeaderLegal>
+      <StyledDesktopHeaderLegal>LEGAL CHECKUP</StyledDesktopHeaderLegal>
 
       <StyledDesktopHeaderLink>Home</StyledDesktopHeaderLink>
       <StyledDesktopHeaderLinkActive>Checkup</StyledDesktopHeaderLinkActive>
