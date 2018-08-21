@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const StyledDesktopHeader = styled.div`
   width: 1440px;
@@ -43,23 +43,19 @@ const StyledDesktopHeaderLink = styled.div`
   font-weight: 500;
   color: #ffffff;
   margin-right: 120px;
+
+  ${props =>
+    props.active &&
+    css`
+      opacity: 1;
+      border-bottom: 2px solid #fff;
+    `};
 `
 StyledDesktopHeaderLink.displayName = 'StyledDesktopHeaderLink'
-
-const StyledDesktopHeaderLinkActive = styled.div`
-  font-family: Avenir, sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  color: #ffffff;
-  margin-right: 120px;
-  border-bottom: 2px solid #fff;
-`
-StyledDesktopHeaderLinkActive.displayName = 'StyledDesktopHeaderLinkActive'
 
 export {
   StyledDesktopHeader,
   StyledDesktopHeaderLogo,
   StyledDesktopHeaderLegal,
-  StyledDesktopHeaderLink,
-  StyledDesktopHeaderLinkActive
+  StyledDesktopHeaderLink
 }

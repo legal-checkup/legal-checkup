@@ -3,8 +3,7 @@ import {
   StyledDesktopHeader,
   StyledDesktopHeaderLogo,
   StyledDesktopHeaderLegal,
-  StyledDesktopHeaderLink,
-  StyledDesktopHeaderLinkActive
+  StyledDesktopHeaderLink
 } from './style'
 
 export default function DesktopHeader () {
@@ -15,7 +14,7 @@ export default function DesktopHeader () {
       <StyledDesktopHeaderLegal>LEGAL CHECKUP</StyledDesktopHeaderLegal>
 
       <StyledDesktopHeaderLink>Home</StyledDesktopHeaderLink>
-      <StyledDesktopHeaderLinkActive>Checkup</StyledDesktopHeaderLinkActive>
+      <StyledDesktopHeaderLink active>Checkup</StyledDesktopHeaderLink>
       <StyledDesktopHeaderLink>About</StyledDesktopHeaderLink>
       <StyledDesktopHeaderLink>Help</StyledDesktopHeaderLink>
     </StyledDesktopHeader>

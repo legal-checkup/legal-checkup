@@ -10,6 +10,7 @@ export default function Layout ({ children }) {
       <Helmet>
         <title>Legal Checkup</title>
       </Helmet>
+
       <DesktopHeader />
       <StyledLayout>{children}</StyledLayout>
       <Footer />
