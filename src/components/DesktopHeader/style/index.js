@@ -15,7 +15,7 @@ const StyledDesktopHeaderLogo = styled.div`
   border-radius: 5px;
   background-color: #474747;
   opacity: 0.39;
-  font-family: Avenir;
+  font-family: Avenir, sans-serif;
   font-size: 32px;
   font-weight: 800;
   line-height: 0.84;
@@ -27,7 +27,7 @@ StyledDesktopHeaderLogo.displayName = 'StyledDesktopHeaderLogo'
 
 const StyledDesktopHeaderLegal = styled.div`
   width: 156px;
-  font-family: Avenir;
+  font-family: Avenir, sans-serif;
   font-size: 32px;
   font-weight: 800;
   line-height: 0.84;
@@ -38,7 +38,7 @@ StyledDesktopHeaderLegal.displayName = 'StyledDesktopHeaderLegal'
 
 const StyledDesktopHeaderLink = styled.div`
   opacity: 0.53;
-  font-family: Avenir;
+  font-family: Avenir, sans-serif;
   font-size: 20px;
   font-weight: 500;
   color: #ffffff;
@@ -47,7 +47,7 @@ const StyledDesktopHeaderLink = styled.div`
 StyledDesktopHeaderLink.displayName = 'StyledDesktopHeaderLink'
 
 const StyledDesktopHeaderLinkActive = styled.div`
-  font-family: Avenir;
+  font-family: Avenir, sans-serif;
   font-size: 20px;
   font-weight: 500;
   color: #ffffff;
