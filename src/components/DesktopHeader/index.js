@@ -13,10 +13,16 @@ export default function DesktopHeader () {
 
       <StyledDesktopHeaderLegal>LEGAL CHECKUP</StyledDesktopHeaderLegal>
 
-      <StyledDesktopHeaderLink>Home</StyledDesktopHeaderLink>
-      <StyledDesktopHeaderLink active>Checkup</StyledDesktopHeaderLink>
-      <StyledDesktopHeaderLink>About</StyledDesktopHeaderLink>
-      <StyledDesktopHeaderLink>Help</StyledDesktopHeaderLink>
+      <StyledDesktopHeaderLink href='/'>Home</StyledDesktopHeaderLink>
+      <StyledDesktopHeaderLink active href='/checkup'>
+        Checkup
+      </StyledDesktopHeaderLink>
+      <StyledDesktopHeaderLink href='/privacy-policy'>
+        About
+      </StyledDesktopHeaderLink>
+      <StyledDesktopHeaderLink href='terms-of-use'>
+        Help
+      </StyledDesktopHeaderLink>
     </StyledDesktopHeader>
   )
 }
