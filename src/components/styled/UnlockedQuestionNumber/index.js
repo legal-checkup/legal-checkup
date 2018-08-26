@@ -2,9 +2,11 @@ import styled from 'styled-components'
 
 const UnlockedQuestionNumber = styled.span`
   background-color: #ccc;
-  color: ${({ onClick }) => (onClick ? '#000' : 'red')};
+  color: blue;
   display: inline-block;
   padding: 5px;
+  margin: 1px;
+  border-radius: 2px;
 `
 UnlockedQuestionNumber.displayName = 'StyledUnlockedQuestionNumber'
 

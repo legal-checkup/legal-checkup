@@ -2,9 +2,11 @@ import styled from 'styled-components'
 
 const AnsweredQuestionNumber = styled.span`
   background-color: #ccc;
-  color: ${({ onClick }) => (onClick ? '#000' : 'red')};
+  color: green;
   display: inline-block;
   padding: 5px;
+  margin: 1px;
+  border-radius: 2px;
 `
 AnsweredQuestionNumber.displayName = 'StyledAnsweredQuestionNumber'
 

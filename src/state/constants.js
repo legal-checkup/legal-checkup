@@ -1,5 +1,5 @@
 export const INITIAL_STATE = {
-  activeQuestion: 1,
+  activeQuestion: 2,
   questions: {
     1: {
       body: 'Is anyone chasing you for money?',
