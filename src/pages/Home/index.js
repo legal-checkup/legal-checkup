@@ -1,5 +1,5 @@
 import React from 'react'
-import { ProgressBar } from '../../components'
+import { ProgressBar } from '../../containers'
 
 import { Layout } from '../../components'
 

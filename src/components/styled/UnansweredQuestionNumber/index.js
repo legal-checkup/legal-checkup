@@ -3,6 +3,7 @@ import styled from 'styled-components'
 const UnansweredQuestionNumber = styled.span`
   background-color: #ccc;
   color: yellow;
+  cursor: not-allowed;
   display: inline-block;
   padding: 5px;
   margin: 1px;

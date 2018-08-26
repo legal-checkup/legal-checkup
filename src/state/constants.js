@@ -242,3 +242,5 @@ export const INITIAL_STATE = {
     3: 'Unknown'
   }
 }
+
+export const QUESTION_SELECTED = 'QUESTION_SELECTED'

@@ -1,39 +1,10 @@
-import { INITIAL_STATE } from '../constants'
+import { QUESTION_SELECTED } from '../constants'
 
-function activeQuestion (question) {
+export function questionSelected (questionNumber) {
   return {
-    type: INITIAL_STATE,
+    type: QUESTION_SELECTED,
     payload: {
-      question
+      activeQuestion: questionNumber
     }
   }
 }
-
-function nextQuestion (question) {
-  return {
-    type: INITIAL_STATE,
-    payload: {
-      question
-    }
-  }
-}
-
-function previousQuestion (question) {
-  return {
-    type: INITIAL_STATE,
-    payload: {
-      question
-    }
-  }
-}
-
-function unlockedQuestion (question) {
-  return {
-    type: INITIAL_STATE,
-    payload: {
-      question
-    }
-  }
-}
-
-export { activeQuestion, nextQuestion, previousQuestion, unlockedQuestion }
