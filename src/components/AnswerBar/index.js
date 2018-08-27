@@ -1,15 +1,17 @@
 import React from 'react'
-import YesButton from '../YesButton'
-import NoButton from '../NoButton'
-import NotSureButton from '../NotSureButton'
+import {
+  ConnectedNoButton,
+  ConnectedYesButton,
+  ConnectedNotSureButton
+} from '../../containers'
 import { StyledAnswerBar } from '../styled'
 
 export default function AnswerBar () {
   return (
     <StyledAnswerBar>
-      <YesButton />
-      <NoButton />
-      <NotSureButton />
+      <ConnectedYesButton />
+      <ConnectedNoButton />
+      <ConnectedNotSureButton />
     </StyledAnswerBar>
   )
 }
