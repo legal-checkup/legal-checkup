@@ -1,3 +1,7 @@
+export const NO_BUTTON_CLICKED = 'NO_BUTTON_CLIKED'
+export const NOT_SURE_BUTTON_CLICKED = 'NOT_SURE_BUTTON_CLICKED'
+export const YES_BUTTON_CLICKED = 'YES_BUTTON_CLICKED'
+
 export const INITIAL_STATE = {
   activeQuestion: 1,
   questions: {

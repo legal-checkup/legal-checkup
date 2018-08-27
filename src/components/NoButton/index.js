@@ -2,10 +2,10 @@ import React, { Fragment } from 'react'
 
 import StyledNoButton from '../styled/Button/NoButton'
 
-export default function NoButton () {
+export default function NoButton ({ handleClick }) {
   return (
     <Fragment>
-      <StyledNoButton>No</StyledNoButton>
+      <StyledNoButton onClick={handleClick}>No</StyledNoButton>
     </Fragment>
   )
 }
