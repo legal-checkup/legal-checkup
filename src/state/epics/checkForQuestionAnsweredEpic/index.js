@@ -14,6 +14,7 @@ function checkForQuestionAnsweredEpic (action$, state$) {
   return action$.ofType(QUESTION_ANSWERED).mergeMap(({ payload }) => {
     const activeQuestion = getActiveQuestion(state$.value)
     const questionsLength = getQuestionsLength(state$.value)
+
     return activeQuestion === questionsLength
       ? Observable.of(surveyCompleted())
       : Observable.of(nextQuestion())
