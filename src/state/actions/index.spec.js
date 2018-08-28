@@ -1,6 +1,6 @@
-import { NEXT_QUESTION, QUESTION_ANSWERED } from '..'
+import { NEXT_QUESTION, QUESTION_ANSWERED, SURVEY_COMPLETED } from '..'
 
-import { nextQuestion, questionAnswered } from '.'
+import { nextQuestion, questionAnswered, surveyCompleted } from '.'
 
 describe('state:actions', () => {
   describe('nextQuestion', () => {
@@ -28,6 +28,14 @@ describe('state:actions', () => {
     it(`creates an empty ${QUESTION_ANSWERED} action`, () => {
       expect(questionAnswered()).toMatchObject({
         type: QUESTION_ANSWERED
+      })
+    })
+  })
+
+  describe('surveyComplete', () => {
+    it(`creates a ${SURVEY_COMPLETED} action`, () => {
+      expect(surveyCompleted()).toMatchObject({
+        type: SURVEY_COMPLETED
       })
     })
   })
