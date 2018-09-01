@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 import configureStore from 'redux-mock-store'
 
 import NavButtonBack from '.'
-import { PREVIOUS_QUESTION } from '../../state'
+import { QUESTION_SELECTED } from '../../state'
 
 const mockStore = configureStore()
 
@@ -34,8 +34,10 @@ describe('containers:NavButton', () => {
     expect(wrapper.props().unlocked).toEqual(true)
   })
 
-  it(`maps handleClick to dispatch ${PREVIOUS_QUESTION} action`, () => {
-    const store = mockStore({ count: 1, activeQuestion: 2 })
+  it(`maps handleClick to dispatch ${QUESTION_SELECTED} action`, () => {
+    const activeQuestion = 2
+    const expectedQuestion = activeQuestion - 1
+    const store = mockStore({ count: 1, activeQuestion })
 
     store.dispatch = jest.fn()
 
@@ -47,7 +49,10 @@ describe('containers:NavButton', () => {
       .onClick()
 
     expect(store.dispatch).toHaveBeenCalledWith({
-      type: PREVIOUS_QUESTION
+      type: QUESTION_SELECTED,
+      payload: {
+        activeQuestion: expectedQuestion
+      }
     })
   })
 })

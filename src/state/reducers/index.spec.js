@@ -1,11 +1,5 @@
 import { rootReducer } from '.'
-import {
-  INITIAL_STATE,
-  nextQuestion,
-  NEXT_QUESTION,
-  previousQuestion,
-  PREVIOUS_QUESTION
-} from '..'
+import { INITIAL_STATE, QUESTION_SELECTED, questionSelected } from '..'
 
 describe('state:reducers', () => {
   describe('rootReducer', () => {
@@ -19,21 +13,15 @@ describe('state:reducers', () => {
       expect(rootReducer(state, {})).toBe(state)
     })
 
-    it(`updates the activeQuestion on a ${NEXT_QUESTION} action`, () => {
+    it(`updates the activeQuestion on a ${QUESTION_SELECTED} action`, () => {
       const activeQuestion = 1
+      const expectedQuestion = 2
       const state = { activeQuestion }
 
-      expect(rootReducer(state, nextQuestion())).toMatchObject({
-        activeQuestion: activeQuestion + 1
-      })
-    })
-
-    it(`updates the activeQuestion on a ${PREVIOUS_QUESTION} action`, () => {
-      const activeQuestion = 2
-      const state = { activeQuestion }
-
-      expect(rootReducer(state, previousQuestion())).toMatchObject({
-        activeQuestion: activeQuestion - 1
+      expect(
+        rootReducer(state, questionSelected(expectedQuestion))
+      ).toMatchObject({
+        activeQuestion: expectedQuestion
       })
     })
   })

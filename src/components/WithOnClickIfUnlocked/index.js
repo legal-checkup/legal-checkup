@@ -1,10 +1,17 @@
 import React from 'react'
 
 export default function WithOnClickIfUnlocked (Wrapped) {
-  return ({ children, handleClick, unlocked, ...props }) => {
+  return ({
+    children,
+    handleClick,
+    navigateToQuestion,
+    unlocked,
+    ...props
+  }) => {
     return (
       <Wrapped
-        {...(unlocked ? { onClick: handleClick, ...props } : { ...props })}
+        {...props}
+        {...(unlocked ? { onClick: handleClick(navigateToQuestion) } : {})}
       >
         {children}
       </Wrapped>

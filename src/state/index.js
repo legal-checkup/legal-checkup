@@ -1,5 +1,5 @@
-import { nextQuestion, previousQuestion } from './actions'
-import { INITIAL_STATE, NEXT_QUESTION, PREVIOUS_QUESTION } from './constants'
+import { questionSelected } from './actions'
+import { INITIAL_STATE, QUESTION_SELECTED } from './constants'
 import { rootReducer } from './reducers'
 import {
   getActiveQuestion,
@@ -16,9 +16,7 @@ export {
   getResponses,
   getResponsesLength,
   INITIAL_STATE,
-  NEXT_QUESTION,
-  nextQuestion,
-  PREVIOUS_QUESTION,
-  previousQuestion,
+  QUESTION_SELECTED,
+  questionSelected,
   rootReducer
 }

@@ -1,16 +1,11 @@
-import { INITIAL_STATE, NEXT_QUESTION, PREVIOUS_QUESTION } from '..'
+import { INITIAL_STATE, QUESTION_SELECTED } from '..'
 
 function rootReducer (state = INITIAL_STATE, { payload = {}, type }) {
   switch (type) {
-    case NEXT_QUESTION:
+    case QUESTION_SELECTED:
       return {
         ...state,
-        activeQuestion: state.activeQuestion + 1
-      }
-    case PREVIOUS_QUESTION:
-      return {
-        ...state,
-        activeQuestion: state.activeQuestion - 1
+        activeQuestion: payload.activeQuestion
       }
     default:
       return state

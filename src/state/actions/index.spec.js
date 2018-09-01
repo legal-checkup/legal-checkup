@@ -1,19 +1,15 @@
-import { nextQuestion, previousQuestion } from '.'
-import { NEXT_QUESTION, PREVIOUS_QUESTION } from '../'
+import { questionSelected } from '.'
+import { QUESTION_SELECTED } from '../'
 
 describe('state:actions', () => {
-  describe('nextQuestion', () => {
-    it(`creates a ${NEXT_QUESTION} action`, () => {
-      expect(nextQuestion()).toMatchObject({
-        type: NEXT_QUESTION
-      })
-    })
-  })
-
-  describe('previousQuestion', () => {
-    it(`creates a ${PREVIOUS_QUESTION} action`, () => {
-      expect(previousQuestion()).toMatchObject({
-        type: PREVIOUS_QUESTION
+  describe('questionSelected', () => {
+    it(`creates a ${QUESTION_SELECTED} action`, () => {
+      const activeQuestion = 1
+      expect(questionSelected(activeQuestion)).toMatchObject({
+        type: QUESTION_SELECTED,
+        payload: {
+          activeQuestion
+        }
       })
     })
   })

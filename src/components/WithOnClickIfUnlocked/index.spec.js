@@ -5,7 +5,10 @@ import WithOnClickIfUnlocked from '.'
 
 describe('components:WithOnClickIfUnlocked', () => {
   it('should provide the onClick prop when unlocked is true', () => {
-    const props = { handleClick: jest.fn(), unlocked: true }
+    const props = {
+      handleClick: jest.fn().mockReturnValue(() => null),
+      unlocked: true
+    }
     const Component = props => <button>Click</button>
     const ComponentWithOnClickIfUnlocked = WithOnClickIfUnlocked(Component)
     const wrapper = shallow(<ComponentWithOnClickIfUnlocked {...props} />)

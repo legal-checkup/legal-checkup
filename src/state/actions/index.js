@@ -1,15 +1,12 @@
-import { NEXT_QUESTION, PREVIOUS_QUESTION } from '../constants'
+import { QUESTION_SELECTED } from '../constants'
 
-function nextQuestion () {
+function questionSelected (activeQuestion) {
   return {
-    type: NEXT_QUESTION
+    type: QUESTION_SELECTED,
+    payload: {
+      activeQuestion
+    }
   }
 }
 
-function previousQuestion () {
-  return {
-    type: PREVIOUS_QUESTION
-  }
-}
-
-export { nextQuestion, previousQuestion }
+export { questionSelected }

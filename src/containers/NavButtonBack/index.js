@@ -2,17 +2,26 @@ import { connect } from 'react-redux'
 
 import WithOnClickIfUnlocked from '../../components/WithOnClickIfUnlocked'
 import StyledNavButtonBack from '../../components/styled/NavButton/Back'
-import { getActiveQuestion, previousQuestion } from '../../state'
+import { getActiveQuestion, questionSelected } from '../../state'
+
+function isGreaterThanOne (activeQuestion) {
+  return activeQuestion > 1
+}
+
+function previousQuestion (activeQuestion) {
+  return activeQuestion - 1
+}
 
 function mapStateToProps (state) {
   return {
-    unlocked: getActiveQuestion(state) > 1
+    unlocked: isGreaterThanOne(getActiveQuestion(state)),
+    navigateToQuestion: previousQuestion(getActiveQuestion(state))
   }
 }
 
 function mapDispatchToProps (dispatch) {
   return {
-    handleClick: () => dispatch(previousQuestion())
+    handleClick: question => () => dispatch(questionSelected(question))
   }
 }
 
