@@ -6,9 +6,10 @@ const CurrentTopic = styled.div`
   font-weight: bold;
   height: 42px;
   line-height: 42px;
-  margin: 0 2px;
+  margin: 0 1px;
+  padding: 0 10px;
   text-align: center;
-  width: 191px;
+  width: 158px;
 `
 
 CurrentTopic.displayName = 'StyledCurrentTopic'

@@ -2,10 +2,16 @@
 
 exports[`components:styled:Progressbar renders the ProgressBar and CSS properties properly 1`] = `
 .c0 {
+  background-color: #fff;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 20px 0;
 }
 
 <nav
