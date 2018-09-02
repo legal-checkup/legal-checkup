@@ -1,3 +1,7 @@
+export const NEXT_QUESTION = 'NEXT_QUESTION'
+export const QUESTION_ANSWERED = 'QUESTION_ANSWERED'
+export const SURVEY_COMPLETED = 'SURVEY_COMPLETED'
+
 export const INITIAL_STATE = {
   activeQuestion: 1,
   questions: {
