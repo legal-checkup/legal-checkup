@@ -1,4 +1,8 @@
-import { QUESTION_SELECTED } from '../constants'
+import {
+  QUESTION_SELECTED,
+  PREVIOUS_QUESTION_REQUESTED,
+  NEXT_QUESTION_REQUESTED
+} from '../constants'
 
 export function questionSelected (questionNumber) {
   return {
@@ -6,5 +10,17 @@ export function questionSelected (questionNumber) {
     payload: {
       activeQuestion: questionNumber
     }
+  }
+}
+
+export function previousQuestion () {
+  return {
+    type: PREVIOUS_QUESTION_REQUESTED
+  }
+}
+
+export function nextQuestiion () {
+  return {
+    type: NEXT_QUESTION_REQUESTED
   }
 }

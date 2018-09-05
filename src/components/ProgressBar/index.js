@@ -6,7 +6,9 @@ import {
   StyledActiveQuestionNumber,
   StyledUnansweredQuestionNumber,
   StyledUnlockedQuestionNumber,
-  StyledProgressBar
+  StyledProgressBar,
+  StyledPreviousQuestions,
+  StyledNextQuestion
 } from '../styled'
 
 const compare = (a, b) => a - b
@@ -20,7 +22,7 @@ export function getNextQuestionNumber (questionNumbers, responseCount) {
   const questionCount = length(questionNumbers) // get the number of questions
 
   return responseCount < questionCount
-    ? responseCount + 1 // return the next number
+    ? responseCount + 1 // return the next number, where is this responseCount defined?
     : responseCount // return responseCount unchanged
 }
 
@@ -33,6 +35,7 @@ function getQuestionNumber (
 ) {
   const clickHandler =
     Boolean(handleClick) && handleClick.bind(this, questionNumber) // binds the question number to the first argument
+  // console.log("what", questionNumber)
 
   if (questionNumber === activeQuestion) {
     return (
@@ -70,14 +73,25 @@ function getQuestionNumber (
 export default function ProgressBar ({
   activeQuestion,
   handleClick,
+  handlePrevious,
+  handleNext,
   questions,
   responses
 }) {
   const questionNumbers = getQuestionNumbers(questions)
   const responseCount = getKeyCount(responses)
-
+  const checkPrevious = activeQuestion > 1
+  const checkNext =
+    activeQuestion >= getNextQuestionNumber(questionNumbers, responseCount)
+  // const clickHandlerNext = Boolean(handleClick) && handleClick.bind(this, activeQuestion + 1)
+  console.log('some', handleNext) // How can I console log 'enabled' since I can't log it after the below return statement.
   return (
     <StyledProgressBar>
+      {checkPrevious ? (
+        <StyledPreviousQuestions enabled onClick={handlePrevious} />
+      ) : (
+        <StyledPreviousQuestions />
+      )}
       {map(
         questionNumber =>
           getQuestionNumber(
@@ -88,6 +102,11 @@ export default function ProgressBar ({
             handleClick
           ),
         questionNumbers
+      )}
+      {checkNext ? (
+        <StyledNextQuestion />
+      ) : (
+        <StyledNextQuestion next onClick={handleNext} />
       )}
     </StyledProgressBar>
   )
