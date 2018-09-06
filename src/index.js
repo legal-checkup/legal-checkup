@@ -1,41 +1,47 @@
 import 'babel-polyfill'
 
-import React from 'react'
-import { render } from 'react-dom'
-import { Provider } from 'react-redux'
+import { Checkup, Home, PrivacyPolicy, TermsOfUse } from './pages'
 import {
   ConnectedRouter,
   connectRouter,
   routerMiddleware
 } from 'connected-react-router'
-import { applyMiddleware, compose, createStore } from 'redux'
-import { createEpicMiddleware } from 'redux-observable'
-import { createBrowserHistory } from 'history'
 import { Route, Switch } from 'react-router'
-import { ApolloProvider } from 'react-apollo'
+import { applyMiddleware, compose, createStore } from 'redux'
+
 import { ApolloClient } from 'apollo-client'
+import { ApolloProvider } from 'react-apollo'
 import { HttpLink } from 'apollo-link-http'
+import { INITIAL_STATE } from './state'
 import { InMemoryCache } from 'apollo-cache-inmemory'
-
+import { Provider } from 'react-redux'
+import React from 'react'
 import baseStyles from './styles'
-import { initialState, rootEpic } from './state'
-import { rootReducer } from './state/reducers'
+// import { createEpicMiddleware } from 'redux-observable'
+import { createBrowserHistory } from 'history'
 import registerServiceWorker from './registerServiceWorker'
+import { render } from 'react-dom'
+import { rootReducer } from './state/reducers'
 
-import { Checkup, Home, PrivacyPolicy, TermsOfUse } from './pages'
-
+// const epicMiddleware = createEpicMiddleware()
 const history = createBrowserHistory()
-const epicMiddleware = createEpicMiddleware()
+const appliedMiddleware = applyMiddleware(
+  routerMiddleware(history) /* , epicMiddleware */
+)
+const devTools =
+  typeof window !== 'undefined' &&
+  window.__REDUX_DEVTOOLS_EXTENSION__ &&
+  window.__REDUX_DEVTOOLS_EXTENSION__()
+const middleware = devTools
+  ? compose(appliedMiddleware, devTools)
+  : compose(appliedMiddleware)
 const store = createStore(
   connectRouter(history)(rootReducer),
-  initialState,
-  compose(
-    applyMiddleware(routerMiddleware(history), epicMiddleware),
-    window && window.devToolsExtension && window.devToolsExtension()
-  )
+  INITIAL_STATE,
+  middleware
 )
 
-epicMiddleware.run(rootEpic)
+// epicMiddleware.run(rootEpic)
 
 const httpLink = new HttpLink({ uri: 'http://localhost:4000' })
 

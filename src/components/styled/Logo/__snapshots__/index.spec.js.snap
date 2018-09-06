@@ -1,28 +1,30 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:styled:NavButton renders the NavButton and CSS properties properly 1`] = `
+exports[`components:styled:Logo renders the Logo and CSS properties properly 1`] = `
 .c0 {
+  width: 96px;
   height: 27px;
-  opacity: 0.53;
+  opacity: 0.39;
   font-family: Avenir;
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 32px;
+  font-weight: 900;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
+  line-height: 0.84;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
-  text-align: center;
   color: #ffffff;
-  margin-left: 120px;
-  margin-bottom: 14px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 10px;
+  margin-bottom: 22px;
 }
 
-<a
+<div
   className="c0"
 >
-  NavButton
-</a>
+  Logo
+</div>
 `;
