@@ -1,4 +1,4 @@
-import { questionSelected, previousQuestion, nextQuestiion } from './actions'
+import { questionSelected, previousQuestion, nextQuestion } from './actions'
 import {
   INITIAL_STATE,
   QUESTION_SELECTED,
@@ -18,6 +18,6 @@ export {
   NEXT_QUESTION_REQUESTED,
   questionSelected,
   previousQuestion,
-  nextQuestiion,
+  nextQuestion,
   rootReducer
 }

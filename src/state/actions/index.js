@@ -19,7 +19,7 @@ export function previousQuestion () {
   }
 }
 
-export function nextQuestiion () {
+export function nextQuestion () {
   return {
     type: NEXT_QUESTION_REQUESTED
   }

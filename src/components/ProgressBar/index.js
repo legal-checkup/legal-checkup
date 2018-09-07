@@ -19,11 +19,9 @@ const getQuestionNumbers = pipe(keysIn, map(parseInt), numericalSort)
 const getKeyCount = pipe(keysIn, length)
 
 export function getNextQuestionNumber (questionNumbers, responseCount) {
-  const questionCount = length(questionNumbers) // get the number of questions
+  const questionCount = length(questionNumbers)
 
-  return responseCount < questionCount
-    ? responseCount + 1 // return the next number, where is this responseCount defined?
-    : responseCount // return responseCount unchanged
+  return responseCount < questionCount ? responseCount + 1 : responseCount
 }
 
 function getQuestionNumber (
@@ -34,8 +32,7 @@ function getQuestionNumber (
   handleClick
 ) {
   const clickHandler =
-    Boolean(handleClick) && handleClick.bind(this, questionNumber) // binds the question number to the first argument
-  // console.log("what", questionNumber)
+    Boolean(handleClick) && handleClick.bind(this, questionNumber)
 
   if (questionNumber === activeQuestion) {
     return (
@@ -83,8 +80,7 @@ export default function ProgressBar ({
   const checkPrevious = activeQuestion > 1
   const checkNext =
     activeQuestion >= getNextQuestionNumber(questionNumbers, responseCount)
-  // const clickHandlerNext = Boolean(handleClick) && handleClick.bind(this, activeQuestion + 1)
-  console.log('some', handleNext) // How can I console log 'enabled' since I can't log it after the below return statement.
+
   return (
     <StyledProgressBar>
       {checkPrevious ? (

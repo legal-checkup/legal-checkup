@@ -35,8 +35,7 @@
     "rxjs-compat": "^6.2.1",
     "styled-bootstrap-components": "^2.0.0",
     "styled-components": "^3.3.3",
-    "styled-normalize": "^8.0.0",
-    "yarn": "^1.7.0"
+    "styled-normalize": "^8.0.0"
   },
   "devDependencies": {
     "@babel/preset-env": "7.0.0-beta.46",

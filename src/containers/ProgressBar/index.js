@@ -7,7 +7,7 @@ import {
   getResponses,
   questionSelected,
   previousQuestion,
-  nextQuestiion
+  nextQuestion
 } from '../../state'
 
 function mapStateToProps (state) {
@@ -22,7 +22,7 @@ function mapDispatchToProps (dispatch) {
   return {
     handleClick: questionNumber => dispatch(questionSelected(questionNumber)),
     handlePrevious: () => dispatch(previousQuestion()),
-    handleNext: () => dispatch(nextQuestiion())
+    handleNext: () => dispatch(nextQuestion())
   }
 }
 
