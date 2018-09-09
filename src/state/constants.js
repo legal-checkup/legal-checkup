@@ -1,5 +1,5 @@
 export const INITIAL_STATE = {
-  activeQuestion: 1,
+  activeQuestion: 'e0db8204-e1c3-4916-a31d-c29849547294',
   topics: [
     {
       topic: 'Money Troubles',
