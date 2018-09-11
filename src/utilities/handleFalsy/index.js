@@ -1,4 +1,3 @@
-import React from 'react'
 import { not } from 'ramda'
 
 function handleFalsy (check, value) {

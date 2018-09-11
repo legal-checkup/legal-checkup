@@ -5,9 +5,9 @@ export function getActiveQuestion ({ activeQuestion }) {
 export function getQuestions ({ questions }) {
   return questions
 }
-export function getQuestionCount ({ activeQuestion, questions }) {
+export function getQuestionCount (state) {
   return {
-    activeQuestion: getActiveQuestion,
-    questions: getQuestions
+    activeQuestion: getActiveQuestion(state),
+    questions: getQuestions(state)
   }
 }
