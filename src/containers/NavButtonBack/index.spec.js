@@ -51,7 +51,7 @@ describe('containers:NavButton', () => {
     expect(store.dispatch).toHaveBeenCalledWith({
       type: QUESTION_SELECTED,
       payload: {
-        activeQuestion: expectedQuestion
+        question: expectedQuestion
       }
     })
   })

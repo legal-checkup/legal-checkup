@@ -1,8 +1,10 @@
 import {
   getActiveQuestion,
   getCurrentTopic,
+  getQuestions,
+  getQuestionsKeys,
   getResponses,
-  getResponsesLength
+  getResponsesCount
 } from '.'
 
 describe('state:selectors', () => {
@@ -18,37 +20,6 @@ describe('state:selectors', () => {
       const state = {}
 
       expect(getActiveQuestion(state)).toBeUndefined()
-    })
-  })
-
-  describe('getResponses', () => {
-    it('should return the responses', () => {
-      const responses = { 1: 'Yes', 2: 'No', 3: "Don't know" }
-      const state = { responses }
-
-      expect(getResponses(state)).toBe(responses)
-    })
-
-    it('should return undefined if no responses', () => {
-      const state = {}
-
-      expect(getResponses(state)).toBeUndefined()
-    })
-  })
-
-  describe('getResponsesLength', () => {
-    it('should return the length of the responses', () => {
-      const responses = { 1: 'Yes', 2: 'No', 3: "Don't know" }
-      const state = { responses }
-
-      expect(getResponsesLength(state)).toBe(3)
-    })
-
-    it('should return 0 when no responses', () => {
-      const responses = {}
-      const state = { responses }
-
-      expect(getResponsesLength(state)).toBe(0)
     })
   })
 
@@ -70,6 +41,71 @@ describe('state:selectors', () => {
       const state = { activeQuestion: 1, questions: { 1: { topic } } }
 
       expect(getCurrentTopic(state)).toBe(topic)
+    })
+  })
+
+  describe('getQuestions', () => {
+    it('should return the questions', () => {
+      const questions = { 1: {}, 2: {} }
+      const state = { questions }
+
+      expect(getQuestions(state)).toMatchObject(questions)
+    })
+
+    it('should return undefined if no questions object', () => {
+      const state = {}
+
+      expect(getQuestions(state)).toBeUndefined()
+    })
+  })
+
+  describe('getQuestionKeys', () => {
+    it('should return an array of the question keys', () => {
+      const expected = [1, 2]
+      const questions = { 1: {}, 2: {} }
+      const state = { questions }
+
+      expect(getQuestionsKeys(state)).toEqual(expect.arrayContaining(expected))
+    })
+
+    it('should return an empty array if no questions object', () => {
+      const expected = []
+      const state = {}
+
+      expect(getQuestionsKeys(state)).toEqual(expected)
+    })
+  })
+
+  describe('getResponses', () => {
+    it('should return the responses', () => {
+      const responses = { 1: 'Yes', 2: 'No', 3: "Don't know" }
+      const state = { responses }
+
+      expect(getResponses(state)).toBe(responses)
+    })
+
+    it('should return undefined if no responses', () => {
+      const state = {}
+
+      expect(getResponses(state)).toBeUndefined()
+    })
+  })
+
+  describe('getResponsesCount', () => {
+    it('should return the length of the responses', () => {
+      const expected = 3
+      const responses = { 1: 'Yes', 2: 'No', 3: "Don't know" }
+      const state = { responses }
+
+      expect(getResponsesCount(state)).toBe(expected)
+    })
+
+    it('should return 0 when no responses', () => {
+      const expected = 0
+      const responses = {}
+      const state = { responses }
+
+      expect(getResponsesCount(state)).toBe(expected)
     })
   })
 })

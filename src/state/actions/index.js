@@ -1,10 +1,10 @@
 import { QUESTION_SELECTED } from '../constants'
 
-function questionSelected (activeQuestion) {
+function questionSelected (question) {
   return {
     type: QUESTION_SELECTED,
     payload: {
-      activeQuestion
+      question
     }
   }
 }

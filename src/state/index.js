@@ -5,16 +5,20 @@ import {
   getActiveQuestion,
   getCount,
   getCurrentTopic,
+  getQuestions,
+  getQuestionsKeys,
   getResponses,
-  getResponsesLength
+  getResponsesCount
 } from './selectors'
 
 export {
   getActiveQuestion,
   getCount,
   getCurrentTopic,
+  getQuestions,
+  getQuestionsKeys,
   getResponses,
-  getResponsesLength,
+  getResponsesCount,
   INITIAL_STATE,
   QUESTION_SELECTED,
   questionSelected,

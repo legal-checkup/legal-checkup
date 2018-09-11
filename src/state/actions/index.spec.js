@@ -4,11 +4,11 @@ import { QUESTION_SELECTED } from '../'
 describe('state:actions', () => {
   describe('questionSelected', () => {
     it(`creates a ${QUESTION_SELECTED} action`, () => {
-      const activeQuestion = 1
-      expect(questionSelected(activeQuestion)).toMatchObject({
+      const question = 1
+      expect(questionSelected(question)).toMatchObject({
         type: QUESTION_SELECTED,
         payload: {
-          activeQuestion
+          question
         }
       })
     })

@@ -1,17 +1,35 @@
-import { length, pipe, values } from 'ramda'
+import { keysIn, length, map, path, pipe } from 'ramda'
 
-export function getActiveQuestion ({ activeQuestion }) {
+function getActiveQuestion ({ activeQuestion }) {
   return activeQuestion
 }
 
-export function getCurrentTopic ({ activeQuestion, questions = {} }) {
-  return questions[activeQuestion] && questions[activeQuestion].topic
+function getCurrentTopic ({ activeQuestion, questions = {} }) {
+  return path([`${activeQuestion}`, 'topic'], questions)
 }
 
-export function getResponses ({ responses }) {
+function getQuestions ({ questions }) {
+  return questions
+}
+
+const getQuestionsKeys = pipe(getQuestions, keysIn, map(parseInt))
+
+function getResponses ({ responses }) {
   return responses
 }
 
-export function getResponsesLength ({ responses }) {
-  return pipe(values, length)(responses)
+function getTopic ({ topic }) {
+  return topic
+}
+
+const getResponsesCount = pipe(getResponses, keysIn, length)
+
+export {
+  getActiveQuestion,
+  getCurrentTopic,
+  getQuestions,
+  getQuestionsKeys,
+  getResponses,
+  getResponsesCount,
+  getTopic
 }
