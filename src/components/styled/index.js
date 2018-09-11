@@ -3,7 +3,7 @@ import Layout from './Layout'
 import NavButton from './NavButton'
 import NavButtonBack from './NavButton/Back'
 import NavButtonForward from './NavButton/Forward'
-import ProgressBar from './ProgressBar'
+import MobileProgressBar from './MobileProgressBar'
 
 export {
   CurrentTopic as StyledCurrentTopic,
@@ -11,5 +11,5 @@ export {
   NavButton as StyledNavButton,
   NavButtonBack as StyledNavButtonBack,
   NavButtonForward as StyledNavButtonForward,
-  ProgressBar as StyledProgressBar
+  MobileProgressBar as StyledMobileProgressBar
 }

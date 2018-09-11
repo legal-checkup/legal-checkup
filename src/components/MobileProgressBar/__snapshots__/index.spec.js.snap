@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:ProgressBar renders the ProgressBar and CSS properties properly 1`] = `
-<StyledProgressBar>
+exports[`components:MobileProgressBar renders the MobileProgressBar and CSS properties properly 1`] = `
+<StyledMobileProgressBar>
   <ConnectedNavButtonBack>
     ◀
   </ConnectedNavButtonBack>
@@ -9,5 +9,5 @@ exports[`components:ProgressBar renders the ProgressBar and CSS properties prope
   <ConnectNavButtonForward>
     ▶
   </ConnectNavButtonForward>
-</StyledProgressBar>
+</StyledMobileProgressBar>
 `;
