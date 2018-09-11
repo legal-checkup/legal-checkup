@@ -1,19 +1,18 @@
 import React from 'react'
 import { StyledQuestionCounter } from '../styled'
 import { keysIn, length } from 'ramda'
-import { isNotNil } from 'ramda-adjunct'
+
+import { handleFalsy } from '../../utilities'
 
 export default function QuestionCounter ({
   questions = {},
   activeQuestion = null
 }) {
   const questionCount = length(keysIn(questions))
-  return (
-    isNotNil(activeQuestion) &&
-    questionCount > 0 && (
-      <StyledQuestionCounter>
-        {`${activeQuestion} / ${questionCount}`}
-      </StyledQuestionCounter>
-    )
+  return handleFalsy(
+    activeQuestion && questionCount,
+    <StyledQuestionCounter>
+      {`${activeQuestion} / ${questionCount}`}
+    </StyledQuestionCounter>
   )
 }
