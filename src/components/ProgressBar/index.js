@@ -1,5 +1,5 @@
 import React from 'react'
 
-export default function ProgressBar () {
-  return <nav>Progress Bar</nav>
+export default function Footer () {
+  return <footer>Footer</footer>
 }

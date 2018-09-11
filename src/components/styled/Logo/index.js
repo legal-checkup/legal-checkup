@@ -17,6 +17,6 @@ const Logo = styled.div`
   margin-left: 10px;
   margin-bottom: 22px;
 `
-Logo.defaultName = 'StyledLogo'
+Logo.displayName = 'StyledLogo'
 
 export default Logo

@@ -9,6 +9,6 @@ const NavBar = styled.span`
   height: 100px;
 `
 
-NavBar.defaultName = 'StyledNavBar'
+NavBar.displayName = 'StyledNavBar'
 
 export default NavBar

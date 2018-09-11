@@ -15,6 +15,6 @@ const NavButton = styled.a`
   margin-bottom: 14px;
 `
 
-NavButton.defaultName = 'StyledNavButton'
+NavButton.displayName = 'StyledNavButton'
 
 export default NavButton

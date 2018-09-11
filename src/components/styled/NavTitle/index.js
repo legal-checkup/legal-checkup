@@ -16,6 +16,6 @@ const NavTitle = styled.span`
   margin-bottom: 22px;
 `
 
-NavTitle.defaultName = 'StyledNavTitle'
+NavTitle.displayName = 'StyledNavTitle'
 
 export default NavTitle
