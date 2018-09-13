@@ -1,5 +1,4 @@
 import { connect } from 'react-redux'
-
 import NotSureButton from '../../components/NotSureButton'
 import { notSureButtonClicked } from '../../state'
 

@@ -1,5 +1,4 @@
 import { connect } from 'react-redux'
-
 import NoButton from '../../components/NoButton'
 import { noButtonClicked } from '../../state'
 
