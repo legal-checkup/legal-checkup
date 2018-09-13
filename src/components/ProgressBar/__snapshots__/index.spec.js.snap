@@ -8,3 +8,5 @@ exports[`components:ProgressBar renders the ProgressBar and CSS properties prope
    />
 </StyledProgressBar>
 `;
+
+

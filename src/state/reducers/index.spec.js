@@ -1,4 +1,5 @@
 import { rootReducer } from '.'
+
 import {
   INITIAL_STATE,
   QUESTION_SELECTED,
@@ -21,8 +22,8 @@ describe('state:reducers', () => {
     })
 
     it(`updates the activeQuestion on a ${QUESTION_SELECTED} action`, () => {
-      const activeQuestion = 1
-      const expectedQuestion = 2
+      const activeQuestion = 2
+      const expectedQuestion = 5
       const state = { activeQuestion }
 
       expect(
@@ -36,7 +37,7 @@ describe('state:reducers', () => {
       const activeQuestion = 2
       const expectedQuestion = 1
       const state = { activeQuestion }
-
+      console.log('testprevious', { activeQuestion: expectedQuestion })
       expect(
         rootReducer(state, previousQuestion(expectedQuestion))
       ).toMatchObject({
@@ -45,12 +46,12 @@ describe('state:reducers', () => {
     })
 
     it(`updates the activeQuestion on a ${NEXT_QUESTION_REQUESTED} action`, () => {
-      const activeQuestion = 1
-      const expectedQuestion = 2
+      const activeQuestion = 2
+      const expectedQuestion = 3
       const state = { activeQuestion }
-
+      console.log('testnext', { activeQuestion: expectedQuestion })
       expect(rootReducer(state, nextQuestion(expectedQuestion))).toMatchObject({
-        activeQuestion: expectedQuestion
+        activeQuestion
       })
     })
   })
