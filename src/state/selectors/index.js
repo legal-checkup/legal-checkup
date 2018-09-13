@@ -1,3 +1,5 @@
+import { keysIn, length } from 'ramda'
+
 export function getActiveQuestion ({ activeQuestion }) {
   return activeQuestion
 }
@@ -8,6 +10,6 @@ export function getQuestions ({ questions }) {
 export function getQuestionCount (state) {
   return {
     activeQuestion: getActiveQuestion(state),
-    questions: getQuestions(state)
+    questionCount: length(keysIn(getQuestions(state)))
   }
 }
