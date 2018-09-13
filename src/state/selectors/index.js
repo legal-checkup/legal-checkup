@@ -1,15 +1,21 @@
 import { keysIn, length } from 'ramda'
 
-export function getActiveQuestion ({ activeQuestion }) {
+function getActiveQuestion ({ activeQuestion }) {
   return activeQuestion
 }
 
-export function getQuestions ({ questions }) {
+function getQuestions ({ questions }) {
   return questions
 }
-export function getQuestionCount (state) {
+function getQuestionCount (state) {
   return {
     activeQuestion: getActiveQuestion(state),
     questionCount: length(keysIn(getQuestions(state)))
   }
 }
+
+function getQuestionBody (state) {
+  return getQuestions(state)[getActiveQuestion(state)]
+}
+
+export { getActiveQuestion, getQuestions, getQuestionCount, getQuestionBody }

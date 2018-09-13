@@ -3,9 +3,8 @@ import { StyledQuestionBox } from '../styled'
 
 import { handleFalsy } from '../../utilities'
 
-export default function QuestionBox ({ questions, activeQuestion }) {
-  const { body } = questions[activeQuestion]
-
+export default function QuestionBox ({ body }) {
+  console.log(body)
   return handleFalsy(body, <StyledQuestionBox>{body}</StyledQuestionBox>)
 }
 
