@@ -5,8 +5,5 @@ exports[`components:Home renders the Home page 1`] = `
   <p>
     This is the Home page
   </p>
-  <p>
-    <Connect(TestButton) />
-  </p>
 </Layout>
 `;

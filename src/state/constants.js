@@ -1,3 +1,5 @@
+export const QUESTION_SELECTED = 'QUESTION_SELECTED'
+
 export const INITIAL_STATE = {
   activeQuestion: 1,
   questions: {
