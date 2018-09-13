@@ -1,7 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components:Header renders the Header and CSS properties properly 1`] = `
-<header>
-  Header
-</header>
+<StyledHeader>
+  <styled.div>
+    LOGO
+  </styled.div>
+  <styled.span>
+    LEGAL CHECKUP
+  </styled.span>
+  <styled.span>
+    <styled.a
+      href="/"
+    >
+      Home
+    </styled.a>
+    <styled.a>
+      Checkup
+    </styled.a>
+    <styled.a>
+      About
+    </styled.a>
+    <styled.a>
+      Help
+    </styled.a>
+  </styled.span>
+</StyledHeader>
 `;

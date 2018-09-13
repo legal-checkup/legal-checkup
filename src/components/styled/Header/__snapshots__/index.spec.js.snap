@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:Header renders the Header and CSS properties properly 1`] = `
+.c0 {
+  width: 1440px;
+  height: 100px;
+  background-color: #202020;
+}
+
+<header
+  className="c0"
+>
+  Header
+</header>
+`;
