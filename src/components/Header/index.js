@@ -4,7 +4,7 @@ import React from 'react'
 import {
   StyledHeader,
   StyledNavTitle,
-  StyledNavButton,
+  StyledHeaderNavButton,
   StyledNavBar,
   StyledLogo
 } from '../styled'
@@ -15,10 +15,10 @@ export default function Header () {
       <StyledLogo>LOGO</StyledLogo>
       <StyledNavTitle>LEGAL CHECKUP</StyledNavTitle>
       <StyledNavBar>
-        <StyledNavButton href='/'>Home</StyledNavButton>
-        <StyledNavButton>Checkup</StyledNavButton>
-        <StyledNavButton>About</StyledNavButton>
-        <StyledNavButton>Help</StyledNavButton>
+        <StyledHeaderNavButton href='/'>Home</StyledHeaderNavButton>
+        <StyledHeaderNavButton>Checkup</StyledHeaderNavButton>
+        <StyledHeaderNavButton>About</StyledHeaderNavButton>
+        <StyledHeaderNavButton>Help</StyledHeaderNavButton>
       </StyledNavBar>
     </StyledHeader>
   )

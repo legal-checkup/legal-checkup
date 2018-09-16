@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-const NavButton = styled.a`
+const HeaderNavButton = styled.a`
   height: 27px;
   opacity: 0.53;
   font-family: Avenir;
@@ -15,6 +15,6 @@ const NavButton = styled.a`
   margin-bottom: 14px;
 `
 
-NavButton.displayName = 'StyledNavButton'
+HeaderNavButton.displayName = 'StyledHeaderNavButton'
 
-export default NavButton
+export default HeaderNavButton

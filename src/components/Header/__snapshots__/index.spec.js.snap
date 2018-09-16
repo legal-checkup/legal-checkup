@@ -2,27 +2,27 @@
 
 exports[`components:Header renders the Header and CSS properties properly 1`] = `
 <StyledHeader>
-  <styled.div>
+  <StyledLogo>
     LOGO
-  </styled.div>
-  <styled.span>
+  </StyledLogo>
+  <StyledNavTitle>
     LEGAL CHECKUP
-  </styled.span>
-  <styled.span>
-    <styled.a
+  </StyledNavTitle>
+  <StyledNavBar>
+    <StyledNavButton
       href="/"
     >
       Home
-    </styled.a>
-    <styled.a>
+    </StyledNavButton>
+    <StyledNavButton>
       Checkup
-    </styled.a>
-    <styled.a>
+    </StyledNavButton>
+    <StyledNavButton>
       About
-    </styled.a>
-    <styled.a>
+    </StyledNavButton>
+    <StyledNavButton>
       Help
-    </styled.a>
-  </styled.span>
+    </StyledNavButton>
+  </StyledNavBar>
 </StyledHeader>
 `;
