@@ -2,15 +2,15 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import configureStore from 'redux-mock-store'
 
-import ConnectedNoButton from '.'
-import { NO_BUTTON_CLICKED } from '../../state'
+import ConnectedYesButton from '.'
+import { YES_BUTTON_CLICKED } from '../../state'
 
 const mockStore = configureStore()
 
-describe('containers:NoButton', () => {
+describe('containers:YesButton', () => {
   it('maps dispatch to props', () => {
     const store = mockStore({ count: 0 })
-    const wrapper = shallow(<ConnectedNoButton store={store} />)
+    const wrapper = shallow(<ConnectedYesButton store={store} />)
 
     expect(wrapper.props()).toEqual(
       expect.objectContaining({
@@ -19,17 +19,17 @@ describe('containers:NoButton', () => {
     )
   })
 
-  it(`maps handleClick to dispatch ${NO_BUTTON_CLICKED} action`, () => {
+  it(`maps handleClick to dispatch ${YES_BUTTON_CLICKED} action`, () => {
     const store = mockStore({ count: 1 })
 
     store.dispatch = jest.fn()
 
-    const wrapper = shallow(<ConnectedNoButton store={store} />)
+    const wrapper = shallow(<ConnectedYesButton store={store} />)
 
     wrapper.props().handleClick()
 
     expect(store.dispatch).toHaveBeenCalledWith({
-      type: NO_BUTTON_CLICKED
+      type: YES_BUTTON_CLICKED
     })
   })
 })
