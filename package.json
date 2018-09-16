@@ -22,6 +22,7 @@
     "react-helmet": "^5.2.0",
     "react-modal": "^3.5.1",
     "react-redux": "^5.0.7",
+    "react-responsive": "^5.0.0",
     "react-router": "^4.3.1",
     "react-responsive": "^5.0.0",
     "react-router-dom": "^4.3.1",
@@ -76,7 +77,7 @@
       "!src/state/epics/index.js",
       "!src/state/epics/rerouteOnThirdTest/index.js",
       "!src/state/index.js",
-      "!src/utils/index.js",
+      "!src/utilities/index.js",
       "src/**/*.{js,jsx}",
       "!<rootDir>/node_modules/"
     ],

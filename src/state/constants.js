@@ -4,6 +4,7 @@ export const YES_BUTTON_CLICKED = 'YES_BUTTON_CLICKED'
 export const YES = 'YES'
 export const NO = 'NO'
 export const NOT_SURE = 'NOT_SURE'
+export const QUESTION_SELECTED = 'QUESTION_SELECTED'
 
 export const INITIAL_STATE = {
   activeQuestion: 1,
