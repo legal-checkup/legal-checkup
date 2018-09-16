@@ -8,4 +8,8 @@ describe('components:ProgressBar', function () {
     expect(
       toJson(shallow(<ProgressBar>ProgressBar</ProgressBar>))
     ).toMatchSnapshot())
+
+  it('?', () => {
+    expect(toJson(shallow(<ProgressBar />).dive())).toMatchSnapshot()
+  })
 })
