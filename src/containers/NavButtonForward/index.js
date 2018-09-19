@@ -4,12 +4,17 @@ import WithOnClickIfUnlocked from '../../components/WithOnClickIfUnlocked'
 import StyledNavButtonForward from '../../components/styled/NavButton/Forward'
 import {
   getActiveQuestion,
+  getQuestionsCount,
   getResponsesCount,
   questionSelected
 } from '../../state'
 
-function isLessThanUnlockedQuestion (activeQuesiton, unlockedQuestion) {
-  return activeQuesiton < unlockedQuestion
+function isNextQuestionUnlocked (
+  activeQuestion,
+  unlockedQuestion,
+  questionCount
+) {
+  return activeQuestion < unlockedQuestion && activeQuestion !== questionCount
 }
 
 function nextQuestion (activeQuestion) {
@@ -18,9 +23,10 @@ function nextQuestion (activeQuestion) {
 
 function mapStateToProps (state) {
   return {
-    unlocked: isLessThanUnlockedQuestion(
+    unlocked: isNextQuestionUnlocked(
       getActiveQuestion(state),
-      getResponsesCount(state) + 1
+      getResponsesCount(state) + 1,
+      getQuestionsCount(state)
     ),
     navigateToQuestion: nextQuestion(getActiveQuestion(state))
   }

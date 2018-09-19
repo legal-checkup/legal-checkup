@@ -20,15 +20,37 @@ describe('containers:NavButtonForward', () => {
     )
   })
 
-  it('should set unlocked to false when activeQuestion is >= count + 1', () => {
-    const store = mockStore({ activeQuestion: 1, responses: {} })
+  it('should set unlocked to false when activeQuestion >= responseCount + 1', () => {
+    const activeQuestion = 2
+    const store = mockStore({
+      activeQuestion,
+      questions: { 1: {}, 2: {}, 3: {}, 4: {} },
+      responses: { 1: 'Yes' }
+    })
     const wrapper = shallow(<NavButtonForward store={store} />)
 
     expect(wrapper.props().unlocked).toEqual(false)
   })
 
-  it('should set unlocked to true when activeQuestion is < count + 1', () => {
-    const store = mockStore({ activeQuestion: 1, responses: { 1: 'Yes' } })
+  it('should set unlocked to false when activeQuestion is last question', () => {
+    const activeQuestion = 4
+    const state = {
+      activeQuestion,
+      questions: { 1: {}, 2: {}, 3: {}, 4: {} },
+      responses: { 1: 'Yes', 2: 'Yes', 3: 'Yes', 4: 'Yes' }
+    }
+    const store = mockStore(state)
+    const wrapper = shallow(<NavButtonForward store={store} />)
+
+    expect(wrapper.props().unlocked).toEqual(false)
+  })
+
+  it('should set unlocked to true when activeQuestion is < responsesCount + 1 and !== questionsCount', () => {
+    const store = mockStore({
+      activeQuestion: 1,
+      questions: { 1: {}, 2: {} },
+      responses: { 1: 'Yes' }
+    })
     const wrapper = shallow(<NavButtonForward store={store} />)
 
     expect(wrapper.props().unlocked).toEqual(true)
@@ -37,7 +59,11 @@ describe('containers:NavButtonForward', () => {
   it(`should map handleClick to dispatch the ${QUESTION_SELECTED} action`, () => {
     const activeQuestion = 1
     const expectedQuestion = activeQuestion + 1
-    const store = mockStore({ activeQuestion: 1, responses: { 1: 'Yes' } })
+    const store = mockStore({
+      activeQuestion: 1,
+      questions: { 1: {}, 2: {} },
+      responses: { 1: 'Yes' }
+    })
 
     store.dispatch = jest.fn()
 
