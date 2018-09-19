@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:NextQuestion renders the NextQuestion CSS properties properly 1`] = `
+.c0 {
+  background-color: #ccc;
+  color: yellow;
+  cursor: not-allowed;
+  display: inline-block;
+  padding: 5px;
+  margin: 1px;
+  border-radius: 2px;
+}
+
+.c0:before {
+  content: '>';
+}
+
+<span
+  className="c0"
+>
+  NextQuestion
+</span>
+`;
+
+exports[`components:styled:NextQuestion renders the NextQuestion properly with next prop 1`] = `
+.c0 {
+  background-color: #ccc;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px;
+  margin: 1px;
+  border-radius: 2px;
+}
+
+.c0:before {
+  content: '>';
+}
+
+<span
+  className="c0"
+/>
+`;
