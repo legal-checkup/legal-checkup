@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:NotSureButton renders the NotSureButton and CSS properties properly 1`] = `
+<React.Fragment>
+  <NoButton>
+    Not sure
+  </NoButton>
+</React.Fragment>
+`;

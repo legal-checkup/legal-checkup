@@ -1,11 +1,11 @@
+import QuestionBox from '.'
 import React from 'react'
 import { shallow } from 'enzyme'
 
-import QuestionBox from '.'
+describe('components:QuestionBox', () => {
+  it(`renders the QuestionBox component when a question is provided`, () => {
+    const body = 'Is anyone chasing you for money?'
 
-describe('components:QuestionBox', function () {
-  it('renders the QuestionBox and CSS properties properly', () =>
-    expect(
-      toJson(shallow(<QuestionBox>QuestionBox</QuestionBox>))
-    ).toMatchSnapshot())
+    expect(shallow(<QuestionBox body={body} />)).toMatchSnapshot()
+  })
 })

@@ -1,3 +1,11 @@
+export const NO_BUTTON_CLICKED = 'NO_BUTTON_CLICKED'
+export const NOT_SURE_BUTTON_CLICKED = 'NOT_SURE_BUTTON_CLICKED'
+export const YES_BUTTON_CLICKED = 'YES_BUTTON_CLICKED'
+export const YES = 'YES'
+export const NO = 'NO'
+export const NOT_SURE = 'NOT_SURE'
+export const QUESTION_SELECTED = 'QUESTION_SELECTED'
+
 export const INITIAL_STATE = {
   activeQuestion: 'e0db8204-e1c3-4916-a31d-c29849547294',
   topics: [

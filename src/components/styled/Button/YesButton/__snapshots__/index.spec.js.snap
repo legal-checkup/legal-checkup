@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:YesButton renders the YesButton and CSS properties properly 1`] = `
+.c0 {
+  width: 88px;
+  height: 78px;
+  background-color: #fff;
+  border: solid 2px #b5b5b5;
+  border-right: 0px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+<button
+  className="c0"
+/>
+`;

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:NavButton:NavButtonForward renders the Back and CSS properties properly 1`] = `
+.c0 {
+  background-color: #ededed;
+  border: none;
+  color: #c0c0c0;
+  height: 42px;
+  outline: none;
+  width: 48px;
+  border-radius: 0 5px 5px 0;
+}
+
+<button
+  className="c0"
+>
+  ▶
+</button>
+`;
