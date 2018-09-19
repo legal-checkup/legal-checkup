@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:YesButton renders the YesButton and CSS properties properly 1`] = `
+<React.Fragment>
+  <YesButton>
+    Yes
+  </YesButton>
+</React.Fragment>
+`;

@@ -1,7 +1,13 @@
+import Layout from '../../components/Layout'
+import QuestionBox from '../../containers/QuestionBox'
+import QuestionCounter from '../../containers/QuestionCounter'
 import React from 'react'
 
-import { Layout } from '../../components'
-
 export default function Checkup () {
-  return <Layout>This is the Checkup page</Layout>
+  return (
+    <Layout>
+      <QuestionCounter />
+      <QuestionBox />
+    </Layout>
+  )
 }
