@@ -22,11 +22,14 @@ function getTopic ({ topic }) {
   return topic
 }
 
+const getQuestionsCount = pipe(getQuestionsKeys, length)
+
 const getResponsesCount = pipe(getResponses, keysIn, length)
 
 export {
   getActiveQuestion,
   getCurrentTopic,
+  getQuestionsCount,
   getQuestions,
   getQuestionsKeys,
   getResponses,

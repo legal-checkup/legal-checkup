@@ -6,9 +6,11 @@ import {
   getCount,
   getCurrentTopic,
   getQuestions,
+  getQuestionsCount,
   getQuestionsKeys,
   getResponses,
-  getResponsesCount
+  getResponsesCount,
+  getTopic
 } from './selectors'
 
 export {
@@ -16,9 +18,11 @@ export {
   getCount,
   getCurrentTopic,
   getQuestions,
+  getQuestionsCount,
   getQuestionsKeys,
   getResponses,
   getResponsesCount,
+  getTopic,
   INITIAL_STATE,
   QUESTION_SELECTED,
   questionSelected,

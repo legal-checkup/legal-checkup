@@ -1,10 +1,12 @@
 import {
   getActiveQuestion,
   getCurrentTopic,
+  getQuestionsCount,
   getQuestions,
   getQuestionsKeys,
   getResponses,
-  getResponsesCount
+  getResponsesCount,
+  getTopic
 } from '.'
 
 describe('state:selectors', () => {
@@ -44,6 +46,24 @@ describe('state:selectors', () => {
     })
   })
 
+  describe('getQuestionsCount', () => {
+    it('should return the total count of questions', () => {
+      const expected = 3
+      const questions = { 1: {}, 2: {}, 3: {} }
+      const state = { questions }
+
+      expect(getQuestionsCount(state)).toBe(expected)
+    })
+
+    it('return 0 when no questions', () => {
+      const expected = 0
+      const questions = {}
+      const state = { questions }
+
+      expect(getQuestionsCount(state)).toBe(expected)
+    })
+  })
+
   describe('getQuestions', () => {
     it('should return the questions', () => {
       const questions = { 1: {}, 2: {} }
@@ -59,7 +79,7 @@ describe('state:selectors', () => {
     })
   })
 
-  describe('getQuestionKeys', () => {
+  describe('getQuestionsKeys', () => {
     it('should return an array of the question keys', () => {
       const expected = [1, 2]
       const questions = { 1: {}, 2: {} }
@@ -106,6 +126,21 @@ describe('state:selectors', () => {
       const state = { responses }
 
       expect(getResponsesCount(state)).toBe(expected)
+    })
+  })
+
+  describe('getTopic', () => {
+    it('should return the topic property off an object', () => {
+      const expected = 'Money Troubles'
+      const question = { topic: expected }
+
+      expect(getTopic(question)).toBe(expected)
+    })
+
+    it('should return undefined if no topic property on an object', () => {
+      const question = {}
+
+      expect(getTopic(question)).toBeUndefined()
     })
   })
 })
