@@ -1,22 +1,25 @@
-import { contains } from 'ramda'
-
 import {
-  getQuestionsKeys,
   INITIAL_STATE,
-  QUESTION_SELECTED,
-  NO_BUTTON_CLICKED,
-  NOT_SURE_BUTTON_CLICKED,
-  YES_BUTTON_CLICKED,
-  YES,
   NO,
-  NOT_SURE
-} from '..'
+  NOT_SURE,
+  NOT_SURE_BUTTON_CLICKED,
+  NO_BUTTON_CLICKED,
+  QUESTION_SELECTED,
+  YES,
+  YES_BUTTON_CLICKED
+} from '../../constants'
+
+import { contains } from 'ramda'
+import { getQuestionsKeys } from '../../selectors'
 
 function isValidQuestionNumber (question, questions) {
   return contains(question, questions)
 }
 
-function rootReducer (state = INITIAL_STATE, { payload = {}, type }) {
+export default function rootReducer (
+  state = INITIAL_STATE,
+  { payload = {}, type }
+) {
   switch (type) {
     case QUESTION_SELECTED:
       return isValidQuestionNumber(payload.question, getQuestionsKeys(state))
@@ -56,5 +59,3 @@ function rootReducer (state = INITIAL_STATE, { payload = {}, type }) {
       return state
   }
 }
-
-export { rootReducer }

@@ -1,6 +1,6 @@
-import { connect } from 'react-redux'
 import NotSureButton from '../../components/NotSureButton'
-import { notSureButtonClicked } from '../../state'
+import { connect } from 'react-redux'
+import { notSureButtonClicked } from '../../state/actions'
 
 function mapDispatchToProps (dispatch) {
   return {

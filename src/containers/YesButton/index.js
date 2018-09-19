@@ -1,7 +1,6 @@
-import { connect } from 'react-redux'
-
 import YesButton from '../../components/YesButton'
-import { yesButtonClicked } from '../../state'
+import { connect } from 'react-redux'
+import { yesButtonClicked } from '../../state/actions'
 
 function mapDispatchToProps (dispatch) {
   return {
