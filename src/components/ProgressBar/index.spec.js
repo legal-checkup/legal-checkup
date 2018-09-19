@@ -10,7 +10,7 @@ describe('components:ProgressBar', function () {
       toJson(shallow(<ProgressBar>ProgressBar</ProgressBar>))
     ).toMatchSnapshot())
 
-  it('renders the Square with the proper styles for player X in the top left square', () => {
+  it('renders the questionNumber CSS properties properly', () => {
     const questionNumber = 1
     expect(
       toJson(
