@@ -8,8 +8,4 @@ describe('components:QuestionBox', () => {
 
     expect(shallow(<QuestionBox body={body} />)).toMatchSnapshot()
   })
-
-  it(`returns null when a question is not provided`, () => {
-    expect(shallow(<QuestionBox />)).toBeNull()
-  })
 })

@@ -1,5 +1,7 @@
 import { keysIn, length } from 'ramda'
 
+import { createSelector } from 'reselect'
+
 function getActiveQuestion ({ activeQuestion }) {
   return activeQuestion
 }
@@ -7,15 +9,15 @@ function getActiveQuestion ({ activeQuestion }) {
 function getQuestions ({ questions }) {
   return questions
 }
-function getQuestionCount (state) {
-  return {
-    activeQuestion: getActiveQuestion(state),
-    questionCount: length(keysIn(getQuestions(state)))
-  }
-}
 
-function getQuestionBody (state) {
-  return getQuestions(state)[getActiveQuestion(state)]
-}
+const getQuestionCount = createSelector(getQuestions, questions =>
+  length(keysIn(questions))
+)
 
-export { getActiveQuestion, getQuestions, getQuestionCount, getQuestionBody }
+const getCurrentQuestion = createSelector(
+  getActiveQuestion,
+  getQuestions,
+  (activeQuestion, questions) => questions[activeQuestion]
+)
+
+export { getActiveQuestion, getQuestions, getQuestionCount, getCurrentQuestion }

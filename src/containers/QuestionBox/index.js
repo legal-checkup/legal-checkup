@@ -1,10 +1,9 @@
-import { connect } from 'react-redux'
-
 import { QuestionBox } from '../../components'
-import { getQuestionBody } from '../../state'
+import { connect } from 'react-redux'
+import { getCurrentQuestion } from '../../state'
 
 function mapStateToProps (state) {
-  return getQuestionBody(state)
+  return getCurrentQuestion(state)
 }
 
 export default connect(mapStateToProps)(QuestionBox)

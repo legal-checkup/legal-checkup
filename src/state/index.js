@@ -1,11 +1,12 @@
+import {
+  getActiveQuestion,
+  getCurrentQuestion,
+  getQuestionCount,
+  getQuestions
+} from './selectors'
+
 import { INITIAL_STATE } from './constants'
 import { rootReducer } from './reducers'
-import {
-  getQuestions,
-  getActiveQuestion,
-  getQuestionCount,
-  getQuestionBody
-} from './selectors'
 
 export {
   INITIAL_STATE,
@@ -13,5 +14,5 @@ export {
   getQuestions,
   getActiveQuestion,
   getQuestionCount,
-  getQuestionBody
+  getCurrentQuestion
 }
