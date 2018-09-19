@@ -2,6 +2,7 @@
 
 exports[`components:Checkup renders the Checkup page 1`] = `
 <Layout>
-  This is the Checkup page
+  <Connect(QuestionCounter) />
+  <Connect(QuestionBox) />
 </Layout>
 `;
