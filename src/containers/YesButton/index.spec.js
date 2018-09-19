@@ -1,9 +1,8 @@
-import React from 'react'
-import { shallow } from 'enzyme'
-import configureStore from 'redux-mock-store'
-
 import ConnectedYesButton from '.'
-import { YES_BUTTON_CLICKED } from '../../state'
+import React from 'react'
+import { YES_BUTTON_CLICKED } from '../../state/constants'
+import configureStore from 'redux-mock-store'
+import { shallow } from 'enzyme'
 
 const mockStore = configureStore()
 

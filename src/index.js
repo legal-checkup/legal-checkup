@@ -26,6 +26,9 @@ import registerServiceWorker from './registerServiceWorker'
 import { render } from 'react-dom'
 import rootReducer from './state/reducers/rootReducer'
 
+import Results from './pages/Results'
+
+const history = createBrowserHistory()
 // const epicMiddleware = createEpicMiddleware()
 const history = createBrowserHistory()
 const appliedMiddleware = applyMiddleware(
@@ -64,6 +67,7 @@ function renderApp () {
             <Route exact path='/' component={Home} />
             <Route path='/checkup' component={Checkup} />
             <Route path='/privacy-policy' component={PrivacyPolicy} />
+            <Route path='/results' component={Results} />
             <Route path='/terms-of-use' component={TermsOfUse} />
           </Switch>
         </ConnectedRouter>

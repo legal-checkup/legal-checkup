@@ -1,9 +1,8 @@
-import React from 'react'
-import { shallow } from 'enzyme'
-import configureStore from 'redux-mock-store'
-
 import NavButtonBack from '.'
-import { QUESTION_SELECTED } from '../../state'
+import { QUESTION_SELECTED } from '../../state/constants'
+import React from 'react'
+import configureStore from 'redux-mock-store'
+import { shallow } from 'enzyme'
 
 const mockStore = configureStore()
 
