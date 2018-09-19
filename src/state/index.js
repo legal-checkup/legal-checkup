@@ -1,18 +1,31 @@
+import { INITIAL_STATE, QUESTION_SELECTED } from './constants'
 import {
   getActiveQuestion,
+  getCount,
   getCurrentQuestion,
+  getCurrentTopic,
   getQuestionCount,
-  getQuestions
+  getQuestions,
+  getQuestionsKeys,
+  getResponses,
+  getResponsesCount
 } from './selectors'
 
-import { INITIAL_STATE } from './constants'
+import { questionSelected } from './actions'
 import { rootReducer } from './reducers'
 
 export {
   INITIAL_STATE,
-  rootReducer,
-  getQuestions,
   getActiveQuestion,
+  getCount,
+  getCurrentQuestion,
+  getCurrentTopic,
   getQuestionCount,
-  getCurrentQuestion
+  getQuestions,
+  getQuestionsKeys,
+  getResponses,
+  getResponsesCount,
+  QUESTION_SELECTED,
+  questionSelected,
+  rootReducer
 }

@@ -1,6 +1,9 @@
-import { keysIn, length } from 'ramda'
+import { keysIn, length, map, path, pipe } from 'ramda'
 
 import { createSelector } from 'reselect'
+
+const mapKeysToIntegers = pipe(keysIn, map(parseInt))
+const countKeys = pipe(keysIn, length)
 
 function getActiveQuestion ({ activeQuestion }) {
   return activeQuestion
@@ -10,9 +13,19 @@ function getQuestions ({ questions }) {
   return questions
 }
 
-const getQuestionCount = createSelector(getQuestions, questions =>
-  length(keysIn(questions))
-)
+function getResponses ({ responses }) {
+  return responses
+}
+
+function getTopic ({ topic }) {
+  return topic
+}
+
+function getCurrentTopic ({ activeQuestion, questions = {} }) {
+  return path([`${activeQuestion}`, 'topic'], questions)
+}
+
+const getQuestionCount = createSelector(getQuestions, countKeys)
 
 const getCurrentQuestion = createSelector(
   getActiveQuestion,
@@ -20,4 +33,18 @@ const getCurrentQuestion = createSelector(
   (activeQuestion, questions) => questions[activeQuestion]
 )
 
-export { getActiveQuestion, getQuestions, getQuestionCount, getCurrentQuestion }
+const getQuestionsKeys = createSelector(getQuestions, mapKeysToIntegers)
+
+const getResponsesCount = pipe(getResponses, keysIn, length)
+
+export {
+  getActiveQuestion,
+  getCurrentQuestion,
+  getCurrentTopic,
+  getQuestionCount,
+  getQuestions,
+  getQuestionsKeys,
+  getResponses,
+  getResponsesCount,
+  getTopic
+}
