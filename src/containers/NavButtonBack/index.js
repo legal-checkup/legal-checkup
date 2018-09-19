@@ -1,8 +1,8 @@
-import { connect } from 'react-redux'
-
-import WithOnClickIfUnlocked from '../../components/WithOnClickIfUnlocked'
 import StyledNavButtonBack from '../../components/styled/NavButton/Back'
-import { getActiveQuestion, questionSelected } from '../../state'
+import WithOnClickIfUnlocked from '../../components/WithOnClickIfUnlocked'
+import { connect } from 'react-redux'
+import { getActiveQuestion } from '../../state/selectors'
+import { questionSelected } from '../../state/actions'
 
 function isGreaterThanOne (activeQuestion) {
   return activeQuestion > 1

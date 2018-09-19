@@ -1,6 +1,5 @@
 import 'babel-polyfill'
 
-import { Checkup, Home, PrivacyPolicy, TermsOfUse } from './pages'
 import {
   ConnectedRouter,
   connectRouter,
@@ -11,17 +10,21 @@ import { applyMiddleware, compose, createStore } from 'redux'
 
 import { ApolloClient } from 'apollo-client'
 import { ApolloProvider } from 'react-apollo'
+import Checkup from './pages/Checkup'
+import Home from './pages/Home'
 import { HttpLink } from 'apollo-link-http'
-import { INITIAL_STATE } from './state'
+import { INITIAL_STATE } from './state/constants'
 import { InMemoryCache } from 'apollo-cache-inmemory'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 import { Provider } from 'react-redux'
 import React from 'react'
+import TermsOfUse from './pages/TermsOfUse'
 import baseStyles from './styles'
 // import { createEpicMiddleware } from 'redux-observable'
 import { createBrowserHistory } from 'history'
 import registerServiceWorker from './registerServiceWorker'
 import { render } from 'react-dom'
-import { rootReducer } from './state/reducers'
+import rootReducer from './state/reducers/rootReducer'
 
 // const epicMiddleware = createEpicMiddleware()
 const history = createBrowserHistory()
