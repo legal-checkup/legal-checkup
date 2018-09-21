@@ -1,11 +1,9 @@
 import React from 'react'
 import { keysIn, length, map, pipe, sort } from 'ramda'
 
+import { getNextQuestionNumber, getQuestionNumber } from './QuestionNumber'
+
 import {
-  StyledAnsweredQuestionNumber,
-  StyledActiveQuestionNumber,
-  StyledUnansweredQuestionNumber,
-  StyledUnlockedQuestionNumber,
   StyledProgressBar,
   StyledPreviousQuestions,
   StyledNextQuestion
@@ -17,55 +15,6 @@ const numericalSort = sort(compare)
 
 const getQuestionNumbers = pipe(keysIn, map(parseInt), numericalSort)
 const getKeyCount = pipe(keysIn, length)
-
-export function getNextQuestionNumber (questionNumbers, responseCount) {
-  const questionCount = length(questionNumbers)
-
-  return responseCount < questionCount ? responseCount + 1 : responseCount
-}
-
-function getQuestionNumber (
-  questionNumber,
-  activeQuestion,
-  questionNumbers,
-  responseCount,
-  handleClick
-) {
-  const clickHandler =
-    Boolean(handleClick) && handleClick.bind(this, questionNumber)
-
-  if (questionNumber === activeQuestion) {
-    return (
-      <StyledActiveQuestionNumber key={questionNumber} onClick={clickHandler}>
-        {questionNumber}
-      </StyledActiveQuestionNumber>
-    )
-  }
-
-  if (questionNumber <= responseCount) {
-    return (
-      <StyledAnsweredQuestionNumber key={questionNumber} onClick={clickHandler}>
-        {questionNumber}
-      </StyledAnsweredQuestionNumber>
-    )
-  }
-
-  if (
-    questionNumber === getNextQuestionNumber(questionNumbers, responseCount)
-  ) {
-    return (
-      <StyledUnlockedQuestionNumber key={questionNumber} onClick={clickHandler}>
-        {questionNumber}
-      </StyledUnlockedQuestionNumber>
-    )
-  }
-
-  return (
-    <StyledUnansweredQuestionNumber key={questionNumber}>
-      {questionNumber}
-    </StyledUnansweredQuestionNumber>
-  )
-}
 
 export default function ProgressBar ({
   activeQuestion,
