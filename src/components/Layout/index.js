@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react'
 
-import AnswerBar from '../AnswerBar'
 import Footer from '../Footer'
 import Header from '../Header'
 import { Helmet } from 'react-helmet'
@@ -14,7 +13,6 @@ export default function Layout ({ children }) {
       </Helmet>
       <Header />
       <StyledLayout>{children}</StyledLayout>
-      <AnswerBar />
       <Footer />
     </Fragment>
   )

@@ -1,111 +1,158 @@
+import { NO, NOT_SURE, YES } from '../constants'
 import {
+  checkNextQuestionEnabled,
+  checkPreviousQuestionEnabled,
   getActiveQuestion,
-  getCurrentTopic,
-  getQuestions,
-  getQuestionsKeys,
+  getActiveQuestionIndex,
+  getCurrentTopicName,
+  getQuestionCount,
+  getQuestionIndices,
+  getQuestionList,
+  getResponseCount,
+  getResponseList,
   getResponses,
-  getResponsesCount
+  getTopics
 } from '.'
+import { head, identity, last, length, times } from 'ramda'
+
+import { state } from '../fixtures'
+
+const questions = getQuestionList(state)
 
 describe('state:selectors', () => {
+  describe('checkNextQuestionEnabled', () => {
+    it('should return true if the next question exists and is permitted', () => {
+      expect(checkNextQuestionEnabled(state)).toBe(true)
+    })
+
+    it('should return false if the next question does not exist or is not permitted', () => {
+      const newState = { ...state, activeQuestionIndex: 3 }
+
+      expect(checkNextQuestionEnabled(newState)).toBe(false)
+    })
+  })
+
+  describe('checkPreviousQuestionEnabled', () => {
+    it('should return true if the next question exists and is permitted', () => {
+      const newState = { ...state, activeQuestionIndex: 3 }
+
+      expect(checkPreviousQuestionEnabled(newState)).toBe(true)
+    })
+
+    it('should return false if the next question does not exist or is not permitted', () => {
+      expect(checkPreviousQuestionEnabled(state)).toBe(false)
+    })
+  })
+
   describe('getActiveQuestion', () => {
+    it('should return the active question when an index is set', () => {
+      const [activeTopic] = state.topics
+      const [activeQuestion] = activeTopic.questions
+
+      expect(getActiveQuestion(state)).toMatchObject(activeQuestion)
+    })
+
+    it('should return undefined when the active question index does not exist', () => {
+      const newState = { ...state, activeQuestionIndex: -1 }
+
+      expect(getActiveQuestion(newState)).toBeUndefined()
+    })
+  })
+
+  describe('getActiveQuestionIndex', () => {
     it('should return the active question', () => {
-      const activeQuestion = 1
-      const state = { activeQuestion }
-
-      expect(getActiveQuestion(state)).toBe(activeQuestion)
+      expect(getActiveQuestionIndex(state)).toBe(state.activeQuestionIndex)
     })
 
-    it('should return undefined if no activeQuestion value', () => {
-      const state = {}
+    it('should return undefined if no activeQuestionIndex value', () => {
+      const newState = {}
 
-      expect(getActiveQuestion(state)).toBeUndefined()
+      expect(getActiveQuestionIndex(newState)).toBeUndefined()
     })
   })
 
-  describe('getCurrentTopic', () => {
-    it('should return undefined if no activeQuestion value', () => {
-      const state = {}
-
-      expect(getCurrentTopic(state)).toBeUndefined()
+  describe('getCurrentTopicName', () => {
+    it('should return the name of the current topic', () => {
+      expect(getCurrentTopicName(state)).toBe('Money Troubles')
     })
 
-    it('should return undefined if no question topic value', () => {
-      const state = { activeQuestion: 1, questions: { 1: { body: 'test' } } }
+    it('should return undefined if no activeQuestionIndex value', () => {
+      const newState = { ...state, activeQuestionIndex: -1 }
 
-      expect(getCurrentTopic(state)).toBeUndefined()
-    })
-
-    it('should return the topic of the activeQuestion', () => {
-      const topic = 'Money'
-      const state = { activeQuestion: 1, questions: { 1: { topic } } }
-
-      expect(getCurrentTopic(state)).toBe(topic)
+      expect(getCurrentTopicName(newState)).toBeUndefined()
     })
   })
 
-  describe('getQuestions', () => {
-    it('should return the questions', () => {
-      const questions = { 1: {}, 2: {} }
-      const state = { questions }
-
-      expect(getQuestions(state)).toMatchObject(questions)
-    })
-
-    it('should return undefined if no questions object', () => {
-      const state = {}
-
-      expect(getQuestions(state)).toBeUndefined()
+  describe('getQuestionCount', () => {
+    it('should give an accurate count of the questions', () => {
+      expect(getQuestionCount(state)).toBe(length(questions))
     })
   })
 
-  describe('getQuestionKeys', () => {
-    it('should return an array of the question keys', () => {
-      const expected = [1, 2]
-      const questions = { 1: {}, 2: {} }
-      const state = { questions }
+  describe('getQuestionIndices', () => {
+    it('provides an array of indices equal to the number of questions', () => {
+      expect(getQuestionIndices(state)).toEqual(times(identity, 28))
+    })
+  })
 
-      expect(getQuestionsKeys(state)).toEqual(expect.arrayContaining(expected))
+  describe('getQuestionList', () => {
+    it('should return the correct number of questions in the correct order', () => {
+      expect(questions).toHaveLength(28)
+      expect(head(questions).id).toBe('759CDC30C25B489A9EB71B7E859F2DD7')
+      expect(last(questions).id).toBe('79591D25C03D4AA7912E1366DD282586')
     })
 
-    it('should return an empty array if no questions object', () => {
-      const expected = []
-      const state = {}
+    it('should add the topic name and id to each question', () => {
+      const { topic, topicId } = head(questions)
 
-      expect(getQuestionsKeys(state)).toEqual(expected)
+      expect(topic).toBe('Money Troubles')
+      expect(topicId).toBe('4DDB61C7677B4BA2813D2CAE98EF51D5')
+    })
+  })
+
+  describe('getResponseCount', () => {
+    it('returns the total number of responses', () => {
+      expect(getResponseCount(state)).toBe(3)
+    })
+  })
+
+  describe('getResponseList', () => {
+    it('should return the correct number of questions in the correct order', () => {
+      const responses = getResponseList(state)
+      const [fst, snd, thd] = responses || []
+
+      expect(responses).toHaveLength(3)
+      expect(fst.id).toBe('759CDC30C25B489A9EB71B7E859F2DD7')
+      expect(fst.answer).toBe(YES)
+      expect(snd.id).toBe('8A9B3C23BA41440187B0B9F9EB0D8400')
+      expect(snd.answer).toBe(NO)
+      expect(thd.id).toBe('A7D51C38F34A4EA1919C74013E703C39')
+      expect(thd.answer).toBe(NOT_SURE)
+    })
+
+    it('should add the topic name and id to each question', () => {
+      const { topic, topicId } = head(questions)
+
+      expect(topic).toBe('Money Troubles')
+      expect(topicId).toBe('4DDB61C7677B4BA2813D2CAE98EF51D5')
     })
   })
 
   describe('getResponses', () => {
-    it('should return the responses', () => {
-      const responses = { 1: 'Yes', 2: 'No', 3: "Don't know" }
-      const state = { responses }
+    it('should include the topics and questions with responses added', () => {
+      const responses = getResponses(state)
+      const { id, name, questions } = head(responses)
 
-      expect(getResponses(state)).toBe(responses)
-    })
-
-    it('should return undefined if no responses', () => {
-      const state = {}
-
-      expect(getResponses(state)).toBeUndefined()
+      expect(id).toBe('4DDB61C7677B4BA2813D2CAE98EF51D5')
+      expect(name).toBe('Money Troubles')
+      expect(questions).toHaveLength(3)
+      expect(head(questions).id).toBe('759CDC30C25B489A9EB71B7E859F2DD7')
     })
   })
 
-  describe('getResponsesCount', () => {
-    it('should return the length of the responses', () => {
-      const expected = 3
-      const responses = { 1: 'Yes', 2: 'No', 3: "Don't know" }
-      const state = { responses }
-
-      expect(getResponsesCount(state)).toBe(expected)
-    })
-
-    it('should return 0 when no responses', () => {
-      const expected = 0
-      const responses = {}
-      const state = { responses }
-
-      expect(getResponsesCount(state)).toBe(expected)
+  describe('getTopics', () => {
+    it('should return the topics and their questions', () => {
+      expect(getTopics(state)).toEqual(state.topics)
     })
   })
 })

@@ -1,6 +1,12 @@
-import Layout from '../../components/Layout'
+import Layout from '@components/Layout'
 import React from 'react'
 
 export default function Results () {
-  return <Layout>This is the Results page</Layout>
+  return (
+    <Layout>
+      <p>
+        This is the <strong>Results</strong> page
+      </p>
+    </Layout>
+  )
 }

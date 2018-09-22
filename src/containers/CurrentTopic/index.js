@@ -1,10 +1,10 @@
-import CurrentTopic from '../../components/CurrentTopic'
+import CurrentTopic from '@components/CurrentTopic'
 import { connect } from 'react-redux'
-import { getCurrentTopic } from '../../state/selectors'
+import { getCurrentTopicName } from '@state/selectors'
 
 function mapStateToProps (state) {
   return {
-    currentTopic: getCurrentTopic(state)
+    currentTopic: getCurrentTopicName(state)
   }
 }
 

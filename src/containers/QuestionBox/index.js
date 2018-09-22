@@ -1,9 +1,9 @@
-import QuestionBox from '../../components/QuestionBox'
+import QuestionBox from '@components/QuestionBox'
 import { connect } from 'react-redux'
-import { getCurrentQuestion } from '../../state/selectors'
+import { getActiveQuestion } from '@state/selectors'
 
 function mapStateToProps (state) {
-  return getCurrentQuestion(state)
+  return getActiveQuestion(state)
 }
 
 export default connect(mapStateToProps)(QuestionBox)
