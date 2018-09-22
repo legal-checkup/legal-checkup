@@ -95,8 +95,12 @@
     "build": "react-app-rewired build",
     "coverage": "react-app-rewired test --env=jsdom --coverage",
     "eject": "react-app-rewired eject",
-    "precommit": "lint-staged",
     "start": "react-app-rewired start",
     "test": "react-app-rewired test --env=jsdom"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
