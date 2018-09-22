@@ -1,107 +1,87 @@
-import { rootReducer } from '.'
-import { INITIAL_STATE, QUESTION_SELECTED, questionSelected } from '..'
+import {
+  NEXT_QUESTION_ACTIVATED,
+  NO,
+  NOT_SURE,
+  PREVIOUS_QUESTION_ACTIVATED,
+  REQUESTED_QUESTION_ACTIVATED,
+  USER_RESPONDED_WITH_NO,
+  USER_RESPONDED_WITH_NOT_SURE,
+  USER_RESPONDED_WITH_YES,
+  YES
+} from '../../constants'
+import {
+  nextQuestionActivated,
+  previousQuestionActivated,
+  requestedQuestionActivated,
+  userRespondedWithNo,
+  userRespondedWithNotSure,
+  userRespondedWithYes
+} from '../../actions'
+
+import rootReducer from '.'
+import setActiveQuestionIndex from '../../domain/setActiveQuestionIndex'
+import setQuestionResponse from '../../domain/setQuestionResponse'
+import { state } from '../../fixtures'
+
+jest.mock('../../domain/setActiveQuestionIndex', () => ({
+  __esModule: true,
+  default: jest.fn()
+}))
+
+jest.mock('../../domain/setQuestionResponse', () => ({
+  __esModule: true,
+  default: jest.fn()
+}))
+
+const topicId = 'topicId'
+const id = 'id'
 
 describe('state:reducers', () => {
   describe('rootReducer', () => {
-    it('defaults to the INITIAL_STATE', () => {
-      expect(rootReducer(undefined, {})).toMatchObject(INITIAL_STATE)
+    it('returns the state unchanged when called with an unrecognised action', () => {
+      expect(rootReducer(state, {})).toMatchObject(state)
     })
 
-    it('handles an unknown action type by returning the state unchanged', () => {
-      const state = 'state'
+    it(`calls setActiveQuestionIndex with the state and the activeQuestionIndex on ${NEXT_QUESTION_ACTIVATED} actions`, () => {
+      const questionIndex = 1
 
-      expect(rootReducer(state, {})).toBe(state)
+      rootReducer(state, nextQuestionActivated(questionIndex))
+
+      expect(setActiveQuestionIndex).toHaveBeenCalledWith(state, questionIndex)
     })
 
-    it('increases the activeQuestion when NO_BUTTON_CLICKED', () => {
-      const beforeState = {
-        activeQuestion: 1
-      }
+    it(`calls setActiveQuestionIndex with the state and the activeQuestionIndex on ${PREVIOUS_QUESTION_ACTIVATED} actions`, () => {
+      const questionIndex = 1
 
-      const afterState = {
-        activeQuestion: 2,
-        responses: { 1: 'NO' }
-      }
+      rootReducer(state, previousQuestionActivated(questionIndex))
 
-      const NO_BUTTON_CLICKED = { type: 'NO_BUTTON_CLICKED' }
-
-      expect(JSON.stringify(rootReducer(beforeState, NO_BUTTON_CLICKED))).toBe(
-        JSON.stringify(afterState)
-      )
+      expect(setActiveQuestionIndex).toHaveBeenCalledWith(state, questionIndex)
     })
 
-    it('increases the activeQuestion when NOT_SURE_BUTTON_CLICKED', () => {
-      const beforeState = {
-        activeQuestion: 1
-      }
+    it(`calls setActiveQuestionIndex with the state and the activeQuestionIndex on ${REQUESTED_QUESTION_ACTIVATED} actions`, () => {
+      const questionIndex = 1
 
-      const afterState = {
-        activeQuestion: 2,
-        responses: { 1: 'NOT_SURE' }
-      }
+      rootReducer(state, requestedQuestionActivated(questionIndex))
 
-      const NOT_SURE_BUTTON_CLICKED = { type: 'NOT_SURE_BUTTON_CLICKED' }
-
-      expect(
-        JSON.stringify(rootReducer(beforeState, NOT_SURE_BUTTON_CLICKED))
-      ).toBe(JSON.stringify(afterState))
+      expect(setActiveQuestionIndex).toHaveBeenCalledWith(state, questionIndex)
     })
 
-    it('increases the activeQuestion when YES_BUTTON_CLICKED', () => {
-      const beforeState = {
-        activeQuestion: 1
-      }
+    it(`calls setQuestionResponse with the state, the topicId, the questionId, and a ${NO} answer on ${USER_RESPONDED_WITH_NO} actions`, () => {
+      rootReducer(state, userRespondedWithNo())
 
-      const afterState = {
-        activeQuestion: 2,
-        responses: { 1: 'YES' }
-      }
-
-      const YES_BUTTON_CLICKED = { type: 'YES_BUTTON_CLICKED' }
-
-      expect(JSON.stringify(rootReducer(beforeState, YES_BUTTON_CLICKED))).toBe(
-        JSON.stringify(afterState)
-      )
+      expect(setQuestionResponse).toHaveBeenCalledWith(state, NO)
     })
 
-    it(`updates the activeQuestion on a ${QUESTION_SELECTED} action`, () => {
-      const activeQuestion = 1
-      const expectedQuestion = 2
-      const state = { activeQuestion, questions: { 1: {}, 2: {} } }
+    it(`calls setQuestionResponse with the state, the topicId, the questionId, and a ${NOT_SURE} answer on ${USER_RESPONDED_WITH_NOT_SURE} actions`, () => {
+      rootReducer(state, userRespondedWithNotSure())
 
-      expect(
-        rootReducer(state, questionSelected(expectedQuestion))
-      ).toMatchObject({
-        activeQuestion: expectedQuestion
-      })
+      expect(setQuestionResponse).toHaveBeenCalledWith(state, NOT_SURE)
     })
 
-    it(`returns the state unchanged if the ${QUESTION_SELECTED} action payload is not a number`, () => {
-      const activeQuestion = 1
-      const questionString = '2'
-      const questionBoolean = true
-      const questionObject = {}
-      const state = { activeQuestion, questions: { 1: {}, 2: {} } }
+    it(`calls setQuestionResponse with the state, the topicId, the questionId, and a ${YES} answer on ${USER_RESPONDED_WITH_YES} actions`, () => {
+      rootReducer(state, userRespondedWithYes())
 
-      expect(
-        rootReducer(state, questionSelected(questionString))
-      ).toMatchObject(state)
-      expect(
-        rootReducer(state, questionSelected(questionBoolean))
-      ).toMatchObject(state)
-      expect(
-        rootReducer(state, questionSelected(questionObject))
-      ).toMatchObject(state)
-    })
-
-    it(`returns the state unchanged if the ${QUESTION_SELECTED} action payload is not in the question range`, () => {
-      const activeQuestion = 1
-      const questionOutOfRange = 3
-      const state = { activeQuestion, questions: { 1: {}, 2: {} } }
-
-      expect(
-        rootReducer(state, questionSelected(questionOutOfRange))
-      ).toMatchObject(state)
+      expect(setQuestionResponse).toHaveBeenCalledWith(state, YES)
     })
   })
 })

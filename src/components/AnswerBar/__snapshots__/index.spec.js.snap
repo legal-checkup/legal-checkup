@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`components:AnswerBar renders the AnswerBar and CSS properties properly 1`] = `
-<StyledAnswerBar>
-  <ConnectedYesButton />
-  <ConnectedNoButton />
-  <ConnectedNotSureButton />
-</StyledAnswerBar>
-`;
