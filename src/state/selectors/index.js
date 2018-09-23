@@ -15,7 +15,7 @@ function getQuestionCount (state) {
 }
 
 function getQuestionBody (state) {
-  return getQuestions(state)[getActiveQuestion(state)]
+  return getQuestions(state)[getActiveQuestion(state)].body
 }
 
 export { getActiveQuestion, getQuestions, getQuestionCount, getQuestionBody }
