@@ -1,13 +1,14 @@
 import { getActiveQuestionIndex, getQuestionCount } from '@state/selectors'
 
-import QuestionCounter from '@components/QuestionCounter'
+import StyledQuestionCounter from '@components/styled/QuestionCounter'
 import { connect } from 'react-redux'
 
 function mapStateToProps (state) {
-  return {
-    activeQuestionIndex: getActiveQuestionIndex(state),
-    questionCount: getQuestionCount(state)
-  }
+  const children = `${getActiveQuestionIndex(state) + 1}/${getQuestionCount(
+    state
+  )}`
+
+  return { children }
 }
 
-export default connect(mapStateToProps)(QuestionCounter)
+export default connect(mapStateToProps)(StyledQuestionCounter)

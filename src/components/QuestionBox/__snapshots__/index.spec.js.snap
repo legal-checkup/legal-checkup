@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`components:QuestionBox renders the QuestionBox component when a question is provided 1`] = `
-<StyledQuestionBox>
-  Is anyone chasing you for money?
-</StyledQuestionBox>
-`;

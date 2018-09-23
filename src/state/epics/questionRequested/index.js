@@ -2,20 +2,23 @@ import {
   NEXT_QUESTION_REQUESTED,
   PREVIOUS_QUESTION_REQUESTED,
   QUESTION_REQUESTED
-} from '../../constants'
+} from '@state/constants'
 import {
   errorQuestionIndexOutOfBounds,
   nextQuestionActivated,
   previousQuestionActivated,
   requestedQuestionActivated
-} from '../../actions'
+} from '@state/actions'
 import {
   getActiveQuestionIndex,
   getQuestionCount,
   getResponseCount
-} from '../../selectors'
+} from '@state/selectors'
 import { map, withLatestFrom } from 'rxjs/operators'
 
+import isNextQuestionPermitted from '@utilities/isNextQuestionPermitted'
+import isPreviousQuestionPermitted from '@utilities/isPreviousQuestionPermitted'
+import isQuestionPermitted from '@utilities/isQuestionPermitted'
 import { ofType } from 'redux-observable'
 
 // Catch question requested actions and test whether the question is allowed
@@ -36,22 +39,24 @@ const questionRequestedEpic = (action$, state$) =>
 
       switch (type) {
         case NEXT_QUESTION_REQUESTED:
-          // Next question can't move more than one past the responses or past the total number of questions
-          return activeQuestionIndex < responseCount &&
-            activeQuestionIndex < questionCount - 1
+          return isNextQuestionPermitted(
+            activeQuestionIndex,
+            responseCount,
+            questionCount
+          )
             ? nextQuestionActivated(activeQuestionIndex + 1)
             : errorQuestionIndexOutOfBounds(activeQuestionIndex + 1)
 
         case PREVIOUS_QUESTION_REQUESTED:
-          // Previous question can't go below zero
-          return activeQuestionIndex > 0
+          return isPreviousQuestionPermitted(activeQuestionIndex)
             ? previousQuestionActivated(activeQuestionIndex - 1)
             : errorQuestionIndexOutOfBounds(activeQuestionIndex - 1)
         default:
-          // Specified question can't go past either of the above boundaries
-          return questionIndex >= 0 &&
-            questionIndex < responseCount &&
-            activeQuestionIndex < questionCount - 1
+          return isQuestionPermitted(
+            activeQuestionIndex,
+            responseCount,
+            questionCount
+          )
             ? requestedQuestionActivated(questionIndex)
             : errorQuestionIndexOutOfBounds(questionIndex)
       }
