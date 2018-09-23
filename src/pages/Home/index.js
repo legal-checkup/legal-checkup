@@ -1,11 +1,12 @@
+import Layout from '@components/Layout'
 import React from 'react'
-
-import { Layout } from '../../components'
 
 export default function Home () {
   return (
     <Layout>
-      <p>This is the Home page</p>
+      <p>
+        This is the <strong>Home</strong> page
+      </p>
     </Layout>
   )
 }
