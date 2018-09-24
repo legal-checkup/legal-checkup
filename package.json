@@ -27,7 +27,6 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-router-redux": "^4.0.8",
-    "react-scripts": "^1.1.5",
     "react-tooltip": "^3.8.4",
     "react-transition-group": "^2.4.0",
     "recompose": "^0.30.0",
@@ -41,26 +40,32 @@
     "styled-normalize": "^8.0.1"
   },
   "devDependencies": {
+    "@babel/code-frame": "^7.0.0",
     "@babel/core": "^7.1.0",
     "@babel/preset-env": "^7.1.0",
     "@babel/preset-react": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
     "chalk": "^2.4.1",
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
     "enzyme-to-json": "^3.3.4",
-    "eslint": "^5.6.0",
     "husky": "^1.0.0-rc.15",
+    "istanbul-reports": "^2.0.0",
     "jest-enzyme": "^6.1.2",
     "jest-styled-components": "^6.2.0",
     "lint-staged": "^7.3.0",
     "node-fs-extra": "^0.8.2",
     "prettier-standard": "^8.0.1",
     "react-app-rewire-aliases": "^0.2.0",
+    "react-app-rewire-eslint": "^0.2.3",
     "react-app-rewire-styled-components": "^3.0.2",
-    "react-app-rewired": "^1.6.2",
+    "react-app-rewired": "^2.0.0",
+    "react-scripts": "^2.0.0-next.2150693d",
     "react-test-renderer": "^16.5.2",
     "redux-devtools-extension": "^2.13.5",
-    "redux-mock-store": "^1.5.3"
+    "redux-mock-store": "^1.5.3",
+    "regenerator-runtime": "^0.12.1"
   },
   "lint-staged": {
     "linters": {
@@ -89,7 +94,16 @@
     ],
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
-    ]
+    ],
+    "moduleNameMapper": {
+      "@components/(.*)$": "<rootDir>/src/components/$1",
+      "@containers/(.*)$": "<rootDir>/src/containers/$1",
+      "@pages/(.*)$": "<rootDir>/src/pages/$1",
+      "@responsive/(.*)$": "<rootDir>/src/responsive/$1",
+      "@state/(.*)$": "<rootDir>/src/state/$1",
+      "@utilities/(.*)$": "<rootDir>/src/utilities/$1",
+      "@wrappers/(.*)$": "<rootDir>/src/wrappers/$1"
+    }
   },
   "scripts": {
     "build": "react-app-rewired build",
@@ -102,5 +116,18 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "browserslist": {
+    "development": [
+      "last 2 chrome versions",
+      "last 2 firefox versions",
+      "last 2 edge versions"
+    ],
+    "production": [
+      ">1%",
+      "last 4 versions",
+      "Firefox ESR",
+      "not ie < 11"
+    ]
   }
 }

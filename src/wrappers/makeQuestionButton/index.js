@@ -1,17 +1,17 @@
 import { checkNextQuestionEnabled } from '@state/selectors'
 import { connect } from 'react-redux'
-import { nextQuestionRequested } from '@state/actions'
+import { questionRequested } from '@state/actions'
 
-function mapStateToProps (state, { children }) {
+function mapStateToProps (state, { children, questionIndex }) {
   return {
-    children: children || String.fromCharCode(9654),
+    children: children || questionIndex,
     enabled: checkNextQuestionEnabled(state)
   }
 }
 
-function mapDispatchToProps (dispatch) {
+function mapDispatchToProps (dispatch, { questionIndex }) {
   return {
-    onClick: () => dispatch(nextQuestionRequested())
+    onClick: dispatch(questionRequested(questionIndex))
   }
 }
 

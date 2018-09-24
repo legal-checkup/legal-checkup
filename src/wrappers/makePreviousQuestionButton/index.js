@@ -2,9 +2,9 @@ import { checkPreviousQuestionEnabled } from '@state/selectors'
 import { connect } from 'react-redux'
 import { previousQuestionRequested } from '@state/actions'
 
-function mapStateToProps (state) {
+function mapStateToProps (state, { children }) {
   return {
-    children: String.fromCharCode(9664),
+    children: children || String.fromCharCode(9664),
     enabled: checkPreviousQuestionEnabled(state)
   }
 }

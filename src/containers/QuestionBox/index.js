@@ -1,9 +1,11 @@
 import StyledQuestionBox from '@components/styled/QuestionBox'
 import { connect } from 'react-redux'
-import { getActiveQuestionBody } from '@state/selectors'
+import { getActiveQuestion } from '@state/selectors'
 
 function mapStateToProps (state) {
-  return { children: getActiveQuestionBody(state) }
+  const { body: children } = getActiveQuestion(state)
+
+  return { children }
 }
 
 export default connect(mapStateToProps)(StyledQuestionBox)
