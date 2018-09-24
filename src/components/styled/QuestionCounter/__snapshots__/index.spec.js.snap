@@ -1,14 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:styled:QuestionBox renders the QuestionBox component with proper CSS properties 1`] = `
+exports[`components:styled:QuestionCounter renders the QuestionCounter component with proper CSS properties 1`] = `
 .c0 {
-  width: 260px;
-  height: 120px;
-  overflow: scroll;
+  width: 63px;
+  height: 17px;
   font-family: Helvetica;
-  font-size: 25px;
-  font-weight: normal;
-  font-style: normal;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: oblique;
   font-stretch: normal;
   line-height: normal;
   -webkit-letter-spacing: normal;
@@ -16,6 +15,7 @@ exports[`components:styled:QuestionBox renders the QuestionBox component with pr
   -ms-letter-spacing: normal;
   letter-spacing: normal;
   text-align: center;
+  color: #000000;
   margin: 0px auto;
 }
 
