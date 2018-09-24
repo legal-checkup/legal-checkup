@@ -2,9 +2,13 @@
 
 exports[`components:Header renders the Header and CSS properties properly 1`] = `
 <header>
-  <h1>
-    Legal Checkup
-  </h1>
+  <Connect(StyledLinkInternal)
+    to="/"
+  >
+    <h1>
+      Legal Checkup
+    </h1>
+  </Connect(StyledLinkInternal)>
   <Connect(StyledLinkInternal)
     to="/checkup"
   >
