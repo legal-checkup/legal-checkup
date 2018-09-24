@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:NoButton renders the NoButton and CSS properties properly 1`] = `
+<React.Fragment>
+  <NoButton>
+    No
+  </NoButton>
+</React.Fragment>
+`;

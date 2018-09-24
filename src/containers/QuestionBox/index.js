@@ -1,13 +1,9 @@
+import StyledQuestionBox from '@components/styled/QuestionBox'
 import { connect } from 'react-redux'
-
-import { StyledQuestionBox } from '../../components/styled'
-import { getQuestionBody } from '../../state'
-import { handleFalsy } from '../../utilities'
+import { getActiveQuestionBody } from '@state/selectors'
 
 function mapStateToProps (state) {
-  return handleFalsy(getQuestionBody(state), {
-    children: getQuestionBody(state)
-  })
+  return { children: getActiveQuestionBody(state) }
 }
 
 export default connect(mapStateToProps)(StyledQuestionBox)

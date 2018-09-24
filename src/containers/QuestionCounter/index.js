@@ -1,10 +1,13 @@
+import { getActiveQuestionIndex, getQuestionCount } from '@state/selectors'
+
+import QuestionCounter from '@components/QuestionCounter'
 import { connect } from 'react-redux'
 
-import { QuestionCounter } from '../../components'
-import { getQuestionCount } from '../../state'
-
 function mapStateToProps (state) {
-  return getQuestionCount(state)
+  return {
+    activeQuestionIndex: getActiveQuestionIndex(state),
+    questionCount: getQuestionCount(state)
+  }
 }
 
 export default connect(mapStateToProps)(QuestionCounter)

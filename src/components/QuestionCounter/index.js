@@ -1,16 +1,19 @@
 import React from 'react'
-import { StyledQuestionCounter } from '../styled'
-
-import { handleFalsy } from '../../utilities'
+import StyledQuestionCounter from '../styled/QuestionCounter'
+import handleFalsy from '@utilities/handleFalsy'
 
 export default function QuestionCounter ({
   questionCount = 0,
-  activeQuestion = null
+  activeQuestionIndex = null
 }) {
-  return handleFalsy(
-    activeQuestion && questionCount,
+  const counter = (
     <StyledQuestionCounter>
-      {`${activeQuestion} / ${questionCount}`}
+      {`${activeQuestionIndex + 1} / ${questionCount}`}
     </StyledQuestionCounter>
+  )
+
+  return handleFalsy(
+    activeQuestionIndex >= 0 && questionCount > activeQuestionIndex,
+    counter
   )
 }
