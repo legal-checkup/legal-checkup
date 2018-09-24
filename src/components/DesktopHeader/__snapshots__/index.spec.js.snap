@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:DesktopHeader renders the DesktopHeader component with the correct CSS 1`] = `
+<StyledDesktopHeader>
+  <StyledDesktopHeaderLogo>
+    LOGO
+  </StyledDesktopHeaderLogo>
+  <StyledDesktopHeaderLegal>
+    LEGAL CHECKUP
+  </StyledDesktopHeaderLegal>
+  <Connect(StyledLinkInternal)
+    to="/"
+  >
+    <StyledDesktopHeaderLink>
+      Home
+    </StyledDesktopHeaderLink>
+  </Connect(StyledLinkInternal)>
+  <Connect(StyledLinkInternal)
+    to="/checkup"
+  >
+    <StyledDesktopHeaderLink>
+      Checkup
+    </StyledDesktopHeaderLink>
+  </Connect(StyledLinkInternal)>
+  <StyledDesktopHeaderLink>
+    About
+  </StyledDesktopHeaderLink>
+  <StyledDesktopHeaderLink>
+    Help
+  </StyledDesktopHeaderLink>
+</StyledDesktopHeader>
+`;
