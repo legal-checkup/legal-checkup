@@ -1,5 +1,5 @@
 import AnswerBar from '@containers/AnswerBar'
-import Layout from '@components/Layout'
+import Layout from '@containers/Layout'
 import MobileProgressBar from '@containers/MobileProgressBar'
 import QuestionBox from '@containers/QuestionBox'
 import QuestionCounter from '@containers/QuestionCounter'

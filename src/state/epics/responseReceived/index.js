@@ -19,7 +19,7 @@ const responseReceivedEpic = (action$, state$) =>
       USER_RESPONDED_WITH_YES
     ),
     withLatestFrom(state$),
-    map(([_, state]) => {
+    map(([_ignore, state]) => {
       const activeQuestionIndex = getActiveQuestionIndex(state)
 
       return activeQuestionIndex < getQuestionCount(state) - 1
