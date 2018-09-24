@@ -3,8 +3,8 @@
 // Can't exceed the number of questions
 export default function isQuestionPermitted (
   index,
-  responseCount,
-  questionCount
+  questionCount,
+  responseCount
 ) {
   return index >= 0 && index < responseCount + 1 && index < questionCount
 }

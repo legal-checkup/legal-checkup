@@ -7,8 +7,8 @@ import isQuestionPermitted from '@utilities/isQuestionPermitted'
 export default function setActiveQuestionIndex (state, activeQuestionIndex) {
   return isQuestionPermitted(
     activeQuestionIndex,
-    getResponseCount(state),
-    getQuestionCount(state)
+    getQuestionCount(state),
+    getResponseCount(state)
   )
     ? {
       ...state,
