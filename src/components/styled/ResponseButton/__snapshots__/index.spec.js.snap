@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:NoButton renders the NoButton and CSS properties properly 1`] = `
+.c0 {
+  background-color: White;
+  border: solid 2px #b5b5b5;
+  border-right: solid 2px #b5b5b5;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  height: 78px;
+  margin-left: 0;
+  width: 88px;
+}
+
+.c0:after {
+  content: '';
+}
+
+<button
+  className="c0"
+/>
+`;

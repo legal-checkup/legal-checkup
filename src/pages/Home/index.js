@@ -1,13 +1,13 @@
+import Layout from '@containers/Layout'
 import React from 'react'
 import { ProgressBar } from '../../containers'
-
-import { Layout } from '../../components'
 
 export default function Home () {
   return (
     <Layout>
-      <p>This is the Home page</p>
-      <ProgressBar />
+      <p>
+        This is the <strong>Home</strong> page
+      </p>
     </Layout>
   )
 }
