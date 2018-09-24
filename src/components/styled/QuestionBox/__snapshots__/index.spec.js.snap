@@ -3,8 +3,6 @@
 exports[`components:styled:QuestionBox renders the QuestionBox component with proper CSS properties 1`] = `
 .c0 {
   width: 260px;
-  height: 120px;
-  overflow: scroll;
   font-family: Helvetica;
   font-size: 25px;
   font-weight: normal;
