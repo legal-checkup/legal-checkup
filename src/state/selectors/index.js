@@ -7,7 +7,10 @@ import isPreviousQuestionPermitted from '@utilities/isPreviousQuestionPermitted'
 // To get an array of indices ([0, 1, 2, 3]), it is enough to get the length
 // And then use the `times` function to count up to that count
 // Passing each number in turn to the `identity` function, which just returns it unchanged
-const getIndices = pipe(length, times(identity))
+const getIndices = pipe(
+  length,
+  times(identity)
+)
 
 // This simply gets the top-level key `activeQuestionIndex`
 export function getActiveQuestionIndex ({ activeQuestionIndex }) {
@@ -56,11 +59,6 @@ export const getActiveQuestion = createSelector(
   getActiveQuestionIndex,
   getQuestionList,
   (activeQuestionIndex, questions) => questions[activeQuestionIndex]
-)
-
-export const getActiveQuestionBody = createSelector(
-  getActiveQuestion,
-  ({ body } = {}) => body
 )
 
 // Use `getActiveQuestion` (above) to get the active question, then extract the topic name from it
