@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { CHECKUP_PATH, HOME_PATH } from '@state/constants'
-import LinkInternal from '@containers/LinkInternal'
+import LinkInternal from '../LinkInternal'
 
 import {
   StyledDesktopHeader,
@@ -17,9 +17,9 @@ export default function DesktopHeader () {
 
       <StyledDesktopHeaderLegal>LEGAL CHECKUP</StyledDesktopHeaderLegal>
 
-      <LinkInternal to={HOME_PATH}>
-        <StyledDesktopHeaderLink>Home</StyledDesktopHeaderLink>
-      </LinkInternal>
+      <StyledDesktopHeaderLink>
+        <LinkInternal to={HOME_PATH}>Home</LinkInternal>
+      </StyledDesktopHeaderLink>
 
       <LinkInternal to={CHECKUP_PATH}>
         <StyledDesktopHeaderLink>Checkup</StyledDesktopHeaderLink>

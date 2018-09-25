@@ -9,7 +9,7 @@ module.exports = function override (config, env) {
     '@components': path.resolve(__dirname, `${paths.appSrc}/components/`),
     '@containers': path.resolve(__dirname, `${paths.appSrc}/containers/`),
     '@pages': path.resolve(__dirname, `${paths.appSrc}/pages/`),
-    '@responsive': path.resolve(__dirname, `${paths.appSrc}/components/`),
+    '@responsive': path.resolve(__dirname, `${paths.appSrc}/responsive/`),
     '@state': path.resolve(__dirname, `${paths.appSrc}/state/`),
     '@utilities': path.resolve(__dirname, `${paths.appSrc}/utilities/`),
     '@wrappers': path.resolve(__dirname, `${paths.appSrc}/wrappers/`)

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
-const StyledDesktopHeader = styled.div`
-  min-width: 1440px;
+const StyledDesktopHeader = styled.header`
+  width: 100%;
   height: 100px;
   background-color: #202020;
   box-sizing: border-box;
@@ -36,7 +36,7 @@ const StyledDesktopHeaderLegal = styled.div`
 `
 StyledDesktopHeaderLegal.displayName = 'StyledDesktopHeaderLegal'
 
-const StyledDesktopHeaderLink = styled.a`
+const StyledDesktopHeaderLink = styled.div`
   opacity: 0.53;
   font-family: Avenir, sans-serif;
   font-size: 20px;
