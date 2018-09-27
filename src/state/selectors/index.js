@@ -4,6 +4,10 @@ import { createSelector } from 'reselect'
 import isNextQuestionPermitted from '@utilities/isNextQuestionPermitted'
 import isPreviousQuestionPermitted from '@utilities/isPreviousQuestionPermitted'
 
+export function getQuestions ({ questions }) {
+  return questions
+}
+
 // To get an array of indices ([0, 1, 2, 3]), it is enough to get the length
 // And then use the `times` function to count up to that count
 // Passing each number in turn to the `identity` function, which just returns it unchanged

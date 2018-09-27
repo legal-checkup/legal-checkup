@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 
-import { ProgressBar } from '../../components'
+import ProgressBar from '../../components/ProgressBar'
 import {
   getActiveQuestion,
   getQuestions,
@@ -26,4 +26,7 @@ function mapDispatchToProps (dispatch) {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProgressBar)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ProgressBar)

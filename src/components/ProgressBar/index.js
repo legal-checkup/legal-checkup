@@ -13,8 +13,15 @@ const compare = (a, b) => a - b
 
 const numericalSort = sort(compare)
 
-const getQuestionNumbers = pipe(keysIn, map(parseInt), numericalSort)
-const getKeyCount = pipe(keysIn, length)
+const getQuestionNumbers = pipe(
+  keysIn,
+  map(parseInt),
+  numericalSort
+)
+const getKeyCount = pipe(
+  keysIn,
+  length
+)
 
 export default function ProgressBar ({
   activeQuestion,
@@ -29,7 +36,7 @@ export default function ProgressBar ({
   const checkPrevious = activeQuestion > 1
   const checkNext =
     activeQuestion >= getNextQuestionNumber(questionNumbers, responseCount)
-
+  console.log('new', getQuestionNumber())
   return (
     <StyledProgressBar>
       {checkPrevious ? (

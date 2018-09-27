@@ -1,13 +1,13 @@
 import { length, keysIn } from 'ramda'
 
 import {
-  INITIAL_STATE,
+  initialState,
   QUESTION_SELECTED,
   PREVIOUS_QUESTION_REQUESTED,
   NEXT_QUESTION_REQUESTED
 } from '..'
 
-function rootReducer (state = INITIAL_STATE, { payload = {}, type }) {
+function rootReducer (state = initialState, { payload = {}, type }) {
   const { activeQuestion } = payload
   const total = length(keysIn(state.questions))
 
