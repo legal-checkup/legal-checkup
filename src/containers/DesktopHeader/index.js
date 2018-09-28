@@ -1,14 +1,15 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 import { CHECKUP_PATH, HOME_PATH } from '@state/constants'
-import LinkInternal from '../LinkInternal'
 
 import {
   StyledDesktopHeader,
   StyledDesktopHeaderLogo,
-  StyledDesktopHeaderLegal,
-  StyledDesktopHeaderLink
+  StyledDesktopHeaderLegal
 } from './style'
+
+import HeaderLink from '@containers/DesktopHeaderLink'
 
 export default function DesktopHeader () {
   return (
@@ -17,17 +18,19 @@ export default function DesktopHeader () {
 
       <StyledDesktopHeaderLegal>LEGAL CHECKUP</StyledDesktopHeaderLegal>
 
-      <StyledDesktopHeaderLink>
+      {/* <StyledDesktopHeaderLink>
         <LinkInternal to={HOME_PATH}>Home</LinkInternal>
-      </StyledDesktopHeaderLink>
+      </StyledDesktopHeaderLink> */}
 
-      <LinkInternal to={CHECKUP_PATH}>
+      <HeaderLink to={HOME_PATH}>Home</HeaderLink>
+
+      {/* <LinkInternal to={CHECKUP_PATH}>
         <StyledDesktopHeaderLink>Checkup</StyledDesktopHeaderLink>
-      </LinkInternal>
+      </LinkInternal> */}
 
-      <StyledDesktopHeaderLink>About</StyledDesktopHeaderLink>
+      {/* <StyledDesktopHeaderLink>About</StyledDesktopHeaderLink>
 
-      <StyledDesktopHeaderLink>Help</StyledDesktopHeaderLink>
+      <StyledDesktopHeaderLink>Help</StyledDesktopHeaderLink> */}
     </StyledDesktopHeader>
   )
 }
