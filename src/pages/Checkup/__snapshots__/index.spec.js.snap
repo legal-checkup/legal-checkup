@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:App renders the App with a blank game board and nine squares 1`] = `
+<Fragment>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <title>
+      Legal Checkup
+    </title>
+  </HelmetWrapper>
+  <Header />
+  <StyledLayout>
+    <MobileProgressBar />
+    <Connect(StyledQuestionCounter) />
+    <Connect(StyledQuestionBox) />
+    <AnswerBar />
+  </StyledLayout>
+  <Footer />
+</Fragment>
+`;

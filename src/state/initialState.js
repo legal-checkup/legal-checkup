@@ -1,6 +1,6 @@
 // Initial state (temporary)
 const initialState = {
-  activeQuestionIndex: 0,
+  activeQuestionIndex: 4,
   topics: [
     {
       id: '4DDB61C7677B4BA2813D2CAE98EF51D5',
