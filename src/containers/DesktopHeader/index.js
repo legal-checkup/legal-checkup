@@ -18,21 +18,10 @@ export default function DesktopHeader () {
 
       <StyledDesktopHeaderLegal>LEGAL CHECKUP</StyledDesktopHeaderLegal>
 
-      {/* <StyledDesktopHeaderLink>
-        <LinkInternal to={HOME_PATH}>Home</LinkInternal>
-      </StyledDesktopHeaderLink> */}
-
       <HeaderLink to={HOME_PATH}>Home</HeaderLink>
-
-      {/* <LinkInternal to={CHECKUP_PATH}>
-        <StyledDesktopHeaderLink>Checkup</StyledDesktopHeaderLink>
-      </LinkInternal> */}
-
       <HeaderLink to={CHECKUP_PATH}>Checkup</HeaderLink>
-
-      {/* <StyledDesktopHeaderLink>About</StyledDesktopHeaderLink>
-
-      <StyledDesktopHeaderLink>Help</StyledDesktopHeaderLink> */}
+      <HeaderLink>About</HeaderLink>
+      <HeaderLink>Help</HeaderLink>
     </StyledDesktopHeader>
   )
 }

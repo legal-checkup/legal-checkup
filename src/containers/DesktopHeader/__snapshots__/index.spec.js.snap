@@ -8,25 +8,21 @@ exports[`components:DesktopHeader renders the DesktopHeader component with the c
   <StyledDesktopHeaderLegal>
     LEGAL CHECKUP
   </StyledDesktopHeaderLegal>
-  <Connect(StyledLinkInternal)
+  <Connect(Component)
     to="/"
   >
-    <StyledDesktopHeaderLink>
-      Home
-    </StyledDesktopHeaderLink>
-  </Connect(StyledLinkInternal)>
-  <Connect(StyledLinkInternal)
+    Home
+  </Connect(Component)>
+  <Connect(Component)
     to="/checkup"
   >
-    <StyledDesktopHeaderLink>
-      Checkup
-    </StyledDesktopHeaderLink>
-  </Connect(StyledLinkInternal)>
-  <StyledDesktopHeaderLink>
+    Checkup
+  </Connect(Component)>
+  <Connect(Component)>
     About
-  </StyledDesktopHeaderLink>
-  <StyledDesktopHeaderLink>
+  </Connect(Component)>
+  <Connect(Component)>
     Help
-  </StyledDesktopHeaderLink>
+  </Connect(Component)>
 </StyledDesktopHeader>
 `;

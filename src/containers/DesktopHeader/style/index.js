@@ -45,6 +45,7 @@ const StyledDesktopHeaderLink = styled.div`
   margin-right: 120px;
   cursor: pointer;
   text-decoration: none;
+  border-bottom: 2px solid transparent;
 
   ${props =>
     props.active &&
