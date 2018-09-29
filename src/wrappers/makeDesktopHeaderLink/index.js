@@ -1,12 +1,12 @@
 import React from 'react'
 import LinkInternal from '@containers/LinkInternal'
 
-function makeActiveDesktopHeaderLink (Component) {
+function makeDesktopHeaderLink (Component) {
   return ({ to, pathname, children }) => (
-    <Component {...(to === pathname ? { active: true } : {})}>
+    <Component {...(to === pathname ? { active: true } : {})} to={to}>
       <LinkInternal to={to}>{children}</LinkInternal>
     </Component>
   )
 }
 
-export default makeActiveDesktopHeaderLink
+export default makeDesktopHeaderLink

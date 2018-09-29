@@ -28,6 +28,8 @@ export default function DesktopHeader () {
         <StyledDesktopHeaderLink>Checkup</StyledDesktopHeaderLink>
       </LinkInternal> */}
 
+      <HeaderLink to={CHECKUP_PATH}>Checkup</HeaderLink>
+
       {/* <StyledDesktopHeaderLink>About</StyledDesktopHeaderLink>
 
       <StyledDesktopHeaderLink>Help</StyledDesktopHeaderLink> */}

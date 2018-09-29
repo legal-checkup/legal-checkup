@@ -2,19 +2,19 @@ import { connect } from 'react-redux'
 
 import { StyledDesktopHeaderLink } from '@containers/DesktopHeader/style'
 import { getRouterLocation } from '@state/selectors'
-import makeActiveDesktopHeaderLink from '@wrappers/makeActiveDesktopHeaderLink'
+import makeDesktopHeaderLink from '@wrappers/makeDesktopHeaderLink'
 
 function mapStateToProps (state) {
   const { pathname } = getRouterLocation(state)
   console.log(pathname)
 
   return {
-    pathname: pathname
+    pathname
   }
 }
 
-const connectedHeaderLink = connect(mapStateToProps)(StyledDesktopHeaderLink)
+const HeaderLink = makeDesktopHeaderLink(StyledDesktopHeaderLink)
 
-const HeaderLinkWithActive = makeActiveDesktopHeaderLink(connectedHeaderLink)
+const ConnectedHeaderLink = connect(mapStateToProps)(HeaderLink)
 
-export default HeaderLinkWithActive
+export default ConnectedHeaderLink
