@@ -1,6 +1,10 @@
-import React from 'react'
-import { getQuestionIndices } from '@state/selectors'
-import { map } from 'ramda'
+import React, { Fragment } from 'react'
+import {
+  getQuestionIndices,
+  getActiveQuestionIndex,
+  getResponseCount
+} from '@state/selectors'
+import { mapIndexed } from 'ramda-adjunct'
 import StyledDesktopQuestionButton from '@components/styled/DesktopQuestionButton'
 import { connect } from 'react-redux'
 
@@ -33,20 +37,35 @@ import makeQuestionButton from '@wrappers/makeQuestionButton'
 //   )
 // }
 
-function ProgressBarQuestions ({ questions }) {
-  const addOne = a => a + 1
+function ProgressBarQuestions ({
+  questionIndices,
+  activeQuestionIndex,
+  responseCount
+}) {
+  return (
+    <Fragment>
+      {mapIndexed((questionIndex, idx) => {
+        const WrappedDesktopButton = makeQuestionButton(
+          StyledDesktopQuestionButton
+        )
 
-  const callMeSomethingMeaningful = question => {
-    const WrappedDesktopButton = makeQuestionButton(StyledDesktopQuestionButton)
-    return <WrappedDesktopButton>{addOne(question)}</WrappedDesktopButton>
-  }
-  return <ul>{map(callMeSomethingMeaningful, questions)}</ul>
+        return (
+          <WrappedDesktopButton key={idx}>
+            {questionIndex + 1}
+          </WrappedDesktopButton>
+        )
+      }, questionIndices)}
+    </Fragment>
+  )
 }
 
 function mapStateToProps (state) {
   return {
-    questions: getQuestionIndices(state)
+    questionIndices: getQuestionIndices(state),
+    activeQuestionIndex: getActiveQuestionIndex(state),
+    responseCount: getResponseCount(state)
   }
 }
 
 export default connect(mapStateToProps)(ProgressBarQuestions)
+// RA.mapIndexed((val, idx, list) => idx + '-' + val, ['f', 'o', 'o', 'b', 'a', 'r'])

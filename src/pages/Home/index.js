@@ -7,8 +7,8 @@ export default function Home () {
     <Layout>
       <p>
         This is the <strong>Home</strong> page
-        <DesktopProgressBar />
       </p>
+      <DesktopProgressBar />
     </Layout>
   )
 }

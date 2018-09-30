@@ -21,9 +21,7 @@ export default function DesktopProgressBar () {
   return (
     <StyledDesktopProgressBar>
       <PreviousButton />
-      <QuestionButton>
-        <ProgressBarQuestions />
-      </QuestionButton>
+      <ProgressBarQuestions />
 
       <NextButton />
     </StyledDesktopProgressBar>
