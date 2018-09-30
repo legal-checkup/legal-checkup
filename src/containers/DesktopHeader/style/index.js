@@ -50,6 +50,7 @@ const StyledDesktopHeaderLink = styled.div`
   ${props =>
     props.active &&
     css`
+      cursor: default;
       opacity: 1;
       border-bottom: 2px solid #fff;
     `};
