@@ -321,5 +321,12 @@ export const state = {
         }
       ]
     }
-  ]
+  ],
+  router: {
+    location: {
+      hash: '',
+      key: 'i9oi6x',
+      pathname: '/checkup'
+    }
+  }
 }
