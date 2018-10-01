@@ -11,6 +11,7 @@ import {
   getResponseCount,
   getResponseList,
   getResponses,
+  getRouterLocation,
   getTopics
 } from '.'
 import { head, identity, last, length, times } from 'ramda'
@@ -147,6 +148,12 @@ describe('state:selectors', () => {
       expect(name).toBe('Money Troubles')
       expect(questions).toHaveLength(3)
       expect(head(questions).id).toBe('759CDC30C25B489A9EB71B7E859F2DD7')
+    })
+  })
+
+  describe('getPathname', () => {
+    it('should return the router location pathname', () => {
+      expect(getRouterLocation(state)).toBe(state.router.location.pathname)
     })
   })
 
