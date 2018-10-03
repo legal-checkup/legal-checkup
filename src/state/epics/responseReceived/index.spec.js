@@ -14,8 +14,6 @@ import { getActiveQuestionIndex, getQuestionCount } from '@state/selectors'
 
 import responseReceivedEpic from '.'
 
-// if we switch to using the latest version of jest it will automatically mock all exported functions from a module...
-// this means we wouldn't need to include the factory function in the jest.mock() call
 jest.mock('@state/actions', () => ({
   checkupComplete: jest
     .fn()
