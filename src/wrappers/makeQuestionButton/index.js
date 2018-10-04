@@ -1,11 +1,11 @@
-import { checkNextQuestionEnabled } from '@state/selectors'
+import { checkCurrentQuestionEnabled } from '@state/selectors'
 import { connect } from 'react-redux'
 import { questionRequested } from '@state/actions'
 
 function mapStateToProps (state, { children, questionIndex }) {
   return {
     children: children || questionIndex,
-    enabled: checkNextQuestionEnabled(state)
+    enabled: checkCurrentQuestionEnabled(state, questionIndex)
   }
 }
 

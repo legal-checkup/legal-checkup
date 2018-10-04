@@ -1,6 +1,7 @@
 // Initial state (temporary)
+import { NO, NOT_SURE, YES } from './constants'
 const initialState = {
-  activeQuestionIndex: 4,
+  activeQuestionIndex: 2,
   topics: [
     {
       id: '4DDB61C7677B4BA2813D2CAE98EF51D5',
@@ -283,7 +284,44 @@ const initialState = {
       ]
     }
   ],
-  responses: []
+  responses: [
+    {
+      id: '4DDB61C7677B4BA2813D2CAE98EF51D5',
+      name: 'Money Troubles',
+      questions: [
+        {
+          body: 'Is anyone chasing you for money?',
+          help: 'The fact that someone is chasing you for money',
+          id: '759CDC30C25B489A9EB71B7E859F2DD7',
+          resource: 'credit and debt',
+          url:
+            'http://communitylaw.org.nz/community-law-manual/chapter-13-credit-and-debt/what-this-chapter-covers-chapter-13/',
+          answer: YES
+        },
+        {
+          body:
+            'Do you have payments due or unpaid accounts? E.g. phone / Work and Income / Cash converters / power bills / car loan / gyms',
+          help: 'Your unpaid accounts or due payments',
+          id: '8A9B3C23BA41440187B0B9F9EB0D8400',
+          resource: 'credit and debt',
+          url:
+            'http://communitylaw.org.nz/community-law-manual/chapter-13-credit-and-debt/what-this-chapter-covers-chapter-13/',
+          answer: NO
+        },
+        {
+          body:
+            "Have you recently had any problems with a product or item you've bought?",
+          help:
+            'The problem you had with a product or item you brought recently',
+          id: 'A7D51C38F34A4EA1919C74013E703C39',
+          resource: 'consumer protection',
+          url:
+            'http://communitylaw.org.nz/community-law-manual/chapter-12-consumer-protection/what-this-chapter-covers-chapter-12/',
+          answer: NOT_SURE
+        }
+      ]
+    }
+  ]
 }
 
 export default initialState

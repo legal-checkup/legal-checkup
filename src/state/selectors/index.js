@@ -2,10 +2,12 @@ import { identity, length, map, pipe, reduce, times } from 'ramda'
 
 import { createSelector } from 'reselect'
 import isNextQuestionPermitted from '@utilities/isNextQuestionPermitted'
+import isQuestionPermitted from '@utilities/isNextQuestionPermitted'
+
 import isPreviousQuestionPermitted from '@utilities/isPreviousQuestionPermitted'
 
-export function getQuestions ({ questions }) {
-  return questions
+export function getQuestionIndex ({ questionIndex }) {
+  return questionIndex
 }
 
 // To get an array of indices ([0, 1, 2, 3]), it is enough to get the length
@@ -100,4 +102,11 @@ export const checkNextQuestionEnabled = createSelector(
 export const checkPreviousQuestionEnabled = createSelector(
   getActiveQuestionIndex,
   isPreviousQuestionPermitted
+)
+
+export const checkCurrentQuestionEnabled = createSelector(
+  getActiveQuestionIndex,
+  getQuestionCount,
+  getResponseCount,
+  isQuestionPermitted
 )

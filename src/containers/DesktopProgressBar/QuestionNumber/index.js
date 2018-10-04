@@ -21,9 +21,6 @@ function getQuestionNumber (
   responseCount,
   handleClick
 ) {
-  const clickHandler =
-    Boolean(handleClick) && handleClick.bind(this, questionNumber)
-  console.log('new', questionNumber)
   if (questionNumber === activeQuestion) {
     return (
       <StyledActiveQuestionNumber key={questionNumber} onClick={clickHandler}>
