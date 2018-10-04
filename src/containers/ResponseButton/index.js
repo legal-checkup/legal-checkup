@@ -5,7 +5,7 @@ import {
   userRespondedWithYes
 } from '@state/actions'
 
-import ResponseButton from '@components/ResponseButton'
+import StyledResponseButton from '@components/styled/ResponseButton'
 import { connect } from 'react-redux'
 
 function getAction (type) {
@@ -21,8 +21,11 @@ function getAction (type) {
 
 function mapDispatchToProps (dispatch, { type }) {
   return {
-    handleClick: () => dispatch(getAction(type))
+    onClick: () => dispatch(getAction(type))
   }
 }
 
-export default connect(null, mapDispatchToProps)(ResponseButton)
+export default connect(
+  null,
+  mapDispatchToProps
+)(StyledResponseButton)
