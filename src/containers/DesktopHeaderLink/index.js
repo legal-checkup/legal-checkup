@@ -5,7 +5,6 @@ import { getPathname } from '@state/selectors'
 import makeDesktopHeaderLink from '@wrappers/makeDesktopHeaderLink'
 
 function mapStateToProps (state) {
-  console.log(state)
   return {
     pathname: getPathname(state)
   }
@@ -13,5 +12,5 @@ function mapStateToProps (state) {
 
 const HeaderLink = makeDesktopHeaderLink(StyledDesktopHeaderLink)
 
-export { getPathname, mapStateToProps }
+export { mapStateToProps }
 export default connect(mapStateToProps)(HeaderLink)
