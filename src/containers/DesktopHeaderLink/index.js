@@ -13,5 +13,5 @@ function mapStateToProps (state) {
 
 const HeaderLink = makeDesktopHeaderLink(StyledDesktopHeaderLink)
 
-export { getPathname, mapStateToProps }
+export { mapStateToProps }
 export default connect(mapStateToProps)(HeaderLink)
