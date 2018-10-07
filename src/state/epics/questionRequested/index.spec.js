@@ -134,7 +134,6 @@ describe('epics:responseReceivedEpic', () => {
         b: { type: QUESTION_REQUESTED }
       })
       const activeQuestionIndex = 0
-      const questionCount = 28
       const state$ = of({ ...state, activeQuestionIndex })
       const expectedSuccessResponse = {
         type: REQUESTED_QUESTION_ACTIVATED,

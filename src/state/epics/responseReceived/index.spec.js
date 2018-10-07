@@ -25,14 +25,15 @@ jest.mock('@state/selectors', () => ({
   getQuestionCount: jest.fn()
 }))
 
-const testScheduler = new TestScheduler((actual, expected) => {
-  expect(actual).toEqual(expected)
-  jest.resetAllMocks()
-})
+const makeTestScheduler = () =>
+  new TestScheduler((actual, expected) => {
+    expect(actual).toEqual(expected)
+    jest.resetAllMocks()
+  })
 
 describe('epics:responseReceivedEpic', () => {
   it(`should generate a ${NEXT_QUESTION_ACTIVATED} action when the active question is less than question count`, () => {
-    testScheduler.run(({ hot, cold, expectObservable }) => {
+    makeTestScheduler().run(({ hot, cold, expectObservable }) => {
       const action$ = hot('abc', {
         a: { type: USER_RESPONDED_WITH_YES },
         b: { type: USER_RESPONDED_WITH_NO },
@@ -63,7 +64,7 @@ describe('epics:responseReceivedEpic', () => {
   })
 
   it(`should generate a ${CHECKUP_COMPLETE} action when the active question is equal to the question count`, () => {
-    testScheduler.run(({ hot, cold, expectObservable }) => {
+    makeTestScheduler().run(({ hot, cold, expectObservable }) => {
       const action$ = hot('a', { a: { type: USER_RESPONDED_WITH_YES } })
       const activeQuestionIndex = 27
       const questionCount = 28
@@ -78,20 +79,20 @@ describe('epics:responseReceivedEpic', () => {
 
       const output$ = responseReceivedEpic(action$, state$)
 
-      expectObservable(output$).toBe('--a', {
+      expectObservable(output$).toBe('a', {
         a: expectedResponse
       })
     })
   })
 
   it(`shouldn't generate an action when action type not ${USER_RESPONDED_WITH_YES}, ${USER_RESPONDED_WITH_NO} or ${USER_RESPONDED_WITH_NOT_SURE}`, () => {
-    testScheduler.run(({ hot, cold, expectObservable }) => {
+    makeTestScheduler().run(({ hot, cold, expectObservable }) => {
       const action$ = hot('a', { a: { type: 'NOT_A_VALID_ACTION' } })
       const state$ = of(state)
 
       const output$ = responseReceivedEpic(action$, state$)
 
-      expectObservable(output$).toBe('----')
+      expectObservable(output$).toBe('-')
     })
   })
 })
