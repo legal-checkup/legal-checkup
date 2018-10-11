@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:Header renders the Header and CSS properties properly 1`] = `
+<header>
+  <Connect(StyledLinkInternal)
+    to="/"
+  >
+    <h1>
+      Legal Checkup
+    </h1>
+  </Connect(StyledLinkInternal)>
+  <Connect(StyledLinkInternal)
+    to="/checkup"
+  >
+    Checkup
+  </Connect(StyledLinkInternal)>
+</header>
+`;

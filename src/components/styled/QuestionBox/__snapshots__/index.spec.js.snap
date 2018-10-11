@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:QuestionBox renders the Layout and CSS properties properly 1`] = `
+.c0 {
+  width: 260px;
+  height: 120px;
+  font-family: Helvetica;
+  font-size: 25px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-align: center;
+}
+
+<div
+  className="c0"
+>
+  StyledQuestionBox
+</div>
+`;

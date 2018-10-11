@@ -1,5 +1,8 @@
 # Legal Checkup client application
 
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/c6327c11255634e325e1062c382df83f809dbcf36c16e580efc98e9fea75996d.svg?columns=all)](https://waffle.io/PaperHat/legal-checkup-client)
+
 ## Installation
 
 You must have [git](https://www.linode.com/docs/development/version-control/how-to-install-git-on-linux-mac-and-windows/), [node](https://nodejs.org/en/download/) ([Mac](http://osxdaily.com/2018/06/29/how-install-nodejs-npm-mac/)), and [yarn](https://yarnpkg.com/lang/en/docs/install/) installed globally to run this application.
