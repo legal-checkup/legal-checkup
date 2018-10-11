@@ -12,10 +12,10 @@ const FooterLink = styled.a`
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
+  text-decoration: none;
   color: #ffffff;
-
   &:hover {
-    color: red;
+    text-decoration: underline;
   }
 `
 FooterLink.displayName = 'StyledFooterLink'

@@ -11,7 +11,6 @@ export default function Footer () {
         <StyledFooterLink href='/privacy-policy'>
           Privacy Policy
         </StyledFooterLink>
-
         <StyledFooterLink href='/terms-of-use'>Terms of Use</StyledFooterLink>
       </StyledFooter>
     </div>
