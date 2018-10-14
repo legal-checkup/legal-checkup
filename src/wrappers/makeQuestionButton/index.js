@@ -1,17 +1,20 @@
-import { checkCurrentQuestionEnabled } from '@state/selectors'
+import { makeCheckQuestionEnabled } from '@state/selectors'
 import { connect } from 'react-redux'
 import { questionRequested } from '@state/actions'
 
-function mapStateToProps (state, { children, questionIndex }) {
-  return {
-    children: children || questionIndex,
-    enabled: checkCurrentQuestionEnabled(state, questionIndex)
+function makeMapStateToProps () {
+  const checkQuestionEnabled = makeCheckQuestionEnabled()
+  return function mapStateToProps (state, { children, questionIndex }) {
+    return {
+      children: children || questionIndex,
+      enabled: checkQuestionEnabled(state, questionIndex)
+    }
   }
 }
 
 function mapDispatchToProps (dispatch, { questionIndex }) {
   return {
-    onClick: dispatch(questionRequested(questionIndex))
+    onClick: () => dispatch(questionRequested(questionIndex))
   }
 }
 
@@ -25,7 +28,7 @@ function mergeProps (stateProps, dispatchProps) {
 }
 
 export default connect(
-  mapStateToProps,
+  makeMapStateToProps,
   mapDispatchToProps,
   mergeProps
 )

@@ -1,13 +1,15 @@
 import styled from 'styled-components'
 
-const ActiveQuestionNumber = styled.span`
-  background-color: #ccc;
-  color: red;
+const ActiveQuestionNumber = styled.button`
+  background-color: #ededed;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  color: black;
   cursor: pointer;
-  display: inline-block;
-  padding: 5px;
-  margin: 1px;
-  border-radius: 2px;
+  height: 42px;
+  outline: none;
+  width: 48px;
+  font-weight: bold;
 `
 ActiveQuestionNumber.displayName = 'StyledActiveQuestionNumber'
 

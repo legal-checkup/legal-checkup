@@ -29,7 +29,8 @@ import TermsOfUse from '@pages/TermsOfUse'
 import baseStyles from './styles'
 import { createBrowserHistory } from 'history'
 import { createEpicMiddleware } from 'redux-observable'
-import initialState from '@state/initialState'
+// import initialState from '@state/initialState'
+import { state } from '@state/fixtures'
 import registerServiceWorker from './registerServiceWorker'
 import { render } from 'react-dom'
 import rootEpic from '@state/epics'
@@ -53,7 +54,8 @@ const middleware = devTools
   : compose(appliedMiddleware)
 const store = createStore(
   connectRouter(history)(rootReducer),
-  initialState,
+  // initialState,
+  state,
   middleware
 )
 

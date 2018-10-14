@@ -1,7 +1,7 @@
 // Initial state (temporary)
 import { NO, NOT_SURE, YES } from './constants'
 const initialState = {
-  activeQuestionIndex: 2,
+  activeQuestionIndex: 12,
   topics: [
     {
       id: '4DDB61C7677B4BA2813D2CAE98EF51D5',

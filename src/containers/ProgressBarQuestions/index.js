@@ -1,86 +1,44 @@
 import React, { Fragment } from 'react'
-import {
-  getQuestionIndices,
-  getActiveQuestionIndex,
-  getResponseCount,
-  getQuestionIndex
-} from '@state/selectors'
-import { length } from 'ramda'
+import { getQuestionIndices, getActiveQuestionIndex } from '@state/selectors'
+
 import { mapIndexed } from 'ramda-adjunct'
 import StyledDesktopQuestionButton from '@components/styled/DesktopQuestionButton'
+import StyledActiveQuestion from '@components/styled/ActiveQuestionNumber'
 import { connect } from 'react-redux'
 
 import makeQuestionButton from '@wrappers/makeQuestionButton'
 
-function getNextQuestionNumber (questionIndices, responseCount) {
-  const questionCount = length(questionIndices)
-
-  return responseCount < questionCount ? responseCount + 1 : responseCount
-}
-
-function ProgressBarQuestions ({
-  questionIndices,
-  activeQuestionIndex,
-  responseCount
-}) {
+function ProgressBarQuestions ({ questionIndices, activeQuestionIndex }) {
   return (
     <Fragment>
-      {/* {mapIndexed((questionIndex, idx) => {
-
-        if (questionIndex === activeQuestionIndex) {
-          return (
-            <WrappedDesktopButton key={idx} onClick={clickHandler} enabled>
-              {questionIndex + 1}
-            </WrappedDesktopButton>
-          )
-        }
-
-        if (questionIndex <= responseCount) {
-          return (
-            <WrappedDesktopButton key={idx} enabled>
-              {questionIndex + 1}
-            </WrappedDesktopButton>
-          )
-        }
-
-        if (
-          questionIndex ===
-          getNextQuestionNumber(questionIndices, responseCount)
-        ) {
-          return (
-            <WrappedDesktopButton key={idx} enabled>
-              {questionIndex + 1}
-            </WrappedDesktopButton>
-          )
-        }
-
-        return (
-          <WrappedDesktopButton key={idx} enabled>
-            {questionIndex + 1}
-          </WrappedDesktopButton>
-        )
-      }, questionIndices)} */}
       {mapIndexed((questionIndex, idx) => {
         const WrappedDesktopButton = makeQuestionButton(
           StyledDesktopQuestionButton
         )
+        const ActiveQuestion = makeQuestionButton(StyledActiveQuestion)
 
-        return (
-          <WrappedDesktopButton key={idx}>
-            {questionIndex + 1}
-          </WrappedDesktopButton>
-        )
+        if (activeQuestionIndex === questionIndex) {
+          return (
+            <ActiveQuestion key={idx} questionIndex={idx}>
+              {questionIndex + 1}
+            </ActiveQuestion>
+          )
+        } else {
+          return (
+            <WrappedDesktopButton key={idx} questionIndex={idx}>
+              {questionIndex + 1}
+            </WrappedDesktopButton>
+          )
+        }
       }, questionIndices)}
     </Fragment>
   )
 }
 
-function mapStateToProps (state) {
+function mapStateToProps (state, { topic }) {
   return {
     questionIndices: getQuestionIndices(state),
-    activeQuestionIndex: getActiveQuestionIndex(state),
-    responseCount: getResponseCount(state),
-    questionIndex: getQuestionIndex(state)
+    activeQuestionIndex: getActiveQuestionIndex(state)
   }
 }
 
