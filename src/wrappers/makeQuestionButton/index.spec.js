@@ -18,6 +18,7 @@ describe('wrappers:makeQuestionButton', () => {
     )
     expect(wrapper.props()).toEqual(
       expect.objectContaining({
+        children: questionIndex,
         enabled: true,
         onClick: {
           type: QUESTION_REQUESTED,
