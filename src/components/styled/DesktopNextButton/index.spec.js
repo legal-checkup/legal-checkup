@@ -9,4 +9,9 @@ describe('components:styled:DesktopNextButton', () => {
       toJson(shallow(<DesktopNextButton>Click Me!</DesktopNextButton>))
     ).toMatchSnapshot()
   })
+  it('renders the DesktopNextButton and CSS properties properly when enabled', () => {
+    expect(
+      toJson(shallow(<DesktopNextButton enabled>Click Me!</DesktopNextButton>))
+    ).toMatchSnapshot()
+  })
 })
