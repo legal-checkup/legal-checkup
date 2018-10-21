@@ -1,22 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:styled:MobileFooterLink renders the MobileFooterLink and CSS properties properly 1`] = `
+exports[`components:styled:DesktopFooterLink renders the DesktopFooterLink and CSS properties properly 1`] = `
 .c0 {
-  padding-top: 5px;
+  height: 25px;
+  margin-left: 140px;
   opacity: 0.53;
   font-family: Avenir;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
+  text-align: center;
+  vertical-align: center;
   -webkit-text-decoration: none;
   text-decoration: none;
   color: #ffffff;
+  cursor: pointer;
 }
 
 <a
