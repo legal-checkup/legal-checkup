@@ -1,5 +1,5 @@
 import React from 'react'
-import LinkInternal from '@containers/LinkInternal'
+import FooterLink from '@containers/FooterLink'
 
 function makeDesktopHeaderLink (Component) {
   return function withActive ({ to, pathname, children, ...props }) {
@@ -12,11 +12,11 @@ function makeDesktopHeaderLink (Component) {
     } else {
       return (
         <Component {...props}>
-          <LinkInternal to={to}>{children}</LinkInternal>
+          <FooterLink to={to}>{children}</FooterLink>
         </Component>
       )
     }
   }
 }
 
-export default makeDesktopHeaderLink
+export default makeDesktopFooterLink
