@@ -1,8 +1,9 @@
-import { identity, length, map, pipe, reduce, times } from 'ramda'
+import { identity, length, map, pipe, reduce, times, filter } from 'ramda'
 
 import { createSelector } from 'reselect'
 import isNextQuestionPermitted from '@utilities/isNextQuestionPermitted'
 import isPreviousQuestionPermitted from '@utilities/isPreviousQuestionPermitted'
+import { YES } from '@state/constants'
 
 // To get an array of indices ([0, 1, 2, 3]), it is enough to get the length
 // And then use the `times` function to count up to that count
@@ -79,6 +80,13 @@ export const getResponseList = createSelector(
     return [...acc, ...topicQuestions]
   }, [])
 )
+
+export const getYesAnswers = createSelector(
+  getResponseList,
+  filter(({ answer }) => answer === YES)
+)
+
+export const getYesAnswerCount = createSelector(getYesAnswers, length)
 
 // Use `getResponseList` then pass it to Ramda's `length` function to get the response count
 export const getResponseCount = createSelector(getResponseList, length)
