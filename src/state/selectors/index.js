@@ -1,12 +1,11 @@
-import { identity, length, map, pipe, reduce, times, uniq, filter } from 'ramda'
+import { identity, length, map, pipe, reduce, times, filter, uniq } from 'ramda'
+import { mapIndexed } from 'ramda-adjunct'
 
 import { createSelector } from 'reselect'
 import isNextQuestionPermitted from '@utilities/isNextQuestionPermitted'
 import isQuestionPermitted from '@utilities/isNextQuestionPermitted'
 
 import isPreviousQuestionPermitted from '@utilities/isPreviousQuestionPermitted'
-
-import { state } from '../fixtures'
 
 // To get an array of indices ([0, 1, 2, 3]), it is enough to get the length
 // And then use the `times` function to count up to that count
@@ -48,9 +47,6 @@ export const getQuestionList = createSelector(
     return [...acc, ...topicQuestions]
   }, [])
 )
-
-const get = ({ name }) => name
-export const getTopicList = createSelector(getTopics, map(get))
 
 // Nice way to use Ramda - we use the `getQuestionList` selector to get the list of questions (above)
 // then pass that to Ramda's `length` function to get the question count
@@ -107,19 +103,21 @@ export const checkPreviousQuestionEnabled = createSelector(
 
 export const makeCheckQuestionEnabled = () =>
   createSelector(
-    (_, questionIndex) => questionIndex,
+    (_, { questionIndex } = {}) => questionIndex,
     getQuestionCount,
     getResponseCount,
     isQuestionPermitted
   )
 
-// console.log('inselectors', checkCurrentQuestionEnabled)
-
-export const getTopicQuestions = createSelector(
-  (_, { topic: currentTopic }) => ({ topic }) => topic === currentTopic,
-  getQuestionIndices,
-  filter
+export const getQuestionListIndexed = pipe(
+  getQuestionList,
+  mapIndexed((question, index) => ({ ...question, index }))
 )
 
-console.log('inselectors', getTopicQuestions(state, { topic: 'Housing' }))
-console.log(getQuestionIndices(state), 'what')
+export const makeGetTopicQuestions = () =>
+  createSelector(
+    (_, { topic } = {}) => topic,
+    getQuestionListIndexed,
+    (filterTopic, questions) =>
+      filter(({ topic }) => topic === filterTopic, questions)
+  )

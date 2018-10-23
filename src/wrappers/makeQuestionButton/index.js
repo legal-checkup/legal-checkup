@@ -7,7 +7,7 @@ function makeMapStateToProps () {
   return function mapStateToProps (state, { children, questionIndex }) {
     return {
       children: children || questionIndex,
-      enabled: checkQuestionEnabled(state, questionIndex)
+      enabled: checkQuestionEnabled(state, { questionIndex })
     }
   }
 }

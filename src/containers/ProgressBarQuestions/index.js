@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { getQuestionIndices, getActiveQuestionIndex } from '@state/selectors'
+import { getActiveQuestionIndex, getTopicQuestions } from '@state/selectors'
 
 import { mapIndexed } from 'ramda-adjunct'
 import StyledDesktopQuestionButton from '@components/styled/DesktopQuestionButton'
@@ -37,7 +37,7 @@ function ProgressBarQuestions ({ questionIndices, activeQuestionIndex }) {
 
 function mapStateToProps (state, { topic }) {
   return {
-    questionIndices: getQuestionIndices(state),
+    questionIndices: getTopicQuestions(state, { topic }),
     activeQuestionIndex: getActiveQuestionIndex(state)
   }
 }
