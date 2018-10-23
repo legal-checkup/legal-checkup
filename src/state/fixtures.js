@@ -1,7 +1,7 @@
 import { NO, NOT_SURE, YES } from './constants'
 
 export const state = {
-  activeQuestionIndex: 1,
+  activeQuestionIndex: 0,
   topics: [
     {
       id: '4DDB61C7677B4BA2813D2CAE98EF51D5',
@@ -317,75 +317,6 @@ export const state = {
           resource: 'consumer protection',
           url:
             'http://communitylaw.org.nz/community-law-manual/chapter-12-consumer-protection/what-this-chapter-covers-chapter-12/',
-          answer: NOT_SURE
-        }
-      ]
-    },
-    {
-      id: '6A83066039A94C1088BBC759E66CB2E7',
-      name: 'Housing',
-      questions: [
-        {
-          body: 'Have you recently received an eviction notice?',
-          help: 'Your eviction notice',
-          id: '9FC65A2D929B4A7DB86BE5417A190928',
-          resource: 'tenancy and housing',
-          url:
-            'http://communitylaw.org.nz/community-law-manual/chapter-15-tenancy-and-housing/what-this-chapter-covers-chapter-15/',
-          answer: NOT_SURE
-        },
-        {
-          body: 'Has your landlord failed to lodge and/or return your bond?',
-          help: 'That your bond has not been lodged or returned',
-          id: 'C3D47C40225E4AE08C1512B79603ADB5',
-          resource: 'bond and tenancy',
-          url: 'https://www.tenancy.govt.nz/about-tenancy-services/contact-us/',
-          answer: NOT_SURE
-        },
-        {
-          body: 'Are there any belongings you have been unable to pick up?',
-          help: 'Your trouble collecting your belongings',
-          id: '3BB7BDCBE09B48B99BFD74EC6A4466C0',
-          resource: 'tenancy and housing',
-          url:
-            'http://communitylaw.org.nz/community-law-manual/chapter-15-tenancy-and-housing/what-this-chapter-covers-chapter-15/',
-          answer: NOT_SURE
-        },
-        {
-          body: 'Do you have any unpaid rent?',
-          help: 'Your unpaid rent',
-          id: '86A9B3EDF65043DE92503EFD8B530475',
-          resource: 'tenancy and housing',
-          url: 'tenancy and housing',
-          answer: NOT_SURE
-        },
-        {
-          body: 'Do you have any problems with your landlord or flatmates?',
-          help: 'Your problems with your landlord and/or flatmates',
-          id: '6AA1854FF9354B95968BBA34B4F92F6E',
-          resource: 'tenancy and housing',
-          url:
-            'http://communitylaw.org.nz/community-law-manual/chapter-15-tenancy-and-housing/what-this-chapter-covers-chapter-15/',
-          answer: NOT_SURE
-        },
-        {
-          body: 'Do you have any problems with your neighbours?',
-          help: 'Problems with your neighbours',
-          id: '288852DF29C440259BC9C1FA141821D4',
-          resource: 'neighbours',
-          url:
-            'http://communitylaw.org.nz/community-law-manual/chapter-11-neighbourhood-life/what-this-chapter-covers-chapter-11/',
-          answer: NOT_SURE
-        },
-        {
-          body:
-            'Are you having difficulties applying for government or community housing?',
-          help:
-            'Your difficulties with applying for government or community housing',
-          id: '64BC22049E5A4FEEAA51505CF79C1571',
-          resource: 'community and government housing',
-          url:
-            'http://communitylaw.org.nz/community-law-manual/chapter-15-tenancy-and-housing/social-housing-tenants-in-state-and-community-housing-chapter-15/',
           answer: NOT_SURE
         }
       ]
