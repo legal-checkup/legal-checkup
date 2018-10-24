@@ -8,16 +8,21 @@ import {
   getQuestionCount,
   getQuestionIndices,
   getQuestionList,
+  getQuestionsIndexed,
   getResponseCount,
   getResponseList,
   getResponses,
-  getTopics
+  getTopics,
+  makeCheckQuestionEnabled,
+  makeGetTopicQuestions,
+  getQuestionListIndexed
 } from '.'
 import { head, identity, last, length, times } from 'ramda'
 
 import { state } from '../fixtures'
 
 const questions = getQuestionList(state)
+const questionsIndexed = getQuestionListIndexed(state)
 
 describe('state:selectors', () => {
   describe('checkNextQuestionEnabled', () => {
@@ -110,6 +115,16 @@ describe('state:selectors', () => {
     })
   })
 
+  describe('getQuestionsIndexed', () => {
+    it('should add the quesiton index to each question', () => {
+      const { index: firstIdx } = head(questionsIndexed)
+      const { index: lastIdx } = last(questionsIndexed)
+
+      expect(firstIdx).toBe(0)
+      expect(lastIdx).toBe(27)
+    })
+  })
+
   describe('getResponseCount', () => {
     it('returns the total number of responses', () => {
       expect(getResponseCount(state)).toBe(3)
@@ -153,6 +168,50 @@ describe('state:selectors', () => {
   describe('getTopics', () => {
     it('should return the topics and their questions', () => {
       expect(getTopics(state)).toEqual(state.topics)
+    })
+  })
+
+  describe('makeCheckQuestionEnabled', () => {
+    it('should return true when question exists and is permitted', () => {
+      const checkQuestionEnabled = makeCheckQuestionEnabled()
+      const lowestPermittedIndex = 0
+      const highestPermittedIndex = getResponseCount(state)
+
+      expect(checkQuestionEnabled(state, { lowestPermittedIndex })).toBe(true)
+      expect(checkQuestionEnabled(state, { highestPermittedIndex })).toBe(true)
+    })
+
+    it('should return false when question does not exist or is not permitted', () => {
+      const checkQuestionEnabled = makeCheckQuestionEnabled()
+      const notPermittedIndex = getResponseCount(state) + 1
+
+      expect(checkQuestionEnabled(state)).toBe(false)
+      expect(checkQuestionEnabled(state, { notPermittedIndex })).toBe(false)
+    })
+  })
+
+  describe('makeGetTopicQuestions', () => {
+    it('should get the correct questions for the specified topic', () => {
+      const getTopicQuestions = makeGetTopicQuestions()
+      const currentTopicName = getCurrentTopicName(state)
+      const topicQuestions = getTopicQuestions(state, {
+        topic: currentTopicName
+      })
+
+      expect(topicQuestions).toHaveLength(5)
+      expect(head(topicQuestions).id).toBe('759CDC30C25B489A9EB71B7E859F2DD7')
+      expect(last(topicQuestions).id).toBe('E2C5A2E126474F56B76719EBC818686E')
+    })
+
+    it('should return an empty array when topic does not match or is not defined', () => {
+      const getTopicQuestions = makeGetTopicQuestions()
+      const noTopicQuestions = getTopicQuestions(state)
+      const noMatchTopicQuestions = getTopicQuestions(state, {
+        topic: 'no match'
+      })
+
+      expect(noTopicQuestions).toEqual([])
+      expect(noMatchTopicQuestions).toEqual([])
     })
   })
 })
