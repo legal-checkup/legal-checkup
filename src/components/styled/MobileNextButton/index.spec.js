@@ -9,4 +9,9 @@ describe('components:styled:MobileNextButton', () => {
       toJson(shallow(<MobileNextButton>Click Me</MobileNextButton>))
     ).toMatchSnapshot()
   })
+  it('renders the MobileNextButton and CSS properties properly when enabled', () => {
+    expect(
+      toJson(shallow(<MobileNextButton enabled>Click Me!</MobileNextButton>))
+    ).toMatchSnapshot()
+  })
 })

@@ -9,4 +9,11 @@ describe('components:styled:MobilePreviousButton', () => {
       toJson(shallow(<MobilePreviousButton>Click Me</MobilePreviousButton>))
     ).toMatchSnapshot()
   })
+  it('renders the MobilePreviousButton and CSS properties properly when enabled', () => {
+    expect(
+      toJson(
+        shallow(<MobilePreviousButton enabled>Click Me!</MobilePreviousButton>)
+      )
+    ).toMatchSnapshot()
+  })
 })

@@ -17,3 +17,21 @@ exports[`components:styled:DesktopNextButton renders the DesktopNextButton and C
   Click Me!
 </button>
 `;
+
+exports[`components:styled:DesktopNextButton renders the DesktopNextButton and CSS properties properly when enabled 1`] = `
+.c0 {
+  background-color: #ededed;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  color: #000;
+  height: 42px;
+  outline: none;
+  width: 48px;
+}
+
+<button
+  className="c0"
+>
+  Click Me!
+</button>
+`;
