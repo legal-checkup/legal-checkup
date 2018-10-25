@@ -7,7 +7,7 @@ test('Desktop Footer : Validate Footer Text', async t => {
   await t
     // Use the assertion to check if the actual footer text is equal to the expected one
     .expect(Selector('.LinkExternalMobile-sc-1suge14-0').innerText)
-    .eql('© 2018 Community Law')
+    .eql('Copyright 2018 by Community Law')
 })
 
 test('Desktop Footer : Validate Community Law has external link to http://communitylaw.org.nz/', async t => {
