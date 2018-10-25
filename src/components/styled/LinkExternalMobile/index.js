@@ -1,17 +1,15 @@
 import styled, { css } from 'styled-components'
 
-const LinkExternal = styled.a`
-  height: 25px;
-  margin-left: 23%;
+const LinkExternalMobile = styled.a`
+  padding-top: 5px;
   opacity: 0.53;
   font-family: Avenir;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-align: center;
   text-decoration: none;
   color: #ffffff;
   cursor: pointer;
@@ -21,6 +19,6 @@ const LinkExternal = styled.a`
       cursor: default;
     `};
 `
-LinkExternal.displayName = 'StyledLinkExternal'
+LinkExternalMobile.displayName = 'StyledLinkExternalMobile'
 
-export default LinkExternal
+export default LinkExternalMobile

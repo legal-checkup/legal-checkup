@@ -46,7 +46,10 @@ const devTools =
   window.__REDUX_DEVTOOLS_EXTENSION__ &&
   window.__REDUX_DEVTOOLS_EXTENSION__()
 const middleware = devTools
-  ? compose(appliedMiddleware, devTools)
+  ? compose(
+    appliedMiddleware,
+    devTools
+  )
   : compose(appliedMiddleware)
 const store = createStore(
   connectRouter(history)(rootReducer),
