@@ -8,7 +8,7 @@ export default function TopicQuestionsList ({ topics }) {
     <ul>
       {map(
         ({ id, name }) => (
-          <TopicQuestions key={id} topic={name} />
+          <TopicQuestions key={id} topic={name} activeTopic />
         ),
         topics
       )}

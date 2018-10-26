@@ -1,4 +1,7 @@
-import { makeCheckQuestionEnabled } from '@state/selectors'
+import {
+  makeCheckQuestionEnabled,
+  getActiveQuestionIndex
+} from '@state/selectors'
 import { connect } from 'react-redux'
 import { questionRequested } from '@state/actions'
 
@@ -7,7 +10,8 @@ function makeMapStateToProps () {
   return function mapStateToProps (state, { children, questionIndex }) {
     return {
       children: children || questionIndex,
-      enabled: checkQuestionEnabled(state, { questionIndex })
+      enabled: checkQuestionEnabled(state, { questionIndex }),
+      active: getActiveQuestionIndex(state) === questionIndex
     }
   }
 }

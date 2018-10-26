@@ -1,4 +1,14 @@
-import { identity, length, map, pipe, reduce, times, filter, uniq } from 'ramda'
+import {
+  identity,
+  length,
+  map,
+  pipe,
+  reduce,
+  times,
+  filter,
+  type,
+  contains
+} from 'ramda'
 import { mapIndexed } from 'ramda-adjunct'
 
 import { createSelector } from 'reselect'
@@ -6,6 +16,8 @@ import isNextQuestionPermitted from '@utilities/isNextQuestionPermitted'
 import isQuestionPermitted from '@utilities/isNextQuestionPermitted'
 
 import isPreviousQuestionPermitted from '@utilities/isPreviousQuestionPermitted'
+
+import { state } from '../fixtures'
 
 // To get an array of indices ([0, 1, 2, 3]), it is enough to get the length
 // And then use the `times` function to count up to that count

@@ -2,11 +2,15 @@ import { map } from 'ramda'
 import React from 'react'
 
 import StyledDesktopQuestionButton from '@components/styled/DesktopQuestionButton'
+
+import StyledTopicQuestions from '@components/styled/TopicQuestions'
+
 import makeQuestionButton from '@wrappers/makeQuestionButton'
 
-export default function TopicQuestions ({ topic, topicQuestions }) {
+export default function TopicQuestions ({ topic, topicQuestions, activeTopic }) {
+  console.log('compoent', activeTopic)
   return (
-    <li>
+    <StyledTopicQuestions>
       <div>{topic}</div>
       <div>
         {map(({ id, index }) => {
@@ -19,6 +23,6 @@ export default function TopicQuestions ({ topic, topicQuestions }) {
           )
         }, topicQuestions)}
       </div>
-    </li>
+    </StyledTopicQuestions>
   )
 }
