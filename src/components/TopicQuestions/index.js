@@ -3,6 +3,8 @@ import React from 'react'
 
 import StyledDesktopQuestionButton from '@components/styled/DesktopQuestionButton'
 
+import StyledTopicName from '@components/styled/TopicName'
+
 import StyledTopicQuestions from '@components/styled/TopicQuestions'
 
 import makeQuestionButton from '@wrappers/makeQuestionButton'
@@ -10,8 +12,8 @@ import makeQuestionButton from '@wrappers/makeQuestionButton'
 export default function TopicQuestions ({ topic, topicQuestions, activeTopic }) {
   console.log('compoent', activeTopic)
   return (
-    <StyledTopicQuestions>
-      <div>{topic}</div>
+    <StyledTopicQuestions activeTopic={activeTopic}>
+      <StyledTopicName>{topic}</StyledTopicName>
       <div>
         {map(({ id, index }) => {
           const QuestionButton = makeQuestionButton(StyledDesktopQuestionButton)

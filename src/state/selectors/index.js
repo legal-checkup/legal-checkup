@@ -1,19 +1,9 @@
-import {
-  identity,
-  length,
-  map,
-  pipe,
-  reduce,
-  times,
-  filter,
-  type,
-  contains
-} from 'ramda'
+import { identity, length, map, pipe, reduce, times, filter } from 'ramda'
 import { mapIndexed } from 'ramda-adjunct'
 
 import { createSelector } from 'reselect'
 import isNextQuestionPermitted from '@utilities/isNextQuestionPermitted'
-import isQuestionPermitted from '@utilities/isNextQuestionPermitted'
+import isQuestionPermitted from '@utilities/isQuestionPermitted'
 
 import isPreviousQuestionPermitted from '@utilities/isPreviousQuestionPermitted'
 
