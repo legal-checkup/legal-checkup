@@ -2,9 +2,11 @@
 
 exports[`components:DesktopHeader renders the DesktopHeader component with the correct CSS 1`] = `
 <StyledDesktopHeader>
-  <StyledDesktopHeaderLogo>
+  <Connect(withActive)
+    to="/"
+  >
     LOGO
-  </StyledDesktopHeaderLogo>
+  </Connect(withActive)>
   <StyledDesktopHeaderLegal>
     LEGAL CHECKUP
   </StyledDesktopHeaderLegal>
@@ -18,10 +20,14 @@ exports[`components:DesktopHeader renders the DesktopHeader component with the c
   >
     Checkup
   </Connect(withActive)>
-  <Connect(withActive)>
+  <Connect(withActive)
+    to="/about"
+  >
     About
   </Connect(withActive)>
-  <Connect(withActive)>
+  <Connect(withActive)
+    to="/help"
+  >
     Help
   </Connect(withActive)>
 </StyledDesktopHeader>

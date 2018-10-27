@@ -30,6 +30,8 @@ export const YES = 'Yes'
 // It ensures that you don't have different values, which causes painful, hard to find bugs
 export const HOME_PATH = '/'
 export const CHECKUP_PATH = '/checkup'
+export const ABOUT_PATH = '/about'
+export const HELP_PATH = '/help'
 export const PRIVACY_POLICY_PATH = '/privacy-policy'
 export const RESULTS_PATH = '/results'
 export const TERMS_OF_USE_PATH = '/terms-of-use'

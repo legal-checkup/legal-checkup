@@ -1,6 +1,9 @@
 import { connect } from 'react-redux'
 
-import { StyledDesktopHeaderLink } from '@containers/DesktopHeader/style'
+import {
+  StyledDesktopHeaderLink,
+  StyledDesktopHeaderLogo
+} from '@containers/DesktopHeader/style'
 import { getPathname } from '@state/selectors'
 import makeDesktopHeaderLink from '@wrappers/makeDesktopHeaderLink'
 
@@ -10,7 +13,12 @@ function mapStateToProps (state) {
   }
 }
 
-const HeaderLink = makeDesktopHeaderLink(StyledDesktopHeaderLink)
+const DesktopHeaderNavLink = connect(mapStateToProps)(
+  makeDesktopHeaderLink(StyledDesktopHeaderLink)
+)
 
-export { mapStateToProps }
-export default connect(mapStateToProps)(HeaderLink)
+const DesktopHeaderLogoLink = connect(mapStateToProps)(
+  makeDesktopHeaderLink(StyledDesktopHeaderLogo)
+)
+
+export { mapStateToProps, DesktopHeaderNavLink, DesktopHeaderLogoLink }

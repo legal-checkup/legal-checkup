@@ -1,27 +1,30 @@
 import React from 'react'
-import { connect } from 'react-redux'
-
-import { CHECKUP_PATH, HOME_PATH } from '@state/constants'
 
 import {
-  StyledDesktopHeader,
-  StyledDesktopHeaderLogo,
-  StyledDesktopHeaderLegal
-} from './style'
+  CHECKUP_PATH,
+  HOME_PATH,
+  HELP_PATH,
+  ABOUT_PATH
+} from '@state/constants'
 
-import HeaderLink from '@containers/DesktopHeaderLink'
+import { StyledDesktopHeader, StyledDesktopHeaderLegal } from './style'
+
+import {
+  DesktopHeaderNavLink,
+  DesktopHeaderLogoLink
+} from '@containers/DesktopHeaderLink'
 
 export default function DesktopHeader () {
   return (
     <StyledDesktopHeader>
-      <StyledDesktopHeaderLogo>LOGO</StyledDesktopHeaderLogo>
+      <DesktopHeaderLogoLink to={HOME_PATH}>LOGO</DesktopHeaderLogoLink>
 
       <StyledDesktopHeaderLegal>LEGAL CHECKUP</StyledDesktopHeaderLegal>
 
-      <HeaderLink to={HOME_PATH}>Home</HeaderLink>
-      <HeaderLink to={CHECKUP_PATH}>Checkup</HeaderLink>
-      <HeaderLink>About</HeaderLink>
-      <HeaderLink>Help</HeaderLink>
+      <DesktopHeaderNavLink to={HOME_PATH}>Home</DesktopHeaderNavLink>
+      <DesktopHeaderNavLink to={CHECKUP_PATH}>Checkup</DesktopHeaderNavLink>
+      <DesktopHeaderNavLink to={ABOUT_PATH}>About</DesktopHeaderNavLink>
+      <DesktopHeaderNavLink to={HELP_PATH}>Help</DesktopHeaderNavLink>
     </StyledDesktopHeader>
   )
 }

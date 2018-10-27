@@ -22,6 +22,13 @@ const StyledDesktopHeaderLogo = styled.div`
   color: #ffffff;
   padding: 17px;
   margin: 0 10px;
+  cursor: pointer;
+
+  ${props =>
+    props.active &&
+    css`
+      cursor: default;
+    `};
 `
 StyledDesktopHeaderLogo.displayName = 'StyledDesktopHeaderLogo'
 

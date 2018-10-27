@@ -3,6 +3,8 @@ import 'babel-polyfill'
 import {
   CHECKUP_PATH,
   HOME_PATH,
+  ABOUT_PATH,
+  HELP_PATH,
   PRIVACY_POLICY_PATH,
   RESULTS_PATH,
   TERMS_OF_USE_PATH
@@ -19,6 +21,8 @@ import { ApolloClient } from 'apollo-client'
 import { ApolloProvider } from 'react-apollo'
 import Checkup from '@pages/Checkup'
 import Home from '@pages/Home'
+import Help from '@pages/Help'
+import About from '@pages/About'
 import { HttpLink } from 'apollo-link-http'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 import PrivacyPolicy from '@pages/PrivacyPolicy'
@@ -46,7 +50,10 @@ const devTools =
   window.__REDUX_DEVTOOLS_EXTENSION__ &&
   window.__REDUX_DEVTOOLS_EXTENSION__()
 const middleware = devTools
-  ? compose(appliedMiddleware, devTools)
+  ? compose(
+    appliedMiddleware,
+    devTools
+  )
   : compose(appliedMiddleware)
 const store = createStore(
   connectRouter(history)(rootReducer),
@@ -73,6 +80,8 @@ function renderApp () {
           <Switch>
             <Route exact path={HOME_PATH} component={Home} />
             <Route path={CHECKUP_PATH} component={Checkup} />
+            <Route path={HELP_PATH} component={Help} />
+            <Route path={ABOUT_PATH} component={About} />
             <Route path={PRIVACY_POLICY_PATH} component={PrivacyPolicy} />
             <Route path={RESULTS_PATH} component={Results} />
             <Route path={TERMS_OF_USE_PATH} component={TermsOfUse} />
