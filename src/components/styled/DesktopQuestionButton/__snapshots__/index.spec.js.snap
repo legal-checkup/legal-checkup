@@ -6,9 +6,12 @@ exports[`components:styled:DesktopQuestionButton renders the DesktopQuestionButt
   border: none;
   border-radius: 5px 0 0 5px;
   color: #c0c0c0;
+  font-weight: normal;
+  cursor: pointer;
   height: 42px;
   outline: none;
   width: 48px;
+  margin-top: 10px;
 }
 
 <button
@@ -18,15 +21,39 @@ exports[`components:styled:DesktopQuestionButton renders the DesktopQuestionButt
 </button>
 `;
 
+exports[`components:styled:DesktopQuestionButton renders the DesktopQuestionButton and CSS properties properly when active 1`] = `
+.c0 {
+  background-color: #ededed;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  color: #c0c0c0;
+  font-weight: bold;
+  cursor: pointer;
+  height: 42px;
+  outline: none;
+  width: 48px;
+  margin-top: 10px;
+}
+
+<button
+  className="c0"
+>
+  Click Me!
+</button>
+`;
+
 exports[`components:styled:DesktopQuestionButton renders the DesktopQuestionButton and CSS properties properly when enabled 1`] = `
 .c0 {
   background-color: #ededed;
   border: none;
   border-radius: 5px 0 0 5px;
   color: #000;
+  font-weight: normal;
+  cursor: pointer;
   height: 42px;
   outline: none;
   width: 48px;
+  margin-top: 10px;
 }
 
 <button

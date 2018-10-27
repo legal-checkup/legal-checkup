@@ -1,4 +1,5 @@
 import { map } from 'ramda'
+import { isNonEmptyArray } from 'ramda-adjunct'
 import React from 'react'
 
 import StyledDesktopQuestionButton from '@components/styled/DesktopQuestionButton'
@@ -9,20 +10,27 @@ import StyledTopicQuestions from '@components/styled/TopicQuestions'
 
 import makeQuestionButton from '@wrappers/makeQuestionButton'
 
-export default function TopicQuestions ({ topic, topicQuestions, activeTopic }) {
+export default function TopicQuestions ({
+  topic,
+  topicQuestions = [],
+  activeTopic
+}) {
   return (
     <StyledTopicQuestions activeTopic={activeTopic}>
       <StyledTopicName>{topic}</StyledTopicName>
       <div>
-        {map(({ id, index }) => {
-          const QuestionButton = makeQuestionButton(StyledDesktopQuestionButton)
+        {isNonEmptyArray(topicQuestions) &&
+          map(({ id, index }) => {
+            const QuestionButton = makeQuestionButton(
+              StyledDesktopQuestionButton
+            )
 
-          return (
-            <QuestionButton key={id} questionIndex={index}>
-              {index + 1}
-            </QuestionButton>
-          )
-        }, topicQuestions)}
+            return (
+              <QuestionButton key={id} questionIndex={index}>
+                {index + 1}
+              </QuestionButton>
+            )
+          }, topicQuestions)}
       </div>
     </StyledTopicQuestions>
   )

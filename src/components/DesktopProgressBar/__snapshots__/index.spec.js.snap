@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers:DestopProgressBar renders the DesktopProgressBar correctly 1`] = `
+<StyledDesktopProgressBar>
+  <Connect(StyledDesktopPreviousButton) />
+  <Connect(StyledDesktopNextButton) />
+</StyledDesktopProgressBar>
+`;
+
+exports[`containers:DestopProgressBar should render the DesktopProgressBar correctly with no topics 1`] = `
+<StyledDesktopProgressBar>
+  <Connect(StyledDesktopPreviousButton) />
+  <Connect(StyledDesktopNextButton) />
+</StyledDesktopProgressBar>
+`;
+
+exports[`containers:DestopProgressBar should render the DesktopProgressBar correctly with topics 1`] = `
+<StyledDesktopProgressBar>
+  <Connect(StyledDesktopPreviousButton) />
+  <Connect(TopicQuestions)
+    key="4DDB61C7677B4BA2813D2CAE98EF51D5"
+    topic="Money Troubles"
+  />
+  <Connect(TopicQuestions)
+    key="6A83066039A94C1088BBC759E66CB2E7"
+    topic="Housing"
+  />
+  <Connect(TopicQuestions)
+    key="C0501ED83A8D4A42A1FA3E6BD7ADFC6F"
+    topic="Crime"
+  />
+  <Connect(TopicQuestions)
+    key="07213088A2B44D4B982F6FF8A6C17407"
+    topic="Work and Income"
+  />
+  <Connect(TopicQuestions)
+    key="9A446019CF9842BB93D3097879973E25"
+    topic="Relationships and Family"
+  />
+  <Connect(TopicQuestions)
+    key="B4EC55D2014740F88AD3E3F94371A3F5"
+    topic="Employment"
+  />
+  <Connect(TopicQuestions)
+    key="6FC5D30617CE43D6A0EB05D0C4243037"
+    topic="Other"
+  />
+  <Connect(StyledDesktopNextButton) />
+</StyledDesktopProgressBar>
+`;

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:TopicQuestions renders the TopicQuestions and CSS properties properly 1`] = `
+.c0 {
+  background-color: #ededed;
+  font-weight: #c0c0c0;
+  margin-top: -150px;
+  margin-bottom: 20px;
+  margin-left: -5px;
+  margin-right: 5px;
+  background-color: #fff;
+  display: inline-block;
+}
+
+<div
+  className="c0"
+>
+  Topic questions
+</div>
+`;
+
+exports[`components:styled:TopicQuestions renders the TopicQuestions and CSS properties properly when activeTopic 1`] = `
+.c0 {
+  background-color: #ededed;
+  font-weight: bold;
+  margin-top: -150px;
+  margin-bottom: 20px;
+  margin-left: -5px;
+  margin-right: 5px;
+  background-color: #fff;
+  display: inline-block;
+}
+
+<div
+  className="c0"
+>
+  Topic questions
+</div>
+`;

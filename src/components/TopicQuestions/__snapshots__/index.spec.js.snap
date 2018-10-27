@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:TopicQuestions should render the TopicQestions and CSS properties properly 1`] = `
+<StyledTopicQuestions>
+  <StyledTopicName />
+  <div />
+</StyledTopicQuestions>
+`;
+
+exports[`components:TopicQuestions should render the TopicQestions and CSS properties properly when activeTopic 1`] = `
+<StyledTopicQuestions
+  activeTopic={true}
+>
+  <StyledTopicName />
+  <div />
+</StyledTopicQuestions>
+`;
+
+exports[`components:TopicQuestions should render the TopicQestions and CSS properties properly when activeTopic 2`] = `
+<StyledTopicQuestions
+  activeTopic={true}
+>
+  <StyledTopicName>
+    Money Troubles
+  </StyledTopicName>
+  <div>
+    <Connect(StyledDesktopQuestionButton)
+      key="759CDC30C25B489A9EB71B7E859F2DD7"
+      questionIndex={0}
+    >
+      1
+    </Connect(StyledDesktopQuestionButton)>
+    <Connect(StyledDesktopQuestionButton)
+      key="8A9B3C23BA41440187B0B9F9EB0D8400"
+      questionIndex={1}
+    >
+      2
+    </Connect(StyledDesktopQuestionButton)>
+    <Connect(StyledDesktopQuestionButton)
+      key="A7D51C38F34A4EA1919C74013E703C39"
+      questionIndex={2}
+    >
+      3
+    </Connect(StyledDesktopQuestionButton)>
+    <Connect(StyledDesktopQuestionButton)
+      key="5DBE75B1D33D43DD8AC4E00730B5BD3D"
+      questionIndex={3}
+    >
+      4
+    </Connect(StyledDesktopQuestionButton)>
+    <Connect(StyledDesktopQuestionButton)
+      key="E2C5A2E126474F56B76719EBC818686E"
+      questionIndex={4}
+    >
+      5
+    </Connect(StyledDesktopQuestionButton)>
+  </div>
+</StyledTopicQuestions>
+`;
