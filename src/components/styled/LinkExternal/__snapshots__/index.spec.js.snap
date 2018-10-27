@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:LinkExternal renders the LinkExternal and CSS properties properly 1`] = `
+<a
+  className=""
+/>
+`;
