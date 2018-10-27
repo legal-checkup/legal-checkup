@@ -8,7 +8,11 @@ exports[`components:DesktopHeader renders the DesktopHeader component with the c
     LOGO
   </Connect(withActive)>
   <StyledDesktopHeaderLegal>
-    LEGAL CHECKUP
+    LEGAL
+     
+    <StyledDesktopHeaderLegal2thChild>
+      CHECKUP
+    </StyledDesktopHeaderLegal2thChild>
   </StyledDesktopHeaderLegal>
   <Connect(withActive)
     to="/"

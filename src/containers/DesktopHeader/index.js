@@ -7,7 +7,11 @@ import {
   ABOUT_PATH
 } from '@state/constants'
 
-import { StyledDesktopHeader, StyledDesktopHeaderLegal } from './style'
+import {
+  StyledDesktopHeader,
+  StyledDesktopHeaderLegal,
+  StyledDesktopHeaderLegal2thChild
+} from './style'
 
 import {
   DesktopHeaderNavLink,
@@ -19,7 +23,12 @@ export default function DesktopHeader () {
     <StyledDesktopHeader>
       <DesktopHeaderLogoLink to={HOME_PATH}>LOGO</DesktopHeaderLogoLink>
 
-      <StyledDesktopHeaderLegal>LEGAL CHECKUP</StyledDesktopHeaderLegal>
+      <StyledDesktopHeaderLegal>
+        LEGAL{' '}
+        <StyledDesktopHeaderLegal2thChild>
+          CHECKUP
+        </StyledDesktopHeaderLegal2thChild>
+      </StyledDesktopHeaderLegal>
 
       <DesktopHeaderNavLink to={HOME_PATH}>Home</DesktopHeaderNavLink>
       <DesktopHeaderNavLink to={CHECKUP_PATH}>Checkup</DesktopHeaderNavLink>

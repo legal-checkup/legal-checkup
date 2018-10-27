@@ -8,6 +8,7 @@ const StyledDesktopHeader = styled.header`
   display: flex;
   flex-direction: row;
   align-items: center;
+  border-bottom: solid 7px #444141;
 `
 StyledDesktopHeader.displayName = 'StyledDesktopHeader'
 
@@ -35,16 +36,21 @@ StyledDesktopHeaderLogo.displayName = 'StyledDesktopHeaderLogo'
 const StyledDesktopHeaderLegal = styled.div`
   width: 156px;
   font-family: Avenir, sans-serif;
-  font-size: 32px;
-  font-weight: 800;
-  line-height: 0.84;
-  color: #8f8f8f;
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1;
+  color: #ffffff;
   margin-right: 150px;
 `
 StyledDesktopHeaderLegal.displayName = 'StyledDesktopHeaderLegal'
 
+const StyledDesktopHeaderLegal2thChild = styled.span`
+  color: #b62645;
+`
+StyledDesktopHeaderLegal2thChild.displayName =
+  'StyledDesktopHeaderLegal2thChild'
+
 const StyledDesktopHeaderLink = styled.div`
-  opacity: 0.53;
   font-family: Avenir, sans-serif;
   font-size: 20px;
   font-weight: 500;
@@ -58,8 +64,8 @@ const StyledDesktopHeaderLink = styled.div`
     props.active &&
     css`
       cursor: default;
-      opacity: 1;
-      border-bottom: 2px solid #fff;
+      color: #b62645;
+      border-bottom: 2px solid #b62645;
     `};
 `
 StyledDesktopHeaderLink.displayName = 'StyledDesktopHeaderLink'
@@ -68,5 +74,6 @@ export {
   StyledDesktopHeader,
   StyledDesktopHeaderLogo,
   StyledDesktopHeaderLegal,
+  StyledDesktopHeaderLegal2thChild,
   StyledDesktopHeaderLink
 }
