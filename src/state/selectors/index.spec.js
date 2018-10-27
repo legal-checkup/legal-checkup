@@ -11,7 +11,7 @@ import {
   getResponseCount,
   getResponseList,
   getResponses,
-  getRouterLocation,
+  getPathname,
   getTopics
 } from '.'
 import { head, identity, last, length, times } from 'ramda'
@@ -153,7 +153,7 @@ describe('state:selectors', () => {
 
   describe('getPathname', () => {
     it('should return the router location pathname', () => {
-      expect(getRouterLocation(state)).toBe(state.router.location.pathname)
+      expect(getPathname(state)).toBe(state.router.location.pathname)
     })
   })
 
