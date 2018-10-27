@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:QuestionCounter renders the QuestionCounter and CSS properties properly 1`] = `
+.c0 {
+  width: 63px;
+  height: 17px;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: oblique;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+}
+
+<div
+  className="c0"
+>
+  Text
+</div>
+`;

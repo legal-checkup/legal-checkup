@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:App renders the App with a blank game board and nine squares 1`] = `
+exports[`components:Checkup renders the Checkup page 1`] = `
 <Fragment>
   <HelmetWrapper
     defer={true}

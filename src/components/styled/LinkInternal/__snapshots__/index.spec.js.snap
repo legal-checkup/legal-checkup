@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:LinkInternal renders the LinkInternal and CSS properties properly 1`] = `
+.c0 {
+  cursor: pointer;
+}
+
+<a
+  className="c0"
+>
+  Click Me
+</a>
+`;

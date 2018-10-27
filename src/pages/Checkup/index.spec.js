@@ -3,8 +3,8 @@ import { shallow } from 'enzyme'
 
 import Checkup from '.'
 
-describe('components:App', () => {
-  it('renders the App with a blank game board and nine squares', () => {
+describe('components:Checkup', () => {
+  it('renders the Checkup page', () => {
     expect(toJson(shallow(<Checkup />).dive())).toMatchSnapshot()
   })
 })

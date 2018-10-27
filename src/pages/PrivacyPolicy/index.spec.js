@@ -3,8 +3,8 @@ import { shallow } from 'enzyme'
 
 import PrivacyPolicy from '.'
 
-describe('components:App', () => {
-  it('renders the App with a blank game board and nine squares', () => {
+describe('components:PrivacyPolicy ', () => {
+  it('renders the PrivacyPolicy page', () => {
     expect(toJson(shallow(<PrivacyPolicy />).dive())).toMatchSnapshot()
   })
 })

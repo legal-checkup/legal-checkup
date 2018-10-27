@@ -1,4 +1,4 @@
-import { CHECKUP_COMPLETE, RESULTS_PATH } from '../../constants'
+import { CHECKUP_COMPLETE, RESULTS_PATH } from '@state/constants'
 
 import { mapTo } from 'rxjs/operators'
 import { ofType } from 'redux-observable'

@@ -3,8 +3,8 @@ import { shallow } from 'enzyme'
 
 import TermsOfUse from '.'
 
-describe('components:App', () => {
-  it('renders the App with a blank game board and nine squares', () => {
-    expect(toJson(shallow(<TermsOfUse />).dive())).toMatchSnapshot()
+describe('components:TermsOfUse ', () => {
+  it('renders the TermsOfUse  page', () => {
+    expect(toJson(shallow(<TermsOfUse />))).toMatchSnapshot()
   })
 })
