@@ -7,7 +7,6 @@ function makeMapStateToProps () {
   const getTopicQuestions = makeGetTopicQuestions()
 
   return function mapStateToProps (state, { topic }) {
-    console.log(getCurrentTopicName(state) === topic, 'container')
     return {
       topicQuestions: getTopicQuestions(state, { topic }),
       activeTopic: getCurrentTopicName(state) === topic

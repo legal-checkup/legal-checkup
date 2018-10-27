@@ -10,7 +10,6 @@ import StyledTopicQuestions from '@components/styled/TopicQuestions'
 import makeQuestionButton from '@wrappers/makeQuestionButton'
 
 export default function TopicQuestions ({ topic, topicQuestions, activeTopic }) {
-  console.log('compoent', activeTopic)
   return (
     <StyledTopicQuestions activeTopic={activeTopic}>
       <StyledTopicName>{topic}</StyledTopicName>

@@ -7,8 +7,6 @@ import isQuestionPermitted from '@utilities/isQuestionPermitted'
 
 import isPreviousQuestionPermitted from '@utilities/isPreviousQuestionPermitted'
 
-import { state } from '../fixtures'
-
 // To get an array of indices ([0, 1, 2, 3]), it is enough to get the length
 // And then use the `times` function to count up to that count
 // Passing each number in turn to the `identity` function, which just returns it unchanged
