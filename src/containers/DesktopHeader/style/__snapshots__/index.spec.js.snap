@@ -40,3 +40,44 @@ exports[`containers:DesktopHeader style:StyledDesktopHeaderLink should render th
   className="c0"
 />
 `;
+
+exports[`containers:DesktopHeader style:StyledDesktopHeaderLogo should render the correct CSS for the StyledDesktopHeaderLogo component 1`] = `
+.c0 {
+  border-radius: 5px;
+  background-color: #474747;
+  opacity: 0.39;
+  font-family: Avenir,sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 0.84;
+  color: #ffffff;
+  padding: 17px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+<div
+  className="c0"
+/>
+`;
+
+exports[`containers:DesktopHeader style:StyledDesktopHeaderLogo should render the correct CSS for the StyledDesktopHeaderLogo component when active prop is passed 1`] = `
+.c0 {
+  border-radius: 5px;
+  background-color: #474747;
+  opacity: 0.39;
+  font-family: Avenir,sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 0.84;
+  color: #ffffff;
+  padding: 17px;
+  margin: 0 10px;
+  cursor: pointer;
+  cursor: default;
+}
+
+<div
+  className="c0"
+/>
+`;

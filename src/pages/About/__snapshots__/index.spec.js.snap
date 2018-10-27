@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pages:About renders the About page 1`] = `
+<Fragment>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <title>
+      Legal Checkup
+    </title>
+  </HelmetWrapper>
+  <Header />
+  <StyledLayout>
+    <h1>
+      This is the About page
+    </h1>
+  </StyledLayout>
+  <Footer />
+</Fragment>
+`;
