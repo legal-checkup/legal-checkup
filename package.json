@@ -37,7 +37,9 @@
     "rxjs-compat": "^6.3.2",
     "styled-bootstrap-components": "^2.0.0",
     "styled-components": "^3.4.9",
-    "styled-normalize": "^8.0.1"
+    "styled-normalize": "^8.0.1",
+    "testcafe": "^0.19.1",
+    "testcafe-react-selectors": "3.0.0"
   },
   "devDependencies": {
     "@babel/code-frame": "^7.0.0",
