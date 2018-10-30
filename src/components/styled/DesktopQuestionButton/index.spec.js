@@ -9,4 +9,13 @@ describe('components:styled:DesktopQuestionButton', () => {
       toJson(shallow(<DesktopQuestionButton>Click Me</DesktopQuestionButton>))
     ).toMatchSnapshot()
   })
+  it('renders the DesktopQuestionButton and CSS properties properly when enabled', () => {
+    expect(
+      toJson(
+        shallow(
+          <DesktopQuestionButton enabled>Click Me!</DesktopQuestionButton>
+        )
+      )
+    ).toMatchSnapshot()
+  })
 })

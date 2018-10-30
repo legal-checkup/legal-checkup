@@ -17,3 +17,21 @@ exports[`components:styled:DesktopQuestionButton renders the DesktopQuestionButt
   Click Me
 </button>
 `;
+
+exports[`components:styled:DesktopQuestionButton renders the DesktopQuestionButton and CSS properties properly when enabled 1`] = `
+.c0 {
+  background-color: #ededed;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  color: #000;
+  height: 42px;
+  outline: none;
+  width: 48px;
+}
+
+<button
+  className="c0"
+>
+  Click Me!
+</button>
+`;

@@ -9,4 +9,13 @@ describe('components:styled:DesktopPreviousButton', () => {
       toJson(shallow(<DesktopPreviousButton>Click Me</DesktopPreviousButton>))
     ).toMatchSnapshot()
   })
+  it('renders the DesktopPreviousButton and CSS properties properly when enabled', () => {
+    expect(
+      toJson(
+        shallow(
+          <DesktopPreviousButton enabled>Click Me!</DesktopPreviousButton>
+        )
+      )
+    ).toMatchSnapshot()
+  })
 })
