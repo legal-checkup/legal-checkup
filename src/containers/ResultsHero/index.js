@@ -17,6 +17,12 @@ function ResultsHero ({ yesCount }) {
         {console.log('YesCount:', yesCount)}
       </p>
       {yesCount > 0 ? <a href='#'>expand</a> : null}
+      {yesCount > 0 ? (
+        <p>
+          You can get free legal advice about these (or any other problem) from
+          your local Community Law Centre.
+        </p>
+      ) : null}
     </StyledResultsHero>
   )
 }

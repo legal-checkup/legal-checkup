@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers:ResultsHero ResultsHero should display ResultsHero 1`] = `
+<styled.div>
+  <p>
+    Based on your answers, a lawyer may be able to help you with...
+  </p>
+  <a
+    href="#"
+  >
+    expand
+  </a>
+</styled.div>
+`;
+
+exports[`containers:ResultsHero ResultsHero should display expand controller when yesCount > 0 1`] = `
+<ResultsHero
+  dispatch={[Function]}
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+  storeSubscription={
+    Subscription {
+      "listeners": Object {
+        "clear": [Function],
+        "get": [Function],
+        "notify": [Function],
+        "subscribe": [Function],
+      },
+      "onStateChange": [Function],
+      "parentSub": undefined,
+      "store": Object {
+        "clearActions": [Function],
+        "dispatch": [Function],
+        "getActions": [Function],
+        "getState": [Function],
+        "replaceReducer": [Function],
+        "subscribe": [Function],
+      },
+      "unsubscribe": [Function],
+    }
+  }
+  yesCount={1}
+/>
+`;
