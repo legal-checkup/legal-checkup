@@ -15,6 +15,7 @@ exports[`components:Checkup renders the Checkup page 1`] = `
     <MobileProgressBar />
     <Connect(StyledQuestionCounter) />
     <Connect(StyledQuestionBox) />
+    <Connect(StyledQuestionExampleText) />
     <AnswerBar />
   </StyledLayout>
   <Footer />

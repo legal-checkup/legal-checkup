@@ -16,6 +16,7 @@ exports[`components:styled:QuestionCounter renders the QuestionCounter and CSS p
   letter-spacing: normal;
   text-align: center;
   color: #000000;
+  margin: 0px auto;
 }
 
 <div
