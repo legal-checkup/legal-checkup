@@ -1,5 +1,13 @@
-import { identity, length, map, pipe, reduce, times, pathOr } from 'ramda'
-import { identity, length, map, pipe, reduce, times, filter } from 'ramda'
+import {
+  identity,
+  length,
+  map,
+  pipe,
+  reduce,
+  times,
+  pathOr,
+  filter
+} from 'ramda'
 
 import { createSelector } from 'reselect'
 import isNextQuestionPermitted from '@utilities/isNextQuestionPermitted'
