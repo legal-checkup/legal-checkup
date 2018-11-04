@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers:Layout renders the Layout 1`] = `
+<Fragment>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <title>
+      Legal Checkup
+    </title>
+  </HelmetWrapper>
+  <Header />
+  <StyledLayout />
+  <Footer />
+</Fragment>
+`;

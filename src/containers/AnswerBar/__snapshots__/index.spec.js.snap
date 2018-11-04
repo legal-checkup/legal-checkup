@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`containers:AnswerBar renders the AnswerBar 1`] = `
+<StyledAnswerBar>
+  <Connect(StyledResponseButton)
+    type="Yes"
+  />
+  <Connect(StyledResponseButton)
+    type="No"
+  />
+  <Connect(StyledResponseButton)
+    type="Not sure"
+  />
+</StyledAnswerBar>
+`;
