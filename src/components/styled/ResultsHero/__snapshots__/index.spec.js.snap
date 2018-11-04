@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`styled:ResultsHero should render the Results component with the correct styles 1`] = `
+<div
+  className=""
+/>
+`;
