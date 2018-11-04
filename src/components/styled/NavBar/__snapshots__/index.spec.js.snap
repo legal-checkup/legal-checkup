@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:NavBar renders the NavBar and CSS properties properly 1`] = `
+.c0 {
+  margin-left: 150px;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 22px;
+  padding-top: 17px;
+  padding-bottom: 14px;
+  height: 100px;
+}
+
+<span
+  className="c0"
+>
+  NavBar
+</span>
+`;
