@@ -4,7 +4,9 @@ import { shallow } from 'enzyme'
 import QuestionCounter from '.'
 
 describe('components:styled:QuestionCounter', () => {
-  it('renders the QuestionCounter component with proper CSS properties', () => {
-    expect(toJson(shallow(<QuestionCounter />))).toMatchSnapshot()
+  it('renders the QuestionCounter and CSS properties properly', () => {
+    expect(
+      toJson(shallow(<QuestionCounter>Text</QuestionCounter>))
+    ).toMatchSnapshot()
   })
 })

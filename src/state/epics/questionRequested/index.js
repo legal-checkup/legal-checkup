@@ -41,8 +41,8 @@ const questionRequestedEpic = (action$, state$) =>
         case NEXT_QUESTION_REQUESTED:
           return isNextQuestionPermitted(
             activeQuestionIndex,
-            questionCount,
-            responseCount
+            responseCount,
+            questionCount
           )
             ? nextQuestionActivated(activeQuestionIndex + 1)
             : errorQuestionIndexOutOfBounds(activeQuestionIndex + 1)
@@ -54,8 +54,8 @@ const questionRequestedEpic = (action$, state$) =>
         default:
           return isQuestionPermitted(
             activeQuestionIndex,
-            questionCount,
-            responseCount
+            responseCount,
+            questionCount
           )
             ? requestedQuestionActivated(questionIndex)
             : errorQuestionIndexOutOfBounds(questionIndex)
