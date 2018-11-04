@@ -1,2 +1,15 @@
-import { selector } from 'testcafe'
-import resultsPage from '../pages/resultsPage'
+import { Selector, t } from 'testcafe'
+
+class ResultsPage {
+  constructor () {
+    this.pageTitle = Selector('#root > section > p')
+    this.zeroYesAnswer = Selector('#root > section > div > p')
+    // this.yesAnswer = Selector('#root > section > div > p > p')
+  }
+
+  async goToResultsPage () {
+    await t.click(this.ResultsPage)
+  }
+}
+
+export default new ResultsPage()
