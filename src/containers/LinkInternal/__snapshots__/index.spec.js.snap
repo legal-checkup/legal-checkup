@@ -6,7 +6,7 @@ exports[`containers:LinkInternal renders the LinkInternal 1`] = `
   store={
     Object {
       "clearActions": [Function],
-      "dispatch": [Function],
+      "dispatch": [MockFunction],
       "getActions": [Function],
       "getState": [Function],
       "replaceReducer": [Function],

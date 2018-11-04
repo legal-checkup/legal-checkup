@@ -7,6 +7,9 @@ import ResponseButton from '.'
 import { NOT_SURE } from '../../state/constants'
 import { NO } from '../../state/constants'
 import { YES } from '../../state/constants'
+import { USER_RESPONDED_WITH_NO } from '../../state/constants'
+import { USER_RESPONDED_WITH_NOT_SURE } from '../../state/constants'
+import { USER_RESPONDED_WITH_YES } from '../../state/constants'
 
 const mockStore = configureStore()
 
@@ -22,7 +25,7 @@ describe('containers:ResponseButton', () => {
     wrapper.simulate('click')
 
     const actions = store.getActions()
-    expect(actions).toEqual([{ type: '@checkup/USER_RESPONDED_WITH_NOT_SURE' }])
+    expect(actions).toEqual([{ type: USER_RESPONDED_WITH_NOT_SURE }])
   })
 
   it('should dispatch onClick with YES', () => {
@@ -31,7 +34,7 @@ describe('containers:ResponseButton', () => {
     wrapper.simulate('click')
 
     const actions = store.getActions()
-    expect(actions).toEqual([{ type: '@checkup/USER_RESPONDED_WITH_YES' }])
+    expect(actions).toEqual([{ type: USER_RESPONDED_WITH_YES }])
   })
 
   it('should dispatch onClick with NO', () => {
@@ -40,6 +43,6 @@ describe('containers:ResponseButton', () => {
     wrapper.simulate('click')
 
     const actions = store.getActions()
-    expect(actions).toEqual([{ type: '@checkup/USER_RESPONDED_WITH_NO' }])
+    expect(actions).toEqual([{ type: USER_RESPONDED_WITH_NO }])
   })
 })

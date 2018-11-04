@@ -8,26 +8,26 @@ import LinkInternal from '.'
 const mockStore = configureStore()
 
 const store = mockStore(state)
-
+store.dispatch = jest.fn()
 const wrapper = shallow(<LinkInternal store={store} />)
 
 describe('containers:LinkInternal', () => {
   it('renders the LinkInternal', () => {
-    expect(toJson(shallow(<LinkInternal store={store} />))).toMatchSnapshot()
+    expect(toJson(wrapper)).toMatchSnapshot()
   })
 
   it('should push to router onClick', () => {
-    wrapper.simulate('click', { preventDefault: () => {} })
+    wrapper
+      .dive()
+      .props()
+      .onClick({ preventDefault: () => {} })
 
-    const actions = store.getActions()
-    expect(actions).toEqual([
-      {
-        payload: {
-          args: [undefined],
-          method: 'push'
-        },
-        type: '@@router/CALL_HISTORY_METHOD'
-      }
-    ])
+    expect(store.dispatch).toHaveBeenCalledWith({
+      payload: {
+        args: [undefined],
+        method: 'push'
+      },
+      type: '@@router/CALL_HISTORY_METHOD'
+    })
   })
 })

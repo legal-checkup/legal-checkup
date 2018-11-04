@@ -1,8 +1,9 @@
 import React from 'react'
 import configureStore from 'redux-mock-store'
 import { shallow } from 'enzyme'
-import { state } from '../../state/fixtures'
+import { length, map, path, sum } from 'ramda'
 
+import { state } from '../../state/fixtures'
 import QuestionCounter from '.'
 
 const mockStore = configureStore()
@@ -16,6 +17,14 @@ describe('containers:QuestionCounter', () => {
 
   it('should map questionCount to props with defaultType', () => {
     const wrapper = shallow(<QuestionCounter store={store} />)
-    expect(wrapper.props().children).toBe('1/28')
+
+    const topics = path(['topics'], state)
+    const getQuestions = path(['questions'])
+    const numberOfQuestionsByTopic = map(t => {
+      return length(getQuestions(t))
+    }, topics)
+    const totalNumberOfQuestions = sum(numberOfQuestionsByTopic)
+
+    expect(wrapper.props().children).toBe(`1/${totalNumberOfQuestions}`)
   })
 })
