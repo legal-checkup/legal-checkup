@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:DesktopButton renders the StyledDesktopButton and CSS properties properly 1`] = `
+.c0 {
+  width: 450px;
+  height: 58px;
+  border-radius: 5px;
+  border: solid 2px #b5b5b5;
+}
+
+<button
+  className="c0"
+/>
+`;

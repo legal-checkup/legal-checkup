@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:wrappers:DesktopServicesButton renders the DesktopServicesButton and CSS properties properly 1`] = `
+<StyledDesktopButton
+  onClick={[Function]}
+>
+  Community Law Services
+</StyledDesktopButton>
+`;
