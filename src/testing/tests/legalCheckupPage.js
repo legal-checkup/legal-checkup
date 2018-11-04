@@ -10,7 +10,7 @@ test('Desktop Footer : Validate Footer Text', async t => {
   await t
     // Use the assertion to check if the actual footer text is equal to the expected one
     .expect(hm.footerCopyRight.innerText)
-    .eql('Copyright 2018 by Community Law')
+    .eql('© 2018 by Community Law Wellington and Hutt Valley')
 })
 
 test('Desktop Footer : Validate Community Law has external link to http://communitylaw.org.nz/', async t => {
