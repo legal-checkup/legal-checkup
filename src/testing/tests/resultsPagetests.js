@@ -10,14 +10,14 @@ test('Desktop ResultsPage : Validate resultpage Text', async t => {
     .eql('This is the Results page')
 })
 
-//   test('Desktop ResultsPage : Validate if Yes > 0 answer reply Text', async t => {
-
-//     await t
-//       // Use the assertion to check if the actual result text is equal to the expected one
-//       .expect(resultsPage.yesAnswer.hasChildNodes.innerText)
-//       .eql('Based on your answers, a lawyer may be able to help you with... You can get free legal advice about these (or any other problem) from your local Community Law Centre.')
-
-// })
+test('Desktop ResultsPage : Validate if Yes > 0 answer reply Text', async t => {
+  await t
+    // Use the assertion to check if the actual result text is equal to the expected one
+    .expect(resultsPage.yesAnswer.hasChildNodes.innerText)
+    .eql(
+      'Based on your answers, a lawyer may be able to help you with... You can get free legal advice about these (or any other problem) from your local Community Law Centre.'
+    )
+})
 
 test('Desktop ResultsPage : Validate if Yes = 0 answer reply Text', async t => {
   await t
@@ -29,5 +29,13 @@ test('Desktop ResultsPage : Validate if Yes = 0 answer reply Text', async t => {
 })
 
 // to write the test case about if Yes > 0 I feel below is the process which will have to be carried out,
-// go to hompage, click on checkup, click on answer yes from question one to question 28, expect answer to be "based on your anwers, A lawyer may
+// go to hompage, click on checkup, click on answer "yes" from question one to question 28, expect answer to be "based on your anwers, A lawyer may
 // able to help you with..."
+
+test('Desktop resultPage: Validate end text', async t => {
+  await t
+    .expect(resultsPage.endText.innerText)
+    .eql(
+      'You can get free legal advice about these (or any other problem) from your local Community Law Centre'
+    )
+})
