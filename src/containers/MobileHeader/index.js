@@ -25,12 +25,12 @@ export default function DesktopHeader () {
       <DesktopHeaderLogoLink to={HOME_PATH}>LOGO</DesktopHeaderLogoLink>
       <StyledDesktopHeaderLegal>LEGAL CHECKUP</StyledDesktopHeaderLegal>
 
-      {/* <StyledMobileHeaderLinkContainer> */}
-      <DesktopHeaderNavLink to={HOME_PATH}>Home</DesktopHeaderNavLink>
-      <DesktopHeaderNavLink to={CHECKUP_PATH}>Checkup</DesktopHeaderNavLink>
-      <DesktopHeaderNavLink to={ABOUT_PATH}>About</DesktopHeaderNavLink>
-      <DesktopHeaderNavLink to={HELP_PATH}>Help</DesktopHeaderNavLink>
-      {/* </StyledMobileHeaderLinkContainer> */}
+      <StyledMobileHeaderLinkContainer>
+        <DesktopHeaderNavLink to={HOME_PATH}>Home</DesktopHeaderNavLink>
+        <DesktopHeaderNavLink to={CHECKUP_PATH}>Checkup</DesktopHeaderNavLink>
+        <DesktopHeaderNavLink to={ABOUT_PATH}>About</DesktopHeaderNavLink>
+        <DesktopHeaderNavLink to={HELP_PATH}>Help</DesktopHeaderNavLink>
+      </StyledMobileHeaderLinkContainer>
     </StyledDesktopHeader>
   )
 }

@@ -14,13 +14,14 @@ const StyledDesktopHeader = styled.header`
 `
 StyledDesktopHeader.displayName = 'StyledDesktopHeader'
 
-const StyledMobileHeaderLinkContainer = styled.header`
+const StyledMobileHeaderLinkContainer = styled.span`
   width: 375px;
   height: 43px;
   background-color: #444141;
-  margin-right: -100px;
-  margin-top: 40px;
+  margin-left: -120px;
+  margin-top: 50px;
   margin-rightt: 100px;
+  // display: inline-block;
 `
 
 const StyledDesktopHeaderLogo = styled.div`
@@ -64,16 +65,16 @@ StyledDesktopHeaderLegal.displayName = 'StyledDesktopHeaderLegal'
 const StyledDesktopHeaderLink = styled.div`
   font-family: Avenir, sans-serif;
   width: 33px;
-  height: 15px;
-  line-height: 1;
+  line-height: 3;
   letter-spacing: normal;
-  font-size: 10px;
-  font-weight: 300;
+  font-size: 15px;
+  font-weight: 700;
   color: #ffffff;
+  display: inline;
   margin-right: 10px;
-  margin-left: 20px;
-  margin-top: 20px;
-  margin-bottom: -30px;
+  margin-left: 30px;
+  padding-top: 20px;
+  margin-bottom: 0px;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
