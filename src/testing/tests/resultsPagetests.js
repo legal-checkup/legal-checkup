@@ -39,3 +39,5 @@ test('Desktop resultPage: Validate end text', async t => {
       'You can get free legal advice about these (or any other problem) from your local Community Law Centre'
     )
 })
+// go to hompage, click on checkup, click on answer yes from question one to question 28, expect answer to be "based on your anwers, A lawyer may
+// able to help you with..."
