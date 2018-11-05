@@ -10,7 +10,6 @@ import {
 import {
   StyledDesktopHeader,
   StyledDesktopHeaderLegal,
-  StyledDesktopHeaderLegal2thChild,
   StyledMobileHeaderLinkContainer
 } from '@components/styled/MobileHeader'
 
