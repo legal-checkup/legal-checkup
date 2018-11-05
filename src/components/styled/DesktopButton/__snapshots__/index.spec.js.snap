@@ -5,7 +5,9 @@ exports[`components:styled:DesktopButton renders the StyledDesktopButton and CSS
   width: 450px;
   height: 58px;
   border-radius: 5px;
-  border: solid 2px #b5b5b5;
+  border: solid 3px #ffffff;
+  font-size: 16px;
+  font-weight: 900;
 }
 
 <button
