@@ -2,7 +2,7 @@ import React from 'react'
 
 import { shallow } from 'enzyme'
 
-import Section from '.'
+import Section from './'
 
 describe('components:styled:Section', function () {
   it('renders the Section and CSS properties properly', () =>

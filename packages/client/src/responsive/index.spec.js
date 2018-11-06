@@ -1,7 +1,7 @@
 import { shallow } from 'enzyme'
 import React from 'react'
 
-import { Desktop, Tablet, Mobile, Default } from '.'
+import { Desktop, Tablet, Mobile, Default } from './'
 
 describe(`responsive:Desktop`, () => {
   it(`should return the Responsive component with the correct props`, () => {

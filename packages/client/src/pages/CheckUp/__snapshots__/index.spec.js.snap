@@ -11,12 +11,9 @@ exports[`components:Checkup renders the Checkup page 1`] = `
     </title>
   </HelmetWrapper>
   <Header />
-  <StyledLayout>
-    <MobileProgressBar />
-    <Connect(StyledQuestionCounter) />
-    <Connect(StyledQuestionBox) />
-    <AnswerBar />
-  </StyledLayout>
+  <Section>
+    <Checkup />
+  </Section>
   <Footer />
 </Fragment>
 `;

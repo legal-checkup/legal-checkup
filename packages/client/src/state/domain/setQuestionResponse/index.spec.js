@@ -1,6 +1,6 @@
 import { NO, YES } from '../../constants'
 
-import setQuestionResponse from '.'
+import setQuestionResponse from './'
 import { state } from '../../fixtures'
 
 describe('state:domain', () => {

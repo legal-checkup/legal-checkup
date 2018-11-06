@@ -3,7 +3,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 
 import { NO, NOT_SURE, YES } from '../../../../../state/constants'
-import Button from '.'
+import Button from './'
 
 describe('components:styled:NoButton', () => {
   it('renders the Button and CSS properties properly', () => {

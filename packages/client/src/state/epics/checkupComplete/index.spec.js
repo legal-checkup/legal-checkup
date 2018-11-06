@@ -3,7 +3,7 @@ import { push } from 'connected-react-router'
 import { TestScheduler } from 'rxjs/testing'
 
 import { CHECKUP_COMPLETE, RESULTS_PATH } from '../../constants'
-import checkupCompleteEpic from '.'
+import checkupCompleteEpic from './'
 
 jest.mock('connected-react-router', () => ({
   push: jest.fn()

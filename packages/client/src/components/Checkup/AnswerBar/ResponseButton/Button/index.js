@@ -18,6 +18,6 @@ const Button = styled.button`
     content: '${({ type }) => type}';
   }
 `
-Button.displayName = 'StyledButton'
+Button.displayName = 'Button'
 
 export default Button

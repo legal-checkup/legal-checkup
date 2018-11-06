@@ -1,7 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:styled:QuestionCounter renders the QuestionCounter and CSS properties properly 1`] = `
-.c0 {
+exports[`components:styled:Counter renders the Counter and CSS properties properly 1`] = `
+<StyledComponent
+  forwardedClass={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": undefined,
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": true,
+        "rules": Array [
+          "
   width: 63px;
   height: 17px;
   font-family: Helvetica;
@@ -10,17 +19,23 @@ exports[`components:styled:QuestionCounter renders the QuestionCounter and CSS p
   font-style: oblique;
   font-stretch: normal;
   line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
   letter-spacing: normal;
   text-align: center;
   color: #000000;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "Counter",
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
 >
   Text
-</div>
+</StyledComponent>
 `;

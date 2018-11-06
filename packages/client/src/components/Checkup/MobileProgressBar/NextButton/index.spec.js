@@ -2,7 +2,7 @@ import React from 'react'
 
 import { shallow } from 'enzyme'
 
-import NextButton from '.'
+import NextButton from './'
 
 describe('components:styled:NextButton', () => {
   it('renders the NextButton and CSS properties properly', () => {

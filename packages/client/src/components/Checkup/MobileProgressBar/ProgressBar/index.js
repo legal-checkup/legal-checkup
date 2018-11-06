@@ -7,6 +7,6 @@ const ProgressBar = styled.nav`
   margin: 20px 0;
 `
 
-ProgressBar.displayName = 'StyledProgressBar'
+ProgressBar.displayName = 'ProgressBar'
 
 export default ProgressBar

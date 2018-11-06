@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import * as React from 'react'
 import { Helmet } from 'react-helmet'
 
 import Footer from './Footer'
@@ -7,13 +7,13 @@ import Section from './Section'
 
 export default function Layout ({ children }) {
   return (
-    <Fragment>
+    <>
       <Helmet>
         <title>Legal Checkup</title>
       </Helmet>
       <Header />
       <Section>{children}</Section>
       <Footer />
-    </Fragment>
+    </>
   )
 }

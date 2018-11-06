@@ -2,7 +2,8 @@ import { of } from 'rxjs'
 import { TestScheduler } from 'rxjs/testing'
 
 import isNextQuestionPermitted from '../../../utilities/isNextQuestionPermitted'
-import isPreviousQuestionPermitted from '../../../utilities/isPreviousQuestionPermitted'
+import isPreviousQuestionPermitted
+  from '../../../utilities/isPreviousQuestionPermitted'
 import isQuestionPermitted from '../../../utilities/isQuestionPermitted'
 import {
   errorQuestionIndexOutOfBounds,
@@ -20,12 +21,8 @@ import {
   REQUESTED_QUESTION_ACTIVATED
 } from '../../constants'
 import { state } from '../../fixtures'
-import {
-  getActiveQuestionIndex,
-  getQuestionCount,
-  getResponseCount
-} from '../../selectors'
-import questionRequestedEpic from '.'
+
+import questionRequestedEpic from './'
 
 jest.mock('../../actions', () => ({
   errorQuestionIndexOutOfBounds: jest.fn(),

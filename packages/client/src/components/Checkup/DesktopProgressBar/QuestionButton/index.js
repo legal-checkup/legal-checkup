@@ -9,6 +9,6 @@ const QuestionButton = styled.button`
   outline: none;
   width: 48px;
 `
-QuestionButton.displayName = 'StyledQuestionButton'
+QuestionButton.displayName = 'QuestionButton'
 
 export default QuestionButton

@@ -12,7 +12,7 @@ import {
   getResponseList,
   getResponses,
   getTopics
-} from '.'
+} from './'
 import { head, identity, last, length, times } from 'ramda'
 
 import { state } from '../fixtures'

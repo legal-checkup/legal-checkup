@@ -8,6 +8,5 @@
   "license": "MIT",
   "dependencies": {
     "lerna": "^3.4.3"
-  },
-  "devDependencies": {}
+  }
 }

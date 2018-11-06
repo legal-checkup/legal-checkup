@@ -23,7 +23,7 @@ import {
   userRespondedWithNo,
   userRespondedWithNotSure,
   userRespondedWithYes
-} from '.'
+} from './'
 
 describe('state:actions', () => {
   describe('checkupComplete', () => {

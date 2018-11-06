@@ -11,7 +11,7 @@ exports[`components:PrivacyPolicy  renders the PrivacyPolicy page 1`] = `
     </title>
   </HelmetWrapper>
   <Header />
-  <StyledLayout>
+  <Section>
     <p>
       This is the 
       <strong>
@@ -19,7 +19,7 @@ exports[`components:PrivacyPolicy  renders the PrivacyPolicy page 1`] = `
       </strong>
        page
     </p>
-  </StyledLayout>
+  </Section>
   <Footer />
 </Fragment>
 `;

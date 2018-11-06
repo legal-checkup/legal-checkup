@@ -1,7 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:styled:QuestionBox renders the Layout and CSS properties properly 1`] = `
-.c0 {
+exports[`components:styled:Box renders the Layout and CSS properties properly 1`] = `
+<StyledComponent
+  forwardedClass={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": undefined,
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": true,
+        "rules": Array [
+          "
   width: 260px;
   height: 120px;
   font-family: Helvetica;
@@ -10,16 +19,22 @@ exports[`components:styled:QuestionBox renders the Layout and CSS properties pro
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
-  -webkit-letter-spacing: normal;
-  -moz-letter-spacing: normal;
-  -ms-letter-spacing: normal;
   letter-spacing: normal;
   text-align: center;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "Box",
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
 >
-  StyledQuestionBox
-</div>
+  StyledBox
+</StyledComponent>
 `;

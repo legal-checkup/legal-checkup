@@ -1,20 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:styled:DesktopProgressBar renders the DesktopProgressBar and CSS properties properly 1`] = `
-.c0 {
+exports[`components:styled:ProgressBar renders the ProgressBar and CSS properties properly 1`] = `
+<StyledComponent
+  forwardedClass={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": undefined,
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": true,
+        "rules": Array [
+          "
   background-color: #fff;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   margin: 20px 0;
-}
-
-<nav
-  className="c0"
+",
+        ],
+      },
+      "displayName": "DesktopProgressBar",
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "nav",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
 />
 `;

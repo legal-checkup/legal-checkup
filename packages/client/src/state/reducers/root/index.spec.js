@@ -1,4 +1,12 @@
 import {
+  nextQuestionActivated,
+  previousQuestionActivated,
+  requestedQuestionActivated,
+  userRespondedWithNo,
+  userRespondedWithNotSure,
+  userRespondedWithYes
+} from '../../actions'
+import {
   NEXT_QUESTION_ACTIVATED,
   NO,
   NOT_SURE,
@@ -9,19 +17,11 @@ import {
   USER_RESPONDED_WITH_YES,
   YES
 } from '../../constants'
-import {
-  nextQuestionActivated,
-  previousQuestionActivated,
-  requestedQuestionActivated,
-  userRespondedWithNo,
-  userRespondedWithNotSure,
-  userRespondedWithYes
-} from '../../actions'
-
-import rootReducer from '.'
 import setActiveQuestionIndex from '../../domain/setActiveQuestionIndex'
 import setQuestionResponse from '../../domain/setQuestionResponse'
 import { state } from '../../fixtures'
+
+import rootReducer from './'
 
 jest.mock('../../domain/setActiveQuestionIndex', () => ({
   __esModule: true,
@@ -32,9 +32,6 @@ jest.mock('../../domain/setQuestionResponse', () => ({
   __esModule: true,
   default: jest.fn()
 }))
-
-const topicId = 'topicId'
-const id = 'id'
 
 describe('state:reducers', () => {
   describe('rootReducer', () => {

@@ -9,6 +9,6 @@ const NextButton = styled.button`
   outline: none;
   width: 48px;
 `
-NextButton.displayName = 'StyledNextButton'
+NextButton.displayName = 'NextButton'
 
 export default NextButton

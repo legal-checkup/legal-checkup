@@ -11,7 +11,7 @@ import {
 } from '../../constants'
 import { state } from '../../fixtures'
 import { getActiveQuestionIndex, getQuestionCount } from '../../selectors'
-import responseReceivedEpic from '.'
+import responseReceivedEpic from './'
 
 jest.mock('../../actions', () => ({
   checkupComplete: jest

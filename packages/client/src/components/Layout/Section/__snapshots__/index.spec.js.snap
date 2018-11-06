@@ -1,14 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:styled:Layout renders the Layout and CSS properties properly 1`] = `
-.c0 {
+exports[`components:styled:Section renders the Section and CSS properties properly 1`] = `
+<StyledComponent
+  forwardedClass={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": undefined,
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": true,
+        "rules": Array [
+          "
   background-color: #eee;
   color: #333;
-}
-
-<section
-  className="c0"
+",
+        ],
+      },
+      "displayName": "Section",
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "section",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
 >
-  StyledLayout
-</section>
+  StyledSection
+</StyledComponent>
 `;

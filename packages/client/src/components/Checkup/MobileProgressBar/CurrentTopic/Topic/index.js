@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-const CurrentTopic = styled.div`
+const Topic = styled.div`
   background-color: #ededed;
   color: #000000;
   font-weight: bold;
@@ -12,6 +12,6 @@ const CurrentTopic = styled.div`
   width: 158px;
 `
 
-CurrentTopic.displayName = 'StyledCurrentTopic'
+Topic.displayName = 'Topic'
 
-export default CurrentTopic
+export default Topic

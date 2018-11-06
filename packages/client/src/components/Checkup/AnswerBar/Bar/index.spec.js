@@ -1,9 +1,10 @@
 import React from 'react'
+
 import { shallow } from 'enzyme'
 
-import AnswerBar from '.'
+import Bar from './'
 
-describe('components:styled:AnswerBar', function () {
-  it('renders the AnswerBar and CSS properties properly', () =>
-    expect(toJson(shallow(<AnswerBar />))).toMatchSnapshot())
+describe('components:styled:Bar', function () {
+  it('renders the Bar and CSS properties properly', () =>
+    expect(toJson(shallow(<Bar />))).toMatchSnapshot())
 })

@@ -2,7 +2,7 @@ import React from 'react'
 
 import { shallow } from 'enzyme'
 
-import Topic from '.'
+import Topic from './'
 
 describe('components:styled:Topic', () => {
   it('renders the Topic and CSS properties properly', () => {

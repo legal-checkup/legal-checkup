@@ -9,6 +9,6 @@ const PreviousButton = styled.button`
   outline: none;
   width: 48px;
 `
-PreviousButton.displayName = 'StyledPreviousButton'
+PreviousButton.displayName = 'PreviousButton'
 
 export default PreviousButton

@@ -1,4 +1,4 @@
-import setActiveQuestionIndex from '.'
+import setActiveQuestionIndex from './'
 import { state } from '../../fixtures'
 
 describe('state:domain', () => {

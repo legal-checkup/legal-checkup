@@ -1,7 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:styled:CurrentTopic renders the CurrentTopic and CSS properties properly 1`] = `
-.c0 {
+exports[`components:styled:Topic renders the Topic and CSS properties properly 1`] = `
+<StyledComponent
+  forwardedClass={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": undefined,
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": true,
+        "rules": Array [
+          "
   background-color: #ededed;
   color: #000000;
   font-weight: bold;
@@ -11,11 +20,20 @@ exports[`components:styled:CurrentTopic renders the CurrentTopic and CSS propert
   padding: 0 10px;
   text-align: center;
   width: 158px;
-}
-
-<div
-  className="c0"
+",
+        ],
+      },
+      "displayName": "Topic",
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "div",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
 >
   This Topic
-</div>
+</StyledComponent>
 `;
