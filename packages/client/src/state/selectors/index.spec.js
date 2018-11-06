@@ -26,7 +26,13 @@ describe('state:selectors', () => {
     })
 
     it('should return false if the next question does not exist or is not permitted', () => {
-      const newState = { ...state, activeQuestionIndex: 3 }
+      const newState = {
+        ...state,
+        checkup: {
+          ...state.checkup,
+          activeQuestionIndex: 3
+        }
+      }
 
       expect(checkNextQuestionEnabled(newState)).toBe(false)
     })
@@ -34,7 +40,13 @@ describe('state:selectors', () => {
 
   describe('checkPreviousQuestionEnabled', () => {
     it('should return true if the next question exists and is permitted', () => {
-      const newState = { ...state, activeQuestionIndex: 3 }
+      const newState = {
+        ...state,
+        checkup: {
+          ...state.checkup,
+          activeQuestionIndex: 3
+        }
+      }
 
       expect(checkPreviousQuestionEnabled(newState)).toBe(true)
     })
@@ -46,14 +58,20 @@ describe('state:selectors', () => {
 
   describe('getActiveQuestion', () => {
     it('should return the active question when an index is set', () => {
-      const [activeTopic] = state.topics
+      const [activeTopic] = state.checkup.topics
       const [activeQuestion] = activeTopic.questions
 
       expect(getActiveQuestion(state)).toMatchObject(activeQuestion)
     })
 
     it('should return undefined when the active question index does not exist', () => {
-      const newState = { ...state, activeQuestionIndex: -1 }
+      const newState = {
+        ...state,
+        checkup: {
+          ...state.checkup,
+          activeQuestionIndex: -1
+        }
+      }
 
       expect(getActiveQuestion(newState)).toBeUndefined()
     })
@@ -61,11 +79,13 @@ describe('state:selectors', () => {
 
   describe('getActiveQuestionIndex', () => {
     it('should return the active question', () => {
-      expect(getActiveQuestionIndex(state)).toBe(state.activeQuestionIndex)
+      expect(getActiveQuestionIndex(state)).toBe(
+        state.checkup.activeQuestionIndex
+      )
     })
 
-    it('should return undefined if no activeQuestionIndex value', () => {
-      const newState = {}
+    it.only('should return undefined if no activeQuestionIndex value', () => {
+      const newState = { checkup: {} }
 
       expect(getActiveQuestionIndex(newState)).toBeUndefined()
     })
@@ -77,7 +97,13 @@ describe('state:selectors', () => {
     })
 
     it('should return undefined if no activeQuestionIndex value', () => {
-      const newState = { ...state, activeQuestionIndex: -1 }
+      const newState = {
+        ...state,
+        checkup: {
+          ...state.checkup,
+          activeQuestionIndex: -1
+        }
+      }
 
       expect(getCurrentTopicName(newState)).toBeUndefined()
     })
@@ -152,7 +178,7 @@ describe('state:selectors', () => {
 
   describe('getTopics', () => {
     it('should return the topics and their questions', () => {
-      expect(getTopics(state)).toEqual(state.topics)
+      expect(getTopics(state)).toEqual(state.checkup.topics)
     })
   })
 })

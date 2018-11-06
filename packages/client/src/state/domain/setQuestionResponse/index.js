@@ -31,7 +31,13 @@ export default function setQuestionResponse (state, answer) {
   }
 
   // Create a 'lens' into the nested responses array/objects that permits us to reach in and get or set a nested value
-  const lp = lensPath(['responses', topicIndex, 'questions', questionIndex])
+  const lp = lensPath([
+    'checkup',
+    'responses',
+    topicIndex,
+    'questions',
+    questionIndex
+  ])
 
   // If the topic already exists in the responses, then inject or update the question (with answer) into it
   if (responses[topicIndex]) {
@@ -39,7 +45,7 @@ export default function setQuestionResponse (state, answer) {
   } else {
     // If the topic does not exist, first inject the topic into the responses array (at the correct index)
 
-    const tp = lensPath(['responses', topicIndex])
+    const tp = lensPath(['checkup', 'responses', topicIndex])
     const newState = set(
       tp,
       { id: topicId, name: topic.name, questions: [] },
