@@ -5,6 +5,7 @@ import { getCurrentTopicName } from '../../../../state/selectors'
 import Topic from './Topic'
 
 function mapStateToProps (state) {
+  console.log('state', state)
   return {
     children: getCurrentTopicName(state)
   }

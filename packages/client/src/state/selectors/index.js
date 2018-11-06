@@ -13,17 +13,17 @@ const getIndices = pipe(
 )
 
 // This simply gets the top-level key `activeQuestionIndex`
-export function getActiveQuestionIndex ({ activeQuestionIndex }) {
+export function getActiveQuestionIndex ({ checkup: { activeQuestionIndex } }) {
   return activeQuestionIndex
 }
 
 // This simply gets the top-level key `activeQuestionIndex`
-export function getTopics ({ topics }) {
+export function getTopics ({ checkup: { topics } }) {
   return topics
 }
 
 // This simply gets the top-level key `activeQuestionIndex`
-export function getResponses ({ responses }) {
+export function getResponses ({ checkup: { responses } }) {
   return responses
 }
 

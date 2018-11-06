@@ -1,7 +1,6 @@
 import * as React from 'react'
 import {
   ConnectedRouter,
-  connectRouter,
   routerMiddleware
 } from 'connected-react-router'
 import { applyMiddleware, compose, createStore } from 'redux'
@@ -16,7 +15,7 @@ import { createBrowserHistory } from 'history'
 
 import rootEpic from '../../state/epics'
 import initialState from '../../state/initialState'
-import rootReducer from '../../state/reducers/root'
+import createRootReducer from '../../state/reducers'
 import Switchboard from '../Switchboard'
 
 const epicMiddleware = createEpicMiddleware()
@@ -36,7 +35,7 @@ const middleware = devTools
   )
   : compose(appliedMiddleware)
 const store = createStore(
-  connectRouter(history)(rootReducer),
+  createRootReducer(history),
   initialState,
   middleware
 )
