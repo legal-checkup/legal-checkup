@@ -4,7 +4,7 @@ class ResultsPage {
   constructor () {
     this.pageTitle = Selector('#root > section > p')
     this.zeroYesAnswer = Selector('#root > section > div > p')
-    this.yesAnswer = Selector('#root > section > div > p > p')
+    this.yesAnswer = Selector('#root > section > div > p:nth-child(1)')
     this.endText = Selector('#root > section > div > p')
   }
 

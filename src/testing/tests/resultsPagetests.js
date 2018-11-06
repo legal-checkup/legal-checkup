@@ -13,7 +13,7 @@ test('Desktop ResultsPage : Validate resultpage Text', async t => {
 test('Desktop ResultsPage : Validate if Yes > 0 answer reply Text', async t => {
   await t
     // Use the assertion to check if the actual result text is equal to the expected one
-    .expect(resultsPage.yesAnswer.hasChildNodes.innerText)
+    .expect(resultsPage.yesAnswer.innerText)
     .eql(
       'Based on your answers, a lawyer may be able to help you with... You can get free legal advice about these (or any other problem) from your local Community Law Centre.'
     )
