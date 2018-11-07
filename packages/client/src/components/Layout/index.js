@@ -2,7 +2,7 @@ import * as React from 'react'
 import { Helmet } from 'react-helmet'
 
 import Footer from './Footer'
-import Header from './Header'
+import MobileHeader from './MobileHeader'
 import Section from './Section'
 
 export default function Layout ({ children }) {
@@ -11,7 +11,7 @@ export default function Layout ({ children }) {
       <Helmet>
         <title>Legal Checkup</title>
       </Helmet>
-      <Header />
+      <MobileHeader />
       <Section>{children}</Section>
       <Footer />
     </>
