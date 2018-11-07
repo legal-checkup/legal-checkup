@@ -3,10 +3,10 @@ import { connect } from 'react-redux'
 import { questionRequested } from '../../state/actions'
 import { checkNextQuestionEnabled } from '../../state/selectors'
 
-function mapStateToProps (state, { children, questionIndex }) {
+function mapStateToProps ({ checkup }, { children, questionIndex }) {
   return {
     children: children || questionIndex,
-    enabled: checkNextQuestionEnabled(state)
+    enabled: checkNextQuestionEnabled(checkup)
   }
 }
 

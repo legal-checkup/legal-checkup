@@ -33,17 +33,17 @@ const questionRequestedEpic = (action$, state$) =>
       QUESTION_REQUESTED
     ),
     withLatestFrom(state$),
-    map(([{ payload: { questionIndex } = {}, type }, state]) => {
-      const activeQuestionIndex = getActiveQuestionIndex(state)
-      const questionCount = getQuestionCount(state)
-      const responseCount = getResponseCount(state)
+    map(([{ payload: { questionIndex } = {}, type }, { checkup }]) => {
+      const activeQuestionIndex = getActiveQuestionIndex(checkup)
+      const questionCount = getQuestionCount(checkup)
+      const responseCount = getResponseCount(checkup)
 
       switch (type) {
         case NEXT_QUESTION_REQUESTED:
           return isNextQuestionPermitted(
             activeQuestionIndex,
-            responseCount,
-            questionCount
+            questionCount,
+            responseCount
           )
             ? nextQuestionActivated(activeQuestionIndex + 1)
             : errorQuestionIndexOutOfBounds(activeQuestionIndex + 1)
@@ -55,8 +55,8 @@ const questionRequestedEpic = (action$, state$) =>
         default:
           return isQuestionPermitted(
             activeQuestionIndex,
-            responseCount,
-            questionCount
+            questionCount,
+            responseCount
           )
             ? requestedQuestionActivated(questionIndex)
             : errorQuestionIndexOutOfBounds(questionIndex)

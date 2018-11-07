@@ -4,8 +4,8 @@ import { getActiveQuestion } from '../../../state/selectors'
 
 import Box from './Box'
 
-function mapStateToProps (state) {
-  const { body: children } = getActiveQuestion(state)
+function mapStateToProps ({ checkup }) {
+  const { body: children } = getActiveQuestion(checkup)
 
   return { children }
 }

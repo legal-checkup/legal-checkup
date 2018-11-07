@@ -7,9 +7,9 @@ import {
 
 import Counter from './Counter'
 
-function mapStateToProps (state) {
-  const children = `${getActiveQuestionIndex(state) + 1}/${getQuestionCount(
-    state
+function mapStateToProps ({ checkup }) {
+  const children = `${getActiveQuestionIndex(checkup) + 1}/${getQuestionCount(
+    checkup
   )}`
 
   return { children }

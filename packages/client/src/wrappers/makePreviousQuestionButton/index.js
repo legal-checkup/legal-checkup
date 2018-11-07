@@ -3,10 +3,10 @@ import { connect } from 'react-redux'
 import { previousQuestionRequested } from '../../state/actions'
 import { checkPreviousQuestionEnabled } from '../../state/selectors'
 
-function mapStateToProps (state, { children }) {
+function mapStateToProps ({ checkup }, { children }) {
   return {
     children: children || String.fromCharCode(9664),
-    enabled: checkPreviousQuestionEnabled(state)
+    enabled: checkPreviousQuestionEnabled(checkup)
   }
 }
 

@@ -3,8 +3,8 @@ import { connect } from 'react-redux'
 
 import { getPathname } from '../../state/selectors'
 
-function mapStateToProps (state, { href }) {
-  const currentPath = getPathname(state)
+function mapStateToProps ({ checkup }, { href }) {
+  const currentPath = getPathname(checkup)
 
   return {
     isCurrentPage: href === currentPath

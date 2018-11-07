@@ -1,7 +1,7 @@
 import { findIndex, lensPath, set } from 'ramda'
-import { getActiveQuestion, getResponses, getTopics } from '../../selectors'
-
 import { isUndefined } from 'ramda-adjunct'
+
+import { getActiveQuestion, getResponses, getTopics } from '../../selectors'
 
 // Copies the question into the responses hierarchy and injects the `answer` into it
 export default function setQuestionResponse (state, answer) {
