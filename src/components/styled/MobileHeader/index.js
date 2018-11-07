@@ -1,10 +1,8 @@
 import styled, { css } from 'styled-components'
 
-const StyledDesktopHeader = styled.header`
+const StyledMobileHeader = styled.header`
   width: 100%;
   margin-top: 100px;
-  width: 375px;
-  height: 100px;
   background-color: #202020;
   box-sizing: border-box;
   display: flex;
@@ -12,27 +10,28 @@ const StyledDesktopHeader = styled.header`
   align-items: center;
   border-bottom: solid 7px #444141;
 `
-StyledDesktopHeader.displayName = 'StyledDesktopHeader'
+StyledMobileHeader.displayName = 'StyledMobileHeader'
 
 const StyledMobileHeaderLinkContainer = styled.span`
-  width: 380px;
-  height: 43px;
+  width: 100%;
+  height: 35px;
+  display: inline;
   background-color: #444141;
   margin-left: -130px;
   margin-top: 50px;
-  margin-rightt: 100px;
 `
 
-const StyledDesktopHeaderLogo = styled.div`
+const StyledMobileHeaderLogo = styled.div`
   border-radius: 5px;
   background-color: #474747;
   opacity: 0.39;
   font-family: Avenir, sans-serif;
   font-size: 10px;
-  margin-bottom: 40px;
-  line-height: 0.84;
+  margin-bottom: 8px;
+  margin-top: -28px;
+  margin-left: 5px;
   width: 32px;
-  height: 32px;
+  height: 35px;
   object-fit: contain;
   color: #ffffff;
   cursor: pointer;
@@ -42,13 +41,13 @@ const StyledDesktopHeaderLogo = styled.div`
       cursor: default;
     `};
 `
-StyledDesktopHeaderLogo.displayName = 'StyledDesktopHeaderLogo'
+StyledMobileHeaderLogo.displayName = 'StyledMobileHeaderLogo'
 
-const StyledDesktopHeaderLegal = styled.div`
+const StyledMobileHeaderLegal = styled.div`
   width: 87px;
   height: 18px;
   font-family: MuseoSansCyrl;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 900;
   font-style: normal;
   font-stretch: normal;
@@ -59,21 +58,19 @@ const StyledDesktopHeaderLegal = styled.div`
   margin-top: -30px;
   margin-left: 5px;
 `
-StyledDesktopHeaderLegal.displayName = 'StyledDesktopHeaderLegal'
+StyledMobileHeaderLegal.displayName = 'StyledMobileHeaderLegal'
 
-const StyledDesktopHeaderLink = styled.div`
+const StyledMobileHeaderLink = styled.div`
   font-family: Avenir, sans-serif;
   width: 33px;
-  line-height: 3;
+  line-height: 2.5;
   letter-spacing: normal;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
   color: #ffffff;
   display: inline;
   margin-right: 10px;
   margin-left: 30px;
-  padding-top: 20px;
-  margin-bottom: 0px;
   text-align: center;
   cursor: pointer;
   text-decoration: none;
@@ -85,19 +82,19 @@ const StyledDesktopHeaderLink = styled.div`
       color: #b62645;
       background-color: #eeedea;
       width: 100px;
-      padding-left: 5px;
-      padding-bottom: 20px;
-      padding-top: 15px;
-      padding-right: 5px;
-      border-radius: 5px;
+      padding-left: 8px;
+      padding-bottom: 15px;
+      padding-top: 8px;
+      padding-right: 8px;
+      border-radius: 4px;
     `};
 `
-StyledDesktopHeaderLink.displayName = 'StyledDesktopHeaderLink'
+StyledMobileHeaderLink.displayName = 'StyledMobileHeaderLink'
 
 export {
-  StyledDesktopHeader,
-  StyledDesktopHeaderLogo,
-  StyledDesktopHeaderLegal,
-  StyledDesktopHeaderLink,
+  StyledMobileHeader,
+  StyledMobileHeaderLogo,
+  StyledMobileHeaderLegal,
+  StyledMobileHeaderLink,
   StyledMobileHeaderLinkContainer
 }

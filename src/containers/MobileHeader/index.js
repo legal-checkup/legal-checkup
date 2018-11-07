@@ -8,28 +8,28 @@ import {
 } from '@state/constants'
 
 import {
-  StyledDesktopHeader,
-  StyledDesktopHeaderLegal,
+  StyledMobileHeader,
+  StyledMobileHeaderLegal,
   StyledMobileHeaderLinkContainer
 } from '@components/styled/MobileHeader'
 
 import {
-  DesktopHeaderNavLink,
-  DesktopHeaderLogoLink
+  MobileHeaderNavLink,
+  MobileHeaderLogoLink
 } from '@containers/MobileHeaderLinks'
 
-export default function DesktopHeader () {
+export default function MobileHeader () {
   return (
-    <StyledDesktopHeader>
-      <DesktopHeaderLogoLink to={HOME_PATH}>LOGO</DesktopHeaderLogoLink>
-      <StyledDesktopHeaderLegal>LEGAL CHECKUP</StyledDesktopHeaderLegal>
+    <StyledMobileHeader>
+      <MobileHeaderLogoLink to={HOME_PATH}>LOGO</MobileHeaderLogoLink>
+      <StyledMobileHeaderLegal>LEGAL CHECKUP</StyledMobileHeaderLegal>
 
       <StyledMobileHeaderLinkContainer>
-        <DesktopHeaderNavLink to={HOME_PATH}>Home</DesktopHeaderNavLink>
-        <DesktopHeaderNavLink to={CHECKUP_PATH}>Checkup</DesktopHeaderNavLink>
-        <DesktopHeaderNavLink to={ABOUT_PATH}>About</DesktopHeaderNavLink>
-        <DesktopHeaderNavLink to={HELP_PATH}>Help</DesktopHeaderNavLink>
+        <MobileHeaderNavLink to={HOME_PATH}>Home</MobileHeaderNavLink>
+        <MobileHeaderNavLink to={CHECKUP_PATH}>Checkup</MobileHeaderNavLink>
+        <MobileHeaderNavLink to={ABOUT_PATH}>About</MobileHeaderNavLink>
+        <MobileHeaderNavLink to={HELP_PATH}>Help</MobileHeaderNavLink>
       </StyledMobileHeaderLinkContainer>
-    </StyledDesktopHeader>
+    </StyledMobileHeader>
   )
 }
