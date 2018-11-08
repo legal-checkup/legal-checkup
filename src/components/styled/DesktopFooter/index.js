@@ -5,10 +5,7 @@ const StyledDesktopFooter = styled.div`
   height: 100px;
   background-color: #202020;
   line-height: 100px;
-  ${'' /* flex-direction: row;
-  align-items: center;
-  display: flex;
-  justify-content: justify-content; */} position: absolute;
+  position: absolute;
   bottom: 0px;
 `
 StyledDesktopFooter.displayName = 'StyledDesktopFooter'

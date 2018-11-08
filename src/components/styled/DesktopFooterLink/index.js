@@ -15,11 +15,6 @@ const StyledDesktopFooterLink = styled.a`
   text-decoration: none;
   color: #ffffff;
   cursor: pointer;
-  ${props =>
-    props.active &&
-    css`
-      cursor: default;
-    `};
 `
 StyledDesktopFooterLink.displayName = 'StyledDesktopFooterLink'
 

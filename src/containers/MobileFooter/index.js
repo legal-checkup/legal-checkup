@@ -13,7 +13,7 @@ export default function Footer () {
   return (
     <StyledMobileFooter>
       <LinkExternalMobile href={COMMUNITY_LAW_PATH} target='_blank'>
-        © 2018 Community Law
+        2018 by Community Law Wellington and Hutt Valley
       </LinkExternalMobile>
       <MobileFooterLink to={PRIVACY_POLICY_PATH}>
         Privacy Policy
