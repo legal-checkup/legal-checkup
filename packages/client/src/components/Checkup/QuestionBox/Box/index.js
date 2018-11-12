@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 const Box = styled.div`
   width: 260px;
-  height: 120px;
   font-family: Helvetica;
   font-size: 25px;
   font-weight: normal;
@@ -11,6 +10,7 @@ const Box = styled.div`
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
+  margin: 0px auto;
 `
 Box.displayName = 'Box'
 
