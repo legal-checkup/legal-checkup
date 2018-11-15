@@ -9,7 +9,8 @@ import {
   REQUESTED_QUESTION_ACTIVATED,
   USER_RESPONDED_WITH_NO,
   USER_RESPONDED_WITH_NOT_SURE,
-  USER_RESPONDED_WITH_YES
+  USER_RESPONDED_WITH_YES,
+  REDO_CHECKUP
 } from '../constants'
 
 // All questions have been answered - triggers the results page in the checkupComplete epic
@@ -101,5 +102,12 @@ export function userRespondedWithNotSure () {
 export function userRespondedWithYes () {
   return {
     type: USER_RESPONDED_WITH_YES
+  }
+}
+
+// The user redo checkup
+export function resetClicked () {
+  return {
+    type: REDO_CHECKUP
   }
 }
