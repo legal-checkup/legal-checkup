@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:Checkup renders the Checkup page 1`] = `
+exports[`pages:Checkup renders the Checkup page 1`] = `
 <Fragment>
   <HelmetWrapper
     defer={true}
@@ -14,6 +14,6 @@ exports[`components:Checkup renders the Checkup page 1`] = `
   <Section>
     <Checkup />
   </Section>
-  <Footer />
+  <DesktopFooter />
 </Fragment>
 `;

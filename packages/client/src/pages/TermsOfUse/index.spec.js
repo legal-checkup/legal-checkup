@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 
 import TermsOfUse from './'
 
-describe('components:TermsOfUse ', () => {
+describe('pages:TermsOfUse ', () => {
   it('renders the TermsOfUse  page', () => {
     expect(toJson(shallow(<TermsOfUse />))).toMatchSnapshot()
   })

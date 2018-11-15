@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:Layout:MobileFooter renders the MobileFooter and CSS properties properly 1`] = `
+<StyledMobileFooter>
+  <Connect(StyledMobileFooterLink)
+    href="http://communitylaw.org.nz/"
+    target="_blank"
+  >
+    2018 by Community Law Wellington and Hutt Valley
+  </Connect(StyledMobileFooterLink)>
+  <Connect(StyledMobileFooterLink)
+    to="/privacy-policy"
+  >
+    Privacy Policy
+  </Connect(StyledMobileFooterLink)>
+  <Connect(StyledMobileFooterLink)
+    to="/terms-of-use"
+  >
+    Terms of Use
+  </Connect(StyledMobileFooterLink)>
+</StyledMobileFooter>
+`;

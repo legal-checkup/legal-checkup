@@ -1,4 +1,5 @@
-import { identity, length, map, pipe, reduce, times } from 'ramda'
+import { identity, length, map, pipe, reduce, times, pathOr } from 'ramda'
+
 import { createSelector } from 'reselect'
 
 import isNextQuestionPermitted from '../../utilities/isNextQuestionPermitted'
@@ -98,3 +99,5 @@ export const checkPreviousQuestionEnabled = createSelector(
   getActiveQuestionIndex,
   isPreviousQuestionPermitted
 )
+
+export const getPathname = pathOr({}, ['pathname'])

@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 
 import Home from './'
 
-describe('components:Home', () => {
+describe('pages:Home', () => {
   it('renders the Home page', () => {
     expect(toJson(shallow(<Home />).dive())).toMatchSnapshot()
   })
