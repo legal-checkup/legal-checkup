@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import { connect } from 'react-redux'
-import { push } from 'connected-react-router'
 
 const DesktopFooterLinkExternal = styled.a`
   height: 25px;
@@ -20,16 +18,4 @@ const DesktopFooterLinkExternal = styled.a`
 `
 DesktopFooterLinkExternal.displayName = 'DesktopFooterLinkExternal'
 
-function mapDispatchToProps (dispatch, { to }) {
-  return {
-    onClick: e => {
-      e.preventDefault()
-      dispatch(push(to))
-    }
-  }
-}
-
-export default connect(
-  undefined,
-  mapDispatchToProps
-)(DesktopFooterLinkExternal)
+export default DesktopFooterLinkExternal
