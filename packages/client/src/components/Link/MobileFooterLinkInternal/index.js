@@ -3,23 +3,21 @@ import styled from 'styled-components'
 import makeLocalLink from '../../../wrappers/makeLocalLink'
 
 const FooterLinkInternal = styled.a`
-  height: 25px;
-  margin-left: 140px;
+  padding-top: 5px;
   opacity: 0.53;
   font-family: Avenir;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
+  line-height: normal;
   letter-spacing: normal;
-  text-align: center;
-  vertical-align: center;
   text-decoration: none;
   color: #ffffff;
   cursor: pointer;
 `
-FooterLinkInternal.displayName = 'StyledDesktopFooterLinkInternal'
+FooterLinkInternal.displayName = 'StyledMobileFooterLinkInternal'
 
-const DesktopFooterLinkInternal = makeLocalLink(FooterLinkInternal)
+const MobileFooterLinkInternal = makeLocalLink(FooterLinkInternal)
 
-export default DesktopFooterLinkInternal
+export default MobileFooterLinkInternal

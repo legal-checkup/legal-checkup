@@ -19,10 +19,10 @@ export default function DesktopFooter () {
   return (
     <StyledDesktopFooter>
       <DesktopFooterLinkExternal href={COMMUNITY_LAW_PATH} target='_blank'>
-        2018 by Community Law Wellington and Hutt Valley
+        © 2018 by Community Law Wellington and Hutt Valley
       </DesktopFooterLinkExternal>
-      <DesktopFooterLinkInternal to={PRIVACY_POLICY_PATH}>Privacy Policy</DesktopFooterLinkInternal>
-      <DesktopFooterLinkInternal to={TERMS_OF_USE_PATH}>Terms of Use</DesktopFooterLinkInternal>
+      <DesktopFooterLinkInternal href={PRIVACY_POLICY_PATH}>Privacy Policy</DesktopFooterLinkInternal>
+      <DesktopFooterLinkInternal href={TERMS_OF_USE_PATH}>Terms of Use</DesktopFooterLinkInternal>
     </StyledDesktopFooter>
   )
 }

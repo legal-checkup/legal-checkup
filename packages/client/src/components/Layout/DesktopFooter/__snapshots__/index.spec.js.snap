@@ -2,19 +2,19 @@
 
 exports[`components:Layout:DesktopFooter renders the DesktopFooter and CSS properties properly 1`] = `
 <StyledDesktopFooter>
-  <Connect(DesktopFooterLinkExternal)
+  <DesktopFooterLinkExternal
     href="http://communitylaw.org.nz/"
     target="_blank"
   >
     2018 by Community Law Wellington and Hutt Valley
-  </Connect(DesktopFooterLinkExternal)>
+  </DesktopFooterLinkExternal>
   <Connect(StyledDesktopFooterLinkInternal)
-    to="/privacy-policy"
+    href="/privacy-policy"
   >
     Privacy Policy
   </Connect(StyledDesktopFooterLinkInternal)>
   <Connect(StyledDesktopFooterLinkInternal)
-    to="/terms-of-use"
+    href="/terms-of-use"
   >
     Terms of Use
   </Connect(StyledDesktopFooterLinkInternal)>
