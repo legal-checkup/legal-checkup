@@ -1,14 +1,16 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { resetClicked } from '../../state/actions'
-import { StyledRedoCheckup } from './StyleRedoCheckup'
+import { DesktopStyledRedoCheckup } from '../RedoCheckup/StyleRedoCheckup'
 import { Link } from 'react-router-dom'
 import { CHECKUP_PATH } from '../../state/constants'
 
-function RedoCheckup ({ handleClick }) {
+function DesktopRedoCheckup ({ handleClick }) {
   return (
     <Link style={{ textDecoration: 'none' }} to={CHECKUP_PATH}>
-      <StyledRedoCheckup onClick={handleClick}>Re-do Checkup</StyledRedoCheckup>
+      <DesktopStyledRedoCheckup onClick={handleClick}>
+        Re-do Checkup
+      </DesktopStyledRedoCheckup>
     </Link>
   )
 }
@@ -19,4 +21,4 @@ function mapDispatchToProps (dispatch) {
   }
 }
 
-export default connect(null, mapDispatchToProps)(RedoCheckup)
+export default connect(null, mapDispatchToProps)(DesktopRedoCheckup)
