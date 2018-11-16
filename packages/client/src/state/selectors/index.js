@@ -105,4 +105,4 @@ export const checkPreviousQuestionEnabled = createSelector(
   isPreviousQuestionPermitted
 )
 
-export const getPathname = pathOr({}, ['router', 'location', 'pathname'])
+export const getPathname = pathOr({}, ['pathname'])

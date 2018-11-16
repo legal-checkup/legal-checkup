@@ -3,7 +3,7 @@ import { shallow } from 'enzyme'
 
 import Checkup from './'
 
-describe('components:Checkup', () => {
+describe('pages:Checkup', () => {
   it('renders the Checkup page', () => {
     expect(toJson(shallow(<Checkup />).dive())).toMatchSnapshot()
   })
