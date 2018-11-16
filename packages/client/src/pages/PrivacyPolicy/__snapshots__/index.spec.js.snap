@@ -10,7 +10,7 @@ exports[`components:PrivacyPolicy  renders the PrivacyPolicy page 1`] = `
       Legal Checkup
     </title>
   </HelmetWrapper>
-  <Header />
+  <MobileHeader />
   <Section>
     <p>
       This is the 

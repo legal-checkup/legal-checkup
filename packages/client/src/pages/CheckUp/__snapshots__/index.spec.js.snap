@@ -10,7 +10,7 @@ exports[`components:Checkup renders the Checkup page 1`] = `
       Legal Checkup
     </title>
   </HelmetWrapper>
-  <Header />
+  <MobileHeader />
   <Section>
     <Checkup />
   </Section>

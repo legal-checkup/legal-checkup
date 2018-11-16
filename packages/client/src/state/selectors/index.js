@@ -1,10 +1,9 @@
-import { identity, length, map, pipe, reduce, times, filter } from 'ramda'
+import { filter, identity, length, map, pathOr, pipe, reduce, times } from 'ramda'
 import { createSelector } from 'reselect'
 
 import isNextQuestionPermitted from '../../utilities/isNextQuestionPermitted'
 import isPreviousQuestionPermitted
   from '../../utilities/isPreviousQuestionPermitted'
-
 import { YES } from '../constants'
 
 // To get an array of indices ([0, 1, 2, 3]), it is enough to get the length
@@ -105,3 +104,5 @@ export const checkPreviousQuestionEnabled = createSelector(
   getActiveQuestionIndex,
   isPreviousQuestionPermitted
 )
+
+export const getPathname = pathOr({}, ['router', 'location', 'pathname'])

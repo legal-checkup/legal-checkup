@@ -28,8 +28,10 @@ export const YES = 'Yes'
 // Page paths
 // Always better to use constants for values used in more than one place in the code --
 // It ensures that you don't have different values, which causes painful, hard to find bugs
-export const HOME_PATH = '/'
+export const ABOUT_PATH = '/about'
 export const CHECKUP_PATH = '/checkup'
+export const HELP_PATH = '/help'
+export const HOME_PATH = '/'
 export const PRIVACY_POLICY_PATH = '/privacy-policy'
 export const RESULTS_PATH = '/results'
 export const TERMS_OF_USE_PATH = '/terms-of-use'
