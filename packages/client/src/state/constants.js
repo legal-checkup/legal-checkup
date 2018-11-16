@@ -35,3 +35,5 @@ export const HOME_PATH = '/'
 export const PRIVACY_POLICY_PATH = '/privacy-policy'
 export const RESULTS_PATH = '/results'
 export const TERMS_OF_USE_PATH = '/terms-of-use'
+
+export const COMMUNITY_LAW_PATH = 'http://communitylaw.org.nz/'

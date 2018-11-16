@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:PrivacyPolicy  renders the PrivacyPolicy page 1`] = `
+exports[`pages:PrivacyPolicy  renders the PrivacyPolicy page 1`] = `
 <Fragment>
   <HelmetWrapper
     defer={true}
@@ -20,6 +20,6 @@ exports[`components:PrivacyPolicy  renders the PrivacyPolicy page 1`] = `
        page
     </p>
   </Section>
-  <Footer />
+  <DesktopFooter />
 </Fragment>
 `;
