@@ -1,0 +1,10 @@
+{
+  "name": "legal-checkup-cafe",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "testcafe": "^0.23.0",
+    "testcafe-react-selectors": "^3.0.0"
+  }
+}

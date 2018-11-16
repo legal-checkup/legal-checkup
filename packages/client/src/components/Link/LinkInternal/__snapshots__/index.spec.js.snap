@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:LinkInternal renders the LinkInternal and CSS properties properly 1`] = `
+<StyledComponent
+  forwardedClass={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": undefined,
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": true,
+        "rules": Array [
+          "
+  cursor: pointer;
+",
+        ],
+      },
+      "displayName": "StyledLinkInternal",
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "a",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+>
+  Click Me
+</StyledComponent>
+`;

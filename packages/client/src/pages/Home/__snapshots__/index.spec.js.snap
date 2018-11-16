@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pages:Home renders the Home page 1`] = `
+<Fragment>
+  <HelmetWrapper
+    defer={true}
+    encodeSpecialCharacters={true}
+  >
+    <title>
+      Legal Checkup
+    </title>
+  </HelmetWrapper>
+  <MobileHeader />
+  <Section>
+    <p>
+      This is the 
+      <strong>
+        Home
+      </strong>
+       page
+    </p>
+  </Section>
+  <DesktopFooter />
+</Fragment>
+`;

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:MobileProgressBar renders the MobileProgressBar and CSS properties properly 1`] = `
+<ProgressBar>
+  <Connect(PreviousButton) />
+  <Connect(Topic) />
+  <Connect(NextButton) />
+</ProgressBar>
+`;

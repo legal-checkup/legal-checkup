@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:MobileButtonAbout renders the MobileButtonAbout and CSS properties properly 1`] = `
+<StyledMobileButton
+  onClick={[Function]}
+>
+  About Community Law
+</StyledMobileButton>
+`;

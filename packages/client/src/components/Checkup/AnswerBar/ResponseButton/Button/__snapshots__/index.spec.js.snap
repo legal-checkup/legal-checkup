@@ -1,0 +1,232 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:NoButton renders the Button and CSS properties properly 1`] = `
+<StyledComponent
+  forwardedClass={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": undefined,
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
+  background-color: White;
+  border: solid 2px #b5b5b5;
+  border-right: ",
+          [Function],
+          ";
+  border-top-left-radius: ",
+          [Function],
+          ";
+  border-top-right-radius: ",
+          [Function],
+          ";
+  border-bottom-left-radius: ",
+          [Function],
+          ";
+  border-bottom-right-radius: ",
+          [Function],
+          ";
+  height: 78px;
+  margin-left: ",
+          [Function],
+          ";
+  width: ",
+          [Function],
+          ";
+
+  &:after {
+    content: '",
+          [Function],
+          "';
+  }
+",
+        ],
+      },
+      "displayName": "Button",
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "button",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
+
+exports[`components:styled:NoButton renders the NoButton and CSS properties properly 1`] = `
+<StyledComponent
+  forwardedClass={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": undefined,
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
+  background-color: White;
+  border: solid 2px #b5b5b5;
+  border-right: ",
+          [Function],
+          ";
+  border-top-left-radius: ",
+          [Function],
+          ";
+  border-top-right-radius: ",
+          [Function],
+          ";
+  border-bottom-left-radius: ",
+          [Function],
+          ";
+  border-bottom-right-radius: ",
+          [Function],
+          ";
+  height: 78px;
+  margin-left: ",
+          [Function],
+          ";
+  width: ",
+          [Function],
+          ";
+
+  &:after {
+    content: '",
+          [Function],
+          "';
+  }
+",
+        ],
+      },
+      "displayName": "Button",
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "button",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  type="No"
+/>
+`;
+
+exports[`components:styled:NoButton renders the NotSureButton and CSS properties properly 1`] = `
+<StyledComponent
+  forwardedClass={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": undefined,
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
+  background-color: White;
+  border: solid 2px #b5b5b5;
+  border-right: ",
+          [Function],
+          ";
+  border-top-left-radius: ",
+          [Function],
+          ";
+  border-top-right-radius: ",
+          [Function],
+          ";
+  border-bottom-left-radius: ",
+          [Function],
+          ";
+  border-bottom-right-radius: ",
+          [Function],
+          ";
+  height: 78px;
+  margin-left: ",
+          [Function],
+          ";
+  width: ",
+          [Function],
+          ";
+
+  &:after {
+    content: '",
+          [Function],
+          "';
+  }
+",
+        ],
+      },
+      "displayName": "Button",
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "button",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  type="Not sure"
+/>
+`;
+
+exports[`components:styled:NoButton renders the YesButton and CSS properties properly 1`] = `
+<StyledComponent
+  forwardedClass={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": undefined,
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": false,
+        "rules": Array [
+          "
+  background-color: White;
+  border: solid 2px #b5b5b5;
+  border-right: ",
+          [Function],
+          ";
+  border-top-left-radius: ",
+          [Function],
+          ";
+  border-top-right-radius: ",
+          [Function],
+          ";
+  border-bottom-left-radius: ",
+          [Function],
+          ";
+  border-bottom-right-radius: ",
+          [Function],
+          ";
+  height: 78px;
+  margin-left: ",
+          [Function],
+          ";
+  width: ",
+          [Function],
+          ";
+
+  &:after {
+    content: '",
+          [Function],
+          "';
+  }
+",
+        ],
+      },
+      "displayName": "Button",
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "button",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+  type="Yes"
+/>
+`;

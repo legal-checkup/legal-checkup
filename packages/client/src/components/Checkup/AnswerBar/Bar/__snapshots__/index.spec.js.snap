@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:styled:Bar renders the Bar and CSS properties properly 1`] = `
+<StyledComponent
+  forwardedClass={
+    Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "attrs": undefined,
+      "componentStyle": ComponentStyle {
+        "componentId": "sc-bdVaJa",
+        "isStatic": true,
+        "rules": Array [
+          "
+  margin: auto;
+  margin-bottom: 41px;
+  width: 90%;
+  width: 292px;
+",
+        ],
+      },
+      "displayName": "StyledBar",
+      "render": [Function],
+      "styledComponentId": "sc-bdVaJa",
+      "target": "section",
+      "toString": [Function],
+      "warnTooManyClasses": [Function],
+      "withComponent": [Function],
+    }
+  }
+  forwardedRef={null}
+/>
+`;
