@@ -19,7 +19,7 @@ export const USER_RESPONDED_WITH_NO = '@checkup/USER_RESPONDED_WITH_NO'
 export const USER_RESPONDED_WITH_NOT_SURE =
   '@checkup/USER_RESPONDED_WITH_NOT_SURE'
 export const USER_RESPONDED_WITH_YES = '@checkup/USER_RESPONDED_WITH_YES'
-
+export const REDO_CHECKUP = '@checkup/REDO_CHECKUP'
 // Response enumeration
 export const NO = 'No'
 export const NOT_SURE = 'Not sure'
