@@ -1,4 +1,8 @@
+import { head, identity, last, length, times } from 'ramda'
+
 import { NO, NOT_SURE, YES } from '../constants'
+import { state as topState } from '../fixtures'
+
 import {
   checkNextQuestionEnabled,
   checkPreviousQuestionEnabled,
@@ -11,11 +15,11 @@ import {
   getResponseCount,
   getResponseList,
   getResponses,
-  getTopics
+  getTopics,
+  getYesAnswers
 } from './'
-import { head, identity, last, length, times } from 'ramda'
 
-import { state } from '../fixtures'
+const { checkup: state } = topState
 
 const questions = getQuestionList(state)
 
@@ -153,6 +157,12 @@ describe('state:selectors', () => {
   describe('getTopics', () => {
     it('should return the topics and their questions', () => {
       expect(getTopics(state)).toEqual(state.topics)
+    })
+  })
+
+  describe(`getYesAnswers`, () => {
+    it(`should return all of the Yes answers`, () => {
+      expect(getYesAnswers(state)).toHaveLength(1)
     })
   })
 })
