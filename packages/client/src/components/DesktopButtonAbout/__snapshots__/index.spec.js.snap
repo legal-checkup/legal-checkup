@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:DesktopButtonAbout renders the DesktopButtonAbout and CSS properties properly 1`] = `
+<StyledDesktopButton
+  onClick={[Function]}
+>
+  About Community Law
+</StyledDesktopButton>
+`;
