@@ -9,5 +9,8 @@ exports[`components:Results renders the Results page 1`] = `
     </strong>
      page
   </p>
+  <div>
+    <Connect(DesktopRedoCheckup) />
+  </div>
 </Layout>
 `;
