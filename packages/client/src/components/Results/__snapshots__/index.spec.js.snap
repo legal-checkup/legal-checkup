@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`containers:ResultsHero ResultsHero should render ResultsHero properly when yesCount == 0 1`] = `
+exports[`components:Results Results should render Results properly when yesCount == 0 1`] = `
 <Fragment>
   <p>
     Based on your answers, it looks like you're in good legal health! 
@@ -10,7 +10,7 @@ exports[`containers:ResultsHero ResultsHero should render ResultsHero properly w
 </Fragment>
 `;
 
-exports[`containers:ResultsHero ResultsHero should render ResultsHero properly when yesCount > 0  1`] = `
+exports[`components:Results Results should render Results properly when yesCount > 0  1`] = `
 <Fragment>
   <p>
     Based on your answers, a lawyer may be able to help you with...

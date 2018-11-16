@@ -64,10 +64,10 @@
   },
   "scripts": {
     "build": "react-scripts build",
-    "coverage": "react-scripts test --env=jsdom --coverage",
+    "cov": "react-scripts test --coverage",
     "format": "standard 'src/**/*.js' --fix --verbose | snazzy",
     "start": "react-scripts start",
-    "test": "react-scripts test --env=jsdom"
+    "test": "react-scripts test"
   },
   "standard": {
     "env": [
@@ -75,7 +75,11 @@
     ],
     "globals": [
       "fetch",
-      "toJson"
+      "toJson",
+      "describe",
+      "expect",
+      "test",
+      "it"
     ]
   },
   "husky": {

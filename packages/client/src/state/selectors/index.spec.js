@@ -1,4 +1,8 @@
+import { head, identity, last, length, times } from 'ramda'
+
 import { NO, NOT_SURE, YES } from '../constants'
+import { state as topState } from '../fixtures'
+
 import {
   checkNextQuestionEnabled,
   checkPreviousQuestionEnabled,
@@ -14,9 +18,8 @@ import {
   getTopics,
   getYesAnswers
 } from './'
-import { head, identity, last, length, times } from 'ramda'
 
-import { state } from '../fixtures'
+const { checkup: state } = topState
 
 const questions = getQuestionList(state)
 

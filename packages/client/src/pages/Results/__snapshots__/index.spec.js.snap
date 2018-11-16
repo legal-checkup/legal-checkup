@@ -3,5 +3,15 @@
 exports[`components:Results renders the Results page 1`] = `
 <Layout>
   <Connect(ResultsHero) />
+  <p>
+    This is the 
+    <strong>
+      Results
+    </strong>
+     page
+  </p>
+  <div>
+    <Connect(DesktopRedoCheckup) />
+  </div>
 </Layout>
 `;

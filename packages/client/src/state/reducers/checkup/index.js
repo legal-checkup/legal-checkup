@@ -7,7 +7,8 @@ import {
   USER_RESPONDED_WITH_NO,
   USER_RESPONDED_WITH_NOT_SURE,
   USER_RESPONDED_WITH_YES,
-  YES
+  YES,
+  REDO_CHECKUP
 } from '../../constants'
 import setActiveQuestionIndex from '../../domain/setActiveQuestionIndex'
 import setQuestionResponse from '../../domain/setQuestionResponse'
@@ -32,6 +33,9 @@ export default function reducer (state = initialState, { payload = {}, type }) {
 
     case USER_RESPONDED_WITH_YES:
       return setQuestionResponse(state, YES)
+
+    case REDO_CHECKUP:
+      return state
 
     default:
       return state
