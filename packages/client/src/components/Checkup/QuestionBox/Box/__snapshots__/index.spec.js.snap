@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:styled:Box renders the Layout and CSS properties properly 1`] = `
+exports[`components:styled:QuestionBox renders the QuestionBox component with proper CSS properties 1`] = `
 <StyledComponent
   forwardedClass={
     Object {
@@ -12,7 +12,6 @@ exports[`components:styled:Box renders the Layout and CSS properties properly 1`
         "rules": Array [
           "
   width: 260px;
-  height: 120px;
   font-family: Helvetica;
   font-size: 25px;
   font-weight: normal;
@@ -21,6 +20,7 @@ exports[`components:styled:Box renders the Layout and CSS properties properly 1`
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
+  margin: 0px auto;
 ",
         ],
       },
@@ -34,7 +34,5 @@ exports[`components:styled:Box renders the Layout and CSS properties properly 1`
     }
   }
   forwardedRef={null}
->
-  StyledBox
-</StyledComponent>
+/>
 `;

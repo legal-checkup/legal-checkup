@@ -22,6 +22,7 @@ exports[`components:styled:Counter renders the Counter and CSS properties proper
   letter-spacing: normal;
   text-align: center;
   color: #000000;
+  margin: 0px auto;
 ",
         ],
       },

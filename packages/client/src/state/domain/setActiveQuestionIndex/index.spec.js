@@ -1,5 +1,8 @@
+import { state as topState } from '../../fixtures'
+
 import setActiveQuestionIndex from './'
-import { state } from '../../fixtures'
+
+const { checkup: state } = topState
 
 describe('state:domain', () => {
   describe('setActiveQuestionIndex', () => {
