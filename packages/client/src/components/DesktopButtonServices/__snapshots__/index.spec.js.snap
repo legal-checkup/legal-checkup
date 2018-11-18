@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`components:DesktopButtonServices renders the DesktopButtonServices and CSS properties properly 1`] = `
-<StyledDesktopButton
-  onClick={[Function]}
->
-  Community Law Services
-</StyledDesktopButton>
-`;

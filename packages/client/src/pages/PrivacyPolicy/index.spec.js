@@ -1,10 +1,10 @@
-import React from 'react'
-import { shallow } from 'enzyme'
+import * as React from 'react'
+import { create } from 'react-test-renderer'
 
 import PrivacyPolicy from './'
 
 describe('pages:PrivacyPolicy ', () => {
   it('renders the PrivacyPolicy page', () => {
-    expect(toJson(shallow(<PrivacyPolicy />).dive())).toMatchSnapshot()
+    expect(create(<PrivacyPolicy />).toJSON()).toMatchSnapshot()
   })
 })

@@ -1,10 +1,10 @@
-import React from 'react'
-import { shallow } from 'enzyme'
+import * as React from 'react'
+import { create } from 'react-test-renderer'
 
 import Checkup from './'
 
 describe('pages:Checkup', () => {
   it('renders the Checkup page', () => {
-    expect(toJson(shallow(<Checkup />).dive())).toMatchSnapshot()
+    expect(create(<Checkup />).toJSON()).toMatchSnapshot()
   })
 })

@@ -1,7 +1,13 @@
 import { head, identity, last, length, times } from 'ramda'
 
-import { NO, NOT_SURE, YES } from '../constants'
-import { state as topState } from '../fixtures'
+import {
+  ALL_GOOD_RESULT,
+  NEED_HELP_RESULT,
+  NO,
+  NOT_SURE,
+  YES
+} from '../constants'
+import { state as fullState } from '../fixtures'
 
 import {
   checkNextQuestionEnabled,
@@ -9,17 +15,20 @@ import {
   getActiveQuestion,
   getActiveQuestionIndex,
   getCurrentTopicName,
+  getNoAnswers,
+  getNotSureAnswers,
   getQuestionCount,
   getQuestionIndices,
   getQuestionList,
   getResponseCount,
   getResponseList,
   getResponses,
+  getResultType,
   getTopics,
   getYesAnswers
 } from './'
 
-const { checkup: state } = topState
+const { checkup: state } = fullState
 
 const questions = getQuestionList(state)
 
@@ -160,9 +169,33 @@ describe('state:selectors', () => {
     })
   })
 
+  describe(`getNoAnswers`, () => {
+    it(`should return all of the No answers`, () => {
+      expect(getNoAnswers(state)).toHaveLength(1)
+    })
+  })
+
+  describe(`getNotSureAnswers`, () => {
+    it(`should return all of the NotSure answers`, () => {
+      expect(getNotSureAnswers(state)).toHaveLength(1)
+    })
+  })
+
   describe(`getYesAnswers`, () => {
     it(`should return all of the Yes answers`, () => {
       expect(getYesAnswers(state)).toHaveLength(1)
+    })
+  })
+
+  describe(`getResultType`, () => {
+    it(`should return ${NEED_HELP_RESULT} when yesCount >= RESULTS_TRIGGER`, () => {
+      expect(getResultType(state)).toBe(NEED_HELP_RESULT)
+    })
+
+    it(`should return ${ALL_GOOD_RESULT} when yesCount < RESULTS_TRIGGER`, () => {
+      const allGoodState = { ...state, responses: [] }
+
+      expect(getResultType(allGoodState)).toBe(ALL_GOOD_RESULT)
     })
   })
 })

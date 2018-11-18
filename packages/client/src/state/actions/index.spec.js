@@ -6,11 +6,13 @@ import {
   PREVIOUS_QUESTION_ACTIVATED,
   PREVIOUS_QUESTION_REQUESTED,
   QUESTION_REQUESTED,
+  REDO_CHECKUP_CLICKED,
   REQUESTED_QUESTION_ACTIVATED,
   USER_RESPONDED_WITH_NO,
   USER_RESPONDED_WITH_NOT_SURE,
   USER_RESPONDED_WITH_YES
 } from '../constants'
+
 import {
   checkupComplete,
   errorQuestionIndexOutOfBounds,
@@ -19,6 +21,7 @@ import {
   previousQuestionActivated,
   previousQuestionRequested,
   questionRequested,
+  redoCheckupClicked,
   requestedQuestionActivated,
   userRespondedWithNo,
   userRespondedWithNotSure,
@@ -137,6 +140,14 @@ describe('state:actions', () => {
     it(`creates a ${USER_RESPONDED_WITH_YES} action`, () => {
       expect(userRespondedWithYes()).toMatchObject({
         type: USER_RESPONDED_WITH_YES
+      })
+    })
+  })
+
+  describe('redoCheckupClicked', () => {
+    it(`creates a ${REDO_CHECKUP_CLICKED} action`, () => {
+      expect(redoCheckupClicked()).toMatchObject({
+        type: REDO_CHECKUP_CLICKED
       })
     })
   })

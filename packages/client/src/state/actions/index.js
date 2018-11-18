@@ -6,11 +6,11 @@ import {
   PREVIOUS_QUESTION_ACTIVATED,
   PREVIOUS_QUESTION_REQUESTED,
   QUESTION_REQUESTED,
+  REDO_CHECKUP_CLICKED,
   REQUESTED_QUESTION_ACTIVATED,
   USER_RESPONDED_WITH_NO,
   USER_RESPONDED_WITH_NOT_SURE,
-  USER_RESPONDED_WITH_YES,
-  REDO_CHECKUP
+  USER_RESPONDED_WITH_YES
 } from '../constants'
 
 // All questions have been answered - triggers the results page in the checkupComplete epic
@@ -105,9 +105,9 @@ export function userRespondedWithYes () {
   }
 }
 
-// The user redo checkup
-export function resetClicked () {
+// The user wants to redo the checkup
+export function redoCheckupClicked () {
   return {
-    type: REDO_CHECKUP
+    type: REDO_CHECKUP_CLICKED
   }
 }

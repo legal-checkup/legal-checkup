@@ -3,10 +3,16 @@ import styledNormalize from 'styled-normalize'
 
 const GlobalStyle = createGlobalStyle`
   ${styledNormalize}
-  @import url(‘https://fonts.googleapis.com/css?family=Merriweather|Montserrat');
+
+  @font-face {
+    font-family: 'Museo Sans Cyrl 900';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Museo Sans Cyrl 900'), url('MuseoSansCyrl_3.woff') format('woff');
+  }
 
   body {
-    font-family: Montserrat, sans-serif;
+    font-family: 'Museo Sans Cyrl 900', sans-serif;
     font-size: 1rem;
     line-height: 1.5;
     margin: 0;

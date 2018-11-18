@@ -38,7 +38,6 @@ export default function setQuestionResponse (state, answer) {
     return set(lp, { ...activeQuestion, answer }, state)
   } else {
     // If the topic does not exist, first inject the topic into the responses array (at the correct index)
-
     const tp = lensPath(['responses', topicIndex])
     const newState = set(
       tp,
