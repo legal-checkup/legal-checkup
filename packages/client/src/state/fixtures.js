@@ -1,5 +1,7 @@
 import { NO, NOT_SURE, YES } from './constants'
 
+// DO NOT CHANGE THIS FIXTURE. YOU WILL BREAK MANY TESTS.
+// CONSULT WITH TEAM FIRST.
 export const state = {
   checkup: {
     activeQuestionIndex: 0,

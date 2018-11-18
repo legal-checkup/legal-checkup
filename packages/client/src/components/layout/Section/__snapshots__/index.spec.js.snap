@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:layout:Section renders the Section and CSS properties properly 1`] = `
+.c0 {
+  background-color: #eee;
+  color: #333;
+}
+
+<section
+  className="c0"
+>
+  Section
+</section>
+`;

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:styled:GlobalStyle matches the snapshot 1`] = `
+exports[`styles:GlobalStyle matches the snapshot 1`] = `
 <ContextConsumer>
   <Component />
 </ContextConsumer>

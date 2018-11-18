@@ -1,10 +1,10 @@
-import React from 'react'
-import { shallow } from 'enzyme'
+import * as React from 'react'
+import { create } from 'react-test-renderer'
 
 import TermsOfUse from './'
 
 describe('pages:TermsOfUse ', () => {
   it('renders the TermsOfUse  page', () => {
-    expect(toJson(shallow(<TermsOfUse />))).toMatchSnapshot()
+    expect(create(<TermsOfUse />).toJSON()).toMatchSnapshot()
   })
 })

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:checkup:QuestionBlock:Box:Wrapper matches the snapshot 1`] = `
+.c0 {
+  width: 260px;
+  font-family: Helvetica;
+  font-size: 25px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-align: center;
+  margin: 0px auto;
+}
+
+<div
+  className="c0"
+>
+  Wrapper
+</div>
+`;

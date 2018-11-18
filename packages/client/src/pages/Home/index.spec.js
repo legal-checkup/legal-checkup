@@ -1,10 +1,10 @@
-import React from 'react'
-import { shallow } from 'enzyme'
+import * as React from 'react'
+import { create } from 'react-test-renderer'
 
 import Home from './'
 
 describe('pages:Home', () => {
   it('renders the Home page', () => {
-    expect(toJson(shallow(<Home />).dive())).toMatchSnapshot()
+    expect(create(<Home />).toJSON()).toMatchSnapshot()
   })
 })

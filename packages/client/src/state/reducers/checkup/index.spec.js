@@ -1,6 +1,7 @@
 import {
   nextQuestionActivated,
   previousQuestionActivated,
+  redoCheckupClicked,
   requestedQuestionActivated,
   userRespondedWithNo,
   userRespondedWithNotSure,
@@ -11,6 +12,7 @@ import {
   NO,
   NOT_SURE,
   PREVIOUS_QUESTION_ACTIVATED,
+  REDO_CHECKUP_CLICKED,
   REQUESTED_QUESTION_ACTIVATED,
   USER_RESPONDED_WITH_NO,
   USER_RESPONDED_WITH_NOT_SURE,
@@ -20,8 +22,9 @@ import {
 import setActiveQuestionIndex from '../../domain/setActiveQuestionIndex'
 import setQuestionResponse from '../../domain/setQuestionResponse'
 import { state } from '../../fixtures'
+import initialState from '../../initialState'
 
-import rootReducer from './'
+import reducer from './'
 
 jest.mock('../../domain/setActiveQuestionIndex', () => ({
   __esModule: true,
@@ -34,15 +37,18 @@ jest.mock('../../domain/setQuestionResponse', () => ({
 }))
 
 describe('state:reducers', () => {
-  describe('rootReducer', () => {
+  describe('checkup', () => {
+    it('defaults to the initialState', () => {
+      expect(reducer(undefined, { type: 'UNKNOWN' })).toMatchObject(initialState)
+    })
     it('returns the state unchanged when called with an unrecognised action', () => {
-      expect(rootReducer(state, {})).toMatchObject(state)
+      expect(reducer(state, {})).toMatchObject(state)
     })
 
     it(`calls setActiveQuestionIndex with the state and the activeQuestionIndex on ${NEXT_QUESTION_ACTIVATED} actions`, () => {
       const questionIndex = 1
 
-      rootReducer(state, nextQuestionActivated(questionIndex))
+      reducer(state, nextQuestionActivated(questionIndex))
 
       expect(setActiveQuestionIndex).toHaveBeenCalledWith(state, questionIndex)
     })
@@ -50,7 +56,7 @@ describe('state:reducers', () => {
     it(`calls setActiveQuestionIndex with the state and the activeQuestionIndex on ${PREVIOUS_QUESTION_ACTIVATED} actions`, () => {
       const questionIndex = 1
 
-      rootReducer(state, previousQuestionActivated(questionIndex))
+      reducer(state, previousQuestionActivated(questionIndex))
 
       expect(setActiveQuestionIndex).toHaveBeenCalledWith(state, questionIndex)
     })
@@ -58,27 +64,33 @@ describe('state:reducers', () => {
     it(`calls setActiveQuestionIndex with the state and the activeQuestionIndex on ${REQUESTED_QUESTION_ACTIVATED} actions`, () => {
       const questionIndex = 1
 
-      rootReducer(state, requestedQuestionActivated(questionIndex))
+      reducer(state, requestedQuestionActivated(questionIndex))
 
       expect(setActiveQuestionIndex).toHaveBeenCalledWith(state, questionIndex)
     })
 
     it(`calls setQuestionResponse with the state, the topicId, the questionId, and a ${NO} answer on ${USER_RESPONDED_WITH_NO} actions`, () => {
-      rootReducer(state, userRespondedWithNo())
+      reducer(state, userRespondedWithNo())
 
       expect(setQuestionResponse).toHaveBeenCalledWith(state, NO)
     })
 
     it(`calls setQuestionResponse with the state, the topicId, the questionId, and a ${NOT_SURE} answer on ${USER_RESPONDED_WITH_NOT_SURE} actions`, () => {
-      rootReducer(state, userRespondedWithNotSure())
+      reducer(state, userRespondedWithNotSure())
 
       expect(setQuestionResponse).toHaveBeenCalledWith(state, NOT_SURE)
     })
 
     it(`calls setQuestionResponse with the state, the topicId, the questionId, and a ${YES} answer on ${USER_RESPONDED_WITH_YES} actions`, () => {
-      rootReducer(state, userRespondedWithYes())
+      reducer(state, userRespondedWithYes())
 
       expect(setQuestionResponse).toHaveBeenCalledWith(state, YES)
+    })
+
+    it(`resets the responses to none on ${REDO_CHECKUP_CLICKED} action`, () => {
+      const newState = reducer(state, redoCheckupClicked())
+
+      expect(newState.responses).toMatchObject([])
     })
   })
 })

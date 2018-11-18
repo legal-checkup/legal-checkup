@@ -4,7 +4,14 @@ import { createSelector } from 'reselect'
 import isNextQuestionPermitted from '../../utilities/isNextQuestionPermitted'
 import isPreviousQuestionPermitted
   from '../../utilities/isPreviousQuestionPermitted'
-import { YES } from '../constants'
+import {
+  ALL_GOOD_RESULT,
+  NEED_HELP_RESULT,
+  NO,
+  NOT_SURE,
+  RESULTS_TRIGGER,
+  YES
+} from '../constants'
 
 // To get an array of indices ([0, 1, 2, 3]), it is enough to get the length
 // And then use the `times` function to count up to that count
@@ -83,12 +90,33 @@ export const getResponseList = createSelector(
 // Use `getResponseList` then pass it to Ramda's `length` function to get the response count
 export const getResponseCount = createSelector(getResponseList, length)
 
+// Get all NO answers
+export const getNoAnswers = createSelector(
+  getResponseList,
+  filter(({ answer }) => answer === NO)
+)
+
+// Get all NOT_SURE answers
+export const getNotSureAnswers = createSelector(
+  getResponseList,
+  filter(({ answer }) => answer === NOT_SURE)
+)
+
+// Get all YES answers
 export const getYesAnswers = createSelector(
   getResponseList,
   filter(({ answer }) => answer === YES)
 )
 
-export const getYesAnswerCount = createSelector(getYesAnswers, length)
+// Get the result type based on the RESULTS_TRIGGER;
+// return NEEDS_HELP_RESULT if triggered, else ALL_GOOD_RESULT.
+// Used to display results on the Results page.
+export const getResultType = createSelector(
+  getYesAnswers,
+  yesAnswers => length(yesAnswers) >= RESULTS_TRIGGER
+    ? NEED_HELP_RESULT
+    : ALL_GOOD_RESULT
+)
 
 // Another use for selectors -- here we use the activeQuestionIndex, the questionCount, and the responseCount
 // to determine whether the Next button should be enabled or disabled

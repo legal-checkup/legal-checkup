@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:checkup:QuestionBlock:Counter:Wrapper matches the snapshot 1`] = `
+.c0 {
+  width: 63px;
+  height: 17px;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: oblique;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+  margin: 0px auto;
+}
+
+<div
+  className="c0"
+>
+  Wrapper
+</div>
+`;

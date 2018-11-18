@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:layout:Footer:Wrapper matches the snapshot when format is desktop 1`] = `
+.c0 {
+  background-color: #202020;
+  bottom: 0px;
+  height: 100px;
+  line-height: 100px;
+  position: absolute;
+  width: 100%;
+}
+
+<div
+  className="c0"
+  format="desktop"
+/>
+`;
+
+exports[`components:layout:Footer:Wrapper matches the snapshot when format is mobile 1`] = `
+.c0 {
+  background-color: #202020;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 130px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+<div
+  className="c0"
+  format="mobile"
+/>
+`;
+
+exports[`components:layout:Footer:Wrapper matches the snapshot when format is tablet 1`] = `
+.c0 {
+  background-color: #202020;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  height: 130px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+}
+
+<div
+  className="c0"
+  format="tablet"
+/>
+`;
