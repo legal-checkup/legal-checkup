@@ -127,7 +127,7 @@ export const checkNextQuestionEnabled = createSelector(
   isNextQuestionPermitted
 )
 
-// And here we us the activeQuestionIndex to determine whether the Previous button should be enabled or disabled
+// And here we use the activeQuestionIndex to determine whether the Previous button should be enabled or disabled
 export const checkPreviousQuestionEnabled = createSelector(
   getActiveQuestionIndex,
   isPreviousQuestionPermitted

@@ -10,30 +10,19 @@ import ProgressBar from './ProgressBar'
 
 export default function (props) {
   const { format } = props
+  const PreviousButton = makePreviousQuestionButton(Button, format)
+  const NextButton = makeNextQuestionButton(Button, format)
 
   switch (format) {
     case DESKTOP:
-      return (
-        <ProgressBar>
-          {makePreviousQuestionButton(Button, TABLET)}
-          {/* add question bar here */}
-          {makeNextQuestionButton(Button, TABLET)}
-        </ProgressBar>
-      )
     case TABLET:
-      return (
-        <ProgressBar>
-          {makePreviousQuestionButton(Button, TABLET)}
-          <CurrentTopic />
-          {makeNextQuestionButton(Button, TABLET)}
-        </ProgressBar>
-      )
+    case MOBILE:
     default:
       return (
         <ProgressBar>
-          {makePreviousQuestionButton(Button, MOBILE)}
+          <PreviousButton />
           <CurrentTopic />
-          {makeNextQuestionButton(Button, MOBILE)}
+          <NextButton />
         </ProgressBar>
       )
   }
