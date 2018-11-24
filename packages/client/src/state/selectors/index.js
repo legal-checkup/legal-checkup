@@ -1,5 +1,16 @@
-import { filter, identity, length, map, pathOr, pipe, reduce, times } from 'ramda'
+import {
+  filter,
+  identity,
+  length,
+  map,
+  pathOr,
+  pipe,
+  reduce,
+  times
+} from 'ramda'
 import { createSelector } from 'reselect'
+
+import { state } from '../fixtures'
 
 import isNextQuestionPermitted from '../../utilities/isNextQuestionPermitted'
 import isPreviousQuestionPermitted
@@ -12,6 +23,7 @@ import {
   RESULTS_TRIGGER,
   YES
 } from '../constants'
+import isQuestionPermitted from '../../utilities/isQuestionPermitted'
 
 // To get an array of indices ([0, 1, 2, 3]), it is enough to get the length
 // And then use the `times` function to count up to that count
@@ -19,8 +31,7 @@ import {
 const getIndices = pipe(length, times(identity))
 
 // This simply gets the top-level key `activeQuestionIndex`
-export function getActiveQuestionIndex (state) {
-  const { activeQuestionIndex } = state
+export function getActiveQuestionIndex ({ activeQuestionIndex }) {
   return activeQuestionIndex
 }
 
@@ -113,9 +124,8 @@ export const getYesAnswers = createSelector(
 // Used to display results on the Results page.
 export const getResultType = createSelector(
   getYesAnswers,
-  yesAnswers => length(yesAnswers) >= RESULTS_TRIGGER
-    ? NEED_HELP_RESULT
-    : ALL_GOOD_RESULT
+  yesAnswers =>
+    (length(yesAnswers) >= RESULTS_TRIGGER ? NEED_HELP_RESULT : ALL_GOOD_RESULT)
 )
 
 // Another use for selectors -- here we use the activeQuestionIndex, the questionCount, and the responseCount
@@ -133,4 +143,14 @@ export const checkPreviousQuestionEnabled = createSelector(
   isPreviousQuestionPermitted
 )
 
+export const checkQuestionEnabled = index =>
+  createSelector(
+    getQuestionCount,
+    getResponseCount,
+    (questionCount, responseCount) =>
+      isQuestionPermitted(index, questionCount, responseCount)
+  )
+
 export const getPathname = pathOr({}, ['pathname'])
+
+console.log('Indices', getTopics(state))
