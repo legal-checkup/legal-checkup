@@ -4,6 +4,7 @@ const Wrapper = styled.div`
   width: 658px;
   height:76px;
   font-family: MuseoSans;
+  background-color:white;
   font-size: 32px;
   font-weight: 500;
   font-style: normal;
@@ -12,6 +13,7 @@ const Wrapper = styled.div`
   letter-spacing: normal;
   text-align: center;
   margin: 0px auto;
+  padding:58px 0 60px;
 `
 Wrapper.displayName = 'Wrapper'
 
