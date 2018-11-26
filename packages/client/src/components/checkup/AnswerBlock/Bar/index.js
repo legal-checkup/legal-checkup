@@ -2,9 +2,10 @@ import styled from 'styled-components'
 
 const Bar = styled.section`
   margin: auto;
-  margin-bottom: 41px;
+  padding-bottom: 105px;
   width: 738px;
   text-align:center;
+  background-color:#ffffff;
 `
 Bar.displayName = 'StyledBar'
 

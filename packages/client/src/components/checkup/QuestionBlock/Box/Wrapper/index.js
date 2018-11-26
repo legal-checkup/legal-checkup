@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  width: 658px;
+  width: 738px;
   height:76px;
   font-family: MuseoSans;
-  background-color:white;
+  background-color:#ffffff;
   font-size: 32px;
   font-weight: 500;
   font-style: normal;
