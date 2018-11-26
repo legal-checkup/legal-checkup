@@ -1,10 +1,11 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  width: 260px;
-  font-family: Helvetica;
-  font-size: 25px;
-  font-weight: normal;
+  width: 658px;
+  height:76px;
+  font-family: MuseoSans;
+  font-size: 32px;
+  font-weight: 500;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
