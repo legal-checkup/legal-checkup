@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  width: 738px;
+  width: 658px;
   height:76px;
   font-family: MuseoSans;
   background-color:#ffffff;
@@ -13,7 +13,7 @@ const Wrapper = styled.div`
   letter-spacing: normal;
   text-align: center;
   margin: 0px auto;
-  padding:58px 0 60px;
+  padding:58px 40px 60px;
 `
 Wrapper.displayName = 'Wrapper'
 
