@@ -13,7 +13,7 @@ function getLayout (format) {
   return (
     <>
       <Header format={format} />
-      <Section>
+      <Section format={format}>
         <p>
           This is the <strong>About</strong> page
         </p>

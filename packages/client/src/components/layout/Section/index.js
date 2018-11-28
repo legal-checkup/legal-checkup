@@ -1,9 +1,18 @@
 import styled from 'styled-components'
+import { DESKTOP, MOBILE, TABLET } from '../../../constants'
+import styledMap from 'styled-map'
 
 const Section = styled.section`
   background-color: #eee;
   color: #333;
-  padding-bottom: 119px;
+  ${styledMap('format', {
+    [DESKTOP]: `
+      padding-bottom: 119px;`,
+    [MOBILE]: `
+    padding-bottom: 60px;`,
+    [TABLET]: `
+    padding-bottom: 270px;`
+  })}
 `
 Section.displayName = 'Section'
 
