@@ -4,13 +4,14 @@ import styledMap from 'styled-map'
 
 const Wrapper = styled.div`
   font-family: MuseoSans;
-  background-color:#ffffff;
+  background-color: #ffffff;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
   letter-spacing: normal;
   text-align: center;
   margin: 0px auto;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
   ${styledMap('format', {
     [DESKTOP]: `
   width: 658px;

@@ -3,9 +3,42 @@ import { DESKTOP, MOBILE, TABLET } from '../../../../../constants'
 import styledMap from 'styled-map'
 import { NOT_SURE } from '../../../../../state/constants'
 
+function setWidthButton (format, type) {
+  if (format === (DESKTOP || TABLET)) {
+    if (type === NOT_SURE) {
+      return '155px'
+    } else {
+      return '153px'
+    }
+  } else {
+    if (type === NOT_SURE) {
+      return '105px'
+    } else {
+      return '85px'
+    }
+  }
+}
+
+function setMarginRight (format, type) {
+  if (format === (DESKTOP || TABLET)) {
+    if (type === NOT_SURE) {
+      return 0
+    } else {
+      return '10px'
+    }
+  } else {
+    if (type === NOT_SURE) {
+      return 0
+    } else {
+      return '7px'
+    }
+  }
+}
+
 const Button = styled.button`
   background-color: #eeedea;
   height: 78px;
+  border:none;
   font-family:MuseoSans;
   font-weight:500;
   font-style: normal;
@@ -13,25 +46,21 @@ const Button = styled.button`
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
+  width: ${({ format, type }) => setWidthButton(format, type)};
+  margin-right: ${({ format, type }) => setMarginRight(format, type)};,
   &:after {
     content: '${({ type }) => type}';
   }
   ${styledMap('format', {
     [DESKTOP]: `
-    width: ${({ type }) => (type === NOT_SURE ? '155px' : '153px')};
     border-radius: 5px;
-    font-size:26px;
-    margin-right: ${({ type }) => (type === NOT_SURE ? 0 : '10px')};`,
+    font-size:26px;`,
     [MOBILE]: `
-    width: ${({ type }) => (type === NOT_SURE ? '101px' : '85px')};
     border-radius: 4px;
-    font-size:20px;
-    margin-right: ${({ type }) => (type === NOT_SURE ? 0 : '7px')};`,
+    font-size:20px;`,
     [TABLET]: `
-    width: ${({ type }) => (type === NOT_SURE ? '155px' : '153px')};
     border-radius: 5px;
-    font-size:26px;
-    margin-right: ${({ type }) => (type === NOT_SURE ? 0 : '10px')};`
+    font-size:26px;`
   })}
 `
 Button.displayName = 'Button'
