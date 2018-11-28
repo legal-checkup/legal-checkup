@@ -11,7 +11,9 @@ const Wrapper = styled.div`
   letter-spacing: normal;
   text-align: center;
   margin: 0px auto;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   ${styledMap('format', {
     [DESKTOP]: `
   width: 658px;
