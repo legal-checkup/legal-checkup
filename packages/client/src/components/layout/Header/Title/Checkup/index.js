@@ -1,10 +1,13 @@
 import styled from 'styled-components'
 
+import { MOBILE } from '../../../../../constants'
+
 const Checkup = styled.div`
   color: #b62645;
+  color: ${({ format }) => (format === MOBILE ? '#fff' : '#b62645')};
   line-height: 1;
   text-transform: uppercase;
-  width: 6rem;
+  font-size: inherit;
 `
 Checkup.displayName = 'Checkup'
 

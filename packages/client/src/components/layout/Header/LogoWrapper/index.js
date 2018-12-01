@@ -3,23 +3,21 @@ import styledMap from 'styled-map'
 
 import { DESKTOP, MOBILE, TABLET } from '../../../../constants'
 
-const Nav = styled.nav`
+const LogoWrapper = styled.div`
   display: flex;
+  align-items: center;
 
   ${styledMap('format', { [`${DESKTOP}`]: `
-      width: 100%;
-      margin-left: 100px;
+      margin-left: 20px;
     `,
   [`${TABLET}`]: `
-      margin-left: 100px;
+      margin-left: 20px;
     `,
   [`${MOBILE}`]: `
-      height: 43px;
-      background-color: #444141;
-      align-items: flex-end;
+      margin-left: 15px;
+      height: 57px;
     ` })};
-
 `
-Nav.displayName = 'StyledNav'
+LogoWrapper.displayName = 'StyledLogoWrapper'
 
-export default Nav
+export default LogoWrapper

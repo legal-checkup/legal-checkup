@@ -1,4 +1,13 @@
-import { filter, identity, length, map, pathOr, pipe, reduce, times } from 'ramda'
+import {
+  filter,
+  identity,
+  length,
+  map,
+  pathOr,
+  pipe,
+  reduce,
+  times
+} from 'ramda'
 import { createSelector } from 'reselect'
 
 import isNextQuestionPermitted from '../../utilities/isNextQuestionPermitted'
@@ -113,9 +122,8 @@ export const getYesAnswers = createSelector(
 // Used to display results on the Results page.
 export const getResultType = createSelector(
   getYesAnswers,
-  yesAnswers => length(yesAnswers) >= RESULTS_TRIGGER
-    ? NEED_HELP_RESULT
-    : ALL_GOOD_RESULT
+  yesAnswers =>
+    (length(yesAnswers) >= RESULTS_TRIGGER ? NEED_HELP_RESULT : ALL_GOOD_RESULT)
 )
 
 // Another use for selectors -- here we use the activeQuestionIndex, the questionCount, and the responseCount
@@ -133,4 +141,4 @@ export const checkPreviousQuestionEnabled = createSelector(
   isPreviousQuestionPermitted
 )
 
-export const getPathname = pathOr({}, ['pathname'])
+export const getPathname = pathOr({}, ['router', 'location', 'pathname'])

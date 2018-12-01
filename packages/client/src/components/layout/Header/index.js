@@ -1,23 +1,32 @@
 import * as React from 'react'
 
 import { DESKTOP, MOBILE, TABLET } from '../../../constants'
-import { ABOUT_PATH, CHECKUP_PATH, HELP_PATH, HOME_PATH } from '../../../state/constants'
+import {
+  ABOUT_PATH,
+  CHECKUP_PATH,
+  HELP_PATH,
+  HOME_PATH
+} from '../../../state/constants'
 import Link from '../../Link'
 
 import LinkedLogo from './LinkedLogo'
+import LogoImage from './LinkedLogo/LogoImage'
+import LogoWrapper from './LogoWrapper'
 import Nav from './Nav'
 import Title from './Title'
 import Wrapper from './Wrapper'
 
-export default function Header (props) {
-  const { format } = props
-
+export default function Header ({ format }) {
   switch (format) {
     case DESKTOP:
       return (
-        <Wrapper>
-          <LinkedLogo format={DESKTOP} />
-          <Title format={DESKTOP} />
+        <Wrapper format={DESKTOP}>
+          <LogoWrapper format={DESKTOP}>
+            <LinkedLogo to={HOME_PATH} format={DESKTOP}>
+              <LogoImage />
+            </LinkedLogo>
+            <Title format={DESKTOP} />
+          </LogoWrapper>
           <Nav format={DESKTOP}>
             <Link to={HOME_PATH} format={`${DESKTOP}Header`}>Home</Link>
             <Link to={CHECKUP_PATH} format={`${DESKTOP}Header`}>Checkup</Link>
@@ -28,9 +37,13 @@ export default function Header (props) {
       )
     case TABLET:
       return (
-        <Wrapper>
-          <LinkedLogo format={TABLET} />
-          <Title format={TABLET} />
+        <Wrapper format={TABLET}>
+          <LogoWrapper format={TABLET}>
+            <LinkedLogo to={HOME_PATH} format={TABLET}>
+              <LogoImage />
+            </LinkedLogo>
+            <Title format={TABLET} />
+          </LogoWrapper>
           <Nav format={TABLET}>
             <Link to={HOME_PATH} format={`${TABLET}Header`}>Home</Link>
             <Link to={CHECKUP_PATH} format={`${TABLET}Header`}>Checkup</Link>
@@ -41,9 +54,13 @@ export default function Header (props) {
       )
     default:
       return (
-        <Wrapper>
-          <LinkedLogo format={MOBILE} />
-          <Title format={MOBILE} />
+        <Wrapper format={MOBILE}>
+          <LogoWrapper format={MOBILE}>
+            <LinkedLogo to={HOME_PATH} format={MOBILE}>
+              <LogoImage />
+            </LinkedLogo>
+            <Title format={MOBILE} />
+          </LogoWrapper>
           <Nav format={MOBILE}>
             <Link to={HOME_PATH} format={`${MOBILE}Header`}>Home</Link>
             <Link to={CHECKUP_PATH} format={`${MOBILE}Header`}>Checkup</Link>
