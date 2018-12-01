@@ -28,4 +28,10 @@ describe('components:UIKit:Accordion', () => {
   it('matches the snapshot when default as expanded', () => {
     expect(create(<Accordion heading={headingRender} content={contentRender} isExpanded />).toJSON()).toMatchSnapshot()
   })
+
+  it('matches the snapshot when button clicked on not expanded', () => {
+    const component = create(<Accordion heading={headingRender} content={contentRender} isExpanded={false} />)
+    component.root.findByType('button').props.onClick()
+    expect(JSON.stringify(component.toJSON())).toEqual(JSON.stringify(create(<Accordion heading={headingRender} content={contentRender} isExpanded />).toJSON()))
+  })
 })

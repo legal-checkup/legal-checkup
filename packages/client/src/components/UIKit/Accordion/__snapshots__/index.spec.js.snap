@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components:UIKit:Accordion matches the snapshot when default as expanded 1`] = `
-Array [
+<div>
   <div>
     <span>
       Topic
@@ -11,7 +11,7 @@ Array [
     >
       click me
     </button>
-  </div>,
+  </div>
   <div>
     <h1>
       Hello!
@@ -19,12 +19,12 @@ Array [
     <p>
       Welcome to the world of Jurassic Park
     </p>
-  </div>,
-]
+  </div>
+</div>
 `;
 
 exports[`components:UIKit:Accordion matches the snapshot when default as not expanded 1`] = `
-Array [
+<div>
   <div>
     <span>
       Topic
@@ -34,7 +34,6 @@ Array [
     >
       click me
     </button>
-  </div>,
-  "",
-]
+  </div>
+</div>
 `;
