@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import PropTypes from 'prop-types'
 
 export default function Accordion (props) {
   const { heading, content, isExpanded } = props
-  const [expanded, setExpanded] = React.useState(isExpanded)
+  const [expanded, setExpanded] = useState(isExpanded)
   const onClick = () => { setExpanded(!expanded) }
 
   return (
