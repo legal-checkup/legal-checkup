@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { DESKTOP, MOBILE, TABLET } from '../../../constants'
+import { DESKTOP, MOBILE, TABLET, progressBarId, currentTopicId } from '../../../constants'
 import makeNextQuestionButton from '../wrappers/makeNextQuestionButton'
 import makePreviousQuestionButton from '../wrappers/makePreviousQuestionButton'
 
@@ -14,7 +14,7 @@ export default function (props) {
   switch (format) {
     case DESKTOP:
       return (
-        <ProgressBar>
+        <ProgressBar data-testid={progressBarId}>
           {makePreviousQuestionButton(Button, TABLET)}
           {/* add question bar here */}
           {makeNextQuestionButton(Button, TABLET)}
@@ -22,17 +22,17 @@ export default function (props) {
       )
     case TABLET:
       return (
-        <ProgressBar>
+        <ProgressBar data-testid={progressBarId}>
           {makePreviousQuestionButton(Button, TABLET)}
-          <CurrentTopic />
+          <CurrentTopic data-testid={currentTopicId} />
           {makeNextQuestionButton(Button, TABLET)}
         </ProgressBar>
       )
     default:
       return (
-        <ProgressBar>
+        <ProgressBar data-testid={progressBarId}>
           {makePreviousQuestionButton(Button, MOBILE)}
-          <CurrentTopic />
+          <CurrentTopic data-testid={currentTopicId} />
           {makeNextQuestionButton(Button, MOBILE)}
         </ProgressBar>
       )
