@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
+import * as React from 'react'
 import PropTypes from 'prop-types'
+
+const { useState } = React
 
 export default function Accordion (props) {
   const { heading, content, isExpanded } = props
