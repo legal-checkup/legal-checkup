@@ -7,7 +7,7 @@ import makePreviousQuestionButton from '../wrappers/makePreviousQuestionButton'
 import Button from './Button'
 import CurrentTopic from './CurrentTopic'
 import ProgressBar from './ProgressBar'
-import QuestionBar from './QuestionBar'
+import DesktopProgressBar from './DesktopProgressBar'
 
 export default function (props) {
   const { format } = props
@@ -19,7 +19,7 @@ export default function (props) {
       return (
         <ProgressBar>
           <PreviousQuestionButton format={DESKTOP} />
-          <QuestionBar />
+          <DesktopProgressBar />
           <NextQuestionButton format={DESKTOP} />
         </ProgressBar>
       )

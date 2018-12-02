@@ -14,9 +14,9 @@ function QuestionBar ({ activeQuestionIndex, questionCount }) {
     <div>
       {times(index => {
         const QuestionButton = makeQuestionButton(Button)
-
         return (
           <QuestionButton
+            key={index}
             questionIndex={index}
             active={activeQuestionIndex === index}
           />
