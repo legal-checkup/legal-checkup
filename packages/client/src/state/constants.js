@@ -4,15 +4,20 @@
 // to keep them all straight
 // Note that these are easy to read and understand when you see them in the Redux DevTools
 export const CHECKUP_COMPLETE = '@checkup/CHECKUP_COMPLETE'
-export const ERROR_QUESTION_INDEX_OUT_OF_BOUNDS = '@checkup/ERROR_QUESTION_INDEX_OUT_OF_BOUNDS'
+export const ERROR_QUESTION_INDEX_OUT_OF_BOUNDS =
+  '@checkup/ERROR_QUESTION_INDEX_OUT_OF_BOUNDS'
 export const NEXT_QUESTION_ACTIVATED = '@checkup/NEXT_QUESTION_ACTIVATED'
 export const NEXT_QUESTION_REQUESTED = '@checkup/NEXT_QUESTION_REQUESTED'
-export const PREVIOUS_QUESTION_ACTIVATED = '@checkup/PREVIOUS_QUESTION_ACTIVATED'
-export const PREVIOUS_QUESTION_REQUESTED = '@checkup/PREVIOUS_QUESTION_REQUESTED'
+export const PREVIOUS_QUESTION_ACTIVATED =
+  '@checkup/PREVIOUS_QUESTION_ACTIVATED'
+export const PREVIOUS_QUESTION_REQUESTED =
+  '@checkup/PREVIOUS_QUESTION_REQUESTED'
 export const QUESTION_REQUESTED = '@checkup/QUESTION_REQUESTED'
-export const REQUESTED_QUESTION_ACTIVATED = '@checkup/REQUESTED_QUESTION_ACTIVATED'
+export const REQUESTED_QUESTION_ACTIVATED =
+  '@checkup/REQUESTED_QUESTION_ACTIVATED'
 export const USER_RESPONDED_WITH_NO = '@checkup/USER_RESPONDED_WITH_NO'
-export const USER_RESPONDED_WITH_NOT_SURE = '@checkup/USER_RESPONDED_WITH_NOT_SURE'
+export const USER_RESPONDED_WITH_NOT_SURE =
+  '@checkup/USER_RESPONDED_WITH_NOT_SURE'
 export const USER_RESPONDED_WITH_YES = '@checkup/USER_RESPONDED_WITH_YES'
 export const REDO_CHECKUP_CLICKED = '@checkup/REDO_CHECKUP_CLICKED'
 
@@ -20,6 +25,9 @@ export const REDO_CHECKUP_CLICKED = '@checkup/REDO_CHECKUP_CLICKED'
 export const NO = 'No'
 export const NOT_SURE = 'Not sure'
 export const YES = 'Yes'
+export const B = 'B'
+export const A = 'A'
+export const esc = 'esc'
 
 // Results
 export const RESULTS_TRIGGER = 1
@@ -40,4 +48,5 @@ export const TERMS_OF_USE_PATH = '/terms-of-use'
 // External URLs
 export const COMMUNITY_LAW_URL = 'http://communitylaw.org.nz/'
 export const ABOUT_COMMUNITY_LAW_URL = 'http://www.wclc.org.nz/about-us/'
-export const COMMUNITY_LAW_SERVICES_URL = 'http://www.wclc.org.nz/our-services/'
+export const COMMUNITY_LAW_SERVICES_URL =
+  'http://www.wclc.org.nz/our-services/'
