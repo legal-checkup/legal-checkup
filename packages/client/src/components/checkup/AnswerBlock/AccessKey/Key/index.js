@@ -1,17 +1,17 @@
 import styled from 'styled-components'
 import { DESKTOP, MOBILE, TABLET } from '../../../../../constants'
 import styledMap from 'styled-map'
-import { NOT_SURE } from '../../../../../state/constants'
+import { esc } from '../../../../../state/constants'
 
-function setWidthButton (format, type) {
+function setWidthKey (format, type) {
   if (format === (DESKTOP || TABLET)) {
-    if (type === NOT_SURE) {
-      return '155px'
+    if (type === esc) {
+      return '49px'
     } else {
-      return '153px'
+      return '29px'
     }
   } else {
-    if (type === NOT_SURE) {
+    if (type === esc) {
       return '105px'
     } else {
       return '85px'
@@ -21,13 +21,13 @@ function setWidthButton (format, type) {
 
 function setMarginRight (format, type) {
   if (format === (DESKTOP || TABLET)) {
-    if (type === NOT_SURE) {
+    if (type === esc) {
       return 0
     } else {
       return '10px'
     }
   } else {
-    if (type === NOT_SURE) {
+    if (type === esc) {
       return 0
     } else {
       return '7px'
@@ -36,9 +36,11 @@ function setMarginRight (format, type) {
 }
 
 const Button = styled.button`
-  background-color: #eeedea;
-  height: 78px;
-  border:none;
+  background-color: #ffffff;
+  color: #a0a0a0;
+  height: 29px;
+  box-shadow: 0 2px 0 0 #cccccc;
+  background-color: #ffffff;
   font-family:MuseoSans;
   font-weight:500;
   font-style: normal;
@@ -46,7 +48,7 @@ const Button = styled.button`
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  width: ${({ format, type }) => setWidthButton(format, type)};
+  width: ${({ format, type }) => setWidthKey(format, type)};
   margin-right: ${({ format, type }) => setMarginRight(format, type)};,
   &:after {
     content: '${({ type }) => type}';
@@ -54,13 +56,13 @@ const Button = styled.button`
   ${styledMap('format', {
     [DESKTOP]: `
     border-radius: 5px;
-    font-size:26px;`,
+    font-size:18px;`,
     [MOBILE]: `
     border-radius: 4px;
-    font-size:20px;`,
+    font-size:18px;`,
     [TABLET]: `
     border-radius: 5px;
-    font-size:26px;`
+    font-size:18px;`
   })}
 `
 Button.displayName = 'Button'
