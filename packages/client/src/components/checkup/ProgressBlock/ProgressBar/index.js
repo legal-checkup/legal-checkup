@@ -4,7 +4,7 @@ import styledMap from 'styled-map'
 import { DESKTOP, MOBILE, TABLET } from '../../../../constants'
 
 const ProgressBar = styled.nav`
-  background-color: #fff;
+  background-color: #eeedea;
   display: flex;
   justify-content: center;
   margin: 20px 0;

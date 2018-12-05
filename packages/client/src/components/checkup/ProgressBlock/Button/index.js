@@ -10,7 +10,7 @@ const Button = styled.button`
   color: ${({ enabled }) => (enabled ? '#000' : '#c0c0c0')};
   height: 42px;
   cursor: ${enabled => (enabled ? 'pointer' : 'default')}
-  border-radius: ${({ active }) => (active ? '22px' : '0 5px 5px 0')};
+  border-radius: ${({ active }) => (active ? '100px' : '0 5px 5px 0')};
   background-color: ${({ active }) => (active ? '#b62645' : '#ededed')};
   font-weight: ${({ active }) => (active ? 'bold' : 'normal')};
 
