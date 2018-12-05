@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { DESKTOP, MOBILE, TABLET } from '../../../../../constants'
 import styledMap from 'styled-map'
-import { esc } from '../../../../../state/constants'
+import { esc, A } from '../../../../../state/constants'
 
 function setWidthKey (format, type) {
   if (format === (DESKTOP || TABLET)) {
@@ -23,8 +23,10 @@ function setMarginRight (format, type) {
   if (format === (DESKTOP || TABLET)) {
     if (type === esc) {
       return 0
+    } else if (type === A) {
+      return '133px'
     } else {
-      return '10px'
+      return '125px'
     }
   } else {
     if (type === esc) {
@@ -35,7 +37,7 @@ function setMarginRight (format, type) {
   }
 }
 
-const Button = styled.button`
+const Key = styled.button`
   background-color: #ffffff;
   color: #a0a0a0;
   height: 29px;
@@ -65,6 +67,6 @@ const Button = styled.button`
     font-size:18px;`
   })}
 `
-Button.displayName = 'Button'
+Key.displayName = 'Key'
 
-export default Button
+export default Key

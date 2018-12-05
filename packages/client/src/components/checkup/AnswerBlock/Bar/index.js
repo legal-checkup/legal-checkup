@@ -15,7 +15,7 @@ const Bar = styled.section`
   ${styledMap('format', {
     [DESKTOP]: `
     width: 738px;
-    padding-bottom: 105px;`,
+    padding-bottom: 10px;`,
     [MOBILE]: `
     width: 325px;
     padding-bottom: 20px;`,
