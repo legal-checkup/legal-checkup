@@ -13,7 +13,7 @@ export default function AnswerBlock ({ format }) {
       <ResponseButton type={YES} format={format} />
       <ResponseButton type={NO} format={format} />
       <ResponseButton type={NOT_SURE} format={format} />
-      <BarBottom>
+      <BarBottom format={format}>
         <AccessKey type={A} format={format} />
         <AccessKey type={B} format={format} />
         <AccessKey type={esc} format={format} />

@@ -62,8 +62,7 @@ const Key = styled.button`
     border-radius: 5px;
     font-size:18px;`,
     [MOBILE]: `
-    border-radius: 4px;
-    font-size:18px;`,
+    display:none`,
     [TABLET]: `
     border-radius: 5px;
     font-size:18px;`

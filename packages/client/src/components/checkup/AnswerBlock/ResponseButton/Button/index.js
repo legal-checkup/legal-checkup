@@ -63,7 +63,8 @@ const Button = styled.button`
     font-size:26px;`,
     [MOBILE]: `
     border-radius: 4px;
-    font-size:20px;`,
+    font-size:20px;
+    margin-bottom:20px;`,
     [TABLET]: `
     border-radius: 5px;
     font-size:26px;`
