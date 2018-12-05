@@ -6,7 +6,8 @@ import { DESKTOP, MOBILE, TABLET } from '../../../../constants'
 const ProgressBar = styled.nav`
   background-color: #eeedea;
   display: flex;
-  justify-content: center;
+  letter-spacing: normal;
+  text-align: center;
   margin: 20px 0;
 
   ${styledMap('format', {
@@ -14,7 +15,6 @@ const ProgressBar = styled.nav`
     [MOBILE]: ``,
     [TABLET]: ``
   })}
-
 `
 
 ProgressBar.displayName = 'ProgressBar'
