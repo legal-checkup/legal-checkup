@@ -8,10 +8,15 @@ exports[`Header:LogoWrapper Renders the LogoWrapper with the correct CSS styles 
       "attrs": undefined,
       "componentStyle": ComponentStyle {
         "componentId": "sc-bdVaJa",
-        "isStatic": true,
+        "isStatic": false,
         "rules": Array [
           "
+  display: flex;
+  align-items: center;
 
+  ",
+          [Function],
+          ";
 ",
         ],
       },

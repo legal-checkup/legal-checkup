@@ -1,0 +1,193 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:layout:Header needs a test 1`] = `
+<Wrapper
+  format="mobile"
+>
+  <StyledLogoWrapper
+    format="mobile"
+  >
+    <[object Object]
+      format="mobile"
+      to="/"
+    >
+      <LogoImage />
+    </[object Object]>
+    <Title
+      format="mobile"
+    />
+  </StyledLogoWrapper>
+  <StyledNav
+    format="mobile"
+  >
+    <[object Object]
+      format="mobileHeader"
+      to="/"
+    >
+      Home
+    </[object Object]>
+    <[object Object]
+      format="mobileHeader"
+      to="/checkup"
+    >
+      Checkup
+    </[object Object]>
+    <[object Object]
+      format="mobileHeader"
+      to="/about"
+    >
+      About
+    </[object Object]>
+    <[object Object]
+      format="mobileHeader"
+      to="/help"
+    >
+      Help
+    </[object Object]>
+  </StyledNav>
+</Wrapper>
+`;
+
+exports[`components:layout:Header renders properly when desktop format is passed 1`] = `
+<Wrapper
+  format="desktop"
+>
+  <StyledLogoWrapper
+    format="desktop"
+  >
+    <[object Object]
+      format="desktop"
+      to="/"
+    >
+      <LogoImage />
+    </[object Object]>
+    <Title
+      format="desktop"
+    />
+  </StyledLogoWrapper>
+  <StyledNav
+    format="desktop"
+  >
+    <[object Object]
+      format="desktopHeader"
+      to="/"
+    >
+      Home
+    </[object Object]>
+    <[object Object]
+      format="desktopHeader"
+      to="/checkup"
+    >
+      Checkup
+    </[object Object]>
+    <[object Object]
+      format="desktopHeader"
+      to="/about"
+    >
+      About
+    </[object Object]>
+    <[object Object]
+      format="desktopHeader"
+      to="/help"
+    >
+      Help
+    </[object Object]>
+  </StyledNav>
+</Wrapper>
+`;
+
+exports[`components:layout:Header renders properly when mobile format is passed 1`] = `
+<Wrapper
+  format="mobile"
+>
+  <StyledLogoWrapper
+    format="mobile"
+  >
+    <[object Object]
+      format="mobile"
+      to="/"
+    >
+      <LogoImage />
+    </[object Object]>
+    <Title
+      format="mobile"
+    />
+  </StyledLogoWrapper>
+  <StyledNav
+    format="mobile"
+  >
+    <[object Object]
+      format="mobileHeader"
+      to="/"
+    >
+      Home
+    </[object Object]>
+    <[object Object]
+      format="mobileHeader"
+      to="/checkup"
+    >
+      Checkup
+    </[object Object]>
+    <[object Object]
+      format="mobileHeader"
+      to="/about"
+    >
+      About
+    </[object Object]>
+    <[object Object]
+      format="mobileHeader"
+      to="/help"
+    >
+      Help
+    </[object Object]>
+  </StyledNav>
+</Wrapper>
+`;
+
+exports[`components:layout:Header renders properly when tablet format is passed 1`] = `
+<Wrapper
+  format="tablet"
+>
+  <StyledLogoWrapper
+    format="tablet"
+  >
+    <[object Object]
+      format="tablet"
+      to="/"
+    >
+      <LogoImage />
+    </[object Object]>
+    <Title
+      format="tablet"
+    />
+  </StyledLogoWrapper>
+  <StyledNav
+    format="tablet"
+  >
+    <[object Object]
+      format="tabletHeader"
+      to="/"
+    >
+      Home
+    </[object Object]>
+    <[object Object]
+      format="tabletHeader"
+      to="/checkup"
+    >
+      Checkup
+    </[object Object]>
+    <[object Object]
+      format="tabletHeader"
+      to="/about"
+    >
+      About
+    </[object Object]>
+    <[object Object]
+      format="tabletHeader"
+      to="/help"
+    >
+      Help
+    </[object Object]>
+  </StyledNav>
+</Wrapper>
+`;

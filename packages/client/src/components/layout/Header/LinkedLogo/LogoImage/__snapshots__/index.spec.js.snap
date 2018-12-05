@@ -2,14 +2,14 @@
 
 exports[`Header:LogoImage Returns the LogoImage svg correctly 1`] = `
 <svg
-  height="32"
+  height="100%"
   viewBox="0 0 32 32"
-  width="32"
+  width="100%"
   xmlns="http://www.w3.org/2000/svg"
 >
   <g
     fill="none"
-    fill-rule="evenodd"
+    fillRule="evenodd"
   >
     <path
       d="M5.333 15.238v-4.571h4.572v4.571zM0 15.238V5.333h4.571v9.905zM10.667 9.905V0h4.571v9.905zM5.333 4.571V0h4.572v4.571z"

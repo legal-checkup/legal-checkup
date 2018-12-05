@@ -18,13 +18,15 @@ function Link ({ children, format, href, onClick, target, tip }) {
     )
   }
 
-  return isNotUndefined(onClick)
-    ? <LinkInternal title={tip} format={format} onClick={onClick}>
+  return isNotUndefined(onClick) ? (
+    <LinkInternal title={tip} format={format} onClick={onClick}>
       {children}
     </LinkInternal>
-    : <LinkInternal title={'This page'} format={format} active>
+  ) : (
+    <LinkInternal title={'This page'} format={format} active>
       {children}
     </LinkInternal>
+  )
 }
 
 function mapStateToProps (state) {
@@ -58,4 +60,8 @@ function mergeProps ({ pathname }, { onClick }, ownProps) {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps, mergeProps)(Link)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+  mergeProps
+)(Link)

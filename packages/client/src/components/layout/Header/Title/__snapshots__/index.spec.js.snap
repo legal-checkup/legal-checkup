@@ -1,24 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:layout:Header:Title matches the snapshot 1`] = `
+exports[`components:layout:Header:Title renders correct css when format is mobile 1`] = `
 .c2 {
   color: #b62645;
+  color: #fff;
   line-height: 1;
   text-transform: uppercase;
-  width: 6rem;
+  font-size: inherit;
 }
 
 .c1 {
-  color: #ffffff;
+  color: #fff;
   line-height: 1;
   text-transform: uppercase;
-  width: 6rem;
+  font-size: inherit;
 }
 
 .c0 {
   font-family: 'Museo Sans Cyrl',sans-serif;
   font-weight: 900;
-  width: 6rem;
+  line-height: 1;
+  margin-left: 8px;
+  font-size: 18px;
+}
+
+<div
+  className="c0"
+  format="mobile"
+>
+  <div
+    className="c1"
+  >
+    Legal
+  </div>
+  <div
+    className="c2"
+    format="mobile"
+  >
+    Checkup
+  </div>
+</div>
+`;
+
+exports[`components:layout:Header:Title renders the snapshot 1`] = `
+.c2 {
+  color: #b62645;
+  color: #b62645;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: inherit;
+}
+
+.c1 {
+  color: #fff;
+  line-height: 1;
+  text-transform: uppercase;
+  font-size: inherit;
+}
+
+.c0 {
+  font-family: 'Museo Sans Cyrl',sans-serif;
+  font-weight: 900;
+  line-height: 1;
+  margin-left: 8px;
+  font-size: 18px;
 }
 
 <div

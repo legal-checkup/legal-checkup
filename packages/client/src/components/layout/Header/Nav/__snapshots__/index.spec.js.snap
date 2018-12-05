@@ -2,12 +2,16 @@
 
 exports[`components:layout:Header:Nav matches the snapshot 1`] = `
 .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 43px;
   background-color: #444141;
-  display: inline;
-  height: 35px;
-  margin-left: -130px;
-  margin-top: 50px;
-  width: 100%;
+  -webkit-align-items: flex-end;
+  -webkit-box-align: flex-end;
+  -ms-flex-align: flex-end;
+  align-items: flex-end;
 }
 
 <nav

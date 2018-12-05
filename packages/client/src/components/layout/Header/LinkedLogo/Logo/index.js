@@ -4,24 +4,22 @@ import styledMap from 'styled-map'
 import { MOBILE, TABLET, DESKTOP } from '../../../../../constants'
 
 const Logo = styled.div`
+  cursor: ${({ active }) => (active ? 'default' : 'pointer')};
 
-  cursor: ${styledMap`
-    active: default;
-    default: pointer;
-  `};
-
-  ${styledMap('format', { [`${DESKTOP}`]: `
+  ${styledMap('format', {
+    [`${DESKTOP}`]: `
       height: 70px;
       width: 70px;
     `,
-  [`${TABLET}`]: `
+    [`${TABLET}`]: `
       height: 52px;
       width: 52px;
     `,
-  [`${MOBILE}`]: `
+    [`${MOBILE}`]: `
       height: 32px;
       width: 32px;
-    ` })};
+    `
+  })};
 `
 Logo.displayName = 'Logo'
 

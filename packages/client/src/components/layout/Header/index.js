@@ -28,10 +28,18 @@ export default function Header ({ format }) {
             <Title format={DESKTOP} />
           </LogoWrapper>
           <Nav format={DESKTOP}>
-            <Link to={HOME_PATH} format={`${DESKTOP}Header`}>Home</Link>
-            <Link to={CHECKUP_PATH} format={`${DESKTOP}Header`}>Checkup</Link>
-            <Link to={ABOUT_PATH} format={`${DESKTOP}Header`}>About</Link>
-            <Link to={HELP_PATH} format={`${DESKTOP}Header`}>Help</Link>
+            <Link to={HOME_PATH} format={`${DESKTOP}Header`}>
+              Home
+            </Link>
+            <Link to={CHECKUP_PATH} format={`${DESKTOP}Header`}>
+              Checkup
+            </Link>
+            <Link to={ABOUT_PATH} format={`${DESKTOP}Header`}>
+              About
+            </Link>
+            <Link to={HELP_PATH} format={`${DESKTOP}Header`}>
+              Help
+            </Link>
           </Nav>
         </Wrapper>
       )
@@ -45,10 +53,18 @@ export default function Header ({ format }) {
             <Title format={TABLET} />
           </LogoWrapper>
           <Nav format={TABLET}>
-            <Link to={HOME_PATH} format={`${TABLET}Header`}>Home</Link>
-            <Link to={CHECKUP_PATH} format={`${TABLET}Header`}>Checkup</Link>
-            <Link to={ABOUT_PATH} format={`${TABLET}Header`}>About</Link>
-            <Link to={HELP_PATH} format={`${TABLET}Header`}>Help</Link>
+            <Link to={HOME_PATH} format={`${TABLET}Header`}>
+              Home
+            </Link>
+            <Link to={CHECKUP_PATH} format={`${TABLET}Header`}>
+              Checkup
+            </Link>
+            <Link to={ABOUT_PATH} format={`${TABLET}Header`}>
+              About
+            </Link>
+            <Link to={HELP_PATH} format={`${TABLET}Header`}>
+              Help
+            </Link>
           </Nav>
         </Wrapper>
       )
@@ -62,10 +78,18 @@ export default function Header ({ format }) {
             <Title format={MOBILE} />
           </LogoWrapper>
           <Nav format={MOBILE}>
-            <Link to={HOME_PATH} format={`${MOBILE}Header`}>Home</Link>
-            <Link to={CHECKUP_PATH} format={`${MOBILE}Header`}>Checkup</Link>
-            <Link to={ABOUT_PATH} format={`${MOBILE}Header`}>About</Link>
-            <Link to={HELP_PATH} format={`${MOBILE}Header`}>Help</Link>
+            <Link to={HOME_PATH} format={`${MOBILE}Header`}>
+              Home
+            </Link>
+            <Link to={CHECKUP_PATH} format={`${MOBILE}Header`}>
+              Checkup
+            </Link>
+            <Link to={ABOUT_PATH} format={`${MOBILE}Header`}>
+              About
+            </Link>
+            <Link to={HELP_PATH} format={`${MOBILE}Header`}>
+              Help
+            </Link>
           </Nav>
         </Wrapper>
       )
