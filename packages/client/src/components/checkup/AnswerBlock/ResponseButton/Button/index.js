@@ -4,7 +4,13 @@ import styledMap from 'styled-map'
 import { NOT_SURE } from '../../../../../state/constants'
 
 function setWidthButton (format, type) {
-  if (format === (DESKTOP || TABLET)) {
+  if (format === DESKTOP) {
+    if (type === NOT_SURE) {
+      return '155px'
+    } else {
+      return '153px'
+    }
+  } else if (format === TABLET) {
     if (type === NOT_SURE) {
       return '155px'
     } else {

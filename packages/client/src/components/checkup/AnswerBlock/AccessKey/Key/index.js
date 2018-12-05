@@ -10,17 +10,19 @@ function setWidthKey (format, type) {
     } else {
       return '29px'
     }
-  } else {
-    if (type === esc) {
-      return '105px'
-    } else {
-      return '85px'
-    }
   }
 }
 
 function setMarginRight (format, type) {
-  if (format === (DESKTOP || TABLET)) {
+  if (format === DESKTOP) {
+    if (type === esc) {
+      return 0
+    } else if (type === A) {
+      return '133px'
+    } else {
+      return '125px'
+    }
+  } else if (format === TABLET) {
     if (type === esc) {
       return 0
     } else if (type === A) {

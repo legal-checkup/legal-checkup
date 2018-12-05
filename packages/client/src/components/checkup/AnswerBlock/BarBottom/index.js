@@ -17,14 +17,11 @@ const BarBottom = styled.section`
 
   ${styledMap('format', {
     [DESKTOP]: `
-    width: 738px;
-    padding-bottom: 105px;`,
+    width: 738px;`,
     [MOBILE]: `
-    width: 325px;
-    padding-bottom: 20px;`,
+    width: 325px;`,
     [TABLET]: `
-    width: 708px;
-    padding-bottom: 105px;`
+    width: 708px;`
   })}
 `
 BarBottom.displayName = 'StyledBar'

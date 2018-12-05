@@ -15,13 +15,12 @@ const Bar = styled.section`
   ${styledMap('format', {
     [DESKTOP]: `
     width: 738px;
-    padding-bottom: 10px;`,
+    padding-bottom:61px;`,
     [MOBILE]: `
-    width: 325px;
-    padding-bottom: 20px;`,
+    width: 325px;`,
     [TABLET]: `
     width: 708px;
-    padding-bottom: 105px;`
+    padding-bottom:61px;`
   })}
 `
 Bar.displayName = 'StyledBar'
