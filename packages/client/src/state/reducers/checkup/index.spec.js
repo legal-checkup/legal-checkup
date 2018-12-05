@@ -92,5 +92,11 @@ describe('state:reducers', () => {
 
       expect(newState.responses).toMatchObject([])
     })
+
+    it(`resets the activeQuestionIndex to zero on ${REDO_CHECKUP_CLICKED} action`, () => {
+      const newState = reducer(state, redoCheckupClicked())
+
+      expect(newState.activeQuestionIndex).toBe(0)
+    })
   })
 })

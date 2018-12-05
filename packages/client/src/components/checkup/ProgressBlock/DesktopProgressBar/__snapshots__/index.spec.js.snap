@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:checkup:ProgressBlock:DestopProgressBar matches the snapshot 1`] = `undefined`;
+
+exports[`components:checkup:ProgressBlock:DestopProgressBar should render the DesktopProgressBar correctly with topics 1`] = `undefined`;

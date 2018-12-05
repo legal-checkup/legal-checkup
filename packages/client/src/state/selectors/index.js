@@ -8,11 +8,11 @@ import {
   reduce,
   times
 } from 'ramda'
+import { mapIndexed } from 'ramda-adjunct'
 import { createSelector } from 'reselect'
 
 import isNextQuestionPermitted from '../../utilities/isNextQuestionPermitted'
-import isPreviousQuestionPermitted
-  from '../../utilities/isPreviousQuestionPermitted'
+import isPreviousQuestionPermitted from '../../utilities/isPreviousQuestionPermitted'
 import {
   ALL_GOOD_RESULT,
   NEED_HELP_RESULT,
@@ -21,15 +21,18 @@ import {
   RESULTS_TRIGGER,
   YES
 } from '../constants'
+import isQuestionPermitted from '../../utilities/isQuestionPermitted'
 
 // To get an array of indices ([0, 1, 2, 3]), it is enough to get the length
 // And then use the `times` function to count up to that count
 // Passing each number in turn to the `identity` function, which just returns it unchanged
-const getIndices = pipe(length, times(identity))
+const getIndices = pipe(
+  length,
+  times(identity)
+)
 
 // This simply gets the top-level key `activeQuestionIndex`
-export function getActiveQuestionIndex (state) {
-  const { activeQuestionIndex } = state
+export function getActiveQuestionIndex ({ activeQuestionIndex }) {
   return activeQuestionIndex
 }
 
@@ -63,11 +66,17 @@ export const getQuestionList = createSelector(
 
 // Nice way to use Ramda - we use the `getQuestionList` selector to get the list of questions (above)
 // then pass that to Ramda's `length` function to get the question count
-export const getQuestionCount = createSelector(getQuestionList, length)
+export const getQuestionCount = createSelector(
+  getQuestionList,
+  length
+)
 
 // Same as above, but we pass the question list to our `getIndices` function (above)
 // which returns an array of the question indices (add one to each and you get the question numbers)
-export const getQuestionIndices = createSelector(getQuestionList, getIndices)
+export const getQuestionIndices = createSelector(
+  getQuestionList,
+  getIndices
+)
 
 // Use `getActiveQuestionIndex` and `getQuestionList` to get the activeQuestionIndex and questionList respectively
 // Then pass those into a function that returns the question at the activeQuestionIndex -- the active question
@@ -97,7 +106,10 @@ export const getResponseList = createSelector(
 )
 
 // Use `getResponseList` then pass it to Ramda's `length` function to get the response count
-export const getResponseCount = createSelector(getResponseList, length)
+export const getResponseCount = createSelector(
+  getResponseList,
+  length
+)
 
 // Get all NO answers
 export const getNoAnswers = createSelector(
@@ -123,7 +135,7 @@ export const getYesAnswers = createSelector(
 export const getResultType = createSelector(
   getYesAnswers,
   yesAnswers =>
-    (length(yesAnswers) >= RESULTS_TRIGGER ? NEED_HELP_RESULT : ALL_GOOD_RESULT)
+    length(yesAnswers) >= RESULTS_TRIGGER ? NEED_HELP_RESULT : ALL_GOOD_RESULT
 )
 
 // Another use for selectors -- here we use the activeQuestionIndex, the questionCount, and the responseCount
@@ -141,4 +153,25 @@ export const checkPreviousQuestionEnabled = createSelector(
   isPreviousQuestionPermitted
 )
 
+export const checkQuestionEnabled = index =>
+  createSelector(
+    getQuestionCount,
+    getResponseCount,
+    (questionCount, responseCount) =>
+      isQuestionPermitted(index, questionCount, responseCount)
+  )
+
 export const getPathname = pathOr({}, ['router', 'location', 'pathname'])
+
+export const getQuestionListIndexed = pipe(
+  getQuestionList,
+  mapIndexed((question, index) => ({ ...question, index }))
+)
+
+export const makeGetTopicQuestions = () =>
+  createSelector(
+    (_, { topic } = {}) => topic,
+    getQuestionListIndexed,
+    (filterTopic, questions) =>
+      filter(({ topic }) => topic === filterTopic, questions)
+  )
