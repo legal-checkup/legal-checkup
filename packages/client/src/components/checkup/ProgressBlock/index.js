@@ -7,33 +7,36 @@ import makePreviousQuestionButton from '../wrappers/makePreviousQuestionButton'
 import Button from './Button'
 import CurrentTopic from './CurrentTopic'
 import ProgressBar from './ProgressBar'
+import DesktopProgressBar from './DesktopProgressBar'
 
 export default function (props) {
   const { format } = props
+  const PreviousQuestionButton = makePreviousQuestionButton(Button)
+  const NextQuestionButton = makeNextQuestionButton(Button)
 
   switch (format) {
     case DESKTOP:
       return (
-        <ProgressBar data-testid={progressBarId}>
-          {makePreviousQuestionButton(Button, TABLET)}
-          {/* add question bar here */}
-          {makeNextQuestionButton(Button, TABLET)}
+        <ProgressBar>
+          <PreviousQuestionButton format={DESKTOP} />
+          <DesktopProgressBar />
+          <NextQuestionButton format={DESKTOP} />
         </ProgressBar>
       )
     case TABLET:
       return (
-        <ProgressBar data-testid={progressBarId}>
-          {makePreviousQuestionButton(Button, TABLET)}
-          <CurrentTopic data-testid={currentTopicId} />
-          {makeNextQuestionButton(Button, TABLET)}
+        <ProgressBar>
+          <PreviousQuestionButton format={TABLET} />
+          <CurrentTopic />
+          <NextQuestionButton format={TABLET} />
         </ProgressBar>
       )
     default:
       return (
-        <ProgressBar data-testid={progressBarId}>
-          {makePreviousQuestionButton(Button, MOBILE)}
-          <CurrentTopic data-testid={currentTopicId} />
-          {makeNextQuestionButton(Button, MOBILE)}
+        <ProgressBar>
+          <PreviousQuestionButton format={MOBILE} />
+          <CurrentTopic />
+          <NextQuestionButton format={MOBILE} />
         </ProgressBar>
       )
   }
