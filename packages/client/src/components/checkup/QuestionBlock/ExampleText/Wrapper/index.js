@@ -3,7 +3,6 @@ import { DESKTOP, MOBILE, TABLET } from '../../../../../constants'
 import styledMap from 'styled-map'
 
 const Wrapper = styled.div`
-  width: 738px;
   background-color: #ffffff;
   margin: 0 auto;
   font-family: MuseoSans;

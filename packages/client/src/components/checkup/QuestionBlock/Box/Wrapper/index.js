@@ -21,7 +21,7 @@ const Wrapper = styled.div`
   line-height: normal;
   padding:58px 0px 9px;`,
     [MOBILE]: `
-  width: 324px;
+  width: 325px;
   font-size: 25px;
   line-height: 1.2;
   padding:58px 0px 0px;`,
