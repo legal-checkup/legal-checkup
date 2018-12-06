@@ -3,6 +3,24 @@ import { DESKTOP, MOBILE, TABLET } from '../../../../../constants'
 import styledMap from 'styled-map'
 import { esc, A } from '../../../../../state/constants'
 
+function getKeyPush (e) {
+  if (e.keyCode === 65) {
+    if (document.getElementsByClassName('sc-VigVT jBObtV')[0] !== undefined) {
+      document.getElementsByClassName('sc-VigVT jBObtV')[0].click()
+    }
+  } else if (e.keyCode === 66) {
+    if (document.getElementsByClassName('sc-VigVT jBObtV')[0] !== undefined) {
+      document.getElementsByClassName('sc-VigVT kvKjKg')[0].click()
+    }
+  } else if (e.keyCode === 27) {
+    if (document.getElementsByClassName('sc-VigVT jBObtV')[0] !== undefined) {
+      document.getElementsByClassName('sc-VigVT cGhvZs')[0].click()
+    }
+  }
+}
+
+document.addEventListener('keyup', getKeyPush, false)
+
 function setWidthKey (format, type) {
   if (format === (DESKTOP || TABLET)) {
     if (type === esc) {

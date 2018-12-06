@@ -7,16 +7,16 @@ import ResponseButton from './ResponseButton'
 import AccessKey from './AccessKey'
 import BarBottom from './BarBottom'
 
-export default function AnswerBlock ({ format }) {
+export default function AnswerBlock ({ format, keycode }) {
   return (
     <Bar format={format}>
       <ResponseButton type={YES} format={format} />
       <ResponseButton type={NO} format={format} />
       <ResponseButton type={NOT_SURE} format={format} />
       <BarBottom format={format}>
-        <AccessKey type={A} format={format} />
-        <AccessKey type={B} format={format} />
-        <AccessKey type={esc} format={format} />
+        <AccessKey disabled type={A} format={format} keycode={65} />
+        <AccessKey disabled type={B} format={format} keycode={66} />
+        <AccessKey disabled type={esc} format={format} keycode={27} />
       </BarBottom>
     </Bar>
   )

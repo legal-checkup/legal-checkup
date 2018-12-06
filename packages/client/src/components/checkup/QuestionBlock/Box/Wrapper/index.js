@@ -16,20 +16,20 @@ const Wrapper = styled.div`
   border-top-right-radius: 5px;
   ${styledMap('format', {
     [DESKTOP]: `
-  width: 738px;
+  width: 658px;
   font-size: 32px;
   line-height: normal;
-  padding:58px 0px 9px;`,
+  padding:58px 40px 9px;`,
     [MOBILE]: `
-  width: 325px;
+  width: 285px;
   font-size: 25px;
   line-height: 1.2;
-  padding:58px 0px 0px;`,
+  padding:58px 20px 0px;`,
     [TABLET]: `
-  width: 708px;
+  width: 630px;
   font-size: 32px;
   line-height: normal;
-  padding:45px 0px 0px;`
+  padding:45px 40px 0px;`
   })}
 `
 Wrapper.displayName = 'Wrapper'
