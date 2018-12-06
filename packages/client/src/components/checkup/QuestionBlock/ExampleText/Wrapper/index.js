@@ -6,18 +6,23 @@ const Wrapper = styled.div`
   width: 738px;
   background-color: #ffffff;
   margin: 0 auto;
-  font-family: Helvetica;
-  font-size: 16px;
+  font-family: MuseoSans;
+  padding-top: 9px;
   text-align: center;
   color: #9b9b9b;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
   ${styledMap('format', {
     [DESKTOP]: `
-    width: 738px;`,
+    width: 738px;
+    padding-bottom:35px;
+    font-size: 20px;`,
     [MOBILE]: `
-    width: 325px;;`,
+    width: 325px;;
+    font-size: 16px;`,
     [TABLET]: `
-    width: 708px;`
+    width: 708px;
+    padding-bottom:35px;
+    font-size: 20px;`
   })}
 `
 Wrapper.displayName = 'Wrapper'

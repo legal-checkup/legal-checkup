@@ -32,15 +32,9 @@ export default function CheckUp () {
       <Helmet>
         <title>Checkup :: {WEBSITE}</title>
       </Helmet>
-      <Mobile>
-        {getLayout(MOBILE)}
-      </Mobile>
-      <Tablet>
-        {getLayout(TABLET)}
-      </Tablet>
-      <Desktop>
-        {getLayout(DESKTOP)}
-      </Desktop>
+      <Mobile>{getLayout(MOBILE)}</Mobile>
+      <Tablet>{getLayout(TABLET)}</Tablet>
+      <Desktop>{getLayout(DESKTOP)}</Desktop>
     </>
   )
 }
