@@ -10,6 +10,7 @@ describe(`components:responsive:Mobile`, () => {
     const wrapper = shallow(<Mobile {...props} />)
 
     expect(wrapper.props()).toEqual({
+      'data-testid': 'responsive',
       maxWidth: 767,
       myProp: 'myProp',
       values: {}

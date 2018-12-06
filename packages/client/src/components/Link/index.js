@@ -10,6 +10,8 @@ import LinkExternal from './LinkExternal'
 import LinkInternal from './LinkInternal'
 import Placeholder from './Placeholder'
 
+import { externalLink, internalLink, placeholder } from '../../constants'
+
 function Link ({ children, format, href, onClick, target, tip }) {
   if (isNotEmpty(href)) {
     return <LinkExternal
@@ -17,12 +19,13 @@ function Link ({ children, format, href, onClick, target, tip }) {
       title={tip}
       format={format}
       target={target}
+      data-testid={externalLink}
     >{children}</LinkExternal>
   }
 
   return isNotUndefined(onClick)
-    ? <LinkInternal title={tip} format={format} onClick={onClick}>{children}</LinkInternal>
-    : <Placeholder title='This page' format={format}>{children}</Placeholder>
+    ? <LinkInternal title={tip} format={format} onClick={onClick} data-testid={internalLink}>{children}</LinkInternal>
+    : <Placeholder title='This page' format={format} data-testid={placeholder}>{children}</Placeholder>
 }
 
 function mapStateToProps (state) {

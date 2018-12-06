@@ -1,6 +1,5 @@
 import * as React from 'react'
-
-import { DESKTOP, MOBILE, TABLET } from '../../../constants'
+import { DESKTOP, MOBILE, TABLET, headerWrapper, headerLinkedLogo, headerTitle, headerHome, headerNav, headerCheckup, headerAbout, headerHelp } from '../../../constants'
 import { ABOUT_PATH, CHECKUP_PATH, HELP_PATH, HOME_PATH } from '../../../state/constants'
 import Link from '../../Link'
 
@@ -15,40 +14,40 @@ export default function Header (props) {
   switch (format) {
     case DESKTOP:
       return (
-        <Wrapper>
-          <LinkedLogo format={DESKTOP} />
-          <Title format={DESKTOP} />
-          <Nav format={DESKTOP}>
-            <Link to={HOME_PATH} format={`${DESKTOP}Header`}>Home</Link>
-            <Link to={CHECKUP_PATH} format={`${DESKTOP}Header`}>Checkup</Link>
-            <Link to={ABOUT_PATH} format={`${DESKTOP}Header`}>About</Link>
-            <Link to={HELP_PATH} format={`${DESKTOP}Header`}>Help</Link>
+        <Wrapper data-testid={headerWrapper}>
+          <LinkedLogo format={DESKTOP} data-testid={headerLinkedLogo} />
+          <Title format={DESKTOP} data-testid={headerTitle} />
+          <Nav format={DESKTOP} data-testid={headerNav}>
+            <Link to={HOME_PATH} format={`${DESKTOP}Header`} data-testid={headerHome}>Home</Link>
+            <Link to={CHECKUP_PATH} format={`${DESKTOP}Header`} data-testid={headerCheckup}>Checkup</Link>
+            <Link to={ABOUT_PATH} format={`${DESKTOP}Header`} data-testid={headerAbout}>About</Link>
+            <Link to={HELP_PATH} format={`${DESKTOP}Header`} data-testid={headerHelp}>Help</Link>
           </Nav>
         </Wrapper>
       )
     case TABLET:
       return (
-        <Wrapper>
-          <LinkedLogo format={TABLET} />
-          <Title format={TABLET} />
-          <Nav format={TABLET}>
-            <Link to={HOME_PATH} format={`${TABLET}Header`}>Home</Link>
-            <Link to={CHECKUP_PATH} format={`${TABLET}Header`}>Checkup</Link>
-            <Link to={ABOUT_PATH} format={`${TABLET}Header`}>About</Link>
-            <Link to={HELP_PATH} format={`${TABLET}Header`}>Help</Link>
+        <Wrapper data-testid={headerWrapper}>
+          <LinkedLogo format={TABLET} data-testid={headerLinkedLogo} />
+          <Title format={TABLET} data-testid={headerTitle} />
+          <Nav format={TABLET} data-testid={headerNav}>
+            <Link to={HOME_PATH} format={`${TABLET}Header`} data-testid={headerHome}>Home</Link>
+            <Link to={CHECKUP_PATH} format={`${TABLET}Header`} data-testid={headerCheckup}>Checkup</Link>
+            <Link to={ABOUT_PATH} format={`${TABLET}Header`} data-testid={headerAbout}>About</Link>
+            <Link to={HELP_PATH} format={`${TABLET}Header`} data-testid={headerHelp}>Help</Link>
           </Nav>
         </Wrapper>
       )
     default:
       return (
-        <Wrapper>
-          <LinkedLogo format={MOBILE} />
-          <Title format={MOBILE} />
-          <Nav format={MOBILE}>
-            <Link to={HOME_PATH} format={`${MOBILE}Header`}>Home</Link>
-            <Link to={CHECKUP_PATH} format={`${MOBILE}Header`}>Checkup</Link>
-            <Link to={ABOUT_PATH} format={`${MOBILE}Header`}>About</Link>
-            <Link to={HELP_PATH} format={`${MOBILE}Header`}>Help</Link>
+        <Wrapper data-testid={headerWrapper}>
+          <LinkedLogo format={MOBILE} data-testid={headerLinkedLogo} />
+          <Title format={MOBILE} data-testid={headerTitle} />
+          <Nav format={MOBILE} data-testid={headerNav}>
+            <Link to={HOME_PATH} format={`${MOBILE}Header`} data-testid={headerHome}>Home</Link>
+            <Link to={CHECKUP_PATH} format={`${MOBILE}Header`} data-testid={headerCheckup}>Checkup</Link>
+            <Link to={ABOUT_PATH} format={`${MOBILE}Header`} data-testid={headerAbout}>About</Link>
+            <Link to={HELP_PATH} format={`${MOBILE}Header`} data-testid={headerHelp}>Help</Link>
           </Nav>
         </Wrapper>
       )
