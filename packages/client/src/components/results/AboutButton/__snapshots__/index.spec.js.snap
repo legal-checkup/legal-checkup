@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:results:AboutButton matches the snapshot when format is desktop 1`] = `
+.c0 {
+  width: 450px;
+  height: 58px;
+  border-radius: 5px;
+  border: solid 3px #ffffff;
+  font-family: 'Museo Sans Cyrl 900',sans-serif;
+  font-size: 16px;
+}
+
+<button
+  className="c0"
+  format="desktop"
+  onClick={[Function]}
+>
+  About Community Law
+</button>
+`;
+
+exports[`components:results:AboutButton matches the snapshot when format is mobile 1`] = `
+.c0 {
+  width: 260px;
+  height: 58px;
+  border-radius: 5px;
+  border: solid 3px #ffffff;
+  font-family: 'Museo Sans Cyrl 900',sans-serif;
+  font-size: 16px;
+}
+
+<button
+  className="c0"
+  format="mobile"
+  onClick={[Function]}
+>
+  About Community Law
+</button>
+`;
+
+exports[`components:results:AboutButton matches the snapshot when format is tablet 1`] = `
+.c0 {
+  width: 260px;
+  height: 58px;
+  border-radius: 5px;
+  border: solid 3px #ffffff;
+  font-family: 'Museo Sans Cyrl 900',sans-serif;
+  font-size: 16px;
+}
+
+<button
+  className="c0"
+  format="tablet"
+  onClick={[Function]}
+>
+  About Community Law
+</button>
+`;
