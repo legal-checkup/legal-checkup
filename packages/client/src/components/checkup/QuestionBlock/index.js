@@ -9,7 +9,7 @@ import { box, counter, exampleText } from '../../../constants'
 export default function QuestionBlock ({ format }) {
   return (
     <>
-      <Counter data-testid={counter} />
+      <Counter data-testid={counter} format={format} />
       <Box data-testid={box} format={format} />
       <ExampleText data-testid={exampleText} format={format} />
     </>
