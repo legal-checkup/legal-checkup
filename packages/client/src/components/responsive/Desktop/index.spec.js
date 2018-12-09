@@ -10,6 +10,7 @@ describe(`components:responsive:Desktop`, () => {
     const wrapper = shallow(<Desktop {...props} />)
 
     expect(wrapper.props()).toEqual({
+      'data-testid': 'responsive',
       minWidth: 1280,
       myProp: 'myProp',
       values: {}

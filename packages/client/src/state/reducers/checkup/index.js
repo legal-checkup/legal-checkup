@@ -37,7 +37,8 @@ export default function reducer (state = initialState, { payload = {}, type }) {
     case REDO_CHECKUP_CLICKED:
       return {
         ...state,
-        responses: []
+        responses: [],
+        activeQuestionIndex: 0
       }
 
     default:

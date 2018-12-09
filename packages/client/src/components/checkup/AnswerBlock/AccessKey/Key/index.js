@@ -11,15 +11,15 @@ import {
 
 function getKeyPush (e) {
   if (e.keyCode === CODE_FOR_A) {
-    if (document.getElementsByClassName('sc-VigVT jBObtV')[0] !== undefined) {
-      document.getElementsByClassName('sc-VigVT jBObtV')[0].click()
+    if (document.getElementsByClassName('sc-VigVT kyyfOR')[0] !== undefined) {
+      document.getElementsByClassName('sc-VigVT kyyfOR')[0].click()
     }
   } else if (e.keyCode === CODE_FOR_B) {
-    if (document.getElementsByClassName('sc-VigVT jBObtV')[0] !== undefined) {
-      document.getElementsByClassName('sc-VigVT kvKjKg')[0].click()
+    if (document.getElementsByClassName('sc-VigVT kyyfOR')[0] !== undefined) {
+      document.getElementsByClassName('sc-VigVT duDcrt')[0].click()
     }
   } else if (e.keyCode === CODE_FOR_ESC) {
-    if (document.getElementsByClassName('sc-VigVT jBObtV')[0] !== undefined) {
+    if (document.getElementsByClassName('sc-VigVT kyyfOR')[0] !== undefined) {
       document.getElementsByClassName('sc-VigVT cGhvZs')[0].click()
     }
   }
