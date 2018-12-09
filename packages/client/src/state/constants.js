@@ -50,3 +50,9 @@ export const COMMUNITY_LAW_URL = 'http://communitylaw.org.nz/'
 export const ABOUT_COMMUNITY_LAW_URL = 'http://www.wclc.org.nz/about-us/'
 export const COMMUNITY_LAW_SERVICES_URL =
   'http://www.wclc.org.nz/our-services/'
+
+// Keycode
+
+export const CODE_FOR_ESC = 27
+export const CODE_FOR_A = 65
+export const CODE_FOR_B = 66

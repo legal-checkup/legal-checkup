@@ -1,18 +1,24 @@
 import styled from 'styled-components'
 import { DESKTOP, MOBILE, TABLET } from '../../../../../constants'
 import styledMap from 'styled-map'
-import { ESC, A } from '../../../../../state/constants'
+import {
+  ESC,
+  A,
+  CODE_FOR_A,
+  CODE_FOR_B,
+  CODE_FOR_ESC
+} from '../../../../../state/constants'
 
 function getKeyPush (e) {
-  if (e.keyCode === 65) {
+  if (e.keyCode === CODE_FOR_A) {
     if (document.getElementsByClassName('sc-VigVT jBObtV')[0] !== undefined) {
       document.getElementsByClassName('sc-VigVT jBObtV')[0].click()
     }
-  } else if (e.keyCode === 66) {
+  } else if (e.keyCode === CODE_FOR_B) {
     if (document.getElementsByClassName('sc-VigVT jBObtV')[0] !== undefined) {
       document.getElementsByClassName('sc-VigVT kvKjKg')[0].click()
     }
-  } else if (e.keyCode === 27) {
+  } else if (e.keyCode === CODE_FOR_ESC) {
     if (document.getElementsByClassName('sc-VigVT jBObtV')[0] !== undefined) {
       document.getElementsByClassName('sc-VigVT cGhvZs')[0].click()
     }
