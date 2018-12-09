@@ -18,8 +18,8 @@ export function getLinkBackgroundColor ({ format = '', active } = {}) {
 }
 
 export function getLinkFontWeight ({ format = '', active } = {}) {
-  if (format === `${MOBILE}Header`) {
-    return active === true ? 900 : 500
+  if (format === `${MOBILE}Header` && active === true) {
+    return 900
   }
   return 500
 }

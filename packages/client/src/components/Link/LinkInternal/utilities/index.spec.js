@@ -17,17 +17,9 @@ const mockProps = {
     active: true
   },
 
-  tabletHeaderLinkProps: {
-    format: `${TABLET}Header`
-  },
-
   tabletHeaderLinkPropsActive: {
     format: `${TABLET}Header`,
     active: true
-  },
-
-  mobileHeaderLinkProps: {
-    format: `${MOBILE}Header`
   },
 
   mobileHeaderLinkPropsActive: {
@@ -43,9 +35,7 @@ const mockProps = {
 const {
   desktopHeaderLinkProps,
   desktopHeaderLinkPropsActive,
-  // tabletHeaderLinkProps,
   tabletHeaderLinkPropsActive,
-  // mobileHeaderLinkProps,
   mobileHeaderLinkPropsActive,
   otherLinkProps
 } = mockProps
@@ -58,6 +48,10 @@ describe(`LinkInternal:utilities`, () => {
 
     it(`returns the correct color for anything that isn't an active header link`, () => {
       expect(getLinkColor(otherLinkProps)).toMatchSnapshot()
+    })
+
+    it(`returns the correct color when supplied nothing`, () => {
+      expect(getLinkColor()).toMatchSnapshot()
     })
   })
 
@@ -77,6 +71,10 @@ describe(`LinkInternal:utilities`, () => {
     it(`returns the correct border for anything that isn't an active ${DESKTOP} OR ${TABLET} header link`, () => {
       expect(getLinkBorder(otherLinkProps)).toMatchSnapshot()
     })
+
+    it(`returns the correct border when supplied nothing`, () => {
+      expect(getLinkBorder()).toMatchSnapshot()
+    })
   })
 
   describe(`getLinkBackgroundColor`, () => {
@@ -89,6 +87,10 @@ describe(`LinkInternal:utilities`, () => {
     it(`returns the correct background color for anything that isn't an active ${MOBILE} header link`, () => {
       expect(getLinkBackgroundColor(otherLinkProps)).toMatchSnapshot()
     })
+
+    it(`returns the correct background color when supplied nothing`, () => {
+      expect(getLinkBackgroundColor()).toMatchSnapshot()
+    })
   })
 
   describe(`getLinkFontWeight`, () => {
@@ -98,6 +100,10 @@ describe(`LinkInternal:utilities`, () => {
 
     it(`returns the correct font weight for anything that isn't an active ${MOBILE} header link`, () => {
       expect(getLinkFontWeight(otherLinkProps)).toMatchSnapshot()
+    })
+
+    it(`returns the default font weight when supplied nothing`, () => {
+      expect(getLinkFontWeight()).toMatchSnapshot()
     })
   })
 })
