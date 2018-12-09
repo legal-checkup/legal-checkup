@@ -6,12 +6,7 @@ const Bar = styled.section`
   margin: auto;
   text-align: center;
   background-color: #ffffff;
-  border-bottom-style: solid;
-  border-bottom-width: 5px;
-  border-bottom-color: #b62645;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
   ${styledMap('format', {
     [DESKTOP]: `
     width: 738px;

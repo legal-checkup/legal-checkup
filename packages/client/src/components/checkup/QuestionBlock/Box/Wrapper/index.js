@@ -11,25 +11,25 @@ const Wrapper = styled.div`
   letter-spacing: normal;
   text-align: center;
   margin: 0px auto;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2), 0 0 2px 0 rgba(0, 0, 0, 0.12);
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
   ${styledMap('format', {
     [DESKTOP]: `
-  width: 658px;
   font-size: 32px;
   line-height: normal;
-  padding:58px 40px 9px;`,
+  padding-top:58px;
+  padding-left:40px;
+  padding-right:40px;`,
     [MOBILE]: `
-  width: 285px;
   font-size: 25px;
   line-height: 1.2;
-  padding:58px 20px 0px;`,
+  padding-top:12px;
+  padding-left:20px;
+  padding-right:20px;`,
     [TABLET]: `
-  width: 630px;
   font-size: 32px;
   line-height: normal;
-  padding:45px 40px 0px;`
+  padding-top:58px;
+  padding-left:40px;
+  padding-right:40px;`
   })}
 `
 Wrapper.displayName = 'Wrapper'
