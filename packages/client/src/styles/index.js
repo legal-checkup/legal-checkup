@@ -7,8 +7,8 @@ const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Museo Sans Cyrl 900';
     font-style: normal;
-    font-weight: normal;
-    src: local('Museo Sans Cyrl 900'), url('./fonts/MuseoSansCyrl_3.woff') format('woff');
+    font-weight: 900;
+    src: local('Museo Sans Cyrl 900'), url('./fonts/MuseoSansCyrl_900.woff') format('woff');
   }
 
   body {
