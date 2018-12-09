@@ -11,12 +11,23 @@ import { btnYes, btnNo, btnNotSure } from '../../../constants'
 export default function AnswerBlock ({ format, keycode }) {
   return (
     <Bar format={format}>
-      <ResponseButton type={YES} data-testid={btnYes} format={format} />
-      <ResponseButton type={NO} data-testid={btnNo} format={format} />
+      <ResponseButton
+        type={YES}
+        data-testid={btnYes}
+        format={format}
+        className='YESBUTTON'
+      />
+      <ResponseButton
+        type={NO}
+        data-testid={btnNo}
+        format={format}
+        className='NOBUTTON'
+      />
       <ResponseButton
         type={NOT_SURE}
         data-testid={btnNotSure}
         format={format}
+        className='NOTSUREBUTTON'
       />
       <BarBottom format={format}>
         <AccessKey type={A} format={format} keycode={65} />

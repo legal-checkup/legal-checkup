@@ -11,16 +11,16 @@ import {
 
 function getKeyPush (e) {
   if (e.keyCode === CODE_FOR_A) {
-    if (document.getElementsByClassName('sc-VigVT kyyfOR')[0] !== undefined) {
-      document.getElementsByClassName('sc-VigVT kyyfOR')[0].click()
+    if (document.getElementsByClassName('YESBUTTON')[0] !== undefined) {
+      document.getElementsByClassName('YESBUTTON')[0].click()
     }
   } else if (e.keyCode === CODE_FOR_B) {
-    if (document.getElementsByClassName('sc-VigVT kyyfOR')[0] !== undefined) {
-      document.getElementsByClassName('sc-VigVT duDcrt')[0].click()
+    if (document.getElementsByClassName('NOBUTTON')[0] !== undefined) {
+      document.getElementsByClassName('NOBUTTON')[0].click()
     }
   } else if (e.keyCode === CODE_FOR_ESC) {
-    if (document.getElementsByClassName('sc-VigVT kyyfOR')[0] !== undefined) {
-      document.getElementsByClassName('sc-VigVT cGhvZs')[0].click()
+    if (document.getElementsByClassName('NOTSUREBUTTON')[0] !== undefined) {
+      document.getElementsByClassName('NOTSUREBUTTON')[0].click()
     }
   }
 }
