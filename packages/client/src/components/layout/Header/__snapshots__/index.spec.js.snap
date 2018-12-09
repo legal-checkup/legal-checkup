@@ -1,53 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:layout:Header needs a test 1`] = `
-<Wrapper
-  format="mobile"
->
-  <StyledLogoWrapper
-    format="mobile"
-  >
-    <[object Object]
-      format="mobile"
-      to="/"
-    >
-      <LogoImage />
-    </[object Object]>
-    <Title
-      format="mobile"
-    />
-  </StyledLogoWrapper>
-  <StyledNav
-    format="mobile"
-  >
-    <[object Object]
-      format="mobileHeader"
-      to="/"
-    >
-      Home
-    </[object Object]>
-    <[object Object]
-      format="mobileHeader"
-      to="/checkup"
-    >
-      Checkup
-    </[object Object]>
-    <[object Object]
-      format="mobileHeader"
-      to="/about"
-    >
-      About
-    </[object Object]>
-    <[object Object]
-      format="mobileHeader"
-      to="/help"
-    >
-      Help
-    </[object Object]>
-  </StyledNav>
-</Wrapper>
-`;
-
 exports[`components:layout:Header renders properly when desktop format is passed 1`] = `
 <Wrapper
   format="desktop"

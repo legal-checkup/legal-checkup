@@ -6,6 +6,7 @@ exports[`components:layout:Header:Nav matches the snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding: 0 3px;
   height: 43px;
   background-color: #444141;
   -webkit-align-items: flex-end;

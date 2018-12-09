@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkInternal:utilities getLinkBackgroundColor returns the correct background color for an active mobile header link 1`] = `"#eeedea"`;
+
+exports[`LinkInternal:utilities getLinkBackgroundColor returns the correct background color for anything that isn't an active mobile header link 1`] = `null`;
+
+exports[`LinkInternal:utilities getLinkBorder returns the correct border for an active desktop header link  1`] = `"2px solid #b62645"`;
+
+exports[`LinkInternal:utilities getLinkBorder returns the correct border for an active tablet header link  1`] = `"2px solid #b62645"`;
+
+exports[`LinkInternal:utilities getLinkBorder returns the correct border for an inactive desktop OR tablet header link  1`] = `"2px solid transparent"`;
+
+exports[`LinkInternal:utilities getLinkBorder returns the correct border for anything that isn't an active desktop OR tablet header link 1`] = `null`;
+
+exports[`LinkInternal:utilities getLinkColor returns the correct color for an active header link  1`] = `"#b62645"`;
+
+exports[`LinkInternal:utilities getLinkColor returns the correct color for anything that isn't an active header link 1`] = `"#fff"`;
+
+exports[`LinkInternal:utilities getLinkFontWeight returns the correct font weight for an active mobile header link 1`] = `900`;
+
+exports[`LinkInternal:utilities getLinkFontWeight returns the correct font weight for anything that isn't an active mobile header link 1`] = `500`;

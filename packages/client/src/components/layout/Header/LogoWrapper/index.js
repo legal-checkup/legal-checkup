@@ -7,16 +7,18 @@ const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
 
-  ${styledMap('format', { [`${DESKTOP}`]: `
+  ${styledMap('format', {
+    [`${DESKTOP}`]: `
       margin-left: 20px;
     `,
-  [`${TABLET}`]: `
+    [`${TABLET}`]: `
       margin-left: 20px;
     `,
-  [`${MOBILE}`]: `
+    [`${MOBILE}`]: `
       margin-left: 15px;
       height: 57px;
-    ` })};
+    `
+  })};
 `
 LogoWrapper.displayName = 'StyledLogoWrapper'
 

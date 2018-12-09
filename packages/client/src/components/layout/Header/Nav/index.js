@@ -6,19 +6,21 @@ import { DESKTOP, MOBILE, TABLET } from '../../../../constants'
 const Nav = styled.nav`
   display: flex;
 
-  ${styledMap('format', { [`${DESKTOP}`]: `
+  ${styledMap('format', {
+    [`${DESKTOP}`]: `
       width: 100%;
       margin-left: 100px;
     `,
-  [`${TABLET}`]: `
+    [`${TABLET}`]: `
       margin-left: 100px;
     `,
-  [`${MOBILE}`]: `
+    [`${MOBILE}`]: `
+      padding: 0 3px;
       height: 43px;
       background-color: #444141;
       align-items: flex-end;
-    ` })};
-
+    `
+  })};
 `
 Nav.displayName = 'StyledNav'
 

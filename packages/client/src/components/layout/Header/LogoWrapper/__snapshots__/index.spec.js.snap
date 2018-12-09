@@ -5,7 +5,7 @@ exports[`Header:LogoWrapper Renders the LogoWrapper with the correct CSS styles 
   forwardedClass={
     Object {
       "$$typeof": Symbol(react.forward_ref),
-      "attrs": undefined,
+      "attrs": Array [],
       "componentStyle": ComponentStyle {
         "componentId": "sc-bdVaJa",
         "isStatic": false,
