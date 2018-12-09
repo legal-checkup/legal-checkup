@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { NO, NOT_SURE, YES, A, B, esc } from '../../../state/constants'
+import { NO, NOT_SURE, YES, A, B, ESC } from '../../../state/constants'
 
 import Bar from './Bar'
 import ResponseButton from './ResponseButton'
@@ -16,7 +16,7 @@ export default function AnswerBlock ({ format, keycode }) {
       <BarBottom format={format}>
         <AccessKey disabled type={A} format={format} keycode={65} />
         <AccessKey disabled type={B} format={format} keycode={66} />
-        <AccessKey disabled type={esc} format={format} keycode={27} />
+        <AccessKey disabled type={ESC} format={format} keycode={27} />
       </BarBottom>
     </Bar>
   )

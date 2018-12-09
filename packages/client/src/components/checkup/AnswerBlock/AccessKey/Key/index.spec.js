@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { create } from 'react-test-renderer'
 
-import { A, B, esc } from '../../../../../state/constants'
+import { A, B, ESC } from '../../../../../state/constants'
 
 import Key from './'
 
@@ -10,8 +10,8 @@ describe('components:checkup:AnswerBlock:AccessKey:Key', function () {
     expect(create(<Key type={B}>{B}</Key>).toJSON()).toMatchSnapshot()
   })
 
-  it(`matches the snapshot for type ${esc}`, () => {
-    expect(create(<Key type={esc}>{esc}</Key>).toJSON()).toMatchSnapshot()
+  it(`matches the snapshot for type ${ESC}`, () => {
+    expect(create(<Key type={ESC}>{ESC}</Key>).toJSON()).toMatchSnapshot()
   })
 
   it(`matches the snapshot for type ${A}`, () => {

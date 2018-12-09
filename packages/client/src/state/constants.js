@@ -27,7 +27,7 @@ export const NOT_SURE = 'Not sure'
 export const YES = 'Yes'
 export const B = 'B'
 export const A = 'A'
-export const esc = 'esc'
+export const ESC = 'esc'
 
 // Results
 export const RESULTS_TRIGGER = 1

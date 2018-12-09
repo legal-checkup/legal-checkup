@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { DESKTOP, MOBILE, TABLET } from '../../../../../constants'
 import styledMap from 'styled-map'
-import { esc, A } from '../../../../../state/constants'
+import { ESC, A } from '../../../../../state/constants'
 
 function getKeyPush (e) {
   if (e.keyCode === 65) {
@@ -23,7 +23,7 @@ document.addEventListener('keyup', getKeyPush, false)
 
 function setWidthKey (format, type) {
   if (format === (DESKTOP || TABLET)) {
-    if (type === esc) {
+    if (type === ESC) {
       return '49px'
     } else {
       return '29px'
@@ -33,7 +33,7 @@ function setWidthKey (format, type) {
 
 function setMarginRight (format, type) {
   if (format === DESKTOP) {
-    if (type === esc) {
+    if (type === ESC) {
       return 0
     } else if (type === A) {
       return '133px'
@@ -41,7 +41,7 @@ function setMarginRight (format, type) {
       return '125px'
     }
   } else if (format === TABLET) {
-    if (type === esc) {
+    if (type === ESC) {
       return 0
     } else if (type === A) {
       return '133px'
@@ -49,7 +49,7 @@ function setMarginRight (format, type) {
       return '125px'
     }
   } else {
-    if (type === esc) {
+    if (type === ESC) {
       return 0
     } else {
       return '7px'
