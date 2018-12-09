@@ -16,7 +16,7 @@ const Button = styled.button`
   font-size: 16px;
 `
 
-export default function ServicesButton ({ format }) {
+export default function AboutButton ({ format }) {
   return (
     <Button format={format}
       onClick={() => {
