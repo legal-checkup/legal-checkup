@@ -99,7 +99,8 @@ export const state = {
             results: 'Your unpaid rent',
             id: '86A9B3EDF65043DE92503EFD8B530475',
             resource: 'tenancy and housing',
-            url: 'tenancy and housing'
+            url:
+              'http://communitylaw.org.nz/community-law-manual/chapter-15-tenancy-and-housing/what-this-chapter-covers-chapter-15/'
           },
           {
             body: 'Do you have any problems with your landlord or flatmates?',
@@ -234,8 +235,8 @@ export const state = {
             help: '',
             results: 'Your experiences as a child',
             id: 'F6044D7F0A7E4F81B755D0099EE9FD6B',
-            resource: '?????',
-            url: '?????'
+            resource: '',
+            url: ''
           }
         ]
       },
@@ -303,8 +304,8 @@ export const state = {
             help: '',
             results: 'Immigration status',
             id: '6729B7CD5B6B425FB782260BEEAE47F4',
-            resource: '????',
-            url: '????'
+            resource: '',
+            url: ''
           },
           {
             body:
@@ -312,8 +313,8 @@ export const state = {
             help: '',
             results: 'Trouble bringing family members to New Zealand',
             id: '79591D25C03D4AA7912E1366DD282586',
-            resource: '????',
-            url: '????'
+            resource: '',
+            url: ''
           }
         ]
       }
