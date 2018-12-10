@@ -1,6 +1,10 @@
+// Formats
 export const DESKTOP = 'desktop'
 export const MOBILE = 'mobile'
 export const TABLET = 'tablet'
+
+// Text
+export const FOR_EXAMPLE = 'For example - '
 export const WEBSITE = 'Legal Checkup'
 
 // Identifiers for testing
