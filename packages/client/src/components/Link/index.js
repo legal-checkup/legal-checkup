@@ -9,21 +9,39 @@ import { getPathname } from '../../state/selectors'
 import LinkExternal from './LinkExternal'
 import LinkInternal from './LinkInternal'
 
+import { externalLink, internalLink } from '../../constants'
+
 function Link ({ children, format, href, onClick, target, tip }) {
   if (isNotEmpty(href)) {
     return (
-      <LinkExternal href={href} title={tip} format={format} target={target}>
+      <LinkExternal
+        href={href}
+        title={tip}
+        format={format}
+        target={target}
+        data-testid={externalLink}
+      >
         {children}
       </LinkExternal>
     )
   }
 
   return isNotUndefined(onClick) ? (
-    <LinkInternal title={tip} format={format} onClick={onClick}>
+    <LinkInternal
+      title={tip}
+      format={format}
+      onClick={onClick}
+      data-testid={internalLink}
+    >
       {children}
     </LinkInternal>
   ) : (
-    <LinkInternal title={'This page'} format={format} active>
+    <LinkInternal
+      title={'This page'}
+      format={format}
+      active
+      data-testid={internalLink}
+    >
       {children}
     </LinkInternal>
   )
