@@ -6,7 +6,7 @@ import { DESKTOP, MOBILE, TABLET } from '../../../constants'
 const LinkInternal = styled.span`
   color: #ffffff;
   cursor: pointer;
-  font-family: 'Museo Sans Cyrl', sans-serif;
+  font-family: 'Museo Sans Cyrl 500'
   font-weight: 500;
   opacity: 0.53;
 
@@ -15,10 +15,10 @@ const LinkInternal = styled.span`
       font-size: 18px;
       height: 25px;
       margin-left: 140px;
-      text-align: center;
-      vertical-align: center;`,
+      text-align: center;`,
     [`${MOBILE}Footer`]: `
       font-size: 15px;
+      height: 25px;
       padding-top: 5px`,
     [`${MOBILE}Header`]: `
       width: 33px;
@@ -31,7 +31,10 @@ const LinkInternal = styled.span`
       border-bottom: 2px solid transparent;`,
     [`${TABLET}Footer`]: `
       font-size: 15px;
-      padding-top: 5px`
+      padding-top: 5px;
+      margin-left: 96px;
+      text-align: center;
+      `
   })};
 `
 LinkInternal.displayName = 'StyledLinkInternal'

@@ -2,11 +2,15 @@
 
 exports[`components:checkup:ProgressBar:Button matches the snapshot when format is desktopNext 1`] = `
 .c0 {
-  background-color: #ededed;
   border-radius: 0 5px 5px 0;
   border: none;
   color: #c0c0c0;
   height: 42px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  background-color: #ededed;
+  font-weight: normal;
+  margin-top: 50px;
   outline: none;
   width: 48px;
 }
@@ -21,11 +25,15 @@ exports[`components:checkup:ProgressBar:Button matches the snapshot when format 
 
 exports[`components:checkup:ProgressBar:Button matches the snapshot when format is desktopPrevious 1`] = `
 .c0 {
-  background-color: #ededed;
   border-radius: 0 5px 5px 0;
   border: none;
   color: #c0c0c0;
   height: 42px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  background-color: #ededed;
+  font-weight: normal;
+  margin-top: 50px;
   outline: none;
   width: 48px;
 }
@@ -40,11 +48,15 @@ exports[`components:checkup:ProgressBar:Button matches the snapshot when format 
 
 exports[`components:checkup:ProgressBar:Button matches the snapshot when format is desktopQuestion 1`] = `
 .c0 {
-  background-color: #ededed;
   border-radius: 0 5px 5px 0;
   border: none;
   color: #c0c0c0;
   height: 42px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  background-color: #ededed;
+  font-weight: normal;
+  margin-top: 50px;
   outline: none;
   width: 48px;
 }
@@ -59,11 +71,15 @@ exports[`components:checkup:ProgressBar:Button matches the snapshot when format 
 
 exports[`components:checkup:ProgressBar:Button matches the snapshot when format is mobileNext 1`] = `
 .c0 {
-  background-color: #ededed;
   border-radius: 0 5px 5px 0;
   border: none;
   color: #c0c0c0;
   height: 42px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  background-color: #ededed;
+  font-weight: normal;
+  margin-top: 50px;
   outline: none;
   width: 48px;
 }
@@ -78,11 +94,15 @@ exports[`components:checkup:ProgressBar:Button matches the snapshot when format 
 
 exports[`components:checkup:ProgressBar:Button matches the snapshot when format is mobilePrevious 1`] = `
 .c0 {
-  background-color: #ededed;
   border-radius: 0 5px 5px 0;
   border: none;
   color: #c0c0c0;
   height: 42px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  background-color: #ededed;
+  font-weight: normal;
+  margin-top: 50px;
   outline: none;
   width: 48px;
 }
@@ -97,11 +117,15 @@ exports[`components:checkup:ProgressBar:Button matches the snapshot when format 
 
 exports[`components:checkup:ProgressBar:Button matches the snapshot when format is mobileQuestion 1`] = `
 .c0 {
-  background-color: #ededed;
   border-radius: 0 5px 5px 0;
   border: none;
   color: #c0c0c0;
   height: 42px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  background-color: #ededed;
+  font-weight: normal;
+  margin-top: 50px;
   outline: none;
   width: 48px;
 }
@@ -116,11 +140,15 @@ exports[`components:checkup:ProgressBar:Button matches the snapshot when format 
 
 exports[`components:checkup:ProgressBar:Button matches the snapshot when format is tabletNext 1`] = `
 .c0 {
-  background-color: #ededed;
   border-radius: 0 5px 5px 0;
   border: none;
   color: #c0c0c0;
   height: 42px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  background-color: #ededed;
+  font-weight: normal;
+  margin-top: 50px;
   outline: none;
   width: 48px;
 }
@@ -135,11 +163,15 @@ exports[`components:checkup:ProgressBar:Button matches the snapshot when format 
 
 exports[`components:checkup:ProgressBar:Button matches the snapshot when format is tabletPrevious 1`] = `
 .c0 {
-  background-color: #ededed;
   border-radius: 0 5px 5px 0;
   border: none;
   color: #c0c0c0;
   height: 42px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  background-color: #ededed;
+  font-weight: normal;
+  margin-top: 50px;
   outline: none;
   width: 48px;
 }
@@ -154,11 +186,15 @@ exports[`components:checkup:ProgressBar:Button matches the snapshot when format 
 
 exports[`components:checkup:ProgressBar:Button matches the snapshot when format is tabletQuestion 1`] = `
 .c0 {
-  background-color: #ededed;
   border-radius: 0 5px 5px 0;
   border: none;
   color: #c0c0c0;
   height: 42px;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  background-color: #ededed;
+  font-weight: normal;
+  margin-top: 50px;
   outline: none;
   width: 48px;
 }

@@ -10,6 +10,7 @@ describe(`components:responsive:Tablet`, () => {
     const wrapper = shallow(<Tablet {...props} />)
 
     expect(wrapper.props()).toEqual({
+      'data-testid': 'responsive',
       minWidth: 768,
       maxWidth: 1279,
       myProp: 'myProp',

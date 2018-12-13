@@ -4,10 +4,11 @@ import { connect } from 'react-redux'
 import { redoCheckupClicked } from '../../../state/actions'
 
 import Button from './Button'
+import { redoBtn } from '../../../constants'
 
 function RedoCheckup ({ handleClick }) {
   return (
-    <Button onClick={handleClick}>
+    <Button onClick={handleClick} data-testid={redoBtn}>
       Redo Checkup
     </Button>
   )
