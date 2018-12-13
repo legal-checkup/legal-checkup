@@ -3,8 +3,9 @@ import styledMap from 'styled-map'
 
 import { DESKTOP, MOBILE, TABLET } from '../../../../constants'
 
-const Footer = styled.div`
+const FooterBlock = styled.div`
   background-color: #202020;
+  border-top: 7px solid #444141;
   ${styledMap('format', {
     [DESKTOP]: `
       bottom: 0px;
@@ -27,6 +28,6 @@ const Footer = styled.div`
   })}
   
 `
-Footer.displayName = 'Footer'
+FooterBlock.displayName = 'FooterBlock'
 
-export default Footer
+export default FooterBlock

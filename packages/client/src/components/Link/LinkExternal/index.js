@@ -10,11 +10,10 @@ const LinkExternal = styled.a`
     [`${DESKTOP}Footer`]: `
       color: #ffffff;
       cursor: pointer;
-      font-family: Avenir;
+      font-family: 'Museo Sans Cyrl', sans-serif;
       font-size: 18px;
       font-weight: 500;
       height: 25px;
-      margin-left: 140px;
       opacity: 0.53;
       text-align: center;
     `,
@@ -30,7 +29,7 @@ const LinkExternal = styled.a`
     [`${MOBILE}Footer`]: `
       color: #ffffff;
       cursor: pointer;
-      font-family: Avenir;
+      font-family: 'Museo Sans Cyrl', sans-serif;
       font-size: 15px;
       font-weight: 500;
       opacity: 0.53;
@@ -48,7 +47,7 @@ const LinkExternal = styled.a`
     [`${TABLET}Footer`]: `
       color: #ffffff;
       cursor: pointer;
-      font-family: Avenir;
+      font-family: 'Museo Sans Cyrl', sans-serif;
       font-size: 15px;
       font-weight: 500;
       opacity: 0.53;

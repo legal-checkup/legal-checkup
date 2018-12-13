@@ -6,7 +6,7 @@ import { DESKTOP, MOBILE, TABLET } from '../../../constants'
 const LinkInternal = styled.span`
   color: #ffffff;
   cursor: pointer;
-  font-family: Avenir, sans-serif;
+  font-family: 'Museo Sans Cyrl', sans-serif;
   font-weight: 500;
   opacity: 0.53;
 
