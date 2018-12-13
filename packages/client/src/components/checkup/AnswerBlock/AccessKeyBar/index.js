@@ -17,7 +17,9 @@ const { useEffect } = React
 function AccessKeyBar ({ format, onKeyDown }) {
   useEffect(() => {
     document.addEventListener('keydown', onKeyDown)
-  })
+
+    return () => document.removeEventListener('keydown', onKeyDown)
+  }, [])
 
   return format === MOBILE
     ? null
