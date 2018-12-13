@@ -3,7 +3,13 @@ import { Helmet } from 'react-helmet'
 
 import Footer from '../../components/layout/Footer'
 import Header from '../../components/layout/Header'
-import Section from '../../components/layout/Section'
+import {
+  HomeContainer,
+  HomeSection,
+  HomeTextContainer
+} from '../../components/layout/Section'
+import Intro from '../../components/home/Intro'
+
 import Desktop from '../../components/responsive/Desktop'
 import Mobile from '../../components/responsive/Mobile'
 import Tablet from '../../components/responsive/Tablet'
@@ -13,11 +19,19 @@ function getLayout (format) {
   return (
     <>
       <Header format={format} />
-      <Section>
-        <p>
-          This is the <strong>Home</strong> page
-        </p>
-      </Section>
+      <HomeContainer format={format}>
+        <HomeSection>
+          <HomeTextContainer format={format}>
+            <Intro format={format} />
+          </HomeTextContainer>
+        </HomeSection>
+        <HomeSection>
+          <HomeTextContainer format={format} />
+        </HomeSection>
+        <HomeSection>
+          <HomeTextContainer format={format} />
+        </HomeSection>
+      </HomeContainer>
       <Footer format={format} />
     </>
   )
@@ -29,15 +43,9 @@ export default function Home () {
       <Helmet>
         <title>{WEBSITE}</title>
       </Helmet>
-      <Mobile>
-        {getLayout(MOBILE)}
-      </Mobile>
-      <Tablet>
-        {getLayout(TABLET)}
-      </Tablet>
-      <Desktop>
-        {getLayout(DESKTOP)}
-      </Desktop>
+      <Mobile>{getLayout(MOBILE)}</Mobile>
+      <Tablet>{getLayout(TABLET)}</Tablet>
+      <Desktop>{getLayout(DESKTOP)}</Desktop>
     </>
   )
 }
