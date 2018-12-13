@@ -4,6 +4,7 @@ exports[`components:layout:Section renders the Section and CSS properties proper
 .c0 {
   background-color: #eee;
   color: #333;
+  padding-bottom: 270px;
 }
 
 <section

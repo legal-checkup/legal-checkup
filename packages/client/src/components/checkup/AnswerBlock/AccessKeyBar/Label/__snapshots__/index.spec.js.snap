@@ -1,0 +1,310 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:checkup:AnswerBlock:AccessKeys:Label matches the snapshot for type A on desktop format 1`] = `
+.c0 {
+  background-color: #ffffff;
+  color: #a0a0a0;
+  height: 29px;
+  box-shadow: 0 2px 0 0 #cccccc;
+  background-color: #ffffff;
+  font-family: MuseoSans;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-align: center;
+  width: 29px;
+  margin-right: 133px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.c0,
+.c0:after {
+  content: 'A';
+}
+
+<button
+  className="c0"
+  format="desktop"
+  type="A"
+/>
+`;
+
+exports[`components:checkup:AnswerBlock:AccessKeys:Label matches the snapshot for type A on mobile format 1`] = `
+.c0 {
+  background-color: #ffffff;
+  color: #a0a0a0;
+  height: 29px;
+  box-shadow: 0 2px 0 0 #cccccc;
+  background-color: #ffffff;
+  font-family: MuseoSans;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-align: center;
+  margin-right: 7px;
+  display: none;
+}
+
+.c0,
+.c0:after {
+  content: 'A';
+}
+
+<button
+  className="c0"
+  format="mobile"
+  type="A"
+/>
+`;
+
+exports[`components:checkup:AnswerBlock:AccessKeys:Label matches the snapshot for type A on tablet format 1`] = `
+.c0 {
+  background-color: #ffffff;
+  color: #a0a0a0;
+  height: 29px;
+  box-shadow: 0 2px 0 0 #cccccc;
+  background-color: #ffffff;
+  font-family: MuseoSans;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-align: center;
+  width: 29px;
+  margin-right: 133px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.c0,
+.c0:after {
+  content: 'A';
+}
+
+<button
+  className="c0"
+  format="tablet"
+  type="A"
+/>
+`;
+
+exports[`components:checkup:AnswerBlock:AccessKeys:Label matches the snapshot for type B on desktop format 1`] = `
+.c0 {
+  background-color: #ffffff;
+  color: #a0a0a0;
+  height: 29px;
+  box-shadow: 0 2px 0 0 #cccccc;
+  background-color: #ffffff;
+  font-family: MuseoSans;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-align: center;
+  width: 29px;
+  margin-right: 125px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.c0,
+.c0:after {
+  content: 'B';
+}
+
+<button
+  className="c0"
+  format="desktop"
+  type="B"
+/>
+`;
+
+exports[`components:checkup:AnswerBlock:AccessKeys:Label matches the snapshot for type B on mobile format 1`] = `
+.c0 {
+  background-color: #ffffff;
+  color: #a0a0a0;
+  height: 29px;
+  box-shadow: 0 2px 0 0 #cccccc;
+  background-color: #ffffff;
+  font-family: MuseoSans;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-align: center;
+  margin-right: 7px;
+  display: none;
+}
+
+.c0,
+.c0:after {
+  content: 'B';
+}
+
+<button
+  className="c0"
+  format="mobile"
+  type="B"
+/>
+`;
+
+exports[`components:checkup:AnswerBlock:AccessKeys:Label matches the snapshot for type B on tablet format 1`] = `
+.c0 {
+  background-color: #ffffff;
+  color: #a0a0a0;
+  height: 29px;
+  box-shadow: 0 2px 0 0 #cccccc;
+  background-color: #ffffff;
+  font-family: MuseoSans;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-align: center;
+  width: 29px;
+  margin-right: 125px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.c0,
+.c0:after {
+  content: 'B';
+}
+
+<button
+  className="c0"
+  format="tablet"
+  type="B"
+/>
+`;
+
+exports[`components:checkup:AnswerBlock:AccessKeys:Label matches the snapshot for type esc on desktop format 1`] = `
+.c0 {
+  background-color: #ffffff;
+  color: #a0a0a0;
+  height: 29px;
+  box-shadow: 0 2px 0 0 #cccccc;
+  background-color: #ffffff;
+  font-family: MuseoSans;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-align: center;
+  width: 49px;
+  margin-right: 0;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.c0,
+.c0:after {
+  content: 'esc';
+}
+
+<button
+  className="c0"
+  format="desktop"
+  type="esc"
+/>
+`;
+
+exports[`components:checkup:AnswerBlock:AccessKeys:Label matches the snapshot for type esc on mobile format 1`] = `
+.c0 {
+  background-color: #ffffff;
+  color: #a0a0a0;
+  height: 29px;
+  box-shadow: 0 2px 0 0 #cccccc;
+  background-color: #ffffff;
+  font-family: MuseoSans;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-align: center;
+  margin-right: 0;
+  display: none;
+}
+
+.c0,
+.c0:after {
+  content: 'esc';
+}
+
+<button
+  className="c0"
+  format="mobile"
+  type="esc"
+/>
+`;
+
+exports[`components:checkup:AnswerBlock:AccessKeys:Label matches the snapshot for type esc on tablet format 1`] = `
+.c0 {
+  background-color: #ffffff;
+  color: #a0a0a0;
+  height: 29px;
+  box-shadow: 0 2px 0 0 #cccccc;
+  background-color: #ffffff;
+  font-family: MuseoSans;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-align: center;
+  width: 49px;
+  margin-right: 0;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.c0,
+.c0:after {
+  content: 'esc';
+}
+
+<button
+  className="c0"
+  format="tablet"
+  type="esc"
+/>
+`;

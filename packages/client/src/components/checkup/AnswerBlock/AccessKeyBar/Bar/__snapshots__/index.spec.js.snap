@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:checkup:AnswerBlock:Bar matches the snapshot for desktop format 1`] = `
+.c0 {
+  width: 738px;
+  margin: auto;
+  padding-top: 15px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+<section
+  className="c0"
+  format="desktop"
+>
+  Bar
+</section>
+`;
+
+exports[`components:checkup:AnswerBlock:Bar matches the snapshot for mobile format 1`] = `
+.c0 {
+  width: 708px;
+  margin: auto;
+  padding-top: 15px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+<section
+  className="c0"
+  format="mobile"
+>
+  Bar
+</section>
+`;
+
+exports[`components:checkup:AnswerBlock:Bar matches the snapshot for tablet format 1`] = `
+.c0 {
+  width: 708px;
+  margin: auto;
+  padding-top: 15px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+<section
+  className="c0"
+  format="tablet"
+>
+  Bar
+</section>
+`;

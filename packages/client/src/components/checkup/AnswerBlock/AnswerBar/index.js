@@ -1,8 +1,9 @@
 import styled from 'styled-components'
-import { DESKTOP, MOBILE, TABLET } from '../../../../constants'
 import styledMap from 'styled-map'
 
-const Bar = styled.section`
+import { DESKTOP, MOBILE, TABLET } from '../../../../constants'
+
+const AnswerBar = styled.section`
   margin: auto;
   text-align: center;
   background-color: #ffffff;
@@ -18,6 +19,6 @@ const Bar = styled.section`
     padding-bottom:61px;`
   })}
 `
-Bar.displayName = 'StyledBar'
+AnswerBar.displayName = 'AnswerBar'
 
-export default Bar
+export default AnswerBar

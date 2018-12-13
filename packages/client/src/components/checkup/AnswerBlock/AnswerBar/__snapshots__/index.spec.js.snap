@@ -3,9 +3,11 @@
 exports[`components:checkup:AnswerBlock:Bar matches the snapshot 1`] = `
 .c0 {
   margin: auto;
-  margin-bottom: 41px;
-  width: 90%;
-  width: 292px;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2);
+  width: 708px;
+  padding-bottom: 61px;
 }
 
 <section

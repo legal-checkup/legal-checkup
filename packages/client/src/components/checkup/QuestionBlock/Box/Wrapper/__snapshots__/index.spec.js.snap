@@ -2,19 +2,22 @@
 
 exports[`components:checkup:QuestionBlock:Box:Wrapper matches the snapshot 1`] = `
 .c0 {
-  width: 260px;
-  font-family: Helvetica;
-  font-size: 25px;
-  font-weight: normal;
+  font-family: MuseoSans;
+  background-color: #ffffff;
+  font-weight: 500;
   font-style: normal;
   font-stretch: normal;
-  line-height: normal;
   -webkit-letter-spacing: normal;
   -moz-letter-spacing: normal;
   -ms-letter-spacing: normal;
   letter-spacing: normal;
   text-align: center;
   margin: 0px auto;
+  font-size: 32px;
+  line-height: normal;
+  padding-top: 58px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 <div

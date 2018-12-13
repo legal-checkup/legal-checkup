@@ -2,12 +2,16 @@
 
 exports[`components:checkup:QuestionBlock:ExampleText:Wrapper matches the snapshot 1`] = `
 .c0 {
-  width: 260px;
+  background-color: #ffffff;
   margin: 0 auto;
-  font-family: Helvetica;
-  font-size: 16px;
+  font-family: MuseoSans;
+  padding-top: 9px;
   text-align: center;
   color: #9b9b9b;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2);
+  width: 708px;
+  padding-bottom: 35px;
+  font-size: 20px;
 }
 
 <div

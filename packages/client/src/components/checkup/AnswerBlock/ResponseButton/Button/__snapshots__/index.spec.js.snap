@@ -2,18 +2,26 @@
 
 exports[`components:checkup:AnswerBlock:ResponseButton:Button matches the snapshot for type No 1`] = `
 .c0 {
-  background-color: White;
-  border: solid 2px #b5b5b5;
-  border-right: solid 2px #b5b5b5;
-  border-top-left-radius: 0;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 5px;
+  background-color: #eeedea;
   height: 78px;
-  margin-left: 0;
-  width: 88px;
+  border: none;
+  font-family: MuseoSans;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-align: center;
+  width: 85px;
+  margin-right: 7px;
+  border-radius: 5px;
+  font-size: 26px;
 }
 
+.c0,
 .c0:after {
   content: 'No';
 }
@@ -28,18 +36,26 @@ exports[`components:checkup:AnswerBlock:ResponseButton:Button matches the snapsh
 
 exports[`components:checkup:AnswerBlock:ResponseButton:Button matches the snapshot for type Not sure 1`] = `
 .c0 {
-  background-color: White;
-  border: solid 2px #b5b5b5;
-  border-right: solid 2px #b5b5b5;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  background-color: #eeedea;
   height: 78px;
-  margin-left: 7px;
-  width: 109px;
+  border: none;
+  font-family: MuseoSans;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-align: center;
+  width: 105px;
+  margin-right: 0;
+  border-radius: 5px;
+  font-size: 26px;
 }
 
+.c0,
 .c0:after {
   content: 'Not sure';
 }
@@ -54,18 +70,26 @@ exports[`components:checkup:AnswerBlock:ResponseButton:Button matches the snapsh
 
 exports[`components:checkup:AnswerBlock:ResponseButton:Button matches the snapshot for type Yes 1`] = `
 .c0 {
-  background-color: White;
-  border: solid 2px #b5b5b5;
-  border-right: 0;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 0;
+  background-color: #eeedea;
   height: 78px;
-  margin-left: 0;
-  width: 88px;
+  border: none;
+  font-family: MuseoSans;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  -webkit-letter-spacing: normal;
+  -moz-letter-spacing: normal;
+  -ms-letter-spacing: normal;
+  letter-spacing: normal;
+  text-align: center;
+  width: 85px;
+  margin-right: 7px;
+  border-radius: 5px;
+  font-size: 26px;
 }
 
+.c0,
 .c0:after {
   content: 'Yes';
 }

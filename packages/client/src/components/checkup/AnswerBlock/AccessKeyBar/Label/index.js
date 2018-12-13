@@ -2,28 +2,30 @@ import styled from 'styled-components'
 import styledMap from 'styled-map'
 
 import { DESKTOP, MOBILE, TABLET } from '../../../../../constants'
-import { NOT_SURE } from '../../../../../state/constants'
+import { KEYS } from '../../../../../state/constants'
 
-function setWidthButton (format, type) {
+function setWidth (format, type) {
   if (format === DESKTOP || format === TABLET) {
-    return type === NOT_SURE ? '155px' : '153px'
-  } else {
-    return type === NOT_SURE ? '105px' : '85px'
+    return type === KEYS.esc ? '49px' : '29px'
   }
 }
 
 function setMarginRight (format, type) {
+  if (type === KEYS.esc) { return 0 }
+
   if (format === DESKTOP || format === TABLET) {
-    return type === NOT_SURE ? 0 : '10px'
+    return type === KEYS.A ? '133px' : '125px'
   } else {
-    return type === NOT_SURE ? 0 : '7px'
+    return '7px'
   }
 }
 
-const Button = styled.button`
-  background-color: #eeedea;
-  height: 78px;
-  border:none;
+const Label = styled.button`
+  background-color: #ffffff;
+  color: #a0a0a0;
+  height: 29px;
+  box-shadow: 0 2px 0 0 #cccccc;
+  background-color: #ffffff;
   font-family:MuseoSans;
   font-weight:500;
   font-style: normal;
@@ -31,7 +33,7 @@ const Button = styled.button`
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  width: ${({ format, type }) => setWidthButton(format, type)};
+  width: ${({ format, type }) => setWidth(format, type)};
   margin-right: ${({ format, type }) => setMarginRight(format, type)};,
   &:after {
     content: '${({ type }) => type}';
@@ -39,16 +41,14 @@ const Button = styled.button`
   ${styledMap('format', {
     [DESKTOP]: `
     border-radius: 5px;
-    font-size:26px;`,
+    font-size:18px;`,
     [MOBILE]: `
-    border-radius: 4px;
-    font-size:20px;
-    margin-bottom:20px;`,
+    display:none`,
     [TABLET]: `
     border-radius: 5px;
-    font-size:26px;`
+    font-size:18px;`
   })}
 `
-Button.displayName = 'Button'
+Label.displayName = 'Label'
 
-export default Button
+export default Label

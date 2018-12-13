@@ -26,7 +26,4 @@ function mapDispatchToProps (dispatch, { type }) {
   }
 }
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(Button)
+export default connect(null, mapDispatchToProps)(Button)

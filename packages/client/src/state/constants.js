@@ -25,9 +25,13 @@ export const REDO_CHECKUP_CLICKED = '@checkup/REDO_CHECKUP_CLICKED'
 export const NO = 'No'
 export const NOT_SURE = 'Not sure'
 export const YES = 'Yes'
-export const B = 'B'
-export const A = 'A'
-export const ESC = 'esc'
+
+// Keyboard characters
+export const KEYS = {
+  A: 'A',
+  B: 'B',
+  esc: 'esc'
+}
 
 // Results
 export const RESULTS_TRIGGER = 1
@@ -52,7 +56,8 @@ export const COMMUNITY_LAW_SERVICES_URL =
   'http://www.wclc.org.nz/our-services/'
 
 // Keycode
-
-export const CODE_FOR_ESC = 27
-export const CODE_FOR_A = 65
-export const CODE_FOR_B = 66
+export const KEY_CODES = {
+  A: 65,
+  B: 66,
+  esc: 27
+}
