@@ -6,9 +6,9 @@ import { DESKTOP, MOBILE, TABLET } from '../../../constants'
 const LinkInternal = styled.span`
   color: #ffffff;
   cursor: pointer;
-  font-family: 'Museo Sans Cyrl 500'
+  font-family: 'Museo Sans Cyrl 500';
   font-weight: 500;
-  opacity: 0.53;
+  opacity: 0.5;
 
   ${styledMap('format', {
     [`${DESKTOP}Footer`]: `

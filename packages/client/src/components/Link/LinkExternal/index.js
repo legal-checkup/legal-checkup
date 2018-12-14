@@ -5,15 +5,16 @@ import { DESKTOP, MOBILE, TABLET } from '../../../constants'
 
 const LinkExternal = styled.a`
   text-decoration: none;
+  font-family: 'Museo Sans Cyrl 500';
+  font-weight: 500;
+  opacity: 0.5;
   
   ${styledMap('format', {
     [`${DESKTOP}Footer`]: `
       color: #ffffff;
       cursor: pointer;
-      font-family: 'Museo Sans Cyrl 500';
       font-size: 18px;
       height: 25px;
-      opacity: 0.5;
       text-align: center;
     `,
     [`${DESKTOP}Section`]: `
@@ -28,10 +29,9 @@ const LinkExternal = styled.a`
     [`${MOBILE}Footer`]: `
       color: #ffffff;
       cursor: pointer;
-      font-family: 'Museo Sans Cyrl 500';
       font-size: 15px;
-      opacity: 0.5;
-      padding-top: 5px
+      padding-top: 5px;
+      height: 25px;
     `,
     [`${MOBILE}Section`]: `
       border-radius: 5px;
@@ -45,9 +45,7 @@ const LinkExternal = styled.a`
     [`${TABLET}Footer`]: `
       color: #ffffff;
       cursor: pointer;
-      font-family: 'Museo Sans Cyrl 500';
       font-size: 15px;
-      opacity: 0.5;
       padding-top: 5px
     `,
     [`${TABLET}Section`]: `
