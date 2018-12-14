@@ -6,34 +6,38 @@ import { DESKTOP, MOBILE, TABLET } from '../../../constants'
 const LinkInternal = styled.span`
   color: #ffffff;
   cursor: pointer;
-  font-family: Avenir, sans-serif;
+  font-family: 'Museo Sans Cyrl 500';
   font-weight: 500;
-  opacity: 0.53;
+  text-align: center;
 
   ${styledMap('format', {
     [`${DESKTOP}Footer`]: `
       font-size: 18px;
+      opacity: 0.6;
       height: 25px;
-      margin-left: 140px;
-      text-align: center;
-      vertical-align: center;`,
+      margin-left: 140px;`,
     [`${MOBILE}Footer`]: `
       font-size: 15px;
-      padding-top: 5px`,
+      opacity: 0.5;
+      height: 18px;
+      padding-top: 13px`,
     [`${MOBILE}Header`]: `
       width: 33px;
       line-height: 2.5;
       font-size: 15px;
       font-weight: 600;
+      opacity: 0.5;
       margin-right: 10px;
       margin-left: 30px;
-      text-align: center;
       border-bottom: 2px solid transparent;`,
     [`${TABLET}Footer`]: `
       font-size: 15px;
-      padding-top: 5px`
+      opacity: 0.6;
+      height: 22px;
+      margin-left: 96px;
+      `
   })};
 `
-LinkInternal.displayName = 'StyledLinkInternal'
+LinkInternal.displayName = 'LinkInternal'
 
 export default LinkInternal
