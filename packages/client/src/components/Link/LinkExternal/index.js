@@ -6,7 +6,6 @@ import { DESKTOP, MOBILE, TABLET } from '../../../constants'
 const LinkExternal = styled.a`
   text-decoration: none;
   font-family: 'Museo Sans Cyrl 500';
-
   
   ${styledMap('format', {
     [`${DESKTOP}Footer`]: `
