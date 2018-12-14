@@ -6,27 +6,20 @@ import { DESKTOP, MOBILE, TABLET } from '../../../../constants'
 const Footer = styled.div`
   background-color: #202020;
   border-top: 7px solid #444141;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   ${styledMap('format', {
     [DESKTOP]: `
-      display: flex;
-      height: 100px;
-      justify-content: center;
-      align-items: center;`,
+      height: 100px;`,
     [MOBILE]: `
-      display: flex;
       height: 130px;
-      justify-content: center;
-      align-items: center;
       flex-direction: column;`,
     [TABLET]: `
-      display: flex;
-      height: 130px;
-      justify-content: center;
-      align-items: center;`
+      height: 130px;`
   })}
-  
 `
-Footer.displayName = 'Footer'
+Footer.displayName = 'StyledFooter'
 
 export default Footer
