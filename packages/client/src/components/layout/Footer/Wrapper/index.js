@@ -12,14 +12,14 @@ const Footer = styled.div`
 
   ${styledMap('format', {
     [DESKTOP]: `
-      height: 100px;`,
+      height: 98px;`,
     [MOBILE]: `
-      height: 130px;
+      height: 135px;
       flex-direction: column;`,
     [TABLET]: `
-      height: 130px;`
+      height: 100px;`
   })}
 `
-Footer.displayName = 'StyledFooter'
+Footer.displayName = 'Footer'
 
 export default Footer
