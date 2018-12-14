@@ -20,6 +20,6 @@ const Footer = styled.div`
       height: 130px;`
   })}
 `
-Footer.displayName = 'StyledFooter'
+Footer.displayName = 'Footer'
 
 export default Footer

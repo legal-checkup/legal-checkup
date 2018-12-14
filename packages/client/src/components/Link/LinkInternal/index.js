@@ -35,6 +35,6 @@ const LinkInternal = styled.span`
       `
   })};
 `
-LinkInternal.displayName = 'StyledLinkInternal'
+LinkInternal.displayName = 'LinkInternal'
 
 export default LinkInternal

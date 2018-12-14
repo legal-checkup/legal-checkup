@@ -8,7 +8,6 @@ import {
   termsOfUsePath
 } from '../../../constants'
 import Link from '../../Link'
-
 import Wrapper from './Wrapper'
 
 export default function Footer ({ format }) {
