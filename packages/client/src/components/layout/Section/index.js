@@ -15,17 +15,17 @@ const Section = styled.section`
 `
 Section.displayName = 'Section'
 
-const HomeContainer = styled.section``
-HomeContainer.displayName = 'HomeContainer'
+const Container = styled.section``
+Container.displayName = 'Container'
 
-const HomeSection = styled.section`
+const TopSection = styled.section`
   &:nth-child(odd) {
     background-color: #eeedea;
   }
 `
-HomeSection.displayName = 'HomeSection'
+TopSection.displayName = 'TopSection'
 
-const HomeTextContainer = styled.div`
+const TextContainer = styled.div`
   max-width: ${getSectionWidth}px;
   text-align: ${getTextAlign};
   padding: 50px 0;
@@ -33,7 +33,7 @@ const HomeTextContainer = styled.div`
 
   background: transparent;
 `
-HomeTextContainer.displayName = 'HomeTextContainer'
+TextContainer.displayName = 'TextContainer'
 
 export default Section
-export { HomeContainer, HomeSection, HomeTextContainer }
+export { Container, TopSection, TextContainer }

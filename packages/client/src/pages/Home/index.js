@@ -4,9 +4,9 @@ import { Helmet } from 'react-helmet'
 import Footer from '../../components/layout/Footer'
 import Header from '../../components/layout/Header'
 import {
-  HomeContainer,
-  HomeSection,
-  HomeTextContainer
+  Container,
+  TopSection,
+  TextContainer
 } from '../../components/layout/Section'
 import Intro from '../../components/home/Intro'
 
@@ -19,19 +19,19 @@ function getLayout (format) {
   return (
     <>
       <Header format={format} />
-      <HomeContainer format={format}>
-        <HomeSection>
-          <HomeTextContainer format={format}>
+      <Container format={format}>
+        <TopSection>
+          <TextContainer format={format}>
             <Intro format={format} />
-          </HomeTextContainer>
-        </HomeSection>
-        <HomeSection>
-          <HomeTextContainer format={format} />
-        </HomeSection>
-        <HomeSection>
-          <HomeTextContainer format={format} />
-        </HomeSection>
-      </HomeContainer>
+          </TextContainer>
+        </TopSection>
+        <TopSection>
+          <TextContainer format={format} />
+        </TopSection>
+        <TopSection>
+          <TextContainer format={format} />
+        </TopSection>
+      </Container>
       <Footer format={format} />
     </>
   )
