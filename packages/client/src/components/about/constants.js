@@ -11,8 +11,11 @@ It is a helpful tool to identify legal issues, but does not form legal advice, n
 The Legal Checkup does not create a legal obligation between the user, and Community Law, or guarantee legal assistance for the potential legal needs. 
 `
 
-export const INTRO_2 = `Acknowledgements:
+export const HEADING_TEXT2 = `Acknowledgements:`
+
+export const INTRO_2 = `
 Special acknowledgement to the Halton Legal Clinic in Canada, and the Queensland Public Interest Law Clearing House Inc (QPILCH) along with the National Association of Community Legal Centres (NACLC) who have inspired this initiative.
 Interface design by: Hamish Dryer
-Built by the Cowboy hat team from Paperhat
+
 `
+export const INTRO_3 = `Built by the Cowboy hat team from Paperhat`
