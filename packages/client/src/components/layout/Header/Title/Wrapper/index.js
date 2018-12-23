@@ -8,18 +8,20 @@ const Wrapper = styled.div`
   font-weight: 900;
   line-height: 1;
 
-  ${styledMap('format', { [`${DESKTOP}`]: `
+  ${styledMap('format', {
+    [`${DESKTOP}`]: `
       margin-left: 10px;
       font-size: 36px;
     `,
-  [`${TABLET}`]: `
+    [`${TABLET}`]: `
       margin-left: 10px;
       font-size: 25px;
     `,
-  [`${MOBILE}`]: `
+    [`${MOBILE}`]: `
       margin-left: 8px;
       font-size: 18px;
-    ` })};
+    `
+  })};
 `
 Wrapper.displayName = 'Wrapper'
 

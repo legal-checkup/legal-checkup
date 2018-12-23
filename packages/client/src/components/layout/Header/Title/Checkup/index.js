@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-import { MOBILE } from '../../../../../constants'
+import { MOBILE, WHITE, RED_ACCENT } from '../../../../../constants'
 
 const Checkup = styled.div`
-  color: #b62645;
-  color: ${({ format }) => (format === MOBILE ? '#fff' : '#b62645')};
+  color: ${({ format }) =>
+    format === MOBILE ? `#${WHITE}` : `#${RED_ACCENT}`};
   line-height: 1;
   text-transform: uppercase;
   font-size: inherit;
