@@ -5,25 +5,24 @@ import {
   MOBILE,
   TABLET,
   WHITE,
-  RED_ACCENT,
-  OFF_WHITE
+  ROUGE,
+  OFF_WHITE,
+  TRANSPARENT
 } from '../../../../constants'
 
 export function getLinkColor ({ format = '', active } = {}) {
-  return includes('Header', format) && active ? `#${RED_ACCENT}` : `#${WHITE}`
+  return includes('Header', format) && active ? `${ROUGE}` : `${WHITE}`
 }
 
 export function getLinkBorder ({ format = '', active } = {}) {
   if (format === `${DESKTOP}Header` || format === `${TABLET}Header`) {
-    return active === true
-      ? `2px solid #${RED_ACCENT}`
-      : '2px solid transparent'
+    return active === true ? `2px solid ${ROUGE}` : `2px solid ${TRANSPARENT}`
   }
   return null
 }
 
 export function getLinkBackgroundColor ({ format = '', active } = {}) {
-  return format === `${MOBILE}Header` && active ? `#${OFF_WHITE}` : null
+  return format === `${MOBILE}Header` && active ? `${OFF_WHITE}` : null
 }
 
 export function getLinkFontWeight ({ format = '', active } = {}) {

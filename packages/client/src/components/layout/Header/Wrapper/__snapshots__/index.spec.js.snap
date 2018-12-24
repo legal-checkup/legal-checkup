@@ -2,7 +2,7 @@
 
 exports[`components:layout:Header:Wrapper renders the Header and CSS properties properly when format is desktop 1`] = `
 .c0 {
-  background-color: #202020;
+  background-color: #1d1b1b;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29,7 +29,7 @@ exports[`components:layout:Header:Wrapper renders the Header and CSS properties 
 
 exports[`components:layout:Header:Wrapper renders the Header and CSS properties properly when format is mobile 1`] = `
 .c0 {
-  background-color: #202020;
+  background-color: #1d1b1b;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -50,7 +50,7 @@ exports[`components:layout:Header:Wrapper renders the Header and CSS properties 
 
 exports[`components:layout:Header:Wrapper renders the Header and CSS properties properly when format is tablet 1`] = `
 .c0 {
-  background-color: #202020;
+  background-color: #1d1b1b;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;

@@ -17,7 +17,7 @@ const Nav = styled.nav`
     [`${MOBILE}`]: `
       padding: 0 3px;
       height: 43px;
-      background-color: #${GREYISH_BROWN};
+      background-color: ${GREYISH_BROWN};
       align-items: flex-end;
     `
   })};

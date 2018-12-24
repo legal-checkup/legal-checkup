@@ -10,7 +10,7 @@ import {
 } from '../../../../constants'
 
 const Wrapper = styled.header`
-  background-color: #${BLACK};
+  background-color: ${BLACK};
   display: flex;
   width: 100%;
 
@@ -19,12 +19,12 @@ const Wrapper = styled.header`
       height: 100px;
       flex-direction: row;
       align-items: center;
-      border-bottom: 7px solid #${GREYISH_BROWN};
+      border-bottom: 7px solid ${GREYISH_BROWN};
     `,
     [`${TABLET}`]: `
       height: 85px;
       flex-direction: row;
-      border-bottom: 7px solid #${GREYISH_BROWN};
+      border-bottom: 7px solid ${GREYISH_BROWN};
       align-items: center;
     `,
     [`${MOBILE}`]: `
