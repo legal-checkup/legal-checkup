@@ -6,7 +6,8 @@ import {
   getLinkColor,
   getLinkBorder,
   getLinkBackgroundColor,
-  getLinkFontWeight
+  getLinkFontWeight,
+  getLinkFontFamily
 } from './utilities'
 
 const LinkInternal = styled.span`
@@ -17,7 +18,7 @@ const LinkInternal = styled.span`
     active: default;
     default: pointer;
   `};
-  font-family: 'Museo Sans Cyrl', sans-serif;
+  font-family: ${getLinkFontFamily}, sans-serif;
   font-weight: ${getLinkFontWeight};
 
   ${({ format }) =>
@@ -26,21 +27,24 @@ const LinkInternal = styled.span`
   ${styledMap('format', {
     [`${DESKTOP}Footer`]: `
       font-size: 18px;
+      opacity: 0.6;
       height: 25px;
       margin-left: 140px;
       text-align: center;
-      vertical-align: center;
-      opacity: 0.5;
       `,
     [`${TABLET}Footer`]: `
       font-size: 15px;
-      padding-top: 5px;
-      opacity: 0.5;
+      opacity: 0.6;
+      height: 22px;
+      margin-left: 96px;
+      text-align: center;
       `,
     [`${MOBILE}Footer`]: `
       font-size: 15px;
-      padding-top: 5px;
       opacity: 0.5;
+      height: 18px;
+      padding-top: 13px
+      text-align: center;
       `,
     [`${DESKTOP}Header`]: `
       font-size: 20px;
@@ -61,6 +65,6 @@ const LinkInternal = styled.span`
     `
   })};
 `
-LinkInternal.displayName = 'StyledLinkInternal'
+LinkInternal.displayName = 'LinkInternal'
 
 export default LinkInternal

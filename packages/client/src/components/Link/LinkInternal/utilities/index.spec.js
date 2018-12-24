@@ -2,7 +2,8 @@ import {
   getLinkColor,
   getLinkBorder,
   getLinkBackgroundColor,
-  getLinkFontWeight
+  getLinkFontWeight,
+  getLinkFontFamily
 } from '.'
 
 import {
@@ -118,6 +119,22 @@ describe(`LinkInternal:utilities`, () => {
 
     it(`returns the default font weight when supplied nothing`, () => {
       expect(getLinkFontWeight()).toBe(500)
+    })
+  })
+
+  describe(`getLinkFontFamily`, () => {
+    it(`returns the correct font family for an active ${MOBILE} header link`, () => {
+      expect(getLinkFontFamily(mobileHeaderLinkPropsActive)).toBe(
+        `'Museo Sans Cyrl 900'`
+      )
+    })
+
+    it(`returns the correct font weight for anything that isn't an active ${MOBILE} header link`, () => {
+      expect(getLinkFontFamily(otherLinkProps)).toBe(`'Museo Sans Cyrl 500'`)
+    })
+
+    it(`returns the default font weight when supplied nothing`, () => {
+      expect(getLinkFontFamily()).toBe(`'Museo Sans Cyrl 500'`)
     })
   })
 })

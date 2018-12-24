@@ -31,3 +31,10 @@ export function getLinkFontWeight ({ format = '', active } = {}) {
   }
   return 500
 }
+
+export function getLinkFontFamily ({ format = '', active } = {}) {
+  if (format === `${MOBILE}Header`) {
+    return active === true ? `'Museo Sans Cyrl 900'` : `'Museo Sans Cyrl 500'`
+  }
+  return `'Museo Sans Cyrl 500'`
+}
