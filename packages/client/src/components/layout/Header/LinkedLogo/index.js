@@ -7,12 +7,21 @@ import { isNotUndefined } from 'ramda-adjunct'
 import { getPathname } from '../../../../state/selectors'
 
 import Logo from './Logo'
-import Placeholder from './Placeholder'
 
-function LinkedLogo ({ children, format, href, onClick, target, tip }) {
-  return isNotUndefined(onClick)
-    ? <Logo title='To the home page' onClick={onClick}>{children}</Logo>
-    : <Placeholder format={format}>{children}</Placeholder>
+function LinkedLogo ({ children, format, onClick, to }) {
+  if (isNotUndefined(onClick)) {
+    return (
+      <Logo title='To the home page' onClick={onClick} to={to} format={format}>
+        {children}
+      </Logo>
+    )
+  } else {
+    return (
+      <Logo title='This page' to={to} format={format} active>
+        {children}
+      </Logo>
+    )
+  }
 }
 
 function mapStateToProps (state) {
@@ -31,14 +40,14 @@ function mapDispatchToProps (dispatch, { to }) {
   }
 }
 
-function mergeProps ({ pathname }, { onClick }, { children, to }) {
+function mergeProps ({ pathname }, { onClick }, { to, ...props }) {
   return pathname === to
     ? {
-      children
+      ...props
     }
     : {
-      children,
-      onClick
+      onClick,
+      ...props
     }
 }
 

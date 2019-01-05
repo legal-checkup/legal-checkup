@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 
+import { MOBILE, WHITE, ROUGE } from '../../../../../constants'
+
 const Checkup = styled.div`
-  color: #b62645;
+  color: ${({ format }) => (format === MOBILE ? `${WHITE}` : `${ROUGE}`)};
   line-height: 1;
   text-transform: uppercase;
-  width: 6rem;
+  font-size: inherit;
 `
-Checkup.displayName = 'Checkup'
+Checkup.displayName = 'StyledCheckup'
 
 export default Checkup

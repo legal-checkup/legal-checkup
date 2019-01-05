@@ -161,7 +161,7 @@ export const checkQuestionEnabled = index =>
       isQuestionPermitted(index, questionCount, responseCount)
   )
 
-export const getPathname = pathOr({}, ['pathname'])
+export const getPathname = pathOr({}, ['router', 'location', 'pathname'])
 
 export const getQuestionListIndexed = pipe(
   getQuestionList,

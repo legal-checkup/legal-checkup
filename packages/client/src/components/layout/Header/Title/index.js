@@ -4,11 +4,11 @@ import Checkup from './Checkup'
 import Legal from './Legal'
 import Wrapper from './Wrapper'
 
-export default function Title () {
+export default function Title ({ format }) {
   return (
-    <Wrapper>
+    <Wrapper format={format}>
       <Legal>Legal</Legal>
-      <Checkup>Checkup</Checkup>
+      <Checkup format={format}>Checkup</Checkup>
     </Wrapper>
   )
 }

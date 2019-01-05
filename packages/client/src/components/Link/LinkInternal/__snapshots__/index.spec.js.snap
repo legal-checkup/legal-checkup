@@ -2,15 +2,16 @@
 
 exports[`components:Link:LinkInternal matches the snapshot when format is desktopFooter 1`] = `
 .c0 {
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
-  font-family: 'Museo Sans Cyrl 500';
+  font-family: 'Museo Sans Cyrl 500',sans-serif;
   font-weight: 500;
-  text-align: center;
+  margin-right: 120px;
   font-size: 18px;
   opacity: 0.6;
   height: 25px;
   margin-left: 140px;
+  text-align: center;
 }
 
 <span
@@ -21,15 +22,15 @@ exports[`components:Link:LinkInternal matches the snapshot when format is deskto
 
 exports[`components:Link:LinkInternal matches the snapshot when format is mobileFooter 1`] = `
 .c0 {
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
-  font-family: 'Museo Sans Cyrl 500';
+  font-family: 'Museo Sans Cyrl 500',sans-serif;
   font-weight: 500;
-  text-align: center;
   font-size: 15px;
   opacity: 0.5;
   height: 18px;
   padding-top: 13px;
+  text-align: center;
 }
 
 <span
@@ -40,19 +41,17 @@ exports[`components:Link:LinkInternal matches the snapshot when format is mobile
 
 exports[`components:Link:LinkInternal matches the snapshot when format is mobileHeader 1`] = `
 .c0 {
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
-  font-family: 'Museo Sans Cyrl 500';
+  font-family: 'Museo Sans Cyrl 500',sans-serif;
   font-weight: 500;
-  text-align: center;
-  width: 33px;
-  line-height: 2.5;
+  line-height: 1;
   font-size: 15px;
-  font-weight: 600;
-  opacity: 0.5;
-  margin-right: 10px;
-  margin-left: 30px;
-  border-bottom: 2px solid transparent;
+  border-radius: 5px 5px 0 0;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 12px 0 11px 0;
 }
 
 <span
@@ -63,15 +62,15 @@ exports[`components:Link:LinkInternal matches the snapshot when format is mobile
 
 exports[`components:Link:LinkInternal matches the snapshot when format is tabletFooter 1`] = `
 .c0 {
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
-  font-family: 'Museo Sans Cyrl 500';
+  font-family: 'Museo Sans Cyrl 500',sans-serif;
   font-weight: 500;
-  text-align: center;
   font-size: 15px;
   opacity: 0.6;
   height: 22px;
   margin-left: 96px;
+  text-align: center;
 }
 
 <span
