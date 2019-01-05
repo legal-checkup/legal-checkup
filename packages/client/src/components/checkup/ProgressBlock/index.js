@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import { DESKTOP, MOBILE, TABLET, progressBarId, currentTopicId } from '../../../constants'
+import { DESKTOP, MOBILE, TABLET } from '../../../constants'
 import makeNextQuestionButton from '../wrappers/makeNextQuestionButton'
 import makePreviousQuestionButton from '../wrappers/makePreviousQuestionButton'
 

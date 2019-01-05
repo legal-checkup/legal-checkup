@@ -3,11 +3,20 @@
 exports[`components:layout:Footer:Wrapper matches the snapshot when format is desktop 1`] = `
 .c0 {
   background-color: #202020;
-  bottom: 0px;
-  height: 100px;
-  line-height: 100px;
-  position: absolute;
-  width: 100%;
+  border-top: 7px solid #444141;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 98px;
 }
 
 <div
@@ -19,19 +28,23 @@ exports[`components:layout:Footer:Wrapper matches the snapshot when format is de
 exports[`components:layout:Footer:Wrapper matches the snapshot when format is mobile 1`] = `
 .c0 {
   background-color: #202020;
+  border-top: 7px solid #444141;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 130px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  text-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 135px;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 <div
@@ -43,19 +56,20 @@ exports[`components:layout:Footer:Wrapper matches the snapshot when format is mo
 exports[`components:layout:Footer:Wrapper matches the snapshot when format is tablet 1`] = `
 .c0 {
   background-color: #202020;
+  border-top: 7px solid #444141;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  height: 130px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
-  text-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100px;
 }
 
 <div

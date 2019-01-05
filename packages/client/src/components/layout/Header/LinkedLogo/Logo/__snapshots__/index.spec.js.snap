@@ -1,19 +1,54 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:layout:Header:LinkedLogo:Logo matches the snapshot 1`] = `
+exports[`components:layout:Header:LinkedLogo:Logo renders proper css for desktop format 1`] = `
 .c0 {
-  background-color: #474747;
-  border-radius: 5px;
-  color: #ffffff;
   cursor: pointer;
-  font-family: 'Museo Sans Cyrl 900',sans-serif;
-  font-size: 10px;
-  height: 35px;
-  margin-bottom: 8px;
-  margin-left: 5px;
-  margin-top: -28px;
-  object-fit: contain;
-  opacity: 0.39;
+  height: 70px;
+  width: 70px;
+}
+
+<div
+  className="c0"
+  format="desktop"
+>
+  Logo
+</div>
+`;
+
+exports[`components:layout:Header:LinkedLogo:Logo renders proper css for mobile format 1`] = `
+.c0 {
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+}
+
+<div
+  className="c0"
+  format="mobile"
+>
+  Logo
+</div>
+`;
+
+exports[`components:layout:Header:LinkedLogo:Logo renders proper css for tablet format 1`] = `
+.c0 {
+  cursor: pointer;
+  height: 52px;
+  width: 52px;
+}
+
+<div
+  className="c0"
+  format="tablet"
+>
+  Logo
+</div>
+`;
+
+exports[`components:layout:Header:LinkedLogo:Logo renders proper css when active prop is passed 1`] = `
+.c0 {
+  cursor: default;
+  height: 32px;
   width: 32px;
 }
 

@@ -9225,10 +9225,10 @@ ramda-adjunct@^2.11.0:
   resolved "https://registry.yarnpkg.com/ramda-adjunct/-/ramda-adjunct-2.11.0.tgz#45d7cf5da84f39ab3ff9e24b43dc098049a14822"
   integrity sha512-xKhKGYz/SAcdlzXZvtxpCgcEMFQ7pEIWbNT43GX+Lk2of+718Lo9X4r/LVCrsvvRm8MWvmLS9lSagi68vwm6bQ==
 
-ramda@^0.25.0:
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.25.0.tgz#8fdf68231cffa90bc2f9460390a0cb74a29b29a9"
-  integrity sha512-GXpfrYVPwx3K7RQ6aYT8KPS8XViSXUVJT1ONhoKPE9VAleW42YE+U+8VEyGWt41EnEQW7gwecYJriTI0pKoecQ==
+ramda@^0.26.1:
+  version "0.26.1"
+  resolved "https://registry.yarnpkg.com/ramda/-/ramda-0.26.1.tgz#8d41351eb8111c55353617fc3bbffad8e4d35d06"
+  integrity sha512-hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==
 
 randexp@0.4.6:
   version "0.4.6"
