@@ -59,7 +59,7 @@ const LinkInternal = styled.span`
       font-size: 15px;
       border-radius: 5px 5px 0 0;
       display: inline-block;
-      width: -webkit-fill-available;
+      width: 100%;
       text-align: center;
       padding: 12px 0 11px 0;
     `
