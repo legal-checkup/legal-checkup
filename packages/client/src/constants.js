@@ -1,6 +1,10 @@
+// Formats
 export const DESKTOP = 'desktop'
 export const MOBILE = 'mobile'
 export const TABLET = 'tablet'
+
+// Text
+export const FOR_EXAMPLE = 'For example - '
 export const WEBSITE = 'Legal Checkup'
 
 // Identifiers for testing
@@ -46,3 +50,16 @@ export const needHelpParagraph1 = 'needHelpParagraph1'
 export const needHelpParagraph2 = 'needHelpParagraph2'
 export const needHelpExpander = 'needHelpExpander'
 export const redoBtn = 'redoBtn'
+
+// colors (hex) - these can be found in the style-guide on Zeplin
+// base colors
+export const WHITE = `#fff`
+export const BLACK = `#1d1b1b`
+export const OFF_WHITE = `#eeedea`
+export const GREYISH_BROWN = `#444141`
+
+// accent colors
+export const BROWNISH_GREY = `#706262`
+export const ROUGE = `#b62645`
+export const DARK_SKY_BLUE = `#4a90e2`
+export const TRANSPARENT = `transparent`

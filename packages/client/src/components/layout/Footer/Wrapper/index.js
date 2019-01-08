@@ -5,27 +5,20 @@ import { DESKTOP, MOBILE, TABLET } from '../../../../constants'
 
 const Footer = styled.div`
   background-color: #202020;
+  border-top: 7px solid #444141;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   ${styledMap('format', {
     [DESKTOP]: `
-      bottom: 0px;
-      height: 100px;
-      line-height: 100px;
-      position: absolute;
-      width: 100%;`,
+      height: 98px;`,
     [MOBILE]: `
-      display: flex;
-      flex-direction: column;
-      height: 130px;
-      justify-content: center;
-      text-align: center`,
+      height: 135px;
+      flex-direction: column;`,
     [TABLET]: `
-      display: flex;
-      flex-direction: column;
-      height: 130px;
-      justify-content: center;
-      text-align: center`
+      height: 100px;`
   })}
-  
 `
 Footer.displayName = 'Footer'
 

@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 
+import { WHITE } from '../../../../../constants'
+
 const Legal = styled.div`
-  color: #ffffff;
+  color: ${WHITE};
   line-height: 1;
   text-transform: uppercase;
-  width: 6rem;
+  font-size: inherit;
 `
-Legal.displayName = 'Legal'
+Legal.displayName = 'StyledLegal'
 
 export default Legal

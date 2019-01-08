@@ -6,13 +6,26 @@ const GlobalStyle = createGlobalStyle`
 
   @font-face {
     font-family: 'Museo Sans Cyrl 900';
-    font-style: normal;
-    font-weight: normal;
-    src: local('Museo Sans Cyrl 900'), url('MuseoSansCyrl_3.woff') format('woff');
+    src: url('./fonts/MuseoSansCyrl_900.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Museo Sans Cyrl 500';
+    src: url('./fonts/MuseoSansCyrl_500.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Museo Sans Cyrl 500 italic';
+    src: url('./fonts/MuseoSansCyrl_500_italic.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: 'Museo Sans Cyrl 700';
+    src: url('./fonts/MuseoSansCyrl_700.woff') format('woff');
   }
 
   body {
-    font-family: 'Museo Sans Cyrl 900', sans-serif;
+    font-family: 'Museo Sans Cyrl 500', sans-serif;
     font-size: 1rem;
     line-height: 1.5;
     margin: 0;

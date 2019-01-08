@@ -22,7 +22,7 @@
     "html-react-parser": "^0.4.7",
     "local-storage-fallback": "^4.1.1",
     "prop-types": "^15.6.2",
-    "ramda": "^0.25.0",
+    "ramda": "^0.26.1",
     "ramda-adjunct": "^2.11.0",
     "react": "^16.7.0-alpha.2",
     "react-addons-css-transition-group": "^15.6.2",
