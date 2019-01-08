@@ -30,7 +30,9 @@ export const YES = 'Yes'
 export const KEYS = {
   A: 'A',
   B: 'B',
-  esc: 'esc'
+  esc: 'esc',
+  left: 'left',
+  right: 'right'
 }
 
 // Results
@@ -59,5 +61,7 @@ export const COMMUNITY_LAW_SERVICES_URL =
 export const KEY_CODES = {
   A: 65,
   B: 66,
-  esc: 27
+  esc: 27,
+  left: 37,
+  right: 39
 }
