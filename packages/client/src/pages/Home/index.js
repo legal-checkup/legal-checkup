@@ -45,7 +45,7 @@ function getLayout (format) {
           </HomeTextContainer>
         </HomeSection>
       </HomeContainer>
-      <Footer format={format} />
+      {/* <Footer format={format} /> */}
     </>
   )
 }
