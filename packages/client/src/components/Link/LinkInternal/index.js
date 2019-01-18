@@ -10,7 +10,7 @@ import {
   getLinkFontFamily
 } from './utilities'
 
-const LinkInternal = styled.span`
+const LinkInternal = styled.a`
   color: ${getLinkColor};
   border-bottom: ${getLinkBorder};
   background-color: ${getLinkBackgroundColor};
@@ -43,7 +43,7 @@ const LinkInternal = styled.span`
       font-size: 15px;
       opacity: 0.5;
       height: 18px;
-      padding-top: 13px
+      padding-top: 13px;
       text-align: center;
       `,
     [`${DESKTOP}Header`]: `
@@ -58,7 +58,6 @@ const LinkInternal = styled.span`
       line-height: 1;
       font-size: 15px;
       border-radius: 5px 5px 0 0;
-      display: inline-block;
       width: 100%;
       text-align: center;
       padding: 12px 0 11px 0;
