@@ -1,12 +1,16 @@
 import styled from 'styled-components'
 import { DESKTOP, TABLET } from '../../../constants'
 
-const getSectionWidth = ({ format }) => {
-  return format === DESKTOP || format === TABLET ? 920 : 315
+const getMaxTextWidth = ({ format }) => {
+  return format === DESKTOP || format === TABLET ? 920 : null
 }
 
 const getTextAlign = ({ format }) => {
   return format === DESKTOP || format === TABLET ? 'center' : 'left'
+}
+
+const getTextPadding = ({ format }) => {
+  return format === DESKTOP ? '50px 0' : '30px'
 }
 
 const Section = styled.section`
@@ -26,9 +30,9 @@ const HomeSection = styled.section`
 HomeSection.displayName = 'HomeSection'
 
 const HomeTextContainer = styled.div`
-  max-width: ${getSectionWidth}px;
+  max-width: ${getMaxTextWidth}px;
   text-align: ${getTextAlign};
-  padding: 50px 0;
+  padding: ${getTextPadding};
   margin: 0 auto;
 
   background: transparent;

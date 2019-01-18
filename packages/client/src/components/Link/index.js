@@ -47,6 +47,13 @@ function Link ({ children, format, href, onClick, target, tip }) {
   )
 }
 
+const makeLinkInternal = Component => {
+  return connect(
+    null,
+    mapDispatchToProps
+  )(Component)
+}
+
 function mapStateToProps (state) {
   return {
     pathname: getPathname(state)
@@ -83,3 +90,5 @@ export default connect(
   mapDispatchToProps,
   mergeProps
 )(Link)
+
+export { makeLinkInternal }
