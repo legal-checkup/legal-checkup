@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:results:ResultAccordion matches the snapshot 1`] = `
+<div>
+  <div>
+    <span>
+      Money Troubles
+    </span>
+    <button
+      onClick={[Function]}
+    >
+      show less/more
+    </button>
+  </div>
+  <div>
+    <p>
+      <div>
+        The fact that someone is chasing you for money
+        ...
+      </div>
+      <a
+        href="http://communitylaw.org.nz/community-law-manual/chapter-13-credit-and-debt/what-this-chapter-covers-chapter-13/"
+      >
+        What does the law say about this
+      </a>
+    </p>
+    <p>
+      <div>
+        The problem you had recently had with a service you have brought
+        ...
+      </div>
+      <a
+        href="http://communitylaw.org.nz/community-law-manual/chapter-12-consumer-protection/what-this-chapter-covers-chapter-12/"
+      >
+        What does the law say about this
+      </a>
+    </p>
+  </div>
+</div>
+`;

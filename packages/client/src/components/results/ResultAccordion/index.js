@@ -1,26 +1,21 @@
 import * as React from 'react'
-// import { connect } from 'react-redux'
 import Accordion from '../../UIKit/Accordion'
+import ResultTopicHeader from '../ResultTopicHeader'
+import ResultTopicContent from '../ResultTopicContent'
 
 export default function ResultAccordion (props) {
+  const { topicObj = {} } = props
+  const { questions = [] } = topicObj
+
+  const headingRender = (onClick) => {
+    return <ResultTopicHeader name={topicObj.name} onClick={onClick} />
+  }
+
+  const contentRender = () => {
+    return <ResultTopicContent questions={questions} />
+  }
+
   return (
     <Accordion heading={headingRender} content={contentRender} isExpanded />
-  )
-}
-
-function headingRender (onClick) {
-  return (
-    <div>
-      <span>Topic Name</span><button onClick={onClick}>show less/more</button>
-    </div>
-  )
-}
-
-function contentRender () {
-  return (
-    <div>
-      <h1>Content Header</h1>
-      <p>All the tiny description related to the header</p>
-    </div>
   )
 }
