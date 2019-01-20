@@ -11,7 +11,9 @@ function setWidth (format, type) {
 }
 
 function setMarginRight (format, type) {
-  if (type === KEYS.esc) { return 0 }
+  if (type === KEYS.esc) {
+    return 0
+  }
 
   if (format === DESKTOP || format === TABLET) {
     return type === KEYS.A ? '133px' : '125px'
@@ -26,7 +28,7 @@ const Label = styled.button`
   height: 29px;
   box-shadow: 0 2px 0 0 #cccccc;
   background-color: #ffffff;
-  font-family:MuseoSans;
+  font-family:'Museo Sans Cyrl 500', sans-serif;;
   font-weight:500;
   font-style: normal;
   font-stretch: normal;

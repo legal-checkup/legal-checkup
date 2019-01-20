@@ -24,7 +24,7 @@ const Button = styled.button`
   background-color: #eeedea;
   height: 78px;
   border:none;
-  font-family:MuseoSans;
+  font-family: 'Museo Sans Cyrl 500', sans-serif;
   font-weight:500;
   font-style: normal;
   font-stretch: normal;
