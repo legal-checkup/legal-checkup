@@ -2,12 +2,67 @@
 
 exports[`components:results:ResultAccordion matches the snapshot 1`] = `
 .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c2 {
+  font-family: 'Museo Sans Cyrl 500',sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #706262;
+  padding: 1px 4px;
+  border-style: none;
+}
+
+.c2:focus {
+  outline: 0;
+}
+
+.c1 {
+  font-family: 'Museo Sans Cyrl 900',sans-serif;
+  font-weight: 900;
   font-size: 15px;
   color: #b62645;
-  font-family: 'Museo Sans Cyrl 900',sans-serif;
 }
 
 .c3 {
+  position: relative;
+  width: 8px;
+  padding: 0 8px 0 8px;
+  margin-left: 4px;
+}
+
+.c3:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 0;
+  border-bottom: 8px solid #706262;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.c3:after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  border-bottom: 4px solid #ffffff;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+.c6 {
   font-family: 'Museo Sans Cyrl 500 italic',sans-serif;
   font-size: 15px;
   font-style: italic;
@@ -15,57 +70,63 @@ exports[`components:results:ResultAccordion matches the snapshot 1`] = `
   font-weight: 500;
 }
 
-.c2 {
+.c5 {
   font-family: 'Museo Sans Cyrl 500',sans-serif;
   font-size: 15px;
   font-weight: 500;
 }
 
-.c1 {
+.c4 {
   margin: 1rem 0;
 }
 
 <div>
-  <div>
+  <div
+    className="c0"
+  >
     <span
-      className="c0"
+      className="c1"
     >
       Money Troubles
     </span>
     <button
+      className="c2"
       onClick={[Function]}
     >
-      show less
+      Show Less
+      <span
+        className="c3"
+      />
     </button>
   </div>
   <div>
     <div
-      className="c1"
+      className="c4"
     >
       <div
-        className="c2"
+        className="c5"
       >
         The fact that someone is chasing you for money
         ...
       </div>
       <a
-        className="c3"
+        className="c6"
         href="http://communitylaw.org.nz/community-law-manual/chapter-13-credit-and-debt/what-this-chapter-covers-chapter-13/"
       >
         What does the law say about this
       </a>
     </div>
     <div
-      className="c1"
+      className="c4"
     >
       <div
-        className="c2"
+        className="c5"
       >
         The problem you had recently had with a service you have brought
         ...
       </div>
       <a
-        className="c3"
+        className="c6"
         href="http://communitylaw.org.nz/community-law-manual/chapter-12-consumer-protection/what-this-chapter-covers-chapter-12/"
       >
         What does the law say about this
