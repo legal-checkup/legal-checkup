@@ -5,8 +5,9 @@ exports[`components:results:ServicesButton matches the snapshot when format is d
   width: 450px;
   height: 58px;
   border-radius: 5px;
-  border: solid 3px #ffffff;
+  border: solid 3px '#ffffff';
   font-family: 'Museo Sans Cyrl 900',sans-serif;
+  font-weight: 900;
   font-size: 16px;
 }
 
@@ -24,8 +25,9 @@ exports[`components:results:ServicesButton matches the snapshot when format is m
   width: 260px;
   height: 58px;
   border-radius: 5px;
-  border: solid 3px #ffffff;
+  border: solid 3px '#ffffff';
   font-family: 'Museo Sans Cyrl 900',sans-serif;
+  font-weight: 900;
   font-size: 16px;
 }
 
@@ -43,8 +45,9 @@ exports[`components:results:ServicesButton matches the snapshot when format is t
   width: 260px;
   height: 58px;
   border-radius: 5px;
-  border: solid 3px #ffffff;
+  border: solid 3px '#ffffff';
   font-family: 'Museo Sans Cyrl 900',sans-serif;
+  font-weight: 900;
   font-size: 16px;
 }
 

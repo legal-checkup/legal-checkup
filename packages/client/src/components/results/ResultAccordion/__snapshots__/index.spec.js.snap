@@ -1,9 +1,35 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components:results:ResultAccordion matches the snapshot 1`] = `
+.c0 {
+  font-size: 15px;
+  color: '#b62645';
+  font-family: 'Museo Sans Cyrl 900',sans-serif;
+}
+
+.c3 {
+  font-family: 'Museo Sans Cyrl 500 italic',sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  color: '#4190e2';
+  font-weight: 500;
+}
+
+.c2 {
+  font-family: 'Museo Sans Cyrl 500',sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.c1 {
+  margin: 1rem 0;
+}
+
 <div>
   <div>
-    <span>
+    <span
+      className="c0"
+    >
       Money Troubles
     </span>
     <button
@@ -13,28 +39,38 @@ exports[`components:results:ResultAccordion matches the snapshot 1`] = `
     </button>
   </div>
   <div>
-    <p>
-      <div>
+    <div
+      className="c1"
+    >
+      <div
+        className="c2"
+      >
         The fact that someone is chasing you for money
         ...
       </div>
       <a
+        className="c3"
         href="http://communitylaw.org.nz/community-law-manual/chapter-13-credit-and-debt/what-this-chapter-covers-chapter-13/"
       >
         What does the law say about this
       </a>
-    </p>
-    <p>
-      <div>
+    </div>
+    <div
+      className="c1"
+    >
+      <div
+        className="c2"
+      >
         The problem you had recently had with a service you have brought
         ...
       </div>
       <a
+        className="c3"
         href="http://communitylaw.org.nz/community-law-manual/chapter-12-consumer-protection/what-this-chapter-covers-chapter-12/"
       >
         What does the law say about this
       </a>
-    </p>
+    </div>
   </div>
 </div>
 `;
