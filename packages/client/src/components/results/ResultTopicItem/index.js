@@ -5,7 +5,7 @@ const Anchor = styled.a`
   font-family: 'Museo Sans Cyrl 500 italic', sans-serif;
   font-size: 15px;
   font-style: italic;
-  color: '#4190e2';
+  color: #4190e2;
   font-weight: 500;
 `
 

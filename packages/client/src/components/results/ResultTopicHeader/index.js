@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Header = styled.span`
   font-size: 15px;
-  color: '#b62645';
+  color: #b62645;
   font-family: 'Museo Sans Cyrl 900', sans-serif;
 `
 
