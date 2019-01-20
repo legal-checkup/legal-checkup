@@ -6,9 +6,10 @@ import ResultTopicContent from '../ResultTopicContent'
 export default function ResultAccordion (props) {
   const { topicObj = {} } = props
   const { questions = [] } = topicObj
+  let isExpanded = true
 
   const headingRender = (onClick) => {
-    return <ResultTopicHeader name={topicObj.name} onClick={onClick} />
+    return <ResultTopicHeader name={topicObj.name} onClick={onClick} isExpanded={isExpanded} />
   }
 
   const contentRender = () => {
@@ -16,6 +17,6 @@ export default function ResultAccordion (props) {
   }
 
   return (
-    <Accordion heading={headingRender} content={contentRender} isExpanded />
+    <Accordion heading={headingRender} content={contentRender} isExpanded={isExpanded} />
   )
 }

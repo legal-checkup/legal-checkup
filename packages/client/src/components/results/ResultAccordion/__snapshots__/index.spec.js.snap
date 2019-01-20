@@ -3,7 +3,7 @@
 exports[`components:results:ResultAccordion matches the snapshot 1`] = `
 .c0 {
   font-size: 15px;
-  color: '#b62645';
+  color: #b62645;
   font-family: 'Museo Sans Cyrl 900',sans-serif;
 }
 
@@ -11,7 +11,7 @@ exports[`components:results:ResultAccordion matches the snapshot 1`] = `
   font-family: 'Museo Sans Cyrl 500 italic',sans-serif;
   font-size: 15px;
   font-style: italic;
-  color: '#4190e2';
+  color: #4190e2;
   font-weight: 500;
 }
 
@@ -35,7 +35,7 @@ exports[`components:results:ResultAccordion matches the snapshot 1`] = `
     <button
       onClick={[Function]}
     >
-      show less/more
+      show less
     </button>
   </div>
   <div>
