@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:checkup:AnswerBlock:Bar matches the snapshot 1`] = `
+.c0 {
+  margin: auto;
+  margin-bottom: 41px;
+  width: 90%;
+  width: 292px;
+}
+
+<section
+  className="c0"
+>
+  Bar
+</section>
+`;

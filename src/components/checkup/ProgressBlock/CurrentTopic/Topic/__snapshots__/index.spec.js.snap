@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:checkup:ProgressBar:CurrentTopic:Topic matches the snapshot 1`] = `
+.c0 {
+  background-color: #ededed;
+  color: #000000;
+  font-weight: bold;
+  height: 42px;
+  line-height: 42px;
+  margin: 0 1px;
+  padding: 0 10px;
+  text-align: center;
+  width: 158px;
+}
+
+<div
+  className="c0"
+>
+  This Topic
+</div>
+`;

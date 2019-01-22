@@ -1,0 +1,84 @@
+import * as React from 'react'
+import { connect } from 'react-redux'
+
+import { navigate } from 'gatsby'
+import { isNotEmpty, isNotUndefined } from 'ramda-adjunct'
+
+import { externalLink, internalLink } from '../../constants'
+import { getPathname } from '../../state/selectors'
+
+import LinkExternal from './LinkExternal'
+import LinkInternal from './LinkInternal'
+
+function Link({ children, format, href, onClick, target, tip }) {
+  if (isNotEmpty(href)) {
+    return (
+      <LinkExternal
+        href={href}
+        title={tip}
+        format={format}
+        target={target}
+        data-testid={externalLink}
+      >
+        {children}
+      </LinkExternal>
+    )
+  }
+
+  return isNotUndefined(onClick) ? (
+    <LinkInternal
+      title={tip}
+      format={format}
+      onClick={onClick}
+      data-testid={internalLink}
+    >
+      {children}
+    </LinkInternal>
+  ) : (
+      <LinkInternal
+        title={'This page'}
+        format={format}
+        active
+        data-testid={internalLink}
+      >
+        {children}
+      </LinkInternal>
+    )
+}
+
+function mapStateToProps(state) {
+  return {
+    pathname: getPathname(state)
+  }
+}
+
+function mapDispatchToProps(dispatch, { to }) {
+  return {
+    onClick: e => {
+      e.preventDefault()
+
+      navigate(to)
+    }
+  }
+}
+
+function mergeProps({ pathname }, { onClick }, ownProps) {
+  const { children, format, href = '', target = '_blank', tip, to } = ownProps
+
+  const altProps = pathname === to ? { active: true } : { onClick }
+
+  return {
+    children,
+    format,
+    href,
+    ...altProps,
+    target,
+    tip
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps,
+  mergeProps
+)(Link)

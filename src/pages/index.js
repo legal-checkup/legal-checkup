@@ -1,21 +1,43 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import * as React from 'react'
+import { Helmet } from 'react-helmet'
 
-import Layout from '../components/layout'
-import Image from '../components/image'
-import SEO from '../components/seo'
+import Footer from '../components/layout/Footer'
+import Header from '../components/layout/Header'
+import Section from '../components/layout/Section'
+import Desktop from '../components/responsive/Desktop'
+import Mobile from '../components/responsive/Mobile'
+import Tablet from '../components/responsive/Tablet'
+import { DESKTOP, MOBILE, TABLET, WEBSITE } from '../constants'
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+function getLayout (format) {
+  return (
+    <>
+      <Header format={format} />
+      <Section>
+        <p>
+          This is the <strong>Home</strong> page
+        </p>
+      </Section>
+      <Footer format={format} />
+    </>
+  )
+}
 
-export default IndexPage
+export default function Home () {
+  return (
+    <>
+      <Helmet>
+        <title>{WEBSITE}</title>
+      </Helmet>
+      <Mobile>
+        {getLayout(MOBILE)}
+      </Mobile>
+      <Tablet>
+        {getLayout(TABLET)}
+      </Tablet>
+      <Desktop>
+        {getLayout(DESKTOP)}
+      </Desktop>
+    </>
+  )
+}
