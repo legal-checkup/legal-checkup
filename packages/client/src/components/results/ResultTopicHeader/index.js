@@ -1,5 +1,7 @@
 import * as React from 'react'
 import styled from 'styled-components'
+import styledMap from 'styled-map'
+import { DESKTOP, MOBILE, TABLET } from '../../../constants'
 
 const { useState } = React
 
@@ -24,7 +26,11 @@ const Button = styled.button`
 const Header = styled.span`
   font-family: 'Museo Sans Cyrl 900', sans-serif;
   font-weight: 900;
-  font-size: 15px;
+  font-size: ${styledMap('format', {
+    [DESKTOP]: '18px',
+    [TABLET]: '15px',
+    [MOBILE]: '15px'
+  })};
   color: #b62645;
 `
 
@@ -82,7 +88,8 @@ const CaretUp = styled.span`
   }
 `
 
-export default function ResultTopicHeader ({ name = '...', onClick, isExpanded }) {
+export default function ResultTopicHeader (props) {
+  const { format, name = '...', onClick, isExpanded } = props
   const [expanded, setExpanded] = useState(isExpanded)
 
   const showText = () => {
@@ -100,7 +107,7 @@ export default function ResultTopicHeader ({ name = '...', onClick, isExpanded }
 
   return (
     <Boundary>
-      <Header>{name}</Header><Button onClick={btnClicked}>{showText()}{showCaret()}</Button>
+      <Header format={format} >{name}</Header><Button onClick={btnClicked}>{showText()}{showCaret()}</Button>
     </Boundary>
   )
 }

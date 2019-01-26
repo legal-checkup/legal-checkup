@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`components:results:ResultAccordion matches the snapshot 1`] = `
-.c0 {
+exports[`components:results:ResultAccordion matches the snapshot for DESKTOP 1`] = `
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -15,7 +15,7 @@ exports[`components:results:ResultAccordion matches the snapshot 1`] = `
   justify-content: space-between;
 }
 
-.c2 {
+.c3 {
   font-family: 'Museo Sans Cyrl 500',sans-serif;
   font-weight: 500;
   font-size: 12px;
@@ -24,25 +24,25 @@ exports[`components:results:ResultAccordion matches the snapshot 1`] = `
   border-style: none;
 }
 
-.c2:focus {
+.c3:focus {
   outline: 0;
 }
 
-.c1 {
+.c2 {
   font-family: 'Museo Sans Cyrl 900',sans-serif;
   font-weight: 900;
-  font-size: 15px;
+  font-size: 18px;
   color: #b62645;
 }
 
-.c3 {
+.c4 {
   position: relative;
   width: 8px;
   padding: 0 8px 0 8px;
   margin-left: 4px;
 }
 
-.c3:before {
+.c4:before {
   content: '';
   position: absolute;
   top: 4px;
@@ -52,7 +52,7 @@ exports[`components:results:ResultAccordion matches the snapshot 1`] = `
   border-right: 8px solid transparent;
 }
 
-.c3:after {
+.c4:after {
   content: '';
   position: absolute;
   left: 4px;
@@ -62,7 +62,160 @@ exports[`components:results:ResultAccordion matches the snapshot 1`] = `
   border-right: 4px solid transparent;
 }
 
+.c7 {
+  font-family: 'Museo Sans Cyrl 500 italic',sans-serif;
+  font-size: 18px;
+  font-style: italic;
+  color: #4190e2;
+  font-weight: 500;
+}
+
 .c6 {
+  font-family: 'Museo Sans Cyrl 500',sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.c5 {
+  margin: 1rem 0;
+}
+
+.c0 {
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding: 23px 24px 21px 30px;
+  width: 920px;
+}
+
+<div
+  className="c0"
+  format="desktop"
+>
+  <div>
+    <div
+      className="c1"
+    >
+      <span
+        className="c2"
+        format="desktop"
+      >
+        Money Troubles
+      </span>
+      <button
+        className="c3"
+        onClick={[Function]}
+      >
+        Show Less
+        <span
+          className="c4"
+        />
+      </button>
+    </div>
+    <div>
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+          format="desktop"
+        >
+          The fact that someone is chasing you for money
+          ...
+        </div>
+        <a
+          className="c7"
+          format="desktop"
+          href="http://communitylaw.org.nz/community-law-manual/chapter-13-credit-and-debt/what-this-chapter-covers-chapter-13/"
+        >
+          What does the law say about this
+        </a>
+      </div>
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+          format="desktop"
+        >
+          The problem you had recently had with a service you have brought
+          ...
+        </div>
+        <a
+          className="c7"
+          format="desktop"
+          href="http://communitylaw.org.nz/community-law-manual/chapter-12-consumer-protection/what-this-chapter-covers-chapter-12/"
+        >
+          What does the law say about this
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components:results:ResultAccordion matches the snapshot for MOBILE 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c3 {
+  font-family: 'Museo Sans Cyrl 500',sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #706262;
+  padding: 1px 4px;
+  border-style: none;
+}
+
+.c3:focus {
+  outline: 0;
+}
+
+.c2 {
+  font-family: 'Museo Sans Cyrl 900',sans-serif;
+  font-weight: 900;
+  font-size: 15px;
+  color: #b62645;
+}
+
+.c4 {
+  position: relative;
+  width: 8px;
+  padding: 0 8px 0 8px;
+  margin-left: 4px;
+}
+
+.c4:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 0;
+  border-bottom: 8px solid #706262;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.c4:after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  border-bottom: 4px solid #ffffff;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+.c7 {
   font-family: 'Museo Sans Cyrl 500 italic',sans-serif;
   font-size: 15px;
   font-style: italic;
@@ -70,67 +223,237 @@ exports[`components:results:ResultAccordion matches the snapshot 1`] = `
   font-weight: 500;
 }
 
-.c5 {
+.c6 {
   font-family: 'Museo Sans Cyrl 500',sans-serif;
   font-size: 15px;
   font-weight: 500;
 }
 
-.c4 {
+.c5 {
   margin: 1rem 0;
 }
 
-<div>
-  <div
-    className="c0"
-  >
-    <span
-      className="c1"
-    >
-      Money Troubles
-    </span>
-    <button
-      className="c2"
-      onClick={[Function]}
-    >
-      Show Less
-      <span
-        className="c3"
-      />
-    </button>
-  </div>
+.c0 {
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding: 16px 20px 12px 20px;
+  width: 315px;
+}
+
+<div
+  className="c0"
+  format="mobile"
+>
   <div>
     <div
-      className="c4"
+      className="c1"
     >
-      <div
-        className="c5"
+      <span
+        className="c2"
+        format="mobile"
       >
-        The fact that someone is chasing you for money
-        ...
-      </div>
-      <a
-        className="c6"
-        href="http://communitylaw.org.nz/community-law-manual/chapter-13-credit-and-debt/what-this-chapter-covers-chapter-13/"
+        Money Troubles
+      </span>
+      <button
+        className="c3"
+        onClick={[Function]}
       >
-        What does the law say about this
-      </a>
+        Show Less
+        <span
+          className="c4"
+        />
+      </button>
     </div>
-    <div
-      className="c4"
-    >
+    <div>
       <div
         className="c5"
       >
-        The problem you had recently had with a service you have brought
-        ...
+        <div
+          className="c6"
+          format="mobile"
+        >
+          The fact that someone is chasing you for money
+          ...
+        </div>
+        <a
+          className="c7"
+          format="mobile"
+          href="http://communitylaw.org.nz/community-law-manual/chapter-13-credit-and-debt/what-this-chapter-covers-chapter-13/"
+        >
+          What does the law say about this
+        </a>
       </div>
-      <a
-        className="c6"
-        href="http://communitylaw.org.nz/community-law-manual/chapter-12-consumer-protection/what-this-chapter-covers-chapter-12/"
+      <div
+        className="c5"
       >
-        What does the law say about this
-      </a>
+        <div
+          className="c6"
+          format="mobile"
+        >
+          The problem you had recently had with a service you have brought
+          ...
+        </div>
+        <a
+          className="c7"
+          format="mobile"
+          href="http://communitylaw.org.nz/community-law-manual/chapter-12-consumer-protection/what-this-chapter-covers-chapter-12/"
+        >
+          What does the law say about this
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`components:results:ResultAccordion matches the snapshot for TABLET 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c3 {
+  font-family: 'Museo Sans Cyrl 500',sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: #706262;
+  padding: 1px 4px;
+  border-style: none;
+}
+
+.c3:focus {
+  outline: 0;
+}
+
+.c2 {
+  font-family: 'Museo Sans Cyrl 900',sans-serif;
+  font-weight: 900;
+  font-size: 15px;
+  color: #b62645;
+}
+
+.c4 {
+  position: relative;
+  width: 8px;
+  padding: 0 8px 0 8px;
+  margin-left: 4px;
+}
+
+.c4:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 0;
+  border-bottom: 8px solid #706262;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+}
+
+.c4:after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 8px;
+  border-bottom: 4px solid #ffffff;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+.c7 {
+  font-family: 'Museo Sans Cyrl 500 italic',sans-serif;
+  font-size: 15px;
+  font-style: italic;
+  color: #4190e2;
+  font-weight: 500;
+}
+
+.c6 {
+  font-family: 'Museo Sans Cyrl 500',sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.c5 {
+  margin: 1rem 0;
+}
+
+.c0 {
+  background-color: #fff;
+  margin-bottom: 15px;
+  padding: 16px 20px 12px 20px;
+  width: 315px;
+}
+
+<div
+  className="c0"
+  format="tablet"
+>
+  <div>
+    <div
+      className="c1"
+    >
+      <span
+        className="c2"
+        format="tablet"
+      >
+        Money Troubles
+      </span>
+      <button
+        className="c3"
+        onClick={[Function]}
+      >
+        Show Less
+        <span
+          className="c4"
+        />
+      </button>
+    </div>
+    <div>
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+          format="tablet"
+        >
+          The fact that someone is chasing you for money
+          ...
+        </div>
+        <a
+          className="c7"
+          format="tablet"
+          href="http://communitylaw.org.nz/community-law-manual/chapter-13-credit-and-debt/what-this-chapter-covers-chapter-13/"
+        >
+          What does the law say about this
+        </a>
+      </div>
+      <div
+        className="c5"
+      >
+        <div
+          className="c6"
+          format="tablet"
+        >
+          The problem you had recently had with a service you have brought
+          ...
+        </div>
+        <a
+          className="c7"
+          format="tablet"
+          href="http://communitylaw.org.nz/community-law-manual/chapter-12-consumer-protection/what-this-chapter-covers-chapter-12/"
+        >
+          What does the law say about this
+        </a>
+      </div>
     </div>
   </div>
 </div>
