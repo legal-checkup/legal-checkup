@@ -4,7 +4,7 @@ import { PageText } from '../../styled/index'
 import Link from '../../Link'
 import { AboutCommunityLaw, CommunityLawServices } from '../buttons'
 
-function Intro ({ format }) {
+function Outro ({ format }) {
   return (
     <Fragment>
       <PageText format={format}>
@@ -32,4 +32,4 @@ function Intro ({ format }) {
   )
 }
 
-export default Intro
+export default Outro

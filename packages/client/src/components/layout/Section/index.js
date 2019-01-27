@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { DESKTOP, TABLET } from '../../../constants'
 
 const getMaxTextWidth = ({ format }) => {
-  return format === DESKTOP || format === TABLET ? 920 : null
+  return format === DESKTOP || format === TABLET ? '920px' : null
 }
 
 const getTextAlign = ({ format }) => {
@@ -30,7 +30,7 @@ const HomeSection = styled.section`
 HomeSection.displayName = 'HomeSection'
 
 const HomeTextContainer = styled.div`
-  max-width: ${getMaxTextWidth}px;
+  max-width: ${getMaxTextWidth};
   text-align: ${getTextAlign};
   padding: ${getTextPadding};
   margin: 0 auto;

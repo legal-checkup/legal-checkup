@@ -1,6 +1,13 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
-import { DESKTOP, TABLET, MOBILE, ROUGE, WHITE } from '../../../../constants'
+import {
+  DESKTOP,
+  TABLET,
+  MOBILE,
+  ROUGE,
+  WHITE,
+  BLACK
+} from '../../../../constants'
 
 const getStartButtonMargin = ({ format }) => {
   switch (format) {
@@ -18,7 +25,7 @@ const getStartButtonMargin = ({ format }) => {
   }
 }
 
-const BaseButton = styled.button`
+const baseButtonStyle = css`
   font-family: 'Museo Sans Cyrl 900', sans-serif;
   font-weight: 900;
 
@@ -27,13 +34,18 @@ const BaseButton = styled.button`
   max-width: 450px;
 
   display: inline-block;
+  box-sizing: border-box;
+
+  text-decoration-line: none;
+  text-align: center;
 
   &:hover {
     cursor: pointer;
   }
 `
 
-const StartCheckupButton = styled(BaseButton)`
+const StartCheckupButton = styled.button`
+  ${baseButtonStyle}
   width: 100%;
   padding: 30px 0;
   margin: 0 auto;
@@ -54,21 +66,28 @@ const getButtonWidth = ({ format }) => {
   return format === MOBILE ? '100%' : 'calc(50% - 10px)'
 }
 
-const AboutCommunityLawButton = styled(BaseButton)`
+const AboutCommunityLawButton = styled.a`
+  ${baseButtonStyle}
   padding: 20px 0;
-  width: ${getButtonWidth};
   margin: ${({ format }) => (format === MOBILE ? '0 0 15px 0' : '0 10px 0 0')};
+  width: ${getButtonWidth};
+
+  color: ${BLACK};
   background-color: transparent;
+
   border: 3px solid ${WHITE};
 
   font-size: 16px;
 `
 AboutCommunityLawButton.displayName = 'StyledAboutCommunityLawButton'
 
-const CommunityLawServicesButton = styled(BaseButton)`
+const CommunityLawServicesButton = styled.a`
+  ${baseButtonStyle}
   padding: 20px 0;
-  width: ${getButtonWidth};
   margin: ${({ format }) => (format === MOBILE ? '0 0' : '0 0 0 10px')};
+  width: ${getButtonWidth};
+
+  color: ${BLACK};
   background-color: transparent;
   border: 3px solid ${WHITE};
 

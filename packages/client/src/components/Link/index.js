@@ -47,6 +47,14 @@ function Link ({ children, format, href, onClick, target, tip }) {
   )
 }
 
+const makeLinkExternal = Component => {
+  return ({ href, tip, target = '_blank', children, format }) => (
+    <Component href={href} title={tip} target={target} format={format}>
+      {children}
+    </Component>
+  )
+}
+
 const makeLinkInternal = Component => {
   return connect(
     null,
@@ -91,4 +99,4 @@ export default connect(
   mergeProps
 )(Link)
 
-export { makeLinkInternal }
+export { makeLinkInternal, makeLinkExternal }

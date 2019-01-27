@@ -1,12 +1,17 @@
+import React from 'react'
+
 import {
   StartCheckupButton,
   AboutCommunityLawButton,
   CommunityLawServicesButton
 } from './style'
-import { makeLinkInternal } from '../../Link'
+import { makeLinkInternal, makeLinkExternal } from '../../Link'
 
 const StartCheckup = makeLinkInternal(StartCheckupButton)
-const AboutCommunityLaw = makeLinkInternal(AboutCommunityLawButton)
-const CommunityLawServices = makeLinkInternal(CommunityLawServicesButton)
+const AboutCommunityLaw = makeLinkExternal(AboutCommunityLawButton)
+const CommunityLawServices = makeLinkExternal(CommunityLawServicesButton)
+
+console.log(StartCheckup)
+console.log(<AboutCommunityLaw />)
 
 export { StartCheckup, AboutCommunityLaw, CommunityLawServices }
