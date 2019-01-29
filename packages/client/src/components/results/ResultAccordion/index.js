@@ -25,7 +25,7 @@ const Boundary = styled.div`
 export default function ResultAccordion (props) {
   const { format, topicObj = {} } = props
   const { questions = [] } = topicObj
-  let isExpanded = true
+  const isExpanded = true
 
   const headingRender = (onClick) => {
     return <ResultTopicHeader format={format} name={topicObj.name} onClick={onClick} isExpanded={isExpanded} />

@@ -16,6 +16,7 @@ const Button = styled.button`
   font-weight: 500;
   font-size: 12px;
   color: #706262;
+  background-color: #fff;
   padding: 1px 4px;
   border-style: none;
   &:focus {
@@ -91,14 +92,8 @@ const CaretUp = styled.span`
 export default function ResultTopicHeader (props) {
   const { format, name = '...', onClick, isExpanded } = props
   const [expanded, setExpanded] = useState(isExpanded)
-
-  const showText = () => {
-    return expanded ? 'Show Less' : 'Show More'
-  }
-
-  const showCaret = () => {
-    return expanded ? <CaretUp /> : <CaretDown />
-  }
+  const showText = expanded ? 'Show Less' : 'Show More'
+  const showCaret = expanded ? <CaretUp /> : <CaretDown />
 
   const btnClicked = () => {
     setExpanded(!expanded)
@@ -107,7 +102,7 @@ export default function ResultTopicHeader (props) {
 
   return (
     <Boundary>
-      <Header format={format} >{name}</Header><Button onClick={btnClicked}>{showText()}{showCaret()}</Button>
+      <Header format={format} >{name}</Header><Button onClick={btnClicked}>{showText}{showCaret}</Button>
     </Boundary>
   )
 }
