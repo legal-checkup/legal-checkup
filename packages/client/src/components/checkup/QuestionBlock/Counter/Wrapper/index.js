@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import { DESKTOP, MOBILE, TABLET } from '../../../../../constants'
-import styledMap from 'styled-map'
 
 const Wrapper = styled.div`
   color: #b62645;
@@ -15,17 +13,6 @@ const Wrapper = styled.div`
   text-align: center;
   margin: 0px auto;
   padding-top: 18px;
-  ${styledMap('format', {
-    [DESKTOP]: `
-   diplay:none;
-    `,
-    [MOBILE]: `
-    
-   `,
-    [TABLET]: `
-  display:none;
-    `
-  })}
 `
 Wrapper.displayName = 'Wrapper'
 
