@@ -3,7 +3,6 @@ import { applyMiddleware, compose, createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { createEpicMiddleware } from 'redux-observable'
 
-import rootEpic from './src/state/epics'
 import initialState from './src/state/initialState'
 import createRootReducer from './src/state/reducers'
 
@@ -18,7 +17,7 @@ const store = createStore(
   middleware
 )
 
-epicMiddleware.run(rootEpic)
+// epicMiddleware.run(rootEpic)
 
 export default ({ element }) => (
   <Provider store={store}>
