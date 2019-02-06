@@ -8,8 +8,8 @@ import checkupCompleteEpic from './checkupComplete'
 const rootEpic = combineEpics(
   // checkupCompleteEpic,
   questionRequestedEpic,
-  responseReceivedEpic,
-  redoRequestedEpic
+  responseReceivedEpic
+  // redoRequestedEpic
 )
 
 export default rootEpic

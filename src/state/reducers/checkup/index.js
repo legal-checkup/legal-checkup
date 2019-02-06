@@ -10,7 +10,8 @@ import {
   USER_RESPONDED_WITH_YES,
   YES,
   RESULTS_PATH,
-  CHECKUP_COMPLETE
+  CHECKUP_COMPLETE,
+  CHECKUP_PATH
 } from '../../constants'
 import setActiveQuestionIndex from '../../domain/setActiveQuestionIndex'
 import setQuestionResponse from '../../domain/setQuestionResponse'
@@ -39,6 +40,7 @@ export default function reducer (state = initialState, { payload = {}, type }) {
       return setQuestionResponse(state, YES)
 
     case REDO_CHECKUP_CLICKED:
+      navigate(CHECKUP_PATH)
       return {
         ...state,
         responses: [],
