@@ -3,6 +3,8 @@ export const DESKTOP = 'desktop'
 export const MOBILE = 'mobile'
 export const TABLET = 'tablet'
 
+export const ABOUT_PAGE = 'aboutPage'
+
 // Text
 export const FOR_EXAMPLE = 'For example - '
 export const WEBSITE = 'Legal Checkup'
