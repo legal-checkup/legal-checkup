@@ -10,7 +10,7 @@ import { getPathname } from '../../state/selectors'
 import LinkExternal from './LinkExternal'
 import LinkInternal from './LinkInternal'
 
-function Link({ children, format, href, onClick, target, tip }) {
+function Link ({ children, format, href, onClick, target, tip }) {
   if (isNotEmpty(href)) {
     return (
       <LinkExternal
@@ -35,24 +35,39 @@ function Link({ children, format, href, onClick, target, tip }) {
       {children}
     </LinkInternal>
   ) : (
-      <LinkInternal
-        title={'This page'}
-        format={format}
-        active
-        data-testid={internalLink}
-      >
-        {children}
-      </LinkInternal>
-    )
+    <LinkInternal
+      title={'This page'}
+      format={format}
+      active
+      data-testid={internalLink}
+    >
+      {children}
+    </LinkInternal>
+  )
 }
 
-function mapStateToProps(state) {
+const makeLinkExternal = Component => {
+  return ({ href, tip, target = '_blank', children, format }) => (
+    <Component href={href} title={tip} target={target} format={format}>
+      {children}
+    </Component>
+  )
+}
+
+const makeLinkInternal = Component => {
+  return connect(
+    null,
+    mapDispatchToProps
+  )(Component)
+}
+
+function mapStateToProps (state) {
   return {
     pathname: getPathname(state)
   }
 }
 
-function mapDispatchToProps(dispatch, { to }) {
+function mapDispatchToProps (dispatch, { to }) {
   return {
     onClick: e => {
       e.preventDefault()
@@ -62,7 +77,7 @@ function mapDispatchToProps(dispatch, { to }) {
   }
 }
 
-function mergeProps({ pathname }, { onClick }, ownProps) {
+function mergeProps ({ pathname }, { onClick }, ownProps) {
   const { children, format, href = '', target = '_blank', tip, to } = ownProps
 
   const altProps = pathname === to ? { active: true } : { onClick }
@@ -82,3 +97,5 @@ export default connect(
   mapDispatchToProps,
   mergeProps
 )(Link)
+
+export { makeLinkExternal, makeLinkInternal }

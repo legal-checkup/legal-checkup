@@ -1,9 +1,11 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
 
+// eslint-disable-next-line
 import Footer from '../components/layout/Footer'
 import Header from '../components/layout/Header'
-import Section from '../components/layout/Section'
+import HomeComponent from '../components/home'
+
 import Desktop from '../components/responsive/Desktop'
 import Mobile from '../components/responsive/Mobile'
 import Tablet from '../components/responsive/Tablet'
@@ -13,11 +15,7 @@ function getLayout (format) {
   return (
     <>
       <Header format={format} />
-      <Section>
-        <p>
-          This is the <strong>Home</strong> page
-        </p>
-      </Section>
+      <HomeComponent format={format} />
       <Footer format={format} />
     </>
   )
