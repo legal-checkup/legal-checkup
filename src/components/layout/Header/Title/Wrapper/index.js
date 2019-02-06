@@ -4,7 +4,7 @@ import styledMap from 'styled-map'
 import { DESKTOP, TABLET, MOBILE } from '../../../../../constants'
 
 const Wrapper = styled.div`
-  font-family: 'Museo Sans Cyrl', sans-serif;
+  font-family: 'Museo Sans Cyrl 900', sans-serif;
   font-weight: 900;
   line-height: 1;
 
