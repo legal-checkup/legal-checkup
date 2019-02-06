@@ -2,13 +2,14 @@
 import { combineEpics } from 'redux-observable'
 import questionRequestedEpic from './questionRequested'
 import responseReceivedEpic from './responseReceived'
-// import redoRequestedEpic from './redoRequested'
+import redoRequestedEpic from './redoRequested'
+import checkupCompleteEpic from './checkupComplete'
 
 const rootEpic = combineEpics(
   // checkupCompleteEpic,
   questionRequestedEpic,
   responseReceivedEpic,
-  // redoRequestedEpic
+  redoRequestedEpic
 )
 
 export default rootEpic

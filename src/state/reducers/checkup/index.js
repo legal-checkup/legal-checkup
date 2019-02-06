@@ -8,11 +8,15 @@ import {
   USER_RESPONDED_WITH_NO,
   USER_RESPONDED_WITH_NOT_SURE,
   USER_RESPONDED_WITH_YES,
-  YES
+  YES,
+  RESULTS_PATH,
+  CHECKUP_COMPLETE
 } from '../../constants'
 import setActiveQuestionIndex from '../../domain/setActiveQuestionIndex'
 import setQuestionResponse from '../../domain/setQuestionResponse'
 import initialState from '../../initialState'
+
+import { navigate } from 'gatsby'
 
 export default function reducer (state = initialState, { payload = {}, type }) {
   const { activeQuestionIndex } = payload
@@ -39,6 +43,12 @@ export default function reducer (state = initialState, { payload = {}, type }) {
         ...state,
         responses: [],
         activeQuestionIndex: 0
+      }
+
+    case CHECKUP_COMPLETE:
+      navigate(RESULTS_PATH)
+      return {
+        ...state
       }
 
     default:
