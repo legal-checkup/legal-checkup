@@ -3,6 +3,7 @@ import { applyMiddleware, compose, createStore } from 'redux'
 import { Provider } from 'react-redux'
 import { createEpicMiddleware } from 'redux-observable'
 
+import GlobalStyle from './src/styles'
 import rootEpic from './src/state/epics'
 import initialState from './src/state/initialState'
 import createRootReducer from './src/state/reducers'
@@ -15,5 +16,10 @@ export default ({ element }) => {
 
   epicMiddleware.run(rootEpic)
 
-  return <Provider store={store}>{element}</Provider>
+  return (
+    <>
+      <GlobalStyle />
+      <Provider store={store}>{element}</Provider>
+    </>
+  )
 }
