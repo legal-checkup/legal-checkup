@@ -1,12 +1,19 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
+# How to work on this project: 🤮
+
+1. Find a spot where you want to clone this repo in your command line (eg: 'workspace').
+
+2. Type ```git clone https://github.com/latrellwhata/legal-blackout.git legal-blackout && cd legal-blackout``` and hit enter.
+
+3. If you don't have Gatsby installed, type ```yarn global add gatsby-cli``` and hit that enter key.
+
+4. Execute the ```yarn``` command to install the project dependencies. 
+
+5. Type ```yarn start``` to run the project -- this command will run ```gatsby develop```.
+
+
+<h3 align="center">
   Gatsby's default starter
-</h1>
+</h3>
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
 
