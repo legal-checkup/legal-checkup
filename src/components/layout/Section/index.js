@@ -1,11 +1,14 @@
 import styled from 'styled-components'
-import { DESKTOP, TABLET } from '../../../constants'
+import { DESKTOP, TABLET, ABOUT_PAGE } from '../../../constants'
 
 const getMaxTextWidth = ({ format }) => {
   return format === DESKTOP || format === TABLET ? '920px' : null
 }
 
-const getTextAlign = ({ format }) => {
+const getTextAlign = ({ format, page }) => {
+  if (page === ABOUT_PAGE) {
+    return 'left'
+  }
   return format === DESKTOP || format === TABLET ? 'center' : 'left'
 }
 
@@ -19,17 +22,14 @@ const Section = styled.section`
 `
 Section.displayName = 'Section'
 
-const HomeContainer = styled.section``
-HomeContainer.displayName = 'HomeContainer'
-
-const HomeSection = styled.section`
-  &:nth-child(odd) {
+const PageSection = styled.section`
+  &:nth-child(even) {
     background-color: #eeedea;
   }
 `
-HomeSection.displayName = 'HomeSection'
+PageSection.displayName = 'PageSection'
 
-const HomeTextContainer = styled.div`
+const PageTextContainer = styled.div`
   max-width: ${getMaxTextWidth};
   text-align: ${getTextAlign};
   padding: ${getTextPadding};
@@ -37,7 +37,7 @@ const HomeTextContainer = styled.div`
 
   background: transparent;
 `
-HomeTextContainer.displayName = 'HomeTextContainer'
+PageTextContainer.displayName = 'PageTextContainer'
 
 export default Section
-export { HomeContainer, HomeSection, HomeTextContainer }
+export { PageSection, PageTextContainer }
