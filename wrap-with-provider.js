@@ -7,21 +7,13 @@ import rootEpic from './src/state/epics'
 import initialState from './src/state/initialState'
 import createRootReducer from './src/state/reducers'
 
-const epicMiddleware = createEpicMiddleware()
-const appliedMiddleware = applyMiddleware(
-  epicMiddleware
-)
-const middleware = compose(appliedMiddleware)
-const store = createStore(
-  createRootReducer(),
-  initialState,
-  middleware
-)
+export default ({ element }) => {
+  const epicMiddleware = createEpicMiddleware()
+  const appliedMiddleware = applyMiddleware(epicMiddleware)
+  const middleware = compose(appliedMiddleware)
+  const store = createStore(createRootReducer(), initialState, middleware)
 
-epicMiddleware.run(rootEpic)
+  epicMiddleware.run(rootEpic)
 
-export default ({ element }) => (
-  <Provider store={store}>
-    {element}
-  </Provider>
-)
+  return <Provider store={store}>{element}</Provider>
+}
