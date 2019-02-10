@@ -14,7 +14,7 @@ export default function Footer ({ format }) {
   return (
     <Wrapper format={format} data-testid={footerWrapper}>
       <Link href={COMMUNITY_LAW_URL} format={`${format}Footer`} data-testid={communityLawUrl}>
-      &copy; 2018 Community Law Wellington &amp; Hutt Valley
+      &copy; {new Date().getFullYear()} Community Law Wellington &amp; Hutt Valley
       </Link>
       <Link to={PRIVACY_POLICY_PATH} format={`${format}Footer`} data-testid={privacyPolicyPath}>Privacy Policy</Link>
       <Link to={TERMS_OF_USE_PATH} format={`${format}Footer`} data-testid={termsOfUsePath}>Terms of Use</Link>
