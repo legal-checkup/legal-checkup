@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:checkup:ProgressBlock:ProgressBar matches the snapshot when format is desktop 1`] = `
+.c0 {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+<nav
+  className="c0"
+  format="desktop"
+>
+  ProgressBar
+</nav>
+`;
+
+exports[`components:checkup:ProgressBlock:ProgressBar matches the snapshot when format is mobile 1`] = `
+.c0 {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+<nav
+  className="c0"
+  format="mobile"
+>
+  ProgressBar
+</nav>
+`;
+
+exports[`components:checkup:ProgressBlock:ProgressBar matches the snapshot when format is tablet 1`] = `
+.c0 {
+  background-color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+<nav
+  className="c0"
+  format="tablet"
+>
+  ProgressBar
+</nav>
+`;
