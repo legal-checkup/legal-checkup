@@ -5,19 +5,17 @@ import { DESKTOP, MOBILE, TABLET } from '../../../../constants'
 
 const Button = styled.button`
   background-color: #ededed;
-  //border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
   border: none;
-  color: ${({ enabled }) => enabled ? '#b62645' : '#c0c0c0'}; //this does nothing 
-   color: ${({ active }) => (active ? 'white' : '#c0c0c0')};
-  height: 42px;
+  color: ${({ active }) => (active ? 'white' : '#c0c0c0')};
+  height: 30px;
   cursor: ${enabled => (enabled ? 'pointer' : 'default')}
   border-radius: ${({ active }) => (active ? '100px' : '0 5px 5px 0')};
   background-color: ${({ active }) => (active ? '#b62645' : '#ededed')};
   font-weight: ${({ enabled }) => (enabled ? 'bold' : 'normal')};
-  margin-top: 50px;
-
+  margin-top: 30px;
   outline: none;
-  width: 48px;
+  width: 30px;
 
   ${styledMap('format', {
     [`${DESKTOP}Next`]: ``,
