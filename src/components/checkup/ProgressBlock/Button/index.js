@@ -13,8 +13,8 @@ const Button = styled.button`
   border-radius: ${({ active }) => (active ? '100px' : '0 5px 5px 0')};
   background-color: ${({ active }) => (active ? '#b62645' : '#ededed')};
   font-weight: ${({ enabled }) => (enabled ? 'bold' : 'normal')};
-  margin-top: 30px;
   outline: none;
+  margin-top: -11px;
   width: 30px;
 
   ${styledMap('format', {
