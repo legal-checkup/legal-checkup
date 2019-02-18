@@ -41,13 +41,13 @@ function AccessKeyBar ({ format, onKeyDown }) {
         data-testid={accessKeyB}
         type={KEYS.B}
         format={format}
-        tabIndex={-1}
+        tabIndex='-1'
       />
       <Label
         data-testid={accessKeyEsc}
         type={KEYS.esc}
         format={format}
-        tabIndex={-1}
+        tabIndex='-1'
       />
     </Bar>
   )
