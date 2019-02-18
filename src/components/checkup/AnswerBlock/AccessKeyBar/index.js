@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { connect } from 'react-redux'
 
+import { KEYS, KEY_CODES } from '../../../../state/constants'
 import {
   MOBILE,
   accessKeyA,
@@ -8,19 +8,17 @@ import {
   accessKeyBar,
   accessKeyEsc
 } from '../../../../constants'
-
 import {
+  nextQuestionRequested,
+  previousQuestionRequested,
   userRespondedWithNo,
   userRespondedWithNotSure,
-  userRespondedWithYes,
-  previousQuestionRequested,
-  nextQuestionRequested
+  userRespondedWithYes
 } from '../../../../state/actions'
-
-import { KEYS, KEY_CODES } from '../../../../state/constants'
 
 import Bar from './Bar'
 import Label from './Label'
+import { connect } from 'react-redux'
 
 const { useEffect } = React
 
@@ -33,9 +31,24 @@ function AccessKeyBar ({ format, onKeyDown }) {
 
   return format === MOBILE ? null : (
     <Bar data-testid={accessKeyBar} format={format}>
-      <Label data-testid={accessKeyA} type={KEYS.A} format={format} />
-      <Label data-testid={accessKeyB} type={KEYS.B} format={format} />
-      <Label data-testid={accessKeyEsc} type={KEYS.esc} format={format} />
+      <Label
+        data-testid={accessKeyA}
+        type={KEYS.A}
+        format={format}
+        tabIndex='-1'
+      />
+      <Label
+        data-testid={accessKeyB}
+        type={KEYS.B}
+        format={format}
+        tabIndex={-1}
+      />
+      <Label
+        data-testid={accessKeyEsc}
+        type={KEYS.esc}
+        format={format}
+        tabIndex={-1}
+      />
     </Bar>
   )
 }
