@@ -6,8 +6,8 @@ import makePreviousQuestionButton from '../wrappers/makePreviousQuestionButton'
 
 import Button from './Button'
 import CurrentTopic from './CurrentTopic'
-import ProgressBar from './ProgressBar'
 import DesktopProgressBar from './DesktopProgressBar'
+import ProgressBar from './ProgressBar'
 
 export default function (props) {
   const { format } = props

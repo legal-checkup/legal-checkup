@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 import AnswerBlock from '../../components/checkup/AnswerBlock'
 import ProgressBlock from '../../components/checkup/ProgressBlock'
 import QuestionBlock from '../../components/checkup/QuestionBlock'
+import Block from '../../components/layout/Block'
 import Footer from '../../components/layout/Footer'
 import Header from '../../components/layout/Header'
 import Section from '../../components/layout/Section'
@@ -18,8 +19,10 @@ function getLayout (format) {
       <Header format={format} />
       <Section>
         <ProgressBlock format={format} />
-        <QuestionBlock format={format} />
-        <AnswerBlock format={format} />
+        <Block format={format}>
+          <QuestionBlock format={format} />
+          <AnswerBlock format={format} />
+        </Block>
       </Section>
       <Footer format={format} />
     </>
@@ -32,15 +35,9 @@ export default function CheckUp () {
       <Helmet>
         <title>Checkup :: {WEBSITE}</title>
       </Helmet>
-      <Mobile>
-        {getLayout(MOBILE)}
-      </Mobile>
-      <Tablet>
-        {getLayout(TABLET)}
-      </Tablet>
-      <Desktop>
-        {getLayout(DESKTOP)}
-      </Desktop>
+      <Mobile>{getLayout(MOBILE)}</Mobile>
+      <Tablet>{getLayout(TABLET)}</Tablet>
+      <Desktop>{getLayout(DESKTOP)}</Desktop>
     </>
   )
 }

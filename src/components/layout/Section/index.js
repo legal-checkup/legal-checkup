@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { DESKTOP, TABLET, ABOUT_PAGE } from '../../../constants'
+import { DESKTOP, TABLET, MOBILE, ABOUT_PAGE } from '../../../constants'
+import styledMap from 'styled-map'
 
 const getMaxTextWidth = ({ format }) => {
   return format === DESKTOP || format === TABLET ? '920px' : null
@@ -19,6 +20,14 @@ const getTextPadding = ({ format }) => {
 const Section = styled.section`
   background-color: #eee;
   color: #333;
+  ${styledMap('format', {
+    [DESKTOP]: `
+      padding-bottom: 119px;`,
+    [MOBILE]: `
+    padding-bottom: 60px;`,
+    [TABLET]: `
+    padding-bottom: 270px;`
+  })}
 `
 Section.displayName = 'Section'
 

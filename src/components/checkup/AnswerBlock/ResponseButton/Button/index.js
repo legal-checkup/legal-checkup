@@ -1,22 +1,55 @@
 import styled from 'styled-components'
 
-import { NO, NOT_SURE, YES } from '../../../../../state/constants'
+import { DESKTOP, MOBILE, TABLET } from '../../../../../constants'
+import styledMap from 'styled-map'
+
+import { NOT_SURE } from '../../../../../state/constants'
+
+function setWidthButton (format, type) {
+  if (format === DESKTOP || format === TABLET) {
+    return type === NOT_SURE ? '155px' : '153px'
+  } else {
+    return type === NOT_SURE ? '105px' : '85px'
+  }
+}
+
+function setMarginRight (format, type) {
+  if (format === DESKTOP || format === TABLET) {
+    return type === NOT_SURE ? 0 : '10px'
+  } else {
+    return type === NOT_SURE ? 0 : '7px'
+  }
+}
 
 const Button = styled.button`
-  background-color: White;
-  border: solid 2px #b5b5b5;
-  border-right: ${({ type }) => (type === YES ? 0 : 'solid 2px #b5b5b5')};
-  border-top-left-radius: ${({ type }) => (type === NO ? 0 : '5px')};
-  border-top-right-radius: ${({ type }) => (type === YES ? 0 : '5px')};
-  border-bottom-left-radius: ${({ type }) => (type === NO ? 0 : '5px')};
-  border-bottom-right-radius: ${({ type }) => (type === YES ? 0 : '5px')};
+  background-color: #eeedea;
   height: 78px;
-  margin-left: ${({ type }) => (type === NOT_SURE ? '7px' : 0)};
-  width: ${({ type }) => (type === NOT_SURE ? '109px' : '88px')};
+  border: none;
+  font-family: 'Museo Sans Cyrl 500', sans-serif;
+  font-weight:500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  width: ${({ format, type }) => setWidthButton(format, type)};
+  margin-right: ${({ format, type }) => setMarginRight(format, type)};,
 
   &:after {
     content: '${({ type }) => type}';
   }
+  ${styledMap('format', {
+    [DESKTOP]: `
+    border-radius: 5px;
+    font-size:26px;`,
+    [MOBILE]: `
+    border-radius: 4px;
+    font-size:20px;
+    margin-bottom: 20px`,
+    [TABLET]: `
+    border-radius: 5px;
+    font-size:26px;`
+  })}
 `
 Button.displayName = 'Button'
 

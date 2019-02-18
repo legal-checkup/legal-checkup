@@ -10,6 +10,10 @@ export const FOR_EXAMPLE = 'For example - '
 export const WEBSITE = 'Legal Checkup'
 
 // Identifiers for testing
+export const accessKeyA = 'accessKeyA'
+export const accessKeyB = 'accessKeyB'
+export const accessKeyBar = 'accessKeyBar'
+export const accessKeyEsc = 'accessKeyEsc'
 export const btnYes = 'btnYes'
 export const btnNo = 'btnNo'
 export const footerWrapper = 'footerWrapper'
