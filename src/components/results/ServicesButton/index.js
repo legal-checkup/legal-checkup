@@ -16,6 +16,7 @@ const Button = styled.button`
   border-radius: 5px;
   border: solid 3px #ffffff;
   font-family: 'Museo Sans Cyrl 900', sans-serif;
+  font-weight: 900;
   font-size: 16px;
 `
 
