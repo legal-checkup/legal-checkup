@@ -47,7 +47,6 @@ export const ABOUT_PATH = '/about'
 export const CHECKUP_PATH = '/checkup'
 export const HELP_PATH = '/help'
 export const HOME_PATH = '/'
-export const PRIVACY_POLICY_PATH = '/privacy-policy'
 export const RESULTS_PATH = '/results'
 export const TERMS_OF_USE_PATH = '/terms-of-use'
 
