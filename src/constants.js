@@ -4,6 +4,7 @@ export const MOBILE = 'mobile'
 export const TABLET = 'tablet'
 
 export const ABOUT_PAGE = 'aboutPage'
+export const TERMS_PAGE = 'termsPage'
 
 // Text
 export const FOR_EXAMPLE = 'For example - '

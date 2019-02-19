@@ -3,21 +3,23 @@ import { Helmet } from 'react-helmet'
 
 import Footer from '../../components/layout/Footer'
 import Header from '../../components/layout/Header'
-import Section from '../../components/layout/Section'
 import Desktop from '../../components/responsive/Desktop'
 import Mobile from '../../components/responsive/Mobile'
 import Tablet from '../../components/responsive/Tablet'
-import { DESKTOP, MOBILE, TABLET, WEBSITE } from '../../constants'
+import { DESKTOP, MOBILE, TABLET, WEBSITE, TERMS_PAGE } from '../../constants'
+import TermsPageContent from '../../components/TermsPageContent'
+import { PageSection, PageTextContainer } from '../../components/layout/Section'
 
 function getLayout (format) {
   return (
     <>
       <Header format={format} />
-      <Section>
-        <p>
-          This is the <strong>TermsOfUse</strong> page
-        </p>
-      </Section>
+      <PageSection>
+        <PageTextContainer format={format} page={TERMS_PAGE}>
+          <TermsPageContent format={format} />
+        </PageTextContainer>
+      </PageSection>
+
       <Footer format={format} />
     </>
   )
@@ -29,15 +31,9 @@ export default function TermsOfUse () {
       <Helmet>
         <title>Terms of Use :: {WEBSITE}</title>
       </Helmet>
-      <Mobile>
-        {getLayout(MOBILE)}
-      </Mobile>
-      <Tablet>
-        {getLayout(TABLET)}
-      </Tablet>
-      <Desktop>
-        {getLayout(DESKTOP)}
-      </Desktop>
+      <Mobile>{getLayout(MOBILE)}</Mobile>
+      <Tablet>{getLayout(TABLET)}</Tablet>
+      <Desktop>{getLayout(DESKTOP)}</Desktop>
     </>
   )
 }
