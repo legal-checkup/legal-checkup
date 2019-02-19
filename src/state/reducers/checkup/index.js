@@ -20,6 +20,8 @@ import initialState from '../../initialState'
 import { navigate } from 'gatsby'
 
 export default function reducer (state = initialState, { payload = {}, type }) {
+  console.log(state)
+
   const { activeQuestionIndex } = payload
 
   switch (type) {
