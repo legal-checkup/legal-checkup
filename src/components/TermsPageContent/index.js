@@ -16,20 +16,6 @@ export default function TermsPageContent ({ format }) {
         amet, consectetur adipiscing elit. Nulla facilisis porta nulla, et
         fermentum leo dictum non.
       </PageText>
-      <PageHeading format={format}>Placeholder Text</PageHeading>
-      <PageText format={format}>
-        Nunc condimentum leo quis dapibus interdum. Proin nec odio quis augue
-        interdum ornare ac sed risus. Fusce ultrices commodo ex nec volutpat.
-        Nulla dolor eros, porttitor dictum mi et, mollis finibus quam. Aenean in
-        porta mi. Integer sed congue enim. Donec lacinia orci lectus, rutrum
-        suscipit magna sollicitudin et. Proin tempor ullamcorper mi, nec viverra
-        nisl egestas ut. Mauris pulvinar maximus leo, et cursus leo consectetur
-        eu. Ut sit amet gravida ex. Etiam consequat arcu eu sagittis mollis.
-        Vivamus id mauris pellentesque, vestibulum enim vel, blandit metus. Ut
-        ac est nec nibh facilisis tincidunt. Maecenas dictum nec tortor volutpat
-        tempus. Morbi sagittis diam at nisl ornare auctor. Phasellus et mauris
-        in nisl molestie eleifend a at enim.
-      </PageText>
     </>
   )
 }
