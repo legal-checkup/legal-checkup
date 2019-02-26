@@ -1,5 +1,10 @@
 import * as React from 'react'
+import { useReducer } from 'react'
+
+import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
+
+import reducer from './state/reducer'
 
 import AnswerBlock from '../../components/checkup/AnswerBlock'
 import ProgressBlock from '../../components/checkup/ProgressBlock'
@@ -29,7 +34,17 @@ function getLayout (format) {
   )
 }
 
-export default function CheckUp () {
+export default ({ data }, props) => {
+  const {
+    allGoogleSheetQuestionsRow: {
+      edges: [{ node: { id = '' } = {} }] = []
+    } = {}
+  } = data
+
+  const [state, dispatch] = useReducer(reducer, { initialQuestionID: id })
+
+  console.log(state)
+
   return (
     <>
       <Helmet>
@@ -41,3 +56,18 @@ export default function CheckUp () {
     </>
   )
 }
+
+export const query = graphql`
+  query {
+    allGoogleSheetQuestionsRow(
+      filter: { status: { eq: "Published" } }
+      limit: 1
+    ) {
+      edges {
+        node {
+          id
+        }
+      }
+    }
+  }
+`

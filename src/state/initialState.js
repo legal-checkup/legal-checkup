@@ -1,31 +1,5 @@
-import { graphql } from 'gatsby'
-import { isEmpty } from 'ramda'
-
-const getInitialState = () => {
-  const query = graphql`
-    {
-      allGoogleSheetQuestionsRow {
-        edges {
-          node {
-            id
-            status
-            topic
-            questiontext
-            helptext
-            resultstext
-            resourcelink
-          }
-        }
-      }
-    }
-  `
-
-  return isEmpty(query) ? 'Nothing returned' : query
-}
-
 // Initial state (temporary)
 const initialState = {
-  query: getInitialState(),
   checkup: {
     activeQuestionIndex: 0,
     topics: [
