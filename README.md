@@ -2,7 +2,7 @@
 
 Find a spot where you want to clone this repo onto your machine (eg: 'workspace').
 
-Type ```git clone https://github.com/PaperHat/legal-checkup.git && cd legal-blackout``` and hit enter.
+Type ```git clone https://github.com/PaperHat/legal-checkup.git && cd legal-checkup``` and hit enter.
 
 If you don't have Gatsby installed, type ```yarn global add gatsby-cli``` and hit that enter key.
 
