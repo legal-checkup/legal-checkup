@@ -1,18 +1,18 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.div`
-  width: 63px;
+  color: #b62645;
+  width: 36px;
   height: 17px;
-  font-family: Helvetica;
-  font-size: 14px;
-  font-weight: 300;
-  font-style: oblique;
+  font-family: MuseoSansCyrl;
+  font-size: 13px;
+  font-weight: 900;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  color: #000000;
   margin: 0px auto;
+  padding-top: 18px;
 `
 Wrapper.displayName = 'Wrapper'
 
