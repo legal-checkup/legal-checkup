@@ -11,7 +11,10 @@ import createRootReducer from './src/state/reducers'
 export default ({ element }) => {
   const epicMiddleware = createEpicMiddleware()
   const appliedMiddleware = applyMiddleware(epicMiddleware)
-  const middleware = compose(appliedMiddleware)
+  const middleware = compose(
+    appliedMiddleware,
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  )
   const store = createStore(createRootReducer(), initialState, middleware)
 
   epicMiddleware.run(rootEpic)

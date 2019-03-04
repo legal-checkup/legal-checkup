@@ -27,8 +27,17 @@ export default function ResultAccordion (props) {
   const { questions = [] } = topicObj
   const isExpanded = true
 
-  const headingRender = (onClick) => {
-    return <ResultTopicHeader format={format} name={topicObj.name} onClick={onClick} isExpanded={isExpanded} />
+  const headingRender = onClick => {
+    return (
+      <div>
+        <ResultTopicHeader
+          format={format}
+          name={topicObj.name}
+          onClick={onClick}
+          isExpanded={isExpanded}
+        />
+      </div>
+    )
   }
 
   const contentRender = () => {
@@ -37,7 +46,11 @@ export default function ResultAccordion (props) {
 
   return (
     <Boundary format={format}>
-      <Accordion heading={headingRender} content={contentRender} isExpanded={isExpanded} />
+      <Accordion
+        heading={headingRender}
+        content={contentRender}
+        isExpanded={isExpanded}
+      />
     </Boundary>
   )
 }
