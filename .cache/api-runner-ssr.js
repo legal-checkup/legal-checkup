@@ -1,11 +1,11 @@
 var plugins = [{
-      plugin: require('/Users/782333/Desktop/legal-checkup/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/Users/782333/Desktop/miscc/legal-checkup/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('/Users/782333/Desktop/legal-checkup/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/gatsby-icon.png"},
+      plugin: require('/Users/782333/Desktop/miscc/legal-checkup/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      options: {"plugins":[],"name":"gatsby-starter-default","short_name":"starter","start_url":"/","background_color":"##1d1b1b","display":"minimal-ui","icon":"src/images/logo.png"},
     },{
-      plugin: require('/Users/782333/Desktop/legal-checkup/gatsby-ssr'),
+      plugin: require('/Users/782333/Desktop/miscc/legal-checkup/gatsby-ssr'),
       options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:

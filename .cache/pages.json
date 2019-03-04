@@ -25,11 +25,6 @@
         "path": "/help/"
     },
     {
-        "componentChunkName": "component---src-pages-privacy-policy-index-js",
-        "jsonName": "privacy-policy-6b7",
-        "path": "/privacy-policy/"
-    },
-    {
         "componentChunkName": "component---src-pages-results-index-js",
         "jsonName": "results-057",
         "path": "/results/"
