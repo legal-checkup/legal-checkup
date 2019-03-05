@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { filter } from 'ramda'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import styledMap from 'styled-map'
@@ -6,6 +7,7 @@ import Accordion from '../../UIKit/Accordion'
 import ResultTopicHeader from '../ResultTopicHeader'
 import ResultTopicContent from '../ResultTopicContent'
 import { DESKTOP, MOBILE, TABLET } from '../../../constants'
+import { NO } from '../../../state/constants'
 
 const Boundary = styled.div`
   background-color: #fff;
@@ -29,19 +31,20 @@ export default function ResultAccordion (props) {
 
   const headingRender = onClick => {
     return (
-      <div>
-        <ResultTopicHeader
-          format={format}
-          name={topicObj.name}
-          onClick={onClick}
-          isExpanded={isExpanded}
-        />
-      </div>
+      <ResultTopicHeader
+        format={format}
+        name={topicObj.name}
+        onClick={onClick}
+        isExpanded={isExpanded}
+      />
     )
   }
 
   const contentRender = () => {
-    return <ResultTopicContent format={format} questions={questions} />
+    const showContent = question => question.answer !== NO
+    const filteredQuestions = filter(showContent, questions)
+
+    return <ResultTopicContent format={format} questions={filteredQuestions} />
   }
 
   return (
