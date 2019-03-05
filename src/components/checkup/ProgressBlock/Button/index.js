@@ -14,7 +14,7 @@ const Button = styled.button`
   background-color: ${({ active }) => (active ? '#b62645' : '#ededed')};
   font-weight: ${({ enabled }) => (enabled ? 'bold' : 'normal')};
   outline: none;
-  margin-top: -11px;
+  margin-top: -10px;
   width: 30px;
 
   ${styledMap('format', {
