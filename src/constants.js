@@ -62,5 +62,7 @@ export const GREYISH_BROWN = `#444141`
 // accent colors
 export const BROWNISH_GREY = `#706262`
 export const ROUGE = `#b62645`
+export const DARK_ROUGE = `#830312`
 export const DARK_SKY_BLUE = `#4a90e2`
 export const TRANSPARENT = `transparent`
+export const PINK = `#efcad1`

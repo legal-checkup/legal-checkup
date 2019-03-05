@@ -6,7 +6,9 @@ import {
   MOBILE,
   ROUGE,
   WHITE,
-  BLACK
+  BLACK,
+  PINK,
+  DARK_ROUGE
 } from '../../../../constants'
 
 const getStartButtonMargin = ({ format }) => {
@@ -42,6 +44,9 @@ const baseButtonStyle = css`
   &:hover {
     cursor: pointer;
   }
+  &:focus {
+    outline: 0;
+  }
 `
 
 const StartCheckupButton = styled.button`
@@ -57,6 +62,21 @@ const StartCheckupButton = styled.button`
 
   background-color: ${ROUGE};
   color: ${WHITE};
+
+  &:hover {
+    background-color: ${BLACK};
+  }
+  &:active {
+    background-color: ${PINK};
+    color: ${ROUGE};
+  }
+  &:focus {
+    background-color: ${DARK_ROUGE};
+  }
+  &:focus:active {
+    background-color: ${PINK};
+    color: ${ROUGE};
+  }
 
   font-size: 20px;
 `
@@ -78,6 +98,25 @@ const AboutCommunityLawButton = styled.a`
   border: 3px solid ${WHITE};
 
   font-size: 16px;
+
+  &:hover {
+    background-color: ${BLACK};
+    color: ${WHITE};
+  }
+  &:active {
+    background-color: ${PINK};
+    color: ${ROUGE};
+  }
+  &:focus {
+    background-color: ${DARK_ROUGE};
+    color: ${WHITE};
+    border: 0;
+  }
+  &:focus:active {
+    background-color: ${PINK};
+    color: ${ROUGE};
+    border: 0;
+  }
 `
 AboutCommunityLawButton.displayName = 'StyledAboutCommunityLawButton'
 
@@ -92,6 +131,25 @@ const CommunityLawServicesButton = styled.a`
   border: 3px solid ${WHITE};
 
   font-size: 16px;
+
+  &:hover {
+    background-color: ${BLACK};
+    color: ${WHITE};
+  }
+  &:active {
+    background-color: ${PINK};
+    color: ${ROUGE};
+  }
+  &:focus {
+    background-color: ${DARK_ROUGE};
+    color: ${WHITE};
+    border: 0;
+  }
+  &:focus:active {
+    background-color: ${PINK};
+    color: ${ROUGE};
+    border: 0;
+  }
 `
 CommunityLawServicesButton.displayName = 'StyledCommunityLawServicesButton'
 
