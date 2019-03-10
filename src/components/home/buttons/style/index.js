@@ -4,7 +4,6 @@ import {
   DESKTOP,
   TABLET,
   MOBILE,
-  ROUGE,
   WHITE,
   BLACK,
   BACKGROUND_BUTTON,
