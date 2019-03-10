@@ -7,8 +7,17 @@ import {
   ROUGE,
   WHITE,
   BLACK,
-  PINK,
-  DARK_ROUGE
+  BACKGROUND_BUTTON,
+  FOREGROUND_BUTTON_ACTIVE,
+  FOREGROUND_BUTTON_FOCUS_ACTIVE,
+  FOREGROUND_LINK_ACTIVE,
+  FOREGROUND_LINK_FOCUS_ACTIVE,
+  BACKGROUND_BUTTON_FOCUS,
+  BACKGROUND_LINK_FOCUS,
+  BACKGROUND_BUTTON_ACTIVE,
+  BACKGROUND_BUTTON_FOCUS_ACTIVE,
+  BACKGROUND_LINK_ACTIVE,
+  BACKGROUND_LINK_FOCUS_ACTIVE
 } from '../../../../constants'
 
 const getStartButtonMargin = ({ format }) => {
@@ -60,22 +69,22 @@ const StartCheckupButton = styled.button`
 
   border: none;
 
-  background-color: ${ROUGE};
+  background-color: ${BACKGROUND_BUTTON};
   color: ${WHITE};
 
   &:hover {
     background-color: ${BLACK};
   }
   &:active {
-    background-color: ${PINK};
-    color: ${ROUGE};
+    background-color: ${BACKGROUND_BUTTON_ACTIVE};
+    color: ${FOREGROUND_BUTTON_ACTIVE};
   }
   &:focus {
-    background-color: ${DARK_ROUGE};
+    background-color: ${BACKGROUND_BUTTON_FOCUS};
   }
   &:focus:active {
-    background-color: ${PINK};
-    color: ${ROUGE};
+    background-color: ${BACKGROUND_BUTTON_FOCUS_ACTIVE};
+    color: ${FOREGROUND_BUTTON_FOCUS_ACTIVE};
   }
 
   font-size: 20px;
@@ -104,17 +113,17 @@ const AboutCommunityLawButton = styled.a`
     color: ${WHITE};
   }
   &:active {
-    background-color: ${PINK};
-    color: ${ROUGE};
+    background-color: ${BACKGROUND_LINK_ACTIVE};
+    color: ${FOREGROUND_LINK_ACTIVE};
   }
   &:focus {
-    background-color: ${DARK_ROUGE};
+    background-color: ${BACKGROUND_LINK_FOCUS};
     color: ${WHITE};
     border: 0;
   }
   &:focus:active {
-    background-color: ${PINK};
-    color: ${ROUGE};
+    background-color: ${BACKGROUND_LINK_FOCUS_ACTIVE};
+    color: ${FOREGROUND_LINK_FOCUS_ACTIVE};
     border: 0;
   }
 `
@@ -137,17 +146,17 @@ const CommunityLawServicesButton = styled.a`
     color: ${WHITE};
   }
   &:active {
-    background-color: ${PINK};
-    color: ${ROUGE};
+    background-color: ${BACKGROUND_LINK_ACTIVE};
+    color: ${FOREGROUND_LINK_ACTIVE};
   }
   &:focus {
-    background-color: ${DARK_ROUGE};
+    background-color: ${BACKGROUND_LINK_FOCUS};
     color: ${WHITE};
     border: 0;
   }
   &:focus:active {
-    background-color: ${PINK};
-    color: ${ROUGE};
+    background-color: ${BACKGROUND_LINK_FOCUS_ACTIVE};
+    color: ${FOREGROUND_LINK_FOCUS_ACTIVE};
     border: 0;
   }
 `

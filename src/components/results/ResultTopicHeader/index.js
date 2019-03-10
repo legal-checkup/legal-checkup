@@ -1,7 +1,14 @@
 import * as React from 'react'
 import styled from 'styled-components'
 import styledMap from 'styled-map'
-import { DESKTOP, MOBILE, TABLET } from '../../../constants'
+import {
+  DESKTOP,
+  MOBILE,
+  TABLET,
+  RESULT_TOPIC_HEADER_FOREGROUND_BUTTON,
+  RESULT_TOPIC_HEADER_BORDER_TOP,
+  RESULT_TOPIC_HEADER_BORDER_BOTTOM
+} from '../../../constants'
 
 const { useState } = React
 
@@ -15,12 +22,12 @@ const Button = styled.button`
   font-family: 'Museo Sans Cyrl 500', sans-serif;
   font-weight: 500;
   font-size: 12px;
-  color: #706262;
+  color: ${RESULT_TOPIC_HEADER_FOREGROUND_BUTTON};
   background-color: #fff;
   padding: 1px 4px;
   border-style: none;
   &:focus {
-    outline:0;
+    outline: 0;
   }
 `
 
@@ -47,7 +54,7 @@ const CaretDown = styled.span`
     position: absolute;
     top: 4px;
     left: 0;
-    border-top: 8px solid #706262;
+    border-top: 8px solid ${RESULT_TOPIC_HEADER_BORDER_TOP};
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
   }
@@ -74,7 +81,7 @@ const CaretUp = styled.span`
     position: absolute;
     top: 4px;
     left: 0;
-    border-bottom: 8px solid #706262;
+    border-bottom: 8px solid ${RESULT_TOPIC_HEADER_BORDER_BOTTOM};
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
   }
@@ -102,7 +109,11 @@ export default function ResultTopicHeader (props) {
 
   return (
     <Boundary>
-      <Header format={format} >{name}</Header><Button onClick={btnClicked}>{showText}{showCaret}</Button>
+      <Header format={format}>{name}</Header>
+      <Button onClick={btnClicked}>
+        {showText}
+        {showCaret}
+      </Button>
     </Boundary>
   )
 }
