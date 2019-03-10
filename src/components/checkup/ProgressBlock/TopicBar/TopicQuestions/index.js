@@ -9,7 +9,7 @@ const TopicQuestions = styled.div`
   margin-right: 5px;
   background-color: transparent;
   display: inline-block;
-  color: ${({ activeTopic }) => (activeTopic ? '#b62645' : '#ededed')};
+  color: ${({ activeTopic }) => (activeTopic ? '#b62645' : '#a1a1a1')};
 `
 
 TopicQuestions.displayName = 'StyledTopicQuestions'
