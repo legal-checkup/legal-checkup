@@ -5,18 +5,23 @@ import {
   MOBILE,
   TABLET,
   WHITE,
-  ROUGE,
+  FOREGROUND_LINK_ACTIVE,
+  BORDER_LINK_ACTIVE,
   OFF_WHITE,
   TRANSPARENT
 } from '../../../../constants'
 
 export function getLinkColor ({ format = '', active } = {}) {
-  return includes('Header', format) && active ? `${ROUGE}` : `${WHITE}`
+  return includes('Header', format) && active
+    ? `${FOREGROUND_LINK_ACTIVE}`
+    : `${WHITE}`
 }
 
 export function getLinkBorder ({ format = '', active } = {}) {
   if (format === `${DESKTOP}Header` || format === `${TABLET}Header`) {
-    return active === true ? `2px solid ${ROUGE}` : `2px solid ${TRANSPARENT}`
+    return active
+      ? `2px solid ${BORDER_LINK_ACTIVE}`
+      : `2px solid ${TRANSPARENT}`
   }
   return null
 }
@@ -26,7 +31,7 @@ export function getLinkBackgroundColor ({ format = '', active } = {}) {
 }
 
 export function getLinkFontWeight ({ format = '', active } = {}) {
-  if (format === `${MOBILE}Header` && active === true) {
+  if (format === `${MOBILE}Header` && active) {
     return 900
   }
   return 500
