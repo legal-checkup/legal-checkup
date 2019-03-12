@@ -70,6 +70,7 @@ export const RESULT_TOPIC_HEADER_BORDER_BOTTOM = BROWNISH_GREY
 
 export const ROUGE = `#b62645`
 export const BACKGROUND_BUTTON = ROUGE
+export const BUTTON_BORDER_FOCUS = ROUGE
 export const FOREGROUND_BUTTON_ACTIVE = ROUGE
 export const FOREGROUND_BUTTON_FOCUS_ACTIVE = ROUGE
 export const FOREGROUND_LINK_ACTIVE = ROUGE
@@ -89,5 +90,6 @@ export const BACKGROUND_BUTTON_ACTIVE = PINK
 export const BACKGROUND_BUTTON_FOCUS_ACTIVE = PINK
 export const BACKGROUND_LINK_ACTIVE = PINK
 export const BACKGROUND_LINK_FOCUS_ACTIVE = PINK
+export const RED = `#`
 
 // new added or like you know just so your mind knows what it's doing

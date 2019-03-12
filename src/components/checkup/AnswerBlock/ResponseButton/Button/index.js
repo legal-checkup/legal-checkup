@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import {
   BACKGROUND_BUTTON,
-  BACKGROUND_BUTTON_FOCUS,
+  BUTTON_BORDER_FOCUS,
   BLACK,
   DESKTOP,
   MOBILE,
@@ -55,9 +55,10 @@ const Button = styled.button`
     background-color: ${BLACK};
     color: ${WHITE};
   }
-  &:focus {
-    background-color: ${BACKGROUND_BUTTON_FOCUS};
-    color: ${WHITE}
+  &:focus{
+    outline: 0px;
+    border-color: ${BUTTON_BORDER_FOCUS}
+    border-style: solid;
   }
   &:focus:active {
     background-color: ${BLACK};
