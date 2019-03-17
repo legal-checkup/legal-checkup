@@ -9,11 +9,12 @@ const ProgressBar = styled.nav`
   width: 100%;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
-  letter-spacing: normal;
+  justify-content: space-evenly;
+  flex-basis: fit-content;
+  flex-shrink: 1;
   text-align: center;
   margin: 0 auto;
-  padding-top: 150px;
+  padding-top: 90px;
 
   ${styledMap('format', {
     [DESKTOP]: ``,

@@ -23,7 +23,7 @@ function TopicBar ({
 }) {
   return (
     <TopicQuestions activeTopic={activeTopic}>
-      <TopicName>{topic}</TopicName>
+      <TopicName activeTopic={activeTopic}>{topic}</TopicName>
       <div>
         {isNonEmptyArray(topicQuestions) &&
           map(({ id, index }) => {

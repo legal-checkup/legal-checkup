@@ -7,7 +7,6 @@ const TopicQuestions = styled.div`
   margin-bottom: 20px;
   margin-left: -5px;
   margin-right: 5px;
-  background-color: transparent;
   display: inline-block;
   color: ${({ activeTopic }) => (activeTopic ? '#b62645' : '#a1a1a1')};
 `
