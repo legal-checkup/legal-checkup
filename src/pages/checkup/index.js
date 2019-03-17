@@ -1,10 +1,10 @@
 import * as React from 'react'
-import { useReducer } from 'react'
+
+import { connect } from 'react-redux'
+import { questionsLoaded } from '../../state/actions'
 
 import { graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
-
-import reducer from './state/reducer'
 
 import AnswerBlock from '../../components/checkup/AnswerBlock'
 import ProgressBlock from '../../components/checkup/ProgressBlock'
@@ -17,6 +17,8 @@ import Desktop from '../../components/responsive/Desktop'
 import Mobile from '../../components/responsive/Mobile'
 import Tablet from '../../components/responsive/Tablet'
 import { DESKTOP, MOBILE, TABLET, WEBSITE } from '../../constants'
+
+const { useEffect } = React
 
 function getLayout (format) {
   return (
@@ -34,16 +36,14 @@ function getLayout (format) {
   )
 }
 
-export default ({ data }, props) => {
-  const {
-    allGoogleSheetQuestionsRow: {
-      edges: [{ node: { id = '' } = {} }] = []
-    } = {}
-  } = data
+function App ({ data, dispatch }) {
+  useEffect(() => {
+    handleQuestions()
+  }, [])
 
-  const [state, dispatch] = useReducer(reducer, { initialQuestionID: id })
-
-  console.log(state)
+  function handleQuestions () {
+    return dispatch(questionsLoaded(data))
+  }
 
   return (
     <>
@@ -58,16 +58,20 @@ export default ({ data }, props) => {
 }
 
 export const query = graphql`
-  query {
-    allGoogleSheetQuestionsRow(
-      filter: { status: { eq: "Published" } }
-      limit: 1
-    ) {
+  {
+    allGoogleSheetQuestionsRow(filter: { status: { eq: "Published" } }) {
       edges {
         node {
           id
+          topic
+          questiontext
+          helptext
+          resultstext
+          resourcelink
         }
       }
     }
   }
 `
+
+export default connect()(App)
