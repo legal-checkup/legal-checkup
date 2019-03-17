@@ -20,7 +20,7 @@ function Expander () {
 function allGood () {
   return (
     <div>
-      <p>You're all done.</p>
+      <div>You're all done.</div>
       <h1>Results</h1>
       <p data-testid={allGoodText}>
         Based on your answers, it looks like you're in good legal health! But if
@@ -34,7 +34,7 @@ function allGood () {
 function needHelp (results, format) {
   return (
     <div>
-      <p>You're all done.</p>
+      <div>You're all done.</div>
       <h1>Results</h1>
       <p data-testid={needHelpParagraph1}>
         {' '}
