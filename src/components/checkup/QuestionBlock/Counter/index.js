@@ -5,7 +5,7 @@ import {
   getQuestionCount
 } from '../../../../state/selectors'
 
-import Wrapper from './Wrapper'
+import StyledCounter from './style'
 
 function mapStateToProps ({ checkup }) {
   const children = `${getActiveQuestionIndex(checkup) + 1} / ${getQuestionCount(
@@ -15,4 +15,4 @@ function mapStateToProps ({ checkup }) {
   return { children }
 }
 
-export default connect(mapStateToProps)(Wrapper)
+export default connect(mapStateToProps)(StyledCounter)

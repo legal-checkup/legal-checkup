@@ -7,7 +7,7 @@ import QuestionBlock from '../../components/checkup/QuestionBlock'
 import Block from '../../components/layout/Block'
 import Footer from '../../components/layout/Footer'
 import Header from '../../components/layout/Header'
-import Section from '../../components/layout/Section'
+import Section, { ContentWrapper } from '../../components/layout/Section'
 import Desktop from '../../components/responsive/Desktop'
 import Mobile from '../../components/responsive/Mobile'
 import Tablet from '../../components/responsive/Tablet'
@@ -16,13 +16,15 @@ import { DESKTOP, MOBILE, TABLET, WEBSITE } from '../../constants'
 function getLayout (format) {
   return (
     <>
-      <Header format={format} />
-      <Section>
-        <ProgressBlock format={format} />
-        <Block format={format}>
-          <QuestionBlock format={format} />
-          <AnswerBlock format={format} />
-        </Block>
+      <Section format={format}>
+        <Header format={format} />
+        <ContentWrapper format={format}>
+          <ProgressBlock format={format} />
+          <Block format={format}>
+            <QuestionBlock format={format} />
+            <AnswerBlock format={format} />
+          </Block>
+        </ContentWrapper>
       </Section>
       <Footer format={format} />
     </>

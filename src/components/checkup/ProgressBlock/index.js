@@ -27,7 +27,7 @@ export default function (props) {
       return (
         <ProgressBar>
           <PreviousQuestionButton format={TABLET} />
-          <CurrentTopic />
+          <DesktopProgressBar />
           <NextQuestionButton format={TABLET} />
         </ProgressBar>
       )

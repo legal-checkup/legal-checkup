@@ -1,14 +1,12 @@
 import styled from 'styled-components'
+import posed from 'react-pose'
+
 import { DESKTOP, MOBILE, TABLET } from '../../../../../constants'
 import styledMap from 'styled-map'
 
-const Wrapper = styled.div`
+const Question = styled.div`
   font-family: 'Museo Sans Cyrl 500', sans-serif;
-  background-color: #ffffff;
   font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: normal;
   text-align: center;
   margin: 0px auto;
   ${styledMap('format', {
@@ -33,6 +31,15 @@ const Wrapper = styled.div`
   padding-right: 40px;`
   })}
 `
-Wrapper.displayName = 'Wrapper'
+Question.displayName = 'StyledQuestion'
 
-export default Wrapper
+const PosedQuestion = posed(Question)({
+  enter: {
+    opacity: 1
+  },
+  exit: {
+    opacity: 0
+  }
+})
+
+export default PosedQuestion

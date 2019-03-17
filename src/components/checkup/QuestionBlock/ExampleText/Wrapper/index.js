@@ -9,7 +9,6 @@ const Wrapper = styled.div`
   padding-top: 9px;
   text-align: center;
   color: #9b9b9b;
-  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.2);
   ${styledMap('format', {
     [DESKTOP]: `
     width: 440px;
