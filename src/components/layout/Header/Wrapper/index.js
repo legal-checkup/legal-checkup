@@ -6,7 +6,7 @@ import {
   MOBILE,
   TABLET,
   BLACK,
-  GREYISH_BROWN
+  HEADER_BORDER_BOTTOM
 } from '../../../../constants'
 
 const Wrapper = styled.header`
@@ -19,12 +19,12 @@ const Wrapper = styled.header`
       height: 100px;
       flex-direction: row;
       align-items: center;
-      border-bottom: 7px solid ${GREYISH_BROWN};
+      border-bottom: 7px solid ${HEADER_BORDER_BOTTOM};
     `,
     [`${TABLET}`]: `
       height: 85px;
       flex-direction: row;
-      border-bottom: 7px solid ${GREYISH_BROWN};
+      border-bottom: 7px solid ${HEADER_BORDER_BOTTOM};
       align-items: center;
     `,
     [`${MOBILE}`]: `

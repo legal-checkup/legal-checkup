@@ -4,17 +4,22 @@ import styledMap from 'styled-map'
 import { DESKTOP, MOBILE, TABLET } from '../../../../constants'
 
 const ProgressBar = styled.nav`
-  background-color: #fff;
+  background-color: #eeedea;
   display: flex;
+  width: 100%;
+  flex-wrap: nowrap;
+  align-items: center;
   justify-content: center;
-  margin: 20px 0;
+  letter-spacing: normal;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 150px;
 
   ${styledMap('format', {
     [DESKTOP]: ``,
     [MOBILE]: ``,
     [TABLET]: ``
   })}
-
 `
 
 ProgressBar.displayName = 'ProgressBar'

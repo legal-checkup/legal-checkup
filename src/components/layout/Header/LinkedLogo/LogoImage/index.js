@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { LOGO_BROWNISH } from '../../../../../constants'
+
 export default function LogoImage () {
   return (
     <svg
@@ -14,7 +16,7 @@ export default function LogoImage () {
           d='M5.333 15.238v-4.571h4.572v4.571zM0 15.238V5.333h4.571v9.905zM10.667 9.905V0h4.571v9.905zM5.333 4.571V0h4.572v4.571z'
         />
         <path
-          fill='#706262'
+          fill={`${LOGO_BROWNISH}`}
           d='M0 0h4.571v4.571H0zM5.333 5.333h4.571v4.571H5.333zM10.667 10.667h4.571v4.571h-4.571z'
         />
         <g>
@@ -29,7 +31,7 @@ export default function LogoImage () {
         </g>
         <g>
           <path
-            fill='#706262'
+            fill={`${LOGO_BROWNISH}`}
             d='M16.762 5.333h4.571v4.572h-4.571zM16.762 0h9.905v4.571h-9.905zM22.095 10.667H32v4.571h-9.905zM27.429 5.333H32v4.572h-4.571z'
           />
           <path
