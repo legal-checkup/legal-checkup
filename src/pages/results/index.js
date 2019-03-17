@@ -15,7 +15,7 @@ function getLayout (format) {
   return (
     <>
       <Header format={format} />
-      <Section>
+      <Section format={format}>
         <Hero format={format} />
         <RedoButton format={format} />
       </Section>
@@ -30,15 +30,9 @@ export default function Results () {
       <Helmet>
         <title>Results :: {WEBSITE}</title>
       </Helmet>
-      <Mobile>
-        {getLayout(MOBILE)}
-      </Mobile>
-      <Tablet>
-        {getLayout(TABLET)}
-      </Tablet>
-      <Desktop>
-        {getLayout(DESKTOP)}
-      </Desktop>
+      <Mobile>{getLayout(MOBILE)}</Mobile>
+      <Tablet>{getLayout(TABLET)}</Tablet>
+      <Desktop>{getLayout(DESKTOP)}</Desktop>
     </>
   )
 }

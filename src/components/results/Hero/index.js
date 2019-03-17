@@ -11,7 +11,7 @@ import {
   expanderText
 } from '../../../constants'
 import ResultAccordion from '../ResultAccordion'
-
+import { NO } from '../../../state/constants'
 function Expander () {
   return <p data-testid={expanderText}>expander here</p>
 }
@@ -30,7 +30,7 @@ function allGood () {
   )
 }
 
-function needHelp (results) {
+function needHelp (results, format) {
   return (
     <div>
       <p>You're all done.</p>
@@ -41,8 +41,14 @@ function needHelp (results) {
       </p>
       {/* <Expander data-testid={needHelpExpander} /> */}
 
-      {results.map((result, index) => {
-        return <ResultAccordion topicObj={result} />
+      {results.map(topicName => {
+        if (
+          topicName.questions.filter(question => question.answer !== NO)
+            .length > 0
+        ) {
+          return <ResultAccordion format={format} topicName={topicName} />
+        } else {
+        }
       })}
 
       <p data-testid={needHelpParagraph2}>
@@ -53,10 +59,10 @@ function needHelp (results) {
   )
 }
 
-function Hero ({ resultType, results }) {
+function Hero ({ resultType, results, format }) {
   switch (resultType) {
     case NEED_HELP_RESULT:
-      return needHelp(results)
+      return needHelp(results, format)
     default:
       return allGood()
   }

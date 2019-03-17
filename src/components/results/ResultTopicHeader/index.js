@@ -20,7 +20,7 @@ const Button = styled.button`
   padding: 1px 4px;
   border-style: none;
   &:focus {
-    outline:0;
+    outline: 0;
   }
 `
 
@@ -99,10 +99,13 @@ export default function ResultTopicHeader (props) {
     setExpanded(!expanded)
     onClick()
   }
-
   return (
     <Boundary>
-      <Header format={format} >{name}</Header><Button onClick={btnClicked}>{showText}{showCaret}</Button>
+      <Header format={format}>{name}</Header>
+      <Button onClick={btnClicked}>
+        {showText}
+        {showCaret}
+      </Button>
     </Boundary>
   )
 }
