@@ -27,7 +27,7 @@ const Boundary = styled.div`
 export default function ResultAccordion (props) {
   const { format, topicName = {} } = props
   const { questions = [] } = topicName
-  const isExpanded = true
+  const isExpanded = false
   const headingRender = onClick => {
     return (
       <ResultTopicHeader
@@ -40,10 +40,7 @@ export default function ResultAccordion (props) {
   }
 
   const contentRender = () => {
-    const showContent = question => question.answer !== NO
-    const filteredQuestions = filter(showContent, questions)
-
-    return <ResultTopicContent format={format} questions={filteredQuestions} />
+    return <ResultTopicContent format={format} questions={questions} />
   }
   return (
     <Boundary format={format}>
@@ -58,5 +55,5 @@ export default function ResultAccordion (props) {
 
 ResultAccordion.propTypes = {
   format: PropTypes.string.isRequired,
-  topicObj: PropTypes.object.isRequired
+  topicName: PropTypes.object.isRequired
 }
