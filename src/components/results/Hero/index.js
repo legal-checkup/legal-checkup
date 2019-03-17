@@ -12,6 +12,7 @@ import {
 } from '../../../constants'
 import ResultAccordion from '../ResultAccordion'
 import { NO } from '../../../state/constants'
+
 function Expander () {
   return <p data-testid={expanderText}>expander here</p>
 }

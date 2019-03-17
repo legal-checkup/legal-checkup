@@ -11,16 +11,16 @@ import { NO } from '../../../state/constants'
 
 const Boundary = styled.div`
   background-color: #fff;
-  margin-bottom: 15px;
+  margin: 15px auto;
   padding: ${styledMap('format', {
     [DESKTOP]: '23px 24px 21px 30px',
     [TABLET]: '16px 20px 12px 20px',
     [MOBILE]: '16px 20px 12px 20px'
   })};
   width: ${styledMap('format', {
-    [DESKTOP]: '920px',
-    [TABLET]: '315px',
-    [MOBILE]: '315px'
+    [DESKTOP]: '866px',
+    [TABLET]: '275px',
+    [MOBILE]: '275px'
   })};
 `
 
