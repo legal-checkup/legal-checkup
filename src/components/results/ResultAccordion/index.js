@@ -40,7 +40,9 @@ export default function ResultAccordion (props) {
   }
 
   const contentRender = () => {
-    return <ResultTopicContent format={format} questions={questions} />
+    const showContent = question => question.answer !== NO
+    const filteredQuestion = filter(showContent, questions)
+    return <ResultTopicContent format={format} questions={filteredQuestion} />
   }
   return (
     <Boundary format={format}>
