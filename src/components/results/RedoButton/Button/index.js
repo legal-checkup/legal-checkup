@@ -1,7 +1,13 @@
 import styled from 'styled-components'
 import styledMap from 'styled-map'
 
-import { DESKTOP, MOBILE, TABLET } from '../../../../constants'
+import {
+  DESKTOP,
+  MOBILE,
+  TABLET,
+  BACKGROUND_BUTTON,
+  WHITE
+} from '../../../../constants'
 
 const Button = styled.div`
   border-radius: 5px;
@@ -13,6 +19,11 @@ const Button = styled.div`
   color: #b62645;
   text-decoration: none;
   margin: auto;
+
+  &:hover {
+    background-color: ${BACKGROUND_BUTTON};
+    color: ${WHITE};
+  }
 
   ${styledMap('format', {
     [DESKTOP]: `
