@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet'
 import Footer from '../../components/layout/Footer'
 import Header from '../../components/layout/Header'
 import Section from '../../components/layout/Section'
+import Grid from '../../components/layout/Grid'
 import Desktop from '../../components/responsive/Desktop'
 import Mobile from '../../components/responsive/Mobile'
 import Tablet from '../../components/responsive/Tablet'
@@ -15,9 +16,11 @@ function getLayout (format) {
   return (
     <>
       <Header format={format} />
-      <Section>
-        <Hero format={format} />
-        <RedoButton format={format} />
+      <Section format={format}>
+        <Grid format={format}>
+          <Hero format={format} />
+          <RedoButton format={format} />
+        </Grid>
       </Section>
       <Footer format={format} />
     </>
@@ -30,15 +33,9 @@ export default function Results () {
       <Helmet>
         <title>Results :: {WEBSITE}</title>
       </Helmet>
-      <Mobile>
-        {getLayout(MOBILE)}
-      </Mobile>
-      <Tablet>
-        {getLayout(TABLET)}
-      </Tablet>
-      <Desktop>
-        {getLayout(DESKTOP)}
-      </Desktop>
+      <Mobile>{getLayout(MOBILE)}</Mobile>
+      <Tablet>{getLayout(TABLET)}</Tablet>
+      <Desktop>{getLayout(DESKTOP)}</Desktop>
     </>
   )
 }

@@ -21,12 +21,12 @@ const Button = styled.div`
       width: 920px;
     `,
     [MOBILE]: `
-      width: 310px;
+      width: 263px;
       height: 24px;
       padding: 28px 26px 26px;
     `,
     [TABLET]: `
-      width: 310px;
+      width: 263px;
       height: 24px;
       padding: 28px 26px 26px;
     `

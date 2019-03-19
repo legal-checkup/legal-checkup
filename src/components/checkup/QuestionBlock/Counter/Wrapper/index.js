@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
   color: #b62645;
-  width: 36px;
+  width: 50px;
   height: 17px;
   font-family: MuseoSansCyrl;
   font-size: 13px;
