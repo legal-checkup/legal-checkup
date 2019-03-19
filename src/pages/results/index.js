@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 
 import Section from '../../components/layout/Section'
 
+import Grid from '../../components/layout/Grid'
 import Hero from '../../components/results/Hero'
 import RedoButton from '../../components/results/RedoButton'
 import { WEBSITE } from '../../constants'
@@ -17,8 +18,10 @@ export default function Results () {
       <FormatConsumer>
         {value => (
           <Section>
-            <Hero format={value} />
-            <RedoButton format={value} />
+            <Grid format={value}>
+              <Hero format={value} />
+              <RedoButton format={value} />
+            </Grid>
           </Section>
         )}
       </FormatConsumer>

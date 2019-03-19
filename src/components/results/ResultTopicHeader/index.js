@@ -106,7 +106,6 @@ export default function ResultTopicHeader (props) {
     setExpanded(!expanded)
     onClick()
   }
-
   return (
     <Boundary>
       <Header format={format}>{name}</Header>

@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { filter } from 'ramda'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import styledMap from 'styled-map'
@@ -6,43 +7,55 @@ import Accordion from '../../UIKit/Accordion'
 import ResultTopicHeader from '../ResultTopicHeader'
 import ResultTopicContent from '../ResultTopicContent'
 import { DESKTOP, MOBILE, TABLET } from '../../../constants'
+import { NO } from '../../../state/constants'
 
 const Boundary = styled.div`
   background-color: #fff;
-  margin-bottom: 15px;
+  margin: 15px auto;
   padding: ${styledMap('format', {
     [DESKTOP]: '23px 24px 21px 30px',
     [TABLET]: '16px 20px 12px 20px',
     [MOBILE]: '16px 20px 12px 20px'
   })};
   width: ${styledMap('format', {
-    [DESKTOP]: '920px',
-    [TABLET]: '315px',
-    [MOBILE]: '315px'
+    [DESKTOP]: '866px',
+    [TABLET]: '275px',
+    [MOBILE]: '275px'
   })};
 `
 
 export default function ResultAccordion (props) {
-  const { format, topicObj = {} } = props
-  const { questions = [] } = topicObj
-  const isExpanded = true
-
-  const headingRender = (onClick) => {
-    return <ResultTopicHeader format={format} name={topicObj.name} onClick={onClick} isExpanded={isExpanded} />
+  const { format, topicName = {} } = props
+  const { questions = [] } = topicName
+  const isExpanded = false
+  const headingRender = onClick => {
+    return (
+      <ResultTopicHeader
+        format={format}
+        name={topicName.name}
+        onClick={onClick}
+        isExpanded={isExpanded}
+      />
+    )
   }
 
   const contentRender = () => {
-    return <ResultTopicContent format={format} questions={questions} />
+    const showContent = question => question.answer !== NO
+    const filteredQuestion = filter(showContent, questions)
+    return <ResultTopicContent format={format} questions={filteredQuestion} />
   }
-
   return (
     <Boundary format={format}>
-      <Accordion heading={headingRender} content={contentRender} isExpanded={isExpanded} />
+      <Accordion
+        heading={headingRender}
+        content={contentRender}
+        isExpanded={isExpanded}
+      />
     </Boundary>
   )
 }
 
 ResultAccordion.propTypes = {
   format: PropTypes.string.isRequired,
-  topicObj: PropTypes.object.isRequired
+  topicName: PropTypes.object.isRequired
 }
