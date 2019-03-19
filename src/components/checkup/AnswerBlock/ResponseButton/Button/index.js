@@ -1,6 +1,14 @@
 import styled from 'styled-components'
 
-import { DESKTOP, MOBILE, TABLET } from '../../../../../constants'
+import {
+  BACKGROUND_BUTTON,
+  BUTTON_BORDER_FOCUS,
+  BLACK,
+  DESKTOP,
+  MOBILE,
+  TABLET,
+  WHITE
+} from '../../../../../constants'
 import styledMap from 'styled-map'
 
 import { NOT_SURE } from '../../../../../state/constants'
@@ -38,6 +46,25 @@ const Button = styled.button`
   &:after {
     content: '${({ type }) => type}';
   }
+
+  &:hover {
+    background-color: ${BACKGROUND_BUTTON};
+    color: ${WHITE};
+  }
+  &:active {
+    background-color: ${BLACK};
+    color: ${WHITE};
+  }
+  &:focus{
+    outline: 0px;
+    border-color: ${BUTTON_BORDER_FOCUS}
+    border-style: solid;
+  }
+  &:focus:active {
+    background-color: ${BLACK};
+    color: ${WHITE};
+  }
+
   ${styledMap('format', {
     [DESKTOP]: `
     border-radius: 5px;

@@ -58,9 +58,38 @@ export const WHITE = `#fff`
 export const BLACK = `#1d1b1b`
 export const OFF_WHITE = `#eeedea`
 export const GREYISH_BROWN = `#444141`
+export const BACKGROUND_NAV = GREYISH_BROWN
+export const HEADER_BORDER_BOTTOM = GREYISH_BROWN
 
 // accent colors
 export const BROWNISH_GREY = `#706262`
+export const LOGO_BROWNISH = BROWNISH_GREY
+export const RESULT_TOPIC_HEADER_FOREGROUND_BUTTON = BROWNISH_GREY
+export const RESULT_TOPIC_HEADER_BORDER_TOP = BROWNISH_GREY
+export const RESULT_TOPIC_HEADER_BORDER_BOTTOM = BROWNISH_GREY
+
 export const ROUGE = `#b62645`
+export const BACKGROUND_BUTTON = ROUGE
+export const BUTTON_BORDER_FOCUS = ROUGE
+export const FOREGROUND_BUTTON_ACTIVE = ROUGE
+export const FOREGROUND_BUTTON_FOCUS_ACTIVE = ROUGE
+export const FOREGROUND_LINK_ACTIVE = ROUGE
+export const FOREGROUND_LINK_FOCUS_ACTIVE = ROUGE
+export const TITLE_TEXT = ROUGE
+export const HEADER_TEXT = ROUGE
+export const BORDER_LINK_ACTIVE = ROUGE
+
+export const DARK_ROUGE = `#830312`
+export const BACKGROUND_BUTTON_FOCUS = DARK_ROUGE
+export const BACKGROUND_LINK_FOCUS = DARK_ROUGE
 export const DARK_SKY_BLUE = `#4a90e2`
+export const FOREGROUND_LINK = DARK_SKY_BLUE
 export const TRANSPARENT = `transparent`
+export const PINK = `#efcad1`
+export const BACKGROUND_BUTTON_ACTIVE = PINK
+export const BACKGROUND_BUTTON_FOCUS_ACTIVE = PINK
+export const BACKGROUND_LINK_ACTIVE = PINK
+export const BACKGROUND_LINK_FOCUS_ACTIVE = PINK
+export const RED = `#`
+
+// new added or like you know just so your mind knows what it's doing

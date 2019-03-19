@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import styledMap from 'styled-map'
 
-import { DESKTOP, MOBILE, TABLET, DARK_SKY_BLUE } from '../../../constants'
+import { DESKTOP, MOBILE, TABLET, FOREGROUND_LINK } from '../../../constants'
 
 const LinkExternal = styled.a`
   text-decoration: none;
   font-family: 'Museo Sans Cyrl 500';
-  color: ${DARK_SKY_BLUE};
+  color: ${FOREGROUND_LINK};
 
   ${styledMap('format', {
     [`${DESKTOP}Footer`]: `

@@ -10,10 +10,11 @@ import {
   DESKTOP,
   MOBILE,
   TABLET,
-  ROUGE,
   WHITE,
   OFF_WHITE,
-  TRANSPARENT
+  TRANSPARENT,
+  FOREGROUND_LINK_ACTIVE,
+  BORDER_LINK_ACTIVE
 } from '../../../../constants'
 
 const mockProps = {
@@ -52,7 +53,9 @@ const {
 describe(`LinkInternal:utilities`, () => {
   describe(`getLinkColor`, () => {
     it(`returns the correct color for an active header link `, () => {
-      expect(getLinkColor(mobileHeaderLinkPropsActive)).toBe(ROUGE)
+      expect(getLinkColor(mobileHeaderLinkPropsActive)).toBe(
+        FOREGROUND_LINK_ACTIVE
+      )
     })
 
     it(`returns the correct color for anything that isn't an active header link`, () => {
@@ -67,13 +70,13 @@ describe(`LinkInternal:utilities`, () => {
   describe(`getLinkBorder`, () => {
     it(`returns the correct border for an active ${DESKTOP} header link `, () => {
       expect(getLinkBorder(desktopHeaderLinkPropsActive)).toBe(
-        `2px solid ${ROUGE}`
+        `2px solid ${BORDER_LINK_ACTIVE}`
       )
     })
 
     it(`returns the correct border for an active ${TABLET} header link `, () => {
       expect(getLinkBorder(tabletHeaderLinkPropsActive)).toBe(
-        `2px solid ${ROUGE}`
+        `2px solid ${BORDER_LINK_ACTIVE}`
       )
     })
 

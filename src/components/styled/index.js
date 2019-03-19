@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { MOBILE, GREYISH_BROWN } from '../../constants'
+import { MOBILE, HEADER_TEXT, GREYISH_BROWN } from '../../constants'
 
 const PageHeading = styled.h3`
   font-weight: 900;
@@ -10,7 +10,7 @@ const PageHeading = styled.h3`
 
   margin: 0;
 
-  color: #b62645;
+  color: ${HEADER_TEXT};
 `
 PageHeading.displayName = 'StyledHeading'
 
