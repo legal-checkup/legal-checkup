@@ -10,33 +10,14 @@ import AnswerBlock from '../../components/checkup/AnswerBlock'
 import ProgressBlock from '../../components/checkup/ProgressBlock'
 import QuestionBlock from '../../components/checkup/QuestionBlock'
 import Block from '../../components/layout/Block'
-import Footer from '../../components/layout/Footer'
-import Header from '../../components/layout/Header'
 import Section from '../../components/layout/Section'
-import Desktop from '../../components/responsive/Desktop'
-import Mobile from '../../components/responsive/Mobile'
-import Tablet from '../../components/responsive/Tablet'
-import { DESKTOP, MOBILE, TABLET, WEBSITE } from '../../constants'
+import { WEBSITE } from '../../constants'
+import { getQuestionCount } from '../../state/selectors'
+import { FormatConsumer } from '../../components/layout/FormatContext'
 
 const { useEffect } = React
 
-function getLayout (format) {
-  return (
-    <>
-      <Header format={format} />
-      <Section>
-        <ProgressBlock format={format} />
-        <Block format={format}>
-          <QuestionBlock format={format} />
-          <AnswerBlock format={format} />
-        </Block>
-      </Section>
-      <Footer format={format} />
-    </>
-  )
-}
-
-function App ({ data, dispatch }) {
+function App ({ data, dispatch, loaded }) {
   useEffect(() => {
     handleQuestions()
   }, [])
@@ -50,9 +31,22 @@ function App ({ data, dispatch }) {
       <Helmet>
         <title>Checkup :: {WEBSITE}</title>
       </Helmet>
-      <Mobile>{getLayout(MOBILE)}</Mobile>
-      <Tablet>{getLayout(TABLET)}</Tablet>
-      <Desktop>{getLayout(DESKTOP)}</Desktop>
+
+      <FormatConsumer>
+        {value => (
+          <Section>
+            {loaded ? (
+              <>
+                <ProgressBlock format={value} />
+                <Block format={value}>
+                  <QuestionBlock format={value} />
+                  <AnswerBlock format={value} />
+                </Block>
+              </>
+            ) : null}
+          </Section>
+        )}
+      </FormatConsumer>
     </>
   )
 }
@@ -74,4 +68,12 @@ export const query = graphql`
   }
 `
 
-export default connect()(App)
+function mapStateToProps ({ checkup }) {
+  const loaded = getQuestionCount(checkup) > 2
+
+  return {
+    loaded: loaded
+  }
+}
+
+export default connect(mapStateToProps)(App)

@@ -8,34 +8,11 @@ import rootEpic from './src/state/epics'
 import initialState from './src/state/initialState'
 import createRootReducer from './src/state/reducers'
 
-const state = {
-  checkup: {
-    activeQuestionIndex: 0,
-    topics: [
-      {
-        id: '',
-        name: '',
-        questions: [
-          {
-            body: '',
-            help: '',
-            results: '',
-            id: '',
-            resource: '',
-            url: ''
-          }
-        ]
-      }
-    ],
-    responses: []
-  }
-}
-
 export default ({ element }) => {
   const epicMiddleware = createEpicMiddleware()
   const appliedMiddleware = applyMiddleware(epicMiddleware)
   const middleware = compose(appliedMiddleware)
-  const store = createStore(createRootReducer(), state, middleware)
+  const store = createStore(createRootReducer(), initialState, middleware)
 
   epicMiddleware.run(rootEpic)
 
