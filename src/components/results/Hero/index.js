@@ -11,6 +11,7 @@ import {
   expanderText
 } from '../../../constants'
 import ResultAccordion from '../ResultAccordion'
+import { ResultHeading, ResultTitle, ResultText } from '../../styled'
 import { NO } from '../../../state/constants'
 
 function Expander () {
@@ -20,13 +21,13 @@ function Expander () {
 function allGood () {
   return (
     <div>
-      <div>You're all done.</div>
-      <h1>Results</h1>
-      <p data-testid={allGoodText}>
+      <ResultHeading>You're all done.</ResultHeading>
+      <ResultTitle>Results</ResultTitle>
+      <ResultText data-testid={allGoodText}>
         Based on your answers, it looks like you're in good legal health! But if
         you have a problem, or something worrying you that wasn't covered by the
         questions in this check-up, do come talk to us at Community Law.
-      </p>
+      </ResultText>
     </div>
   )
 }
@@ -34,12 +35,12 @@ function allGood () {
 function needHelp (results, format) {
   return (
     <div>
-      <div>You're all done.</div>
-      <h1>Results</h1>
-      <p data-testid={needHelpParagraph1}>
+      <ResultHeading>You're all done.</ResultHeading>
+      <ResultTitle>Results</ResultTitle>
+      <ResultText data-testid={needHelpParagraph1}>
         {' '}
         Based on your answers, a lawyer may be able to help you with &#8230;
-      </p>
+      </ResultText>
       {/* <Expander data-testid={needHelpExpander} /> */}
 
       {results.map(topicName => {
@@ -52,10 +53,10 @@ function needHelp (results, format) {
         }
       })}
 
-      <p data-testid={needHelpParagraph2}>
+      <ResultText data-testid={needHelpParagraph2}>
         You can get free legal advice about these (or any other problem) from
         your local Community Law Centre.
-      </p>
+      </ResultText>
     </div>
   )
 }
