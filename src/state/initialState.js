@@ -4,6 +4,29 @@ const initialState = {
     activeQuestionIndex: 0,
     topics: [
       {
+        id: '',
+        name: '',
+        questions: [
+          {
+            body: '',
+            help: '',
+            results: '',
+            id: '',
+            resource: '',
+            url: ''
+          }
+        ]
+      }
+    ],
+    responses: []
+  }
+}
+
+const state = {
+  checkup: {
+    activeQuestionIndex: 0,
+    topics: [
+      {
         id: '4DDB61C7677B4BA2813D2CAE98EF51D5',
         name: 'Money Troubles',
         questions: [
