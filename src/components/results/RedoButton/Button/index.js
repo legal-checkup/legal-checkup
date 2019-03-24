@@ -12,9 +12,8 @@ import {
 const Button = styled.div`
   border-radius: 5px;
   border: solid 3px #ffffff;
-  font-family: Helvetica;
+  font-family: 'Museo Sans Cyrl 900', sans-serif;
   font-size: 20px;
-  font-weight: 900;
   text-align: center;
   color: #b62645;
   text-decoration: none;
@@ -32,12 +31,10 @@ const Button = styled.div`
       width: 920px;
     `,
     [MOBILE]: `
-      width: 263px;
       height: 24px;
       padding: 28px 26px 26px;
     `,
     [TABLET]: `
-      width: 263px;
       height: 24px;
       padding: 28px 26px 26px;
     `

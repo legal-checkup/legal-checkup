@@ -11,7 +11,7 @@ function RedoCheckup ({ handleClick }) {
   return (
     <PageTextContainer>
       <Button onClick={handleClick} data-testid={redoBtn}>
-        Redo Checkup
+        Re-do Checkup
       </Button>
     </PageTextContainer>
   )
