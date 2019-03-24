@@ -1,31 +1,13 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
 
-import Footer from '../../components/layout/Footer'
-import Header from '../../components/layout/Header'
 import Section from '../../components/layout/Section'
+
 import Grid from '../../components/layout/Grid'
-import Desktop from '../../components/responsive/Desktop'
-import Mobile from '../../components/responsive/Mobile'
-import Tablet from '../../components/responsive/Tablet'
 import Hero from '../../components/results/Hero'
 import RedoButton from '../../components/results/RedoButton'
-import { DESKTOP, MOBILE, TABLET, WEBSITE } from '../../constants'
-
-function getLayout (format) {
-  return (
-    <>
-      <Header format={format} />
-      <Section format={format}>
-        <Grid format={format}>
-          <Hero format={format} />
-          <RedoButton format={format} />
-        </Grid>
-      </Section>
-      <Footer format={format} />
-    </>
-  )
-}
+import { WEBSITE } from '../../constants'
+import { FormatConsumer } from '../../components/layout/FormatContext'
 
 export default function Results () {
   return (
@@ -33,9 +15,16 @@ export default function Results () {
       <Helmet>
         <title>Results :: {WEBSITE}</title>
       </Helmet>
-      <Mobile>{getLayout(MOBILE)}</Mobile>
-      <Tablet>{getLayout(TABLET)}</Tablet>
-      <Desktop>{getLayout(DESKTOP)}</Desktop>
+      <FormatConsumer>
+        {value => (
+          <Section>
+            <Grid format={value}>
+              <Hero format={value} />
+              <RedoButton format={value} />
+            </Grid>
+          </Section>
+        )}
+      </FormatConsumer>
     </>
   )
 }

@@ -11,10 +11,12 @@ import {
   YES,
   RESULTS_PATH,
   CHECKUP_COMPLETE,
-  CHECKUP_PATH
+  CHECKUP_PATH,
+  QUESTIONS_LOADED
 } from '../../constants'
 import setActiveQuestionIndex from '../../domain/setActiveQuestionIndex'
 import setQuestionResponse from '../../domain/setQuestionResponse'
+import setTopics from '../../domain/setTopics'
 import initialState from '../../initialState'
 
 import { navigate } from 'gatsby'
@@ -51,6 +53,12 @@ export default function reducer (state = initialState, { payload = {}, type }) {
       navigate(RESULTS_PATH)
       return {
         ...state
+      }
+
+    case QUESTIONS_LOADED:
+      return {
+        ...state,
+        topics: setTopics(payload)
       }
 
     default:
