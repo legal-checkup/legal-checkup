@@ -102,6 +102,7 @@ hr {
   box-sizing: content-box;
   height: 0;
   overflow: visible;
+  border-color: #e5e5e5;
 }
 button,
 input,

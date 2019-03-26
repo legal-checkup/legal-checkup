@@ -5,12 +5,15 @@ import { redoCheckupClicked } from '../../../state/actions'
 
 import Button from './Button'
 import { redoBtn } from '../../../constants'
+import { PageTextContainer } from '../../layout/Section'
 
 function RedoCheckup ({ handleClick }) {
   return (
-    <Button onClick={handleClick} data-testid={redoBtn}>
-      Redo Checkup
-    </Button>
+    <PageTextContainer>
+      <Button onClick={handleClick} data-testid={redoBtn}>
+        Re-do Checkup
+      </Button>
+    </PageTextContainer>
   )
 }
 
@@ -20,4 +23,7 @@ function mapDispatchToProps (dispatch) {
   }
 }
 
-export default connect(null, mapDispatchToProps)(RedoCheckup)
+export default connect(
+  null,
+  mapDispatchToProps
+)(RedoCheckup)
