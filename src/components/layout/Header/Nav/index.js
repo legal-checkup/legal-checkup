@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import styledMap from 'styled-map'
 
-import { DESKTOP, MOBILE, TABLET, GREYISH_BROWN } from '../../../../constants'
+import { DESKTOP, MOBILE, TABLET, BACKGROUND_NAV } from '../../../../constants'
 
 const Nav = styled.nav`
   display: flex;
@@ -17,7 +17,7 @@ const Nav = styled.nav`
     [`${MOBILE}`]: `
       padding: 0 3px;
       height: 43px;
-      background-color: ${GREYISH_BROWN};
+      background-color: ${BACKGROUND_NAV};
       align-items: flex-end;
     `
   })};

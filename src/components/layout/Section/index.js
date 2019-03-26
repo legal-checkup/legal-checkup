@@ -1,5 +1,11 @@
 import styled from 'styled-components'
-import { DESKTOP, TABLET, MOBILE, ABOUT_PAGE } from '../../../constants'
+import {
+  DESKTOP,
+  TABLET,
+  MOBILE,
+  ABOUT_PAGE,
+  TERMS_PAGE
+} from '../../../constants'
 import styledMap from 'styled-map'
 
 const getMaxTextWidth = ({ format }) => {
@@ -7,7 +13,7 @@ const getMaxTextWidth = ({ format }) => {
 }
 
 const getTextAlign = ({ format, page }) => {
-  if (page === ABOUT_PAGE) {
+  if (page === ABOUT_PAGE || page === TERMS_PAGE) {
     return 'left'
   }
   return format === DESKTOP || format === TABLET ? 'center' : 'left'
@@ -20,6 +26,7 @@ const getTextPadding = ({ format }) => {
 const Section = styled.section`
   background-color: #eee;
   color: #333;
+  font-family: 'Museo Sans Cyrl 500', sans-serif;
   ${styledMap('format', {
     [DESKTOP]: `
       padding-bottom: 119px;`,

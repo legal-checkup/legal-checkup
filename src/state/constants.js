@@ -20,6 +20,7 @@ export const USER_RESPONDED_WITH_NOT_SURE =
   '@checkup/USER_RESPONDED_WITH_NOT_SURE'
 export const USER_RESPONDED_WITH_YES = '@checkup/USER_RESPONDED_WITH_YES'
 export const REDO_CHECKUP_CLICKED = '@checkup/REDO_CHECKUP_CLICKED'
+export const QUESTIONS_LOADED = '@checkup/QUESTIONS_LOADED'
 
 // Response enumeration
 export const NO = 'No'
@@ -47,7 +48,6 @@ export const ABOUT_PATH = '/about'
 export const CHECKUP_PATH = '/checkup'
 export const HELP_PATH = '/help'
 export const HOME_PATH = '/'
-export const PRIVACY_POLICY_PATH = '/privacy-policy'
 export const RESULTS_PATH = '/results'
 export const TERMS_OF_USE_PATH = '/terms-of-use'
 
