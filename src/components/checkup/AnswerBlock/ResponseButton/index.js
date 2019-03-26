@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 import {
   userRespondedWithNo,
   userRespondedWithNotSure,
-  userRespondedWithYes
+  userRespondedWithYes,
+  isQuestionActive
 } from '../../../../state/actions'
 import { NO, YES } from '../../../../state/constants'
 
@@ -20,6 +21,12 @@ function getAction (type) {
   }
 }
 
+function mapStateToProps ({ checkup }) {
+  return {
+    // active: isQuestionActive(checkup)
+  }
+}
+
 function mapDispatchToProps (dispatch, { type }) {
   return {
     onClick: () => dispatch(getAction(type))
@@ -27,6 +34,6 @@ function mapDispatchToProps (dispatch, { type }) {
 }
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Button)

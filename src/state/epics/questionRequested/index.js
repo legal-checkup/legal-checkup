@@ -34,6 +34,7 @@ const questionRequestedEpic = (action$, state$) =>
     ),
     withLatestFrom(state$),
     map(([{ payload: { questionIndex } = {}, type }, { checkup }]) => {
+      // goDoActiveThing()
       const activeQuestionIndex = getActiveQuestionIndex(checkup)
       const questionCount = getQuestionCount(checkup)
       const responseCount = getResponseCount(checkup)

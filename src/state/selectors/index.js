@@ -175,3 +175,8 @@ export const makeGetTopicQuestions = () =>
     (filterTopic, questions) =>
       filter(({ topic }) => topic === filterTopic, questions)
   )
+
+export const getQuestionAnswer = pipe(
+  getActiveQuestion,
+  question => question.answer
+)
