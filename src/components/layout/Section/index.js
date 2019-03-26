@@ -26,6 +26,7 @@ const getTextPadding = ({ format }) => {
 const Section = styled.section`
   background-color: #eee;
   color: #333;
+  font-family: 'Museo Sans Cyrl 500', sans-serif;
   ${styledMap('format', {
     [DESKTOP]: `
       padding-bottom: 119px;`,

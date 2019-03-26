@@ -13,7 +13,8 @@ const ProgressBar = styled.nav`
   letter-spacing: normal;
   text-align: center;
   margin: 0 auto;
-  padding-top: 150px;
+  padding-top: 130px;
+  position: relative;
 
   ${styledMap('format', {
     [DESKTOP]: ``,
