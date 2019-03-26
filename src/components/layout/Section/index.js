@@ -34,6 +34,7 @@ ContentWrapper.displayName = 'StyledContentWrapper'
 const Section = styled.section`
   background-color: #eee;
   color: #333;
+  font-family: 'Museo Sans Cyrl 500', sans-serif;
   ${styledMap('format', {
     [DESKTOP]: `
       min-height: calc(100vh - 105px);

@@ -28,7 +28,7 @@ const Label = styled.button`
   height: 29px;
   box-shadow: 0 2px 0 0 #cccccc;
   background-color: #ffffff;
-  font-family:'Museo Sans Cyrl 500', sans-serif;;
+  font-family:'Museo Sans Cyrl 500', sans-serif;
   font-weight:500;
   font-style: normal;
   font-stretch: normal;

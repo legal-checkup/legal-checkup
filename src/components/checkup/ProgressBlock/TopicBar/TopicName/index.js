@@ -2,9 +2,10 @@ import styled from 'styled-components'
 
 const TopicName = styled.div`
   transform: rotate(-30deg);
-  padding-bottom: 30px;
-  margin-left: 20px;
-  margin-top: 0;
+  // transform: translate(-30%);
+  margin-top: -75px;
+  position: absolute;
+  // vertical-align: sub;
 `
 
 TopicName.displayName = 'StyledTopicName'
