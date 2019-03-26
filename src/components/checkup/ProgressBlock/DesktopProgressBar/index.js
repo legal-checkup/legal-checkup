@@ -1,19 +1,17 @@
 import * as React from 'react'
 import { connect } from 'react-redux'
-
 import { map } from 'ramda'
 import { isNonEmptyArray } from 'ramda-adjunct'
 
-import TopicBar from '../TopicBar'
-
 import { getTopics } from '../../../../state/selectors'
+import TopicBar from '../TopicBar'
 
 function DesktopProgressBar ({ topics = [] }) {
   return (
-    <div>
+    <span>
       {isNonEmptyArray(topics) &&
-        map(({ id, name }) => <TopicBar key={id} topic={name} />, topics)}
-    </div>
+        map(({ id, name }) => <TopicBar key={id} topic={name} />, topics)}{' '}
+    </span>
   )
 }
 

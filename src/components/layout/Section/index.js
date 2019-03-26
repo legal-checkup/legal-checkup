@@ -32,7 +32,7 @@ const ContentWrapper = styled.div`
 ContentWrapper.displayName = 'StyledContentWrapper'
 
 const Section = styled.section`
-  background-color: #eee;
+  background-color: #eeedea;
   color: #333;
   font-family: 'Museo Sans Cyrl 500', sans-serif;
   ${styledMap('format', {
@@ -44,6 +44,7 @@ const Section = styled.section`
       `,
     [MOBILE]: `
       min-height: calc(100vh - 142px);
+      padding: 0 25px;
     `
   })}
 `

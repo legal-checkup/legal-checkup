@@ -3,18 +3,23 @@ import styledMap from 'styled-map'
 
 import { DESKTOP, MOBILE, TABLET } from '../../../../constants'
 
+const getWidth = ({ format }) => {
+  switch (format) {
+    case DESKTOP:
+      return '738px'
+    case TABLET:
+      return '708px'
+  }
+}
+
 const ProgressBar = styled.nav`
-  background-color: #eeedea;
   display: flex;
-  width: 100%;
+  width: ${getWidth};
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
-  letter-spacing: normal;
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 130px;
-  position: relative;
+  justify-content: space-between;
+  margin: 0 auto ${({ format }) => (format === MOBILE ? '30px' : '40px')} auto;
+  padding-top: ${({ format }) => (format === MOBILE ? '30px' : '130px')};
 
   ${styledMap('format', {
     [DESKTOP]: ``,

@@ -13,22 +13,15 @@ const Question = styled.div`
     [DESKTOP]: `
   font-size: 32px;
   line-height: normal;
-  padding-top: 58px;
-  padding-left: 40px;
-  padding-right: 40px;`,
+  padding-top: 58px;`,
     [MOBILE]: `
   font-size: 25px;
   line-height: 1.2;
-  padding-top: 12px;
-  padding-left: 20px;
-  padding-right: 20px;`,
+  padding-top: 12px;`,
     [TABLET]: `
-  width: 630px;
   font-size: 32px;
   line-height: normal;
-  padding-top: 58px;
-  padding-left: 40px;
-  padding-right: 40px;`
+  padding-top: 58px;`
   })}
 `
 Question.displayName = 'StyledQuestion'
