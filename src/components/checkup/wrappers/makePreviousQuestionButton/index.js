@@ -5,7 +5,7 @@ import { checkPreviousQuestionEnabled } from '../../../../state/selectors'
 
 function mapStateToProps ({ checkup }, { children }) {
   return {
-    children: children || String.fromCharCode(9664),
+    children: children || String.fromCharCode(60),
     enabled: checkPreviousQuestionEnabled(checkup)
   }
 }
