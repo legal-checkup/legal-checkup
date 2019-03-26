@@ -12,6 +12,7 @@ import {
 } from '../../../../constants'
 
 export function getLinkColor ({ format = '', active } = {}) {
+  // console.log('format', format, 'active', active)
   return includes('Header', format) && active
     ? `${FOREGROUND_LINK_ACTIVE}`
     : `${WHITE}`

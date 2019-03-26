@@ -1,15 +1,7 @@
-import {
-  filter,
-  identity,
-  length,
-  map,
-  pathOr,
-  pipe,
-  reduce,
-  times
-} from 'ramda'
+import { filter, identity, length, map, pipe, reduce, times } from 'ramda'
 import { mapIndexed } from 'ramda-adjunct'
 import { createSelector } from 'reselect'
+import { globalHistory } from '@reach/router'
 
 import isNextQuestionPermitted from '../../utilities/isNextQuestionPermitted'
 import isPreviousQuestionPermitted from '../../utilities/isPreviousQuestionPermitted'
@@ -161,8 +153,10 @@ export const checkQuestionEnabled = index =>
       isQuestionPermitted(index, questionCount, responseCount)
   )
 
-export const getPathname = pathOr({}, ['router', 'location', 'pathname'])
-
+export const getPathname = function () {
+  // console.log('path', globalHistory.location.pathname)
+  return globalHistory.location.pathname
+}
 export const getQuestionListIndexed = pipe(
   getQuestionList,
   mapIndexed((question, index) => ({ ...question, index }))

@@ -61,17 +61,17 @@ const makeLinkInternal = Component => {
   )(Component)
 }
 
-function mapStateToProps (state) {
+function mapStateToProps () {
   return {
-    pathname: getPathname(state)
+    pathname: getPathname()
   }
 }
 
-function mapDispatchToProps (dispatch, { to }) {
+function mapDispatchToProps ({ to }) {
+  console.log('to', to)
   return {
     onClick: e => {
       e.preventDefault()
-
       navigate(to)
     }
   }
@@ -81,7 +81,8 @@ function mergeProps ({ pathname }, { onClick }, ownProps) {
   const { children, format, href = '', target = '_blank', tip, to } = ownProps
 
   const altProps = pathname === to ? { active: true } : { onClick }
-
+  // console.log('pathname', pathname, 'to', to)
+  // console.log('ownprops', altProps)
   return {
     children,
     format,
