@@ -1,25 +1,25 @@
 import {
+  CHECKUP_COMPLETE,
+  CHECKUP_PATH,
   NEXT_QUESTION_ACTIVATED,
   NO,
   NOT_SURE,
   PREVIOUS_QUESTION_ACTIVATED,
+  QUESTIONS_LOADED,
   REDO_CHECKUP_CLICKED,
   REQUESTED_QUESTION_ACTIVATED,
+  RESULTS_PATH,
   USER_RESPONDED_WITH_NO,
   USER_RESPONDED_WITH_NOT_SURE,
   USER_RESPONDED_WITH_YES,
-  YES,
-  RESULTS_PATH,
-  CHECKUP_COMPLETE,
-  CHECKUP_PATH,
-  QUESTIONS_LOADED
+  YES
 } from '../../constants'
+
+import initialState from '../../initialState'
+import { navigate } from 'gatsby'
 import setActiveQuestionIndex from '../../domain/setActiveQuestionIndex'
 import setQuestionResponse from '../../domain/setQuestionResponse'
 import setTopics from '../../domain/setTopics'
-import initialState from '../../initialState'
-
-import { navigate } from 'gatsby'
 
 export default function reducer (state = initialState, { payload = {}, type }) {
   const { activeQuestionIndex } = payload
@@ -58,7 +58,9 @@ export default function reducer (state = initialState, { payload = {}, type }) {
     case QUESTIONS_LOADED:
       return {
         ...state,
-        topics: setTopics(payload)
+        topics: setTopics(payload),
+        responses: [],
+        activeQuestionIndex: 0
       }
 
     default:

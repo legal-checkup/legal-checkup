@@ -33,7 +33,7 @@ export default function ResultTopicItem ({ description, format, link }) {
   return (
     <Boundary>
       <Comment format={format}>{description}...</Comment>
-      <Anchor format={format} href={link}>What does the law say about this</Anchor>
+      {link && <Anchor format={format} href={link}>What does the law say about this?</Anchor>}
     </Boundary>
   )
 }
