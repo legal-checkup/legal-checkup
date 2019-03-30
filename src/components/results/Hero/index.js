@@ -26,9 +26,11 @@ function allGood (format) {
       <ResultHeading>You're all done.</ResultHeading>
       <ResultTitle>Results</ResultTitle>
       <ResultText data-testid={allGoodText}>
-        Based on your answers, it looks like you're in good legal health! But if
-        you have a problem, or something worrying you that wasn't covered by the
-        questions in this check-up, do come talk to us at Community Law.
+        Based on your answers, it looks like you're in good legal health!
+      </ResultText>
+      <ResultText>
+        But if you have a problem, or something worrying you that wasn't covered
+        by the questions in this check-up, do come talk to us at Community Law.
       </ResultText>
       <ResultText>
         You can find information about Community Law services and clinic hours
@@ -54,6 +56,14 @@ function allGood (format) {
 }
 
 function needHelp (results, format) {
+  const topicArray = []
+  results.map(topic => {
+    if (topic.questions.filter(question => question.answer !== NO).length > 0) {
+      topicArray.push(topic)
+    } else {
+    }
+  })
+
   return (
     <div>
       <ResultHeading>You're all done.</ResultHeading>
@@ -63,18 +73,23 @@ function needHelp (results, format) {
         Based on your answers, a lawyer may be able to help you with &#8230;
       </ResultText>
       {/* <Expander data-testid={needHelpExpander} /> */}
-      {results.map(topicName => {
-        if (
-          topicName.questions.filter(question => question.answer !== NO)
-            .length > 0
-        ) {
-          return <ResultAccordion format={format} topicName={topicName} />
-        } else {
-        }
+
+      {topicArray.map(topic => {
+        return (
+          <ResultAccordion
+            format={format}
+            topicName={topic}
+            topicArray={topicArray}
+          />
+        )
       })}
       <ResultText data-testid={needHelpParagraph2}>
         You can get free legal advice about these (or any other problem) from
         your local Community Law Centre.
+      </ResultText>
+      <ResultText>
+        You can find information about Community Law services and clinic hours
+        below.
       </ResultText>
       <PageTextContainer>
         <AboutCommunityLaw

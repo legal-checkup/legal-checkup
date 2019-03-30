@@ -18,7 +18,8 @@ const Wrapper = styled.div`
     padding-bottom: 35px;
     font-size: 20px;`,
     [MOBILE]: `
-    width: 325px;
+    width: 285px;
+    padding: 20px;
     font-size: 16px;`,
     [TABLET]: `
     width: 410px;
