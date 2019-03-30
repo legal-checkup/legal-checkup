@@ -1,24 +1,19 @@
 import * as React from 'react'
-import { connect } from 'react-redux'
 
-import { NEED_HELP_RESULT } from '../../../state/constants'
-import { getResultType } from '../../../state/selectors'
-import {
-  needHelpExpander,
-  needHelpParagraph1,
-  needHelpParagraph2,
-  allGoodText,
-  expanderText
-} from '../../../constants'
-import ResultAccordion from '../ResultAccordion'
-import { ResultHeading, ResultTitle, ResultText } from '../../styled'
-import { NO } from '../../../state/constants'
 import { AboutCommunityLaw, CommunityLawServices } from '../../home/buttons'
-import { PageTextContainer } from '../../layout/Section'
+import { NEED_HELP_RESULT, NO } from '../../../state/constants'
+import { ResultHeading, ResultText, ResultTitle } from '../../styled'
+import {
+  allGoodText,
+  needHelpParagraph1,
+  needHelpParagraph2
+} from '../../../constants'
+import { filter, isEmpty, map, not, pipe } from 'ramda'
 
-function Expander () {
-  return <p data-testid={expanderText}>expander here</p>
-}
+import { PageTextContainer } from '../../layout/Section'
+import ResultAccordion from '../ResultAccordion'
+import { connect } from 'react-redux'
+import { getResultType } from '../../../state/selectors'
 
 function allGood (format) {
   return (
@@ -55,6 +50,12 @@ function allGood (format) {
   )
 }
 
+const hasResults = pipe(
+  filter(question => question.answer !== NO),
+  isEmpty,
+  not
+)
+
 function needHelp (results, format) {
   const topicArray = []
   results.map(topic => {
@@ -72,17 +73,18 @@ function needHelp (results, format) {
         {' '}
         Based on your answers, a lawyer may be able to help you with &#8230;
       </ResultText>
-      {/* <Expander data-testid={needHelpExpander} /> */}
-
-      {topicArray.map(topic => {
-        return (
-          <ResultAccordion
-            format={format}
-            topicName={topic}
-            topicArray={topicArray}
-          />
-        )
-      })}
+      {map(
+        topicName =>
+          hasResults(topicName.questions) ? (
+            <ResultAccordion
+              key={topicName.id}
+              format={format}
+              topicName={topicName}
+              topicArray={topicArray}
+            />
+          ) : null,
+        results
+      )}
       <ResultText data-testid={needHelpParagraph2}>
         You can get free legal advice about these (or any other problem) from
         your local Community Law Centre.
