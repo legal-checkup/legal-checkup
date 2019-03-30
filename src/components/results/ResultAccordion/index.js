@@ -65,5 +65,6 @@ export default function ResultAccordion (props) {
 ResultAccordion.propTypes = {
   format: PropTypes.string.isRequired,
   topicName: PropTypes.object.isRequired,
-  topicArray: PropTypes.array.isRequired
+  topicArray: PropTypes.array.isRequired,
+  isExpanded: PropTypes.bool.isRequired
 }
