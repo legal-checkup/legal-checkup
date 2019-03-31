@@ -10,7 +10,7 @@ function DesktopProgressBar ({ topics = [] }) {
   return (
     <span>
       {isNonEmptyArray(topics) &&
-        map(({ id, name }) => <TopicBar key={id} topic={name} />, topics)}{' '}
+        map(({ id, name }) => <TopicBar key={id} topic={name} />, topics)}
     </span>
   )
 }

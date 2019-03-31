@@ -23,33 +23,24 @@ function setMarginRight (format, type) {
 }
 
 const Label = styled.button`
-  background-color: #ffffff;
+  border: solid 1px #ccc;
   color: #a0a0a0;
-  height: 29px;
   box-shadow: 0 2px 0 0 #cccccc;
   background-color: #ffffff;
   font-family:'Museo Sans Cyrl 500', sans-serif;
-  font-weight:500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
+  font-weight: 500;
   text-align: center;
-  width: ${({ format, type }) => setWidth(format, type)};
-  margin-right: ${({ format, type }) => setMarginRight(format, type)};,
+  margin-right: ${({ format, type }) => setMarginRight(format, type)};
+
+  border-radius: 5px;
+  font-size:18px;
+
+  padding: 3px 9px;
+
+  ${({ format }) => format === MOBILE && 'display: none;'}
   &:after {
     content: '${({ type }) => type}';
   }
-  ${styledMap('format', {
-    [DESKTOP]: `
-    border-radius: 5px;
-    font-size:18px;`,
-    [MOBILE]: `
-    display:none`,
-    [TABLET]: `
-    border-radius: 5px;
-    font-size:18px;`
-  })}
 `
 Label.displayName = 'Label'
 

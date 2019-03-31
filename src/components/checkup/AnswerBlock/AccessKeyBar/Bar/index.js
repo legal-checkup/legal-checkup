@@ -6,15 +6,11 @@ import { DESKTOP, MOBILE, TABLET } from '../../../../../constants'
 const Bar = styled.section`
   ${styledMap('format', {
     [DESKTOP]: `
-      margin: 0 auto;
       padding-top: 15px;
-      text-align: center;
     `,
     [MOBILE]: ``,
     [TABLET]: `
-      margin: 0 auto;
       padding-top: 15px;
-      text-align: center;
     `
   })}
 `

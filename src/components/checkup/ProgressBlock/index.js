@@ -19,11 +19,11 @@ export default function (props) {
     case DESKTOP:
       return (
         <ProgressBar format={DESKTOP}>
-          <PreviousQuestionButton format={DESKTOP}>
+          <PreviousQuestionButton>
             <LeftArrowImage />
           </PreviousQuestionButton>
           <DesktopProgressBar />
-          <NextQuestionButton format={DESKTOP}>
+          <NextQuestionButton>
             <RightArrowImage />
           </NextQuestionButton>
         </ProgressBar>
@@ -31,11 +31,11 @@ export default function (props) {
     case TABLET:
       return (
         <ProgressBar format={TABLET}>
-          <PreviousQuestionButton format={DESKTOP}>
+          <PreviousQuestionButton>
             <LeftArrowImage />
           </PreviousQuestionButton>
           <DesktopProgressBar />
-          <NextQuestionButton format={DESKTOP}>
+          <NextQuestionButton>
             <RightArrowImage />
           </NextQuestionButton>
         </ProgressBar>
@@ -43,11 +43,11 @@ export default function (props) {
     default:
       return (
         <ProgressBar format={MOBILE}>
-          <PreviousQuestionButton format={DESKTOP}>
+          <PreviousQuestionButton>
             <LeftArrowImage />
           </PreviousQuestionButton>
-          <CurrentTopic format={MOBILE} />
-          <NextQuestionButton format={DESKTOP}>
+          <CurrentTopic />
+          <NextQuestionButton>
             <RightArrowImage />
           </NextQuestionButton>
         </ProgressBar>
