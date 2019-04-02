@@ -1,19 +1,17 @@
 import * as React from 'react'
 
-import { connect } from 'react-redux'
-import { questionsLoaded } from '../../state/actions'
-
-import { graphql } from 'gatsby'
-import { Helmet } from 'react-helmet'
-
 import AnswerBlock from '../../components/checkup/AnswerBlock'
+import Block from '../../components/layout/Block'
+import { FormatConsumer } from '../../components/layout/FormatContext'
+import { Helmet } from 'react-helmet'
 import ProgressBlock from '../../components/checkup/ProgressBlock'
 import QuestionBlock from '../../components/checkup/QuestionBlock'
-import Block from '../../components/layout/Block'
 import Section from '../../components/layout/Section'
 import { WEBSITE } from '../../constants'
+import { connect } from 'react-redux'
 import { getQuestionCount } from '../../state/selectors'
-import { FormatConsumer } from '../../components/layout/FormatContext'
+import { graphql } from 'gatsby'
+import { questionsLoaded } from '../../state/actions'
 
 const { useEffect } = React
 
