@@ -129,7 +129,6 @@ export const getYesAnswers = createSelector(
   filter(({ answer }) => answer === YES)
 )
 
-// TODO: Fix this shit, check response button
 export const getActiveQuestionAnswer = createSelector(
   getResponseList,
   getActiveQuestionIndex,
@@ -185,8 +184,3 @@ export const makeGetTopicQuestions = () =>
     (filterTopic, questions) =>
       filter(({ topic }) => topic === filterTopic, questions)
   )
-
-export const getQuestionAnswer = pipe(
-  getActiveQuestion
-  // question => question.answer
-)

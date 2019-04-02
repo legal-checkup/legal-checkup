@@ -33,18 +33,21 @@ function setMarginRight (format, type) {
   }
 }
 
-function setBackgroundColor (type, answerText) {
-  return type === answerText ? BACKGROUND_BUTTON_ACTIVE : OFF_WHITE
+function setPreviousSelectedBackgroundColor (buttonType, activeQuestionAnswer) {
+  return buttonType === activeQuestionAnswer
+    ? BACKGROUND_BUTTON_ACTIVE
+    : OFF_WHITE
 }
 
-function setTextColor (type, answerText) {
-  return type === answerText ? ROUGE : TEXT_COLOR
+function setPreviousSelectedTextColor (buttonType, activeQuestionAnswer) {
+  return buttonType === activeQuestionAnswer ? ROUGE : TEXT_COLOR
 }
 
 const Button = styled.button`
-  background-color: ${({ format, type, active }) =>
-    setBackgroundColor(type, active)};
-  color: ${({ format, type, active }) => setTextColor(type, active)};
+  background-color: ${({ format, type, activeQuestionAnswer }) =>
+    setPreviousSelectedBackgroundColor(type, activeQuestionAnswer)};
+  color: ${({ format, type, activeQuestionAnswer }) =>
+    setPreviousSelectedTextColor(type, activeQuestionAnswer)};
   height: 78px;
   border: none;
   font-family: 'Museo Sans Cyrl 500', sans-serif;

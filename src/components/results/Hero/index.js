@@ -4,26 +4,17 @@ import { AboutCommunityLaw, CommunityLawServices } from '../../home/buttons'
 import { NEED_HELP_RESULT, NO } from '../../../state/constants'
 import { ResultHeading, ResultText, ResultTitle } from '../../styled'
 import {
-<<<<<<< HEAD
-  needHelpParagraph1,
-  needHelpParagraph2,
-  allGoodText
-=======
   allGoodText,
   needHelpParagraph1,
   needHelpParagraph2
->>>>>>> master
 } from '../../../constants'
 import { filter, isEmpty, map, not, pipe } from 'ramda'
 
-<<<<<<< HEAD
-=======
 import { PageTextContainer } from '../../layout/Section'
 import ResultAccordion from '../ResultAccordion'
 import { connect } from 'react-redux'
 import { getResultType } from '../../../state/selectors'
 
->>>>>>> master
 function allGood (format) {
   return (
     <div>

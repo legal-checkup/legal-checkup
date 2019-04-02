@@ -23,9 +23,8 @@ function getAction (type) {
 }
 
 function mapStateToProps ({ checkup }) {
-  const activeQAnswer = getActiveQuestionAnswer(checkup)
   return {
-    active: activeQAnswer
+    activeQuestionAnswer: getActiveQuestionAnswer(checkup)
   }
 }
 
