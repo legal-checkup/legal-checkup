@@ -129,6 +129,16 @@ export const getYesAnswers = createSelector(
   filter(({ answer }) => answer === YES)
 )
 
+// TODO: Fix this shit, check response button
+export const getActiveQuestionAnswer = createSelector(
+  getResponseList,
+  getActiveQuestionIndex,
+  (answers, activeQuestionIndex) =>
+    answers &&
+    answers[activeQuestionIndex] &&
+    answers[activeQuestionIndex].answer
+)
+
 // Get the result type based on the RESULTS_TRIGGER;
 // return NEEDS_HELP_RESULT if triggered, else ALL_GOOD_RESULT.
 // Used to display results on the Results page.
@@ -177,6 +187,6 @@ export const makeGetTopicQuestions = () =>
   )
 
 export const getQuestionAnswer = pipe(
-  getActiveQuestion,
-  question => question.answer
+  getActiveQuestion
+  // question => question.answer
 )

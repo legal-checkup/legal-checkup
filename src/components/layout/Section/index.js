@@ -4,7 +4,8 @@ import {
   TABLET,
   MOBILE,
   ABOUT_PAGE,
-  TERMS_PAGE
+  TERMS_PAGE,
+  TEXT_COLOR
 } from '../../../constants'
 import styledMap from 'styled-map'
 
@@ -25,7 +26,7 @@ const getTextPadding = ({ format }) => {
 
 const Section = styled.section`
   background-color: #eee;
-  color: #333;
+  color: ${TEXT_COLOR};
   font-family: 'Museo Sans Cyrl 500', sans-serif;
   ${styledMap('format', {
     [DESKTOP]: `

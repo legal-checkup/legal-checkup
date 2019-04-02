@@ -4,21 +4,15 @@ import { connect } from 'react-redux'
 import { NEED_HELP_RESULT } from '../../../state/constants'
 import { getResultType } from '../../../state/selectors'
 import {
-  needHelpExpander,
   needHelpParagraph1,
   needHelpParagraph2,
-  allGoodText,
-  expanderText
+  allGoodText
 } from '../../../constants'
 import ResultAccordion from '../ResultAccordion'
 import { ResultHeading, ResultTitle, ResultText } from '../../styled'
 import { NO } from '../../../state/constants'
 import { AboutCommunityLaw, CommunityLawServices } from '../../home/buttons'
 import { PageTextContainer } from '../../layout/Section'
-
-function Expander () {
-  return <p data-testid={expanderText}>expander here</p>
-}
 
 function allGood (format) {
   return (
@@ -70,6 +64,7 @@ function needHelp (results, format) {
         ) {
           return <ResultAccordion format={format} topicName={topicName} />
         } else {
+          return null
         }
       })}
       <ResultText data-testid={needHelpParagraph2}>

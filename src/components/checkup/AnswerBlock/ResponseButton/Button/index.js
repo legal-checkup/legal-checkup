@@ -7,7 +7,11 @@ import {
   DESKTOP,
   MOBILE,
   TABLET,
-  WHITE
+  WHITE,
+  ROUGE,
+  BACKGROUND_BUTTON_ACTIVE,
+  OFF_WHITE,
+  TEXT_COLOR
 } from '../../../../../constants'
 import styledMap from 'styled-map'
 
@@ -29,8 +33,18 @@ function setMarginRight (format, type) {
   }
 }
 
+function setBackgroundColor (type, answerText) {
+  return type === answerText ? BACKGROUND_BUTTON_ACTIVE : OFF_WHITE
+}
+
+function setTextColor (type, answerText) {
+  return type === answerText ? ROUGE : TEXT_COLOR
+}
+
 const Button = styled.button`
-  background-color: #eeedea;
+  background-color: ${({ format, type, active }) =>
+    setBackgroundColor(type, active)};
+  color: ${({ format, type, active }) => setTextColor(type, active)};
   height: 78px;
   border: none;
   font-family: 'Museo Sans Cyrl 500', sans-serif;

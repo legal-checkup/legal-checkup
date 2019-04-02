@@ -3,9 +3,10 @@ import { connect } from 'react-redux'
 import {
   userRespondedWithNo,
   userRespondedWithNotSure,
-  userRespondedWithYes,
-  isQuestionActive
+  userRespondedWithYes
 } from '../../../../state/actions'
+
+import { getActiveQuestionAnswer } from '../../../../state/selectors'
 import { NO, YES } from '../../../../state/constants'
 
 import Button from './Button'
@@ -22,8 +23,9 @@ function getAction (type) {
 }
 
 function mapStateToProps ({ checkup }) {
+  const activeQAnswer = getActiveQuestionAnswer(checkup)
   return {
-    // active: isQuestionActive(checkup)
+    active: activeQAnswer
   }
 }
 
