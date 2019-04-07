@@ -5,13 +5,14 @@ import styled from 'styled-components'
 import styledMap from 'styled-map'
 
 import { DESKTOP, MOBILE, TABLET } from '../../../constants'
+import { ABOUT_COMMUNITY_LAW_URL } from '../../../state/constants'
 
 const Button = styled.button`
   width: ${styledMap('format', {
-  [DESKTOP]: '450px',
-  [TABLET]: '260px',
-  [MOBILE]: '260px'
-})};
+    [DESKTOP]: '450px',
+    [TABLET]: '260px',
+    [MOBILE]: '260px'
+  })};
   height: 58px;
   border-radius: 5px;
   border: solid 3px #ffffff;
@@ -19,11 +20,12 @@ const Button = styled.button`
   font-size: 16px;
 `
 
-export default function AboutButton({ format }) {
+export default function AboutButton ({ format }) {
   return (
-    <Button format={format}
+    <Button
+      format={format}
       onClick={() => {
-        navigate('http://www.wclc.org.nz/about-us/')
+        navigate({ ABOUT_COMMUNITY_LAW_URL })
       }}
     >
       About Community Law
