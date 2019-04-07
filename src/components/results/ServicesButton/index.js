@@ -18,6 +18,7 @@ const Button = styled.button`
   font-family: 'Museo Sans Cyrl 900', sans-serif;
   font-weight: 900;
   font-size: 16px;
+  
 `
 
 export default function ServicesButton({ format }) {
