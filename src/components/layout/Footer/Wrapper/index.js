@@ -13,11 +13,11 @@ const Footer = styled.div`
   ${styledMap('format', {
     [DESKTOP]: `
       height: 98px;`,
+    [TABLET]: `
+      height: 100px;`,
     [MOBILE]: `
       height: 135px;
-      flex-direction: column;`,
-    [TABLET]: `
-      height: 100px;`
+      flex-direction: column;`
   })}
 `
 Footer.displayName = 'Footer'

@@ -2,6 +2,7 @@ import * as React from 'react'
 import { connect } from 'react-redux'
 import { map } from 'ramda'
 import { isNonEmptyArray } from 'ramda-adjunct'
+import styled from 'styled-components'
 
 import TopicQuestions from './TopicQuestions'
 import TopicName from './TopicName'
@@ -15,6 +16,15 @@ import {
 
 import makeQuestionButton from '../../wrappers/makeQuestionButton'
 
+const CenteredTopic = styled.div`
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 1px;
+  height: 1px;
+`
+
 function TopicBar ({
   topic,
   topicQuestions = [],
@@ -22,9 +32,11 @@ function TopicBar ({
   activeQuestionIndex
 }) {
   return (
-    <TopicQuestions activeTopic={activeTopic}>
-      <TopicName>{topic}</TopicName>
-      <div>
+    <TopicQuestions>
+      <CenteredTopic>
+        <TopicName activeTopic={activeTopic}>{topic}</TopicName>
+      </CenteredTopic>
+      <>
         {isNonEmptyArray(topicQuestions) &&
           map(({ id, index }) => {
             const QuestionButton = makeQuestionButton(Button)
@@ -39,7 +51,7 @@ function TopicBar ({
               </QuestionButton>
             )
           }, topicQuestions)}
-      </div>
+      </>
     </TopicQuestions>
   )
 }

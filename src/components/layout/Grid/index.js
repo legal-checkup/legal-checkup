@@ -4,7 +4,6 @@ import styledMap from 'styled-map'
 
 const Grid = styled.section`
   margin: auto;
-  padding: 30px;
   ${styledMap('format', {
     [DESKTOP]: `
       width: 920px;`,
