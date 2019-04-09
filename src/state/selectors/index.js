@@ -135,7 +135,7 @@ export const getActiveQuestionAnswer = createSelector(
   (answers, activeQuestionIndex) =>
     answers &&
     answers[activeQuestionIndex] &&
-    answers[activeQuestionIndex].answer
+    pathOr('', ['answer'], answers[activeQuestionIndex])
 )
 
 // Get the result type based on the RESULTS_TRIGGER;
