@@ -1,14 +1,7 @@
 import styled from 'styled-components'
-import styledMap from 'styled-map'
 
 import { DESKTOP, MOBILE, TABLET } from '../../../../../constants'
 import { KEYS } from '../../../../../state/constants'
-
-function setWidth (format, type) {
-  if (format === DESKTOP || format === TABLET) {
-    return type === KEYS.esc ? '49px' : '29px'
-  }
-}
 
 function setMarginRight (format, type) {
   if (type === KEYS.esc) {
