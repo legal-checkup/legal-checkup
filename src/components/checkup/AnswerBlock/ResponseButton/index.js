@@ -5,6 +5,8 @@ import {
   userRespondedWithNotSure,
   userRespondedWithYes
 } from '../../../../state/actions'
+
+import { getActiveQuestionAnswer } from '../../../../state/selectors'
 import { NO, YES } from '../../../../state/constants'
 
 import Button from './Button'
@@ -20,6 +22,12 @@ function getAction (type) {
   }
 }
 
+function mapStateToProps ({ checkup }) {
+  return {
+    activeQuestionAnswer: getActiveQuestionAnswer(checkup)
+  }
+}
+
 function mapDispatchToProps (dispatch, { type }) {
   return {
     onClick: () => dispatch(getAction(type))
@@ -27,6 +35,6 @@ function mapDispatchToProps (dispatch, { type }) {
 }
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Button)
