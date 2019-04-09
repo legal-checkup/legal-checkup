@@ -6,12 +6,14 @@ import styledMap from 'styled-map'
 
 import { DESKTOP, MOBILE, TABLET } from '../../../constants'
 
+import { COMMUNITY_LAW_SERVICES_URL } from '../../../state/constants'
+
 const Button = styled.button`
   width: ${styledMap('format', {
-  [DESKTOP]: '450px',
-  [TABLET]: '260px',
-  [MOBILE]: '260px'
-})};
+    [DESKTOP]: '450px',
+    [TABLET]: '260px',
+    [MOBILE]: '260px'
+  })};
   height: 58px;
   border-radius: 5px;
   border: solid 3px #ffffff;
@@ -21,11 +23,12 @@ const Button = styled.button`
   
 `
 
-export default function ServicesButton({ format }) {
+export default function ServicesButton ({ format }) {
   return (
-    <Button format={format}
+    <Button
+      format={format}
       onClick={() => {
-        navigate('http://www.wclc.org.nz/our-services/')
+        navigate({ COMMUNITY_LAW_SERVICES_URL })
       }}
     >
       Community Law Services
