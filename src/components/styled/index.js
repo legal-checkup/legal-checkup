@@ -14,6 +14,18 @@ const PageHeading = styled.h3`
 `
 PageHeading.displayName = 'StyledHeading'
 
+const PageQuestion = styled.h5`
+  font-weight: 900;
+  font-size: ${({ format }) => (format === MOBILE ? 12 : 17)}px;
+  font-family: 'Museo Sans Cyrl 900', sans-serif;
+  text-align: inherit;
+
+  margin: 0;
+
+  color: ${HEADER_TEXT};
+`
+PageQuestion.displayName = 'StyledQuestion'
+
 const PageText = styled.p`
   font-weight: 500;
   font-size: ${({ format }) => (format === MOBILE ? 15 : 18)}px;
@@ -52,4 +64,11 @@ const ResultText = styled.p`
 
 ResultText.displayName = 'ResultText'
 
-export { PageHeading, PageText, ResultHeading, ResultTitle, ResultText }
+export {
+  PageHeading,
+  PageQuestion,
+  PageText,
+  ResultHeading,
+  ResultTitle,
+  ResultText
+}

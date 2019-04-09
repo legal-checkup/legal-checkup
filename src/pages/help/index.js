@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { Helmet } from 'react-helmet'
 
-import Section from '../../components/layout/Section'
-
-import { WEBSITE } from '../../constants'
+import { WEBSITE, HELP_PAGE } from '../../constants'
+import HelpPageContent from '../../components/HelpPageContent'
+import { PageSection, PageTextContainer } from '../../components/layout/Section'
 import { FormatConsumer } from '../../components/layout/FormatContext'
 
 export default function Help () {
@@ -14,11 +14,11 @@ export default function Help () {
       </Helmet>
       <FormatConsumer>
         {value => (
-          <Section>
-            <p>
-              This is the <strong>Help</strong> page
-            </p>
-          </Section>
+          <PageSection>
+            <PageTextContainer format={value} page={HELP_PAGE}>
+              <HelpPageContent format={value} />
+            </PageTextContainer>
+          </PageSection>
         )}
       </FormatConsumer>
     </>
