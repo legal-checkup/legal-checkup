@@ -44,9 +44,9 @@ function setPreviousSelectedTextColor (buttonType, activeQuestionAnswer) {
 }
 
 const Button = styled.button`
-  background-color: ${({ format, type, activeQuestionAnswer }) =>
+  background-color: ${({ type, activeQuestionAnswer }) =>
     setPreviousSelectedBackgroundColor(type, activeQuestionAnswer)};
-  color: ${({ format, type, activeQuestionAnswer }) =>
+  color: ${({ type, activeQuestionAnswer }) =>
     setPreviousSelectedTextColor(type, activeQuestionAnswer)};
   height: 78px;
   border: none;
