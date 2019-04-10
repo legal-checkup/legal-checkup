@@ -92,4 +92,6 @@ export const BACKGROUND_LINK_ACTIVE = PINK
 export const BACKGROUND_LINK_FOCUS_ACTIVE = PINK
 export const RED = `#`
 
+export const PROGRESS_BAR_DIVIDER = 'hsla(0, 0%, 0%, 0.1)'
+
 // new added or like you know just so your mind knows what it's doing
