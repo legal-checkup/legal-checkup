@@ -15,33 +15,33 @@ import ResultAccordion from '../ResultAccordion'
 import { connect } from 'react-redux'
 import { getResultType } from '../../../state/selectors'
 
-import { ABOUT_COMMUNITY_LAW_URL, COMMUNITY_LAW_SERVICES_URL } from '../../../state/constants'
+import {
+  ABOUT_COMMUNITY_LAW_URL,
+  COMMUNITY_LAW_SERVICES_URL
+} from '../../../state/constants'
 
 function allGood (format) {
   return (
     <div>
-      <ResultHeading>You're all done.</ResultHeading>
-      <ResultTitle>Results</ResultTitle>
-      <ResultText data-testid={allGoodText}>
-        Based on your answers, it looks like you're in good legal health! But if
-        you have a problem, or something worrying you that wasn't covered by the
-        questions in this check-up, do come talk to us at Community Law.
-      </ResultText>
-      <ResultText>
-        You can find information about Community Law services and clinic hours
-        below.
-      </ResultText>
       <PageTextContainer>
-        <AboutCommunityLaw
-          format={format}
-          href={ABOUT_COMMUNITY_LAW_URL}
-        >
+        <ResultHeading>You're all done.</ResultHeading>
+        <ResultTitle>Results</ResultTitle>
+        <ResultText data-testid={allGoodText}>
+          Based on your answers, it looks like you're in good legal health!
+        </ResultText>
+        <ResultText>
+          But if you have a problem, or something worrying you that wasn't
+          covered by the questions in this check-up, do come talk to us at
+          Community Law.
+        </ResultText>
+        <ResultText>
+          You can find information about Community Law services and clinic hours
+          below.
+        </ResultText>
+        <AboutCommunityLaw format={format} href={ABOUT_COMMUNITY_LAW_URL}>
           About Community Law
         </AboutCommunityLaw>
-        <CommunityLawServices
-          format={format}
-          href={COMMUNITY_LAW_SERVICES_URL}
-        >
+        <CommunityLawServices format={format} href={COMMUNITY_LAW_SERVICES_URL}>
           Community Law Services
         </CommunityLawServices>
       </PageTextContainer>
@@ -57,40 +57,45 @@ const hasResults = pipe(
 )
 
 function needHelp (results, format) {
+  const topicArray = []
+  results.map(topic => {
+    if (topic.questions.filter(question => question.answer !== NO).length > 0) {
+      topicArray.push(topic)
+    }
+  })
+
   return (
     <div>
-      <ResultHeading>You're all done.</ResultHeading>
-      <ResultTitle>Results</ResultTitle>
-      <ResultText data-testid={needHelpParagraph1}>
-        {' '}
-        Based on your answers, a lawyer may be able to help you with &#8230;
-      </ResultText>
-      {map(
-        topicName =>
-          hasResults(topicName.questions) ? (
-            <ResultAccordion
-              key={topicName.id}
-              format={format}
-              topicName={topicName}
-            />
-          ) : null,
-        results
-      )}
-      <ResultText data-testid={needHelpParagraph2}>
-        You can get free legal advice about these (or any other problem) from
-        your local Community Law Centre.
-      </ResultText>
       <PageTextContainer>
-        <AboutCommunityLaw
-          format={format}
-          href={ABOUT_COMMUNITY_LAW_URL}
-        >
+        <ResultHeading>You're all done.</ResultHeading>
+        <ResultTitle>Results</ResultTitle>
+        <ResultText data-testid={needHelpParagraph1}>
+          Based on your answers, a lawyer may be able to help you with &#8230;
+        </ResultText>
+        {map(
+          topicName =>
+            hasResults(topicName.questions) ? (
+              <ResultAccordion
+                key={topicName.id}
+                format={format}
+                topicName={topicName}
+                topicArray={topicArray}
+              />
+            ) : null,
+          results
+        )}
+        <ResultText data-testid={needHelpParagraph2}>
+          You can get free legal advice about these (or any other problem) from
+          your local Community Law Centre.
+        </ResultText>
+        <ResultText>
+          You can find information about Community Law services and clinic hours
+          below.
+        </ResultText>
+        <AboutCommunityLaw format={format} href={ABOUT_COMMUNITY_LAW_URL}>
           About Community Law
         </AboutCommunityLaw>
-        <CommunityLawServices
-          format={format}
-          href={COMMUNITY_LAW_SERVICES_URL}
-        >
+        <CommunityLawServices format={format} href={COMMUNITY_LAW_SERVICES_URL}>
           Community Law Services
         </CommunityLawServices>
       </PageTextContainer>

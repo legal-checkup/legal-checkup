@@ -11,11 +11,13 @@ const Wrapper = styled.div`
     [DESKTOP]: `
     padding: 18px 0 35px 0;    
     font-size: 20px;`,
+    [MOBILE]: `
+    width: 285px;
+    padding: 20px;
+    font-size: 16px;`,
     [TABLET]: `
     padding: 18px 0 35px 0;
     font-size: 20px;`,
-    [MOBILE]: `
-    font-size: 16px;`
   })}
 `
 Wrapper.displayName = 'Wrapper'
