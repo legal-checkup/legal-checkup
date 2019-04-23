@@ -9,7 +9,7 @@ const getWidth = ({ format }) => {
     case TABLET:
       return '708px'
     default:
-      return '708px'
+      return 'auto'
   }
 }
 
