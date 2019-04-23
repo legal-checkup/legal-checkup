@@ -15,6 +15,8 @@ import ResultAccordion from '../ResultAccordion'
 import { connect } from 'react-redux'
 import { getResultType } from '../../../state/selectors'
 
+import { ABOUT_COMMUNITY_LAW_URL, COMMUNITY_LAW_SERVICES_URL } from '../../../state/constants'
+
 function allGood (format) {
   return (
     <div>
@@ -35,13 +37,13 @@ function allGood (format) {
         </ResultText>
         <AboutCommunityLaw
           format={format}
-          href='http://www.wclc.org.nz/about-us/'
+          href={ABOUT_COMMUNITY_LAW_URL}
         >
           About Community Law
         </AboutCommunityLaw>
         <CommunityLawServices
           format={format}
-          href='http://www.wclc.org.nz/our-services/'
+          href={COMMUNITY_LAW_SERVICES_URL}
         >
           Community Law Services
         </CommunityLawServices>
@@ -97,13 +99,13 @@ function needHelp (results, format) {
         </ResultText>
         <AboutCommunityLaw
           format={format}
-          href='http://www.wclc.org.nz/about-us/'
+          href={ABOUT_COMMUNITY_LAW_URL}
         >
           About Community Law
         </AboutCommunityLaw>
         <CommunityLawServices
           format={format}
-          href='http://www.wclc.org.nz/our-services/'
+          href={COMMUNITY_LAW_SERVICES_URL}
         >
           Community Law Services
         </CommunityLawServices>

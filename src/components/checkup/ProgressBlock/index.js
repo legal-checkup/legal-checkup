@@ -8,6 +8,7 @@ import Button from './Button'
 import CurrentTopic from './CurrentTopic'
 import DesktopProgressBar from './DesktopProgressBar'
 import ProgressBar from './ProgressBar'
+import { LeftArrowImage, RightArrowImage } from './images/Arrow'
 
 export default function (props) {
   const { format } = props
@@ -17,26 +18,38 @@ export default function (props) {
   switch (format) {
     case DESKTOP:
       return (
-        <ProgressBar>
-          <PreviousQuestionButton format={DESKTOP} />
+        <ProgressBar format={DESKTOP}>
+          <PreviousQuestionButton>
+            <LeftArrowImage />
+          </PreviousQuestionButton>
           <DesktopProgressBar />
-          <NextQuestionButton format={DESKTOP} />
+          <NextQuestionButton>
+            <RightArrowImage />
+          </NextQuestionButton>
         </ProgressBar>
       )
     case TABLET:
       return (
-        <ProgressBar>
-          <PreviousQuestionButton format={TABLET} />
-          <CurrentTopic />
-          <NextQuestionButton format={TABLET} />
+        <ProgressBar format={TABLET}>
+          <PreviousQuestionButton>
+            <LeftArrowImage />
+          </PreviousQuestionButton>
+          <DesktopProgressBar />
+          <NextQuestionButton>
+            <RightArrowImage />
+          </NextQuestionButton>
         </ProgressBar>
       )
     default:
       return (
-        <ProgressBar>
-          <PreviousQuestionButton format={MOBILE} />
+        <ProgressBar format={MOBILE}>
+          <PreviousQuestionButton>
+            <LeftArrowImage />
+          </PreviousQuestionButton>
           <CurrentTopic />
-          <NextQuestionButton format={MOBILE} />
+          <NextQuestionButton>
+            <RightArrowImage />
+          </NextQuestionButton>
         </ProgressBar>
       )
   }

@@ -53,8 +53,10 @@ export const TERMS_OF_USE_PATH = '/terms-of-use'
 
 // External URLs
 export const COMMUNITY_LAW_URL = 'http://communitylaw.org.nz/'
-export const ABOUT_COMMUNITY_LAW_URL = 'http://www.wclc.org.nz/about-us/'
-export const COMMUNITY_LAW_SERVICES_URL = 'http://www.wclc.org.nz/our-services/'
+export const ABOUT_COMMUNITY_LAW_URL =
+  'https://communitylaw.org.nz/free-legal-help/'
+export const COMMUNITY_LAW_SERVICES_URL =
+  'https://communitylaw.org.nz/our-law-centres/'
 
 // Keycode
 

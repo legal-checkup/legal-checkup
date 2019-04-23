@@ -3,6 +3,10 @@ import React, { Fragment } from 'react'
 import { PageText } from '../../styled/index'
 import Link from '../../Link'
 import { AboutCommunityLaw, CommunityLawServices } from '../buttons'
+import {
+  ABOUT_COMMUNITY_LAW_URL,
+  COMMUNITY_LAW_SERVICES_URL
+} from '../../../state/constants'
 
 function Outro ({ format }) {
   return (
@@ -16,16 +20,10 @@ function Outro ({ format }) {
         - where you can get free legal advice on all the topics covered by this
         quiz.
       </PageText>
-      <AboutCommunityLaw
-        format={format}
-        href='http://www.wclc.org.nz/about-us/'
-      >
+      <AboutCommunityLaw format={format} href={ABOUT_COMMUNITY_LAW_URL}>
         About Community Law
       </AboutCommunityLaw>
-      <CommunityLawServices
-        format={format}
-        href='http://www.wclc.org.nz/our-services/'
-      >
+      <CommunityLawServices format={format} href={COMMUNITY_LAW_SERVICES_URL}>
         Community Law Services
       </CommunityLawServices>
     </Fragment>

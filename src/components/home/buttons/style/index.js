@@ -110,6 +110,7 @@ const AboutCommunityLawButton = styled.a`
   &:hover {
     background-color: ${BLACK};
     color: ${WHITE};
+    border: 0;
   }
   &:active {
     background-color: ${BACKGROUND_LINK_ACTIVE};
@@ -143,6 +144,7 @@ const CommunityLawServicesButton = styled.a`
   &:hover {
     background-color: ${BLACK};
     color: ${WHITE};
+    border: 0;
   }
   &:active {
     background-color: ${BACKGROUND_LINK_ACTIVE};

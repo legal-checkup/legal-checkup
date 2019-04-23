@@ -23,17 +23,29 @@ const getTextPadding = ({ format }) => {
   return format === DESKTOP ? '50px 0' : '30px'
 }
 
+const ContentWrapper = styled.div`
+  padding: 0 25px;
+  ${styledMap('format', {
+    [DESKTOP]: ``
+  })}
+`
+ContentWrapper.displayName = 'StyledContentWrapper'
+
 const Section = styled.section`
-  background-color: #eee;
+  background-color: #eeedea;
   color: #333;
   font-family: 'Museo Sans Cyrl 500', sans-serif;
   ${styledMap('format', {
     [DESKTOP]: `
-      padding-bottom: 119px;`,
-    [MOBILE]: `
-    padding-bottom: 60px;`,
+      min-height: calc(100vh - 105px);
+      `,
     [TABLET]: `
-    padding-bottom: 270px;`
+      min-height: calc(100vh - 107px);
+      `,
+    [MOBILE]: `
+      min-height: calc(100vh - 142px);
+      padding: 0 25px;
+    `
   })}
 `
 Section.displayName = 'Section'
@@ -56,4 +68,4 @@ const PageTextContainer = styled.div`
 PageTextContainer.displayName = 'PageTextContainer'
 
 export default Section
-export { PageSection, PageTextContainer }
+export { PageSection, PageTextContainer, ContentWrapper }

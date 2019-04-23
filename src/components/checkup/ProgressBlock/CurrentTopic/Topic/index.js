@@ -1,14 +1,17 @@
 import styled from 'styled-components'
 
 const Topic = styled.div`
-  background-color: #ededed;
   color: #b62645;
-  font-weight: bold;
+
   font-family: 'Museo Sans Cyrl 900', sans-serif;
-  height: 42px;
-  line-height: 42px;
+  font-weight: 900;
+  font-size: 17px;
+
   text-align: center;
-  width: 158px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 `
 
 Topic.displayName = 'Topic'

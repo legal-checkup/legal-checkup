@@ -15,7 +15,7 @@ import { questionsLoaded } from '../../state/actions'
 
 const { useEffect } = React
 
-function App ({ data, dispatch, loaded }) {
+function App ({ data, dispatch, questionsNotEmpty }) {
   useEffect(() => {
     handleQuestions()
   }, [])
@@ -29,11 +29,10 @@ function App ({ data, dispatch, loaded }) {
       <Helmet>
         <title>Checkup :: {WEBSITE}</title>
       </Helmet>
-
       <FormatConsumer>
         {value => (
           <Section>
-            {loaded ? (
+            {questionsNotEmpty ? (
               <>
                 <ProgressBlock format={value} />
                 <Block format={value}>
@@ -67,10 +66,10 @@ export const query = graphql`
 `
 
 function mapStateToProps ({ checkup }) {
-  const loaded = getQuestionCount(checkup) > 2
+  const questionsNotEmpty = getQuestionCount(checkup) > 2
 
   return {
-    loaded: loaded
+    questionsNotEmpty: questionsNotEmpty
   }
 }
 

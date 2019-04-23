@@ -58,9 +58,7 @@ export default function reducer (state = initialState, { payload = {}, type }) {
     case QUESTIONS_LOADED:
       return {
         ...state,
-        topics: setTopics(payload),
-        responses: [],
-        activeQuestionIndex: 0
+        topics: setTopics(payload)
       }
 
     default:

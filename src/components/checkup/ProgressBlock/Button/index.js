@@ -3,19 +3,31 @@ import styledMap from 'styled-map'
 
 import { DESKTOP, MOBILE, TABLET } from '../../../../constants'
 
+const getColor = ({ active, enabled }) => {
+  if (active) {
+    return 'white'
+  } else if (enabled) {
+    return 'black'
+  } else {
+    return '#c0c0c0'
+  }
+}
+
 const Button = styled.button`
-  background-color: #ededed;
-  border-radius: 0 5px 5px 0;
+  stroke: ${({ enabled }) => (enabled ? '#b62645' : '#dcb1b8')};
   border: none;
-  color: ${({ active }) => (active ? 'white' : '#c0c0c0')};
-  height: 30px;
-  cursor: ${enabled => (enabled ? 'pointer' : 'default')}
-  border-radius: ${({ active }) => (active ? '100px' : '0 5px 5px 0')};
-  background-color: ${({ active }) => (active ? '#b62645' : '#ededed')};
-  font-weight: ${({ enabled }) => (enabled ? 'bold' : 'normal')};
+  color: ${getColor};
+  cursor: ${({ enabled }) => (enabled ? 'pointer' : 'default')};
+  border-radius: 50%;
+  background-color: ${({ active }) => (active ? '#b62645' : 'transparent')};
+  font-size: 13px;
+  font-weight: bold;
   outline: none;
-  margin-top: -10px;
-  width: 30px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  padding: 0px;
 
   ${styledMap('format', {
     [`${DESKTOP}Next`]: ``,
@@ -28,7 +40,6 @@ const Button = styled.button`
     [`${TABLET}Previous`]: ``,
     [`${TABLET}Question`]: ``
   })}
-
 `
 Button.displayName = 'Button'
 

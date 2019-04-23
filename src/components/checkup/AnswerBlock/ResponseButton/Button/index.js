@@ -7,7 +7,11 @@ import {
   DESKTOP,
   MOBILE,
   TABLET,
-  WHITE
+  WHITE,
+  ROUGE,
+  BACKGROUND_BUTTON_ACTIVE,
+  OFF_WHITE,
+  TEXT_COLOR
 } from '../../../../../constants'
 import styledMap from 'styled-map'
 
@@ -29,8 +33,21 @@ function setMarginRight (format, type) {
   }
 }
 
+function setPreviousSelectedBackgroundColor (buttonType, activeQuestionAnswer) {
+  return buttonType === activeQuestionAnswer
+    ? BACKGROUND_BUTTON_ACTIVE
+    : OFF_WHITE
+}
+
+function setPreviousSelectedTextColor (buttonType, activeQuestionAnswer) {
+  return buttonType === activeQuestionAnswer ? ROUGE : TEXT_COLOR
+}
+
 const Button = styled.button`
-  background-color: #eeedea;
+  background-color: ${({ type, activeQuestionAnswer }) =>
+    setPreviousSelectedBackgroundColor(type, activeQuestionAnswer)};
+  color: ${({ type, activeQuestionAnswer }) =>
+    setPreviousSelectedTextColor(type, activeQuestionAnswer)};
   height: 78px;
   border: none;
   font-family: 'Museo Sans Cyrl 500', sans-serif;

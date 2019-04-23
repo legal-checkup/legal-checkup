@@ -60,6 +60,7 @@ export const OFF_WHITE = `#eeedea`
 export const GREYISH_BROWN = `#444141`
 export const BACKGROUND_NAV = GREYISH_BROWN
 export const HEADER_BORDER_BOTTOM = GREYISH_BROWN
+export const TEXT_COLOR = `#333`
 
 // accent colors
 export const BROWNISH_GREY = `#706262`
