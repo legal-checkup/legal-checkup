@@ -15,7 +15,10 @@ import ResultAccordion from '../ResultAccordion'
 import { connect } from 'react-redux'
 import { getResultType } from '../../../state/selectors'
 
-import { ABOUT_COMMUNITY_LAW_URL, COMMUNITY_LAW_SERVICES_URL } from '../../../state/constants'
+import {
+  ABOUT_COMMUNITY_LAW_URL,
+  COMMUNITY_LAW_SERVICES_URL
+} from '../../../state/constants'
 
 function allGood (format) {
   return (
@@ -35,16 +38,10 @@ function allGood (format) {
           You can find information about Community Law services and clinic hours
           below.
         </ResultText>
-        <AboutCommunityLaw
-          format={format}
-          href={ABOUT_COMMUNITY_LAW_URL}
-        >
+        <AboutCommunityLaw format={format} href={ABOUT_COMMUNITY_LAW_URL}>
           About Community Law
         </AboutCommunityLaw>
-        <CommunityLawServices
-          format={format}
-          href={COMMUNITY_LAW_SERVICES_URL}
-        >
+        <CommunityLawServices format={format} href={COMMUNITY_LAW_SERVICES_URL}>
           Community Law Services
         </CommunityLawServices>
       </PageTextContainer>
@@ -64,7 +61,6 @@ function needHelp (results, format) {
   results.map(topic => {
     if (topic.questions.filter(question => question.answer !== NO).length > 0) {
       topicArray.push(topic)
-    } else {
     }
   })
 
@@ -97,16 +93,10 @@ function needHelp (results, format) {
           You can find information about Community Law services and clinic hours
           below.
         </ResultText>
-        <AboutCommunityLaw
-          format={format}
-          href={ABOUT_COMMUNITY_LAW_URL}
-        >
+        <AboutCommunityLaw format={format} href={ABOUT_COMMUNITY_LAW_URL}>
           About Community Law
         </AboutCommunityLaw>
-        <CommunityLawServices
-          format={format}
-          href={COMMUNITY_LAW_SERVICES_URL}
-        >
+        <CommunityLawServices format={format} href={COMMUNITY_LAW_SERVICES_URL}>
           Community Law Services
         </CommunityLawServices>
       </PageTextContainer>
