@@ -28,13 +28,8 @@ export default function ResultAccordion (props) {
   const { format, topicName = {}, topicArray } = props
   const { questions = [] } = topicName
 
-  const isExpanded = () => {
-    if (topicArray.length > 2) {
-      return false
-    } else {
-      return true
-    }
-  }
+  const isExpanded = () => topicArray.length < 3
+
   const headingRender = onClick => {
     return (
       <ResultTopicHeader

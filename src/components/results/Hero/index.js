@@ -70,7 +70,6 @@ function needHelp (results, format) {
         <ResultHeading>You're all done.</ResultHeading>
         <ResultTitle>Results</ResultTitle>
         <ResultText data-testid={needHelpParagraph1}>
-          {' '}
           Based on your answers, a lawyer may be able to help you with &#8230;
         </ResultText>
         {map(
