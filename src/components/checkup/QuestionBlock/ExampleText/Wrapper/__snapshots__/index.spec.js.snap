@@ -1,17 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components:checkup:QuestionBlock:ExampleText:Wrapper matches the snapshot 1`] = `
-.c0 {
-  width: 260px;
-  margin: 0 auto;
-  font-family: Helvetica;
-  font-size: 16px;
-  text-align: center;
-  color: #9b9b9b;
-}
-
 <div
-  className="c0"
+  className="sc-bdVaJa fnWYxx"
 >
   Wrapper
 </div>

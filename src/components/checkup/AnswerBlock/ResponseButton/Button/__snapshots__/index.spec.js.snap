@@ -1,25 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components:checkup:AnswerBlock:ResponseButton:Button matches the snapshot for type No 1`] = `
-.c0 {
-  background-color: White;
-  border: solid 2px #b5b5b5;
-  border-right: solid 2px #b5b5b5;
-  border-top-left-radius: 0;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 5px;
-  height: 78px;
-  margin-left: 0;
-  width: 88px;
-}
-
-.c0:after {
-  content: 'No';
-}
-
 <button
-  className="c0"
+  className="sc-bdVaJa qOFnr"
   type="No"
 >
   No
@@ -27,25 +10,8 @@ exports[`components:checkup:AnswerBlock:ResponseButton:Button matches the snapsh
 `;
 
 exports[`components:checkup:AnswerBlock:ResponseButton:Button matches the snapshot for type Not sure 1`] = `
-.c0 {
-  background-color: White;
-  border: solid 2px #b5b5b5;
-  border-right: solid 2px #b5b5b5;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  height: 78px;
-  margin-left: 7px;
-  width: 109px;
-}
-
-.c0:after {
-  content: 'Not sure';
-}
-
 <button
-  className="c0"
+  className="sc-bdVaJa gDtnQp"
   type="Not sure"
 >
   Not sure
@@ -53,25 +19,8 @@ exports[`components:checkup:AnswerBlock:ResponseButton:Button matches the snapsh
 `;
 
 exports[`components:checkup:AnswerBlock:ResponseButton:Button matches the snapshot for type Yes 1`] = `
-.c0 {
-  background-color: White;
-  border: solid 2px #b5b5b5;
-  border-right: 0;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 0;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 0;
-  height: 78px;
-  margin-left: 0;
-  width: 88px;
-}
-
-.c0:after {
-  content: 'Yes';
-}
-
 <button
-  className="c0"
+  className="sc-bdVaJa eFNFOG"
   type="Yes"
 >
   Yes

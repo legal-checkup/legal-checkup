@@ -1,38 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components:layout:Header:Title renders correctly 1`] = `
-.c2 {
-  color: #b62645;
-  line-height: 1;
-  text-transform: uppercase;
-  font-size: inherit;
-}
-
-.c1 {
-  color: #fff;
-  line-height: 1;
-  text-transform: uppercase;
-  font-size: inherit;
-}
-
-.c0 {
-  font-family: 'Museo Sans Cyrl',sans-serif;
-  font-weight: 900;
-  line-height: 1;
-  margin-left: 8px;
-  font-size: 18px;
-}
-
 <div
-  className="c0"
+  className="sc-htpNat cisWkv"
 >
   <div
-    className="c1"
+    className="sc-bwzfXH kShIvT"
   >
     Legal
   </div>
   <div
-    className="c2"
+    className="sc-bdVaJa hVgXGa"
   >
     Checkup
   </div>

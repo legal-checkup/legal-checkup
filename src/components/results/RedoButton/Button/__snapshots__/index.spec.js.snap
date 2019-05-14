@@ -1,70 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components:results:RedoButton:Button matches the snapshot when format is desktop 1`] = `
-.c0 {
-  border-radius: 5px;
-  border: solid 3px #ffffff;
-  font-family: Helvetica;
-  font-size: 20px;
-  font-weight: 900;
-  text-align: center;
-  color: #b62645;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: auto;
-  height: 78px;
-  padding-top: 39px;
-  width: 920px;
-}
-
 <div
-  className="c0"
+  className="sc-bdVaJa dRUGMu"
   format="desktop"
 />
 `;
 
 exports[`components:results:RedoButton:Button matches the snapshot when format is mobile 1`] = `
-.c0 {
-  border-radius: 5px;
-  border: solid 3px #ffffff;
-  font-family: Helvetica;
-  font-size: 20px;
-  font-weight: 900;
-  text-align: center;
-  color: #b62645;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: auto;
-  width: 310px;
-  height: 24px;
-  padding: 28px 26px 26px;
-}
-
 <div
-  className="c0"
+  className="sc-bdVaJa lfurmQ"
   format="mobile"
 />
 `;
 
 exports[`components:results:RedoButton:Button matches the snapshot when format is tablet 1`] = `
-.c0 {
-  border-radius: 5px;
-  border: solid 3px #ffffff;
-  font-family: Helvetica;
-  font-size: 20px;
-  font-weight: 900;
-  text-align: center;
-  color: #b62645;
-  -webkit-text-decoration: none;
-  text-decoration: none;
-  margin: auto;
-  width: 310px;
-  height: 24px;
-  padding: 28px 26px 26px;
-}
-
 <div
-  className="c0"
+  className="sc-bdVaJa lfurmQ"
   format="tablet"
 />
 `;
