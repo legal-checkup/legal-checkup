@@ -1,14 +1,12 @@
 import styled from 'styled-components'
 
-import { MOBILE, HEADER_TEXT, GREYISH_BROWN } from '../../constants'
+import { MOBILE, HEADER_TEXT, GREYISH_BROWN, BLACK } from '../../constants'
 
 const PageHeading = styled.h3`
   font-weight: 900;
   font-size: ${({ format }) => (format === MOBILE ? 22 : 32)}px;
   font-family: 'Museo Sans Cyrl 900', sans-serif;
   text-align: inherit;
-
-  margin: 0;
 
   color: ${HEADER_TEXT};
 `
@@ -20,16 +18,23 @@ const PageQuestion = styled.h5`
   font-family: 'Museo Sans Cyrl 900', sans-serif;
   text-align: inherit;
 
-  margin: 0;
+  margin: ${({ dense }) => (dense ? 0 : 18)}px;
 
-  color: ${HEADER_TEXT};
+  color: ${BLACK};
 `
 PageQuestion.displayName = 'StyledQuestion'
+
+const QuestionAnswerWrapper = styled.div`
+  margin: 18px 0px 18px 0px;
+`
+QuestionAnswerWrapper.displayName = 'StyledQuestionAnswerWrapper'
 
 const PageText = styled.p`
   font-weight: 500;
   font-size: ${({ format }) => (format === MOBILE ? 15 : 18)}px;
   font-family: 'Museo Sans Cyrl 500', sans-serif;
+
+  margin: ${({ dense }) => (dense ? 0 : 18)}px;
 `
 PageText.displayName = 'PageText'
 
@@ -70,5 +75,6 @@ export {
   PageText,
   ResultHeading,
   ResultTitle,
-  ResultText
+  ResultText,
+  QuestionAnswerWrapper
 }
