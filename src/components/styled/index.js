@@ -6,7 +6,7 @@ const PageHeading = styled.h3`
   font-weight: 900;
   font-size: ${({ format }) => (format === MOBILE ? 22 : 32)}px;
   font-family: 'Museo Sans Cyrl 900', sans-serif;
-  text-align: inherit;
+  text-align: left;
 
   color: ${HEADER_TEXT};
 `
@@ -25,7 +25,7 @@ const PageQuestion = styled.h5`
 PageQuestion.displayName = 'StyledQuestion'
 
 const QuestionAnswerWrapper = styled.div`
-  margin: 18px 0px 18px 0px;
+  text-align: left;
 `
 QuestionAnswerWrapper.displayName = 'StyledQuestionAnswerWrapper'
 
