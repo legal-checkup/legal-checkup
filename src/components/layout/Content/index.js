@@ -4,6 +4,7 @@ import styledMap from 'styled-map'
 import { DESKTOP, MOBILE, TABLET } from '../../../constants'
 
 const Content = styled.div`
+  background-color: #eeedea;
   ${styledMap('format', {
     [DESKTOP]: `
       padding-bottom: 98px;`,

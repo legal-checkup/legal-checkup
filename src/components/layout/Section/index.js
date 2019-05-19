@@ -40,7 +40,7 @@ Section.displayName = 'Section'
 
 const PageSection = styled.section`
   &:nth-child(even) {
-    background-color: #eeedea;
+    background-color: #ffffff;
     padding: 0 25px;
   }
 `
