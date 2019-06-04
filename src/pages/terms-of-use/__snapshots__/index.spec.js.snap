@@ -1,3 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`pages:TermsOfUse  renders the TermsOfUse  page 1`] = `null`;
+exports[`pages:TermsOfUse  renders the TermsOfUse  page 1`] = `
+<section
+  className="sc-gzVnrw cjYPES"
+>
+  <div
+    className="sc-htoDjs cXOWYK"
+    format="mobile"
+  >
+    <h3
+      className="sc-bdVaJa dWrNVg"
+      format="mobile"
+    >
+      Terms of Use
+    </h3>
+    <p
+      className="sc-bwzfXH bTzyaU"
+      format="mobile"
+    >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut nibh purus. Morbi luctus mi eu nunc tristique, id porta leo fermentum. Vestibulum lectus velit, vestibulum sit amet auctor sed, fermentum et velit. Duis rhoncus erat sed gravida ullamcorper. Curabitur ultrices lorem neque, nec imperdiet enim faucibus ac. Etiam interdum purus id magna viverra, ut malesuada ligula tristique. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisis porta nulla, et fermentum leo dictum non.
+    </p>
+  </div>
+</section>
+`;

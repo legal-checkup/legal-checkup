@@ -1,14 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components:layout:Header:LinkedLogo:Logo renders proper css for desktop format 1`] = `
-.c0 {
-  cursor: pointer;
-  height: 70px;
-  width: 70px;
-}
-
 <div
-  className="c0"
+  className="sc-bdVaJa kOWcsz"
   format="desktop"
 >
   Logo
@@ -16,14 +10,8 @@ exports[`components:layout:Header:LinkedLogo:Logo renders proper css for desktop
 `;
 
 exports[`components:layout:Header:LinkedLogo:Logo renders proper css for mobile format 1`] = `
-.c0 {
-  cursor: pointer;
-  height: 32px;
-  width: 32px;
-}
-
 <div
-  className="c0"
+  className="sc-bdVaJa gWnjyY"
   format="mobile"
 >
   Logo
@@ -31,14 +19,8 @@ exports[`components:layout:Header:LinkedLogo:Logo renders proper css for mobile 
 `;
 
 exports[`components:layout:Header:LinkedLogo:Logo renders proper css for tablet format 1`] = `
-.c0 {
-  cursor: pointer;
-  height: 52px;
-  width: 52px;
-}
-
 <div
-  className="c0"
+  className="sc-bdVaJa iKaFrQ"
   format="tablet"
 >
   Logo
@@ -46,14 +28,8 @@ exports[`components:layout:Header:LinkedLogo:Logo renders proper css for tablet 
 `;
 
 exports[`components:layout:Header:LinkedLogo:Logo renders proper css when active prop is passed 1`] = `
-.c0 {
-  cursor: default;
-  height: 32px;
-  width: 32px;
-}
-
 <div
-  className="c0"
+  className="sc-bdVaJa gLJhY"
 >
   Logo
 </div>

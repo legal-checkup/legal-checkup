@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:checkup:AnswerBlock:AccessKeys:Label matches the snapshot for type A on desktop format 1`] = `
+<button
+  className="sc-bdVaJa gQqCsL"
+  format="desktop"
+  type="A"
+/>
+`;
+
+exports[`components:checkup:AnswerBlock:AccessKeys:Label matches the snapshot for type A on mobile format 1`] = `
+<button
+  className="sc-bdVaJa kslRFR"
+  format="mobile"
+  type="A"
+/>
+`;
+
+exports[`components:checkup:AnswerBlock:AccessKeys:Label matches the snapshot for type A on tablet format 1`] = `
+<button
+  className="sc-bdVaJa gQqCsL"
+  format="tablet"
+  type="A"
+/>
+`;
+
+exports[`components:checkup:AnswerBlock:AccessKeys:Label matches the snapshot for type B on desktop format 1`] = `
+<button
+  className="sc-bdVaJa lbfLzK"
+  format="desktop"
+  type="B"
+/>
+`;
+
+exports[`components:checkup:AnswerBlock:AccessKeys:Label matches the snapshot for type B on mobile format 1`] = `
+<button
+  className="sc-bdVaJa hTPxtm"
+  format="mobile"
+  type="B"
+/>
+`;
+
+exports[`components:checkup:AnswerBlock:AccessKeys:Label matches the snapshot for type B on tablet format 1`] = `
+<button
+  className="sc-bdVaJa lbfLzK"
+  format="tablet"
+  type="B"
+/>
+`;
+
+exports[`components:checkup:AnswerBlock:AccessKeys:Label matches the snapshot for type esc on desktop format 1`] = `
+<button
+  className="sc-bdVaJa ewkDbH"
+  format="desktop"
+  type="esc"
+/>
+`;
+
+exports[`components:checkup:AnswerBlock:AccessKeys:Label matches the snapshot for type esc on mobile format 1`] = `
+<button
+  className="sc-bdVaJa CPMjD"
+  format="mobile"
+  type="esc"
+/>
+`;
+
+exports[`components:checkup:AnswerBlock:AccessKeys:Label matches the snapshot for type esc on tablet format 1`] = `
+<button
+  className="sc-bdVaJa ewkDbH"
+  format="tablet"
+  type="esc"
+/>
+`;

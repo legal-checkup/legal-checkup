@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components:checkup:AnswerBlock:AccessKey:Key matches the snapshot for type undefined 1`] = `
+<section
+  className="sc-bdVaJa iUoFmA"
+/>
+`;
+
+exports[`components:checkup:AnswerBlock:AccessKey:Key matches the snapshot for type undefined 2`] = `
+<section
+  className="sc-bdVaJa iUoFmA"
+/>
+`;
+
+exports[`components:checkup:AnswerBlock:AccessKey:Key matches the snapshot for type undefined 3`] = `
+<section
+  className="sc-bdVaJa iUoFmA"
+/>
+`;
