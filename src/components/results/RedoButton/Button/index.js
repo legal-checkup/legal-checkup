@@ -22,6 +22,7 @@ const Button = styled.div`
   &:hover {
     background-color: ${BACKGROUND_BUTTON};
     color: ${WHITE};
+    border: solid 3px ${BACKGROUND_BUTTON};
   }
 
   ${styledMap('format', {
