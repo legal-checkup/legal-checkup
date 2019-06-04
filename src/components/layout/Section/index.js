@@ -35,24 +35,13 @@ const Section = styled.section`
   background-color: #eeedea;
   color: #333;
   font-family: 'Museo Sans Cyrl 500', sans-serif;
-  ${styledMap('format', {
-    [DESKTOP]: `
-      min-height: calc(100vh - 105px);
-      `,
-    [TABLET]: `
-      min-height: calc(100vh - 107px);
-      `,
-    [MOBILE]: `
-      min-height: calc(100vh - 142px);
-      padding: 0 25px;
-    `
-  })}
 `
 Section.displayName = 'Section'
 
 const PageSection = styled.section`
   &:nth-child(even) {
-    background-color: #eeedea;
+    background-color: #ffffff;
+    padding: 0 25px;
   }
 `
 PageSection.displayName = 'PageSection'
