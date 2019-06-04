@@ -5,6 +5,7 @@ export const TABLET = 'tablet'
 
 export const ABOUT_PAGE = 'aboutPage'
 export const TERMS_PAGE = 'termsPage'
+export const HELP_PAGE = 'helpPage'
 
 // Text
 export const FOR_EXAMPLE = 'For example - '
