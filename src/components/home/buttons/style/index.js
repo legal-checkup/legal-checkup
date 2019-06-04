@@ -91,13 +91,13 @@ const StartCheckupButton = styled.button`
 StartCheckupButton.displayName = 'StyledStartCheckupButton'
 
 const getButtonWidth = ({ format }) => {
-  return format === MOBILE ? '100%' : 'calc(50% - 10px)'
+  return format === DESKTOP ? 'calc(50% - 10px)' : '100%'
 }
 
 const AboutCommunityLawButton = styled.a`
   ${baseButtonStyle}
   padding: 20px 0;
-  margin: ${({ format }) => (format === MOBILE ? '0 0 15px 0' : '0 10px 0 0')};
+  margin: ${({ format }) => (format === DESKTOP ? '0 10px 0 0' : '0 0 15px 0')};
   width: ${getButtonWidth};
 
   color: ${BLACK};
@@ -132,7 +132,7 @@ AboutCommunityLawButton.displayName = 'StyledAboutCommunityLawButton'
 const CommunityLawServicesButton = styled.a`
   ${baseButtonStyle}
   padding: 20px 0;
-  margin: ${({ format }) => (format === MOBILE ? '0 0' : '0 0 0 10px')};
+  margin: ${({ format }) => (format === DESKTOP ? '0 0 0 10px' : '0 0')};
   width: ${getButtonWidth};
 
   color: ${BLACK};
