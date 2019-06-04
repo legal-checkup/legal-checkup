@@ -1,3 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`pages:Help renders the Help page 1`] = `null`;
+exports[`pages:Help renders the Help page 1`] = `
+<section
+  className="sc-bwzfXH demIpD"
+>
+  <p>
+    This is the 
+    <strong>
+      Help
+    </strong>
+     page
+  </p>
+</section>
+`;

@@ -1,20 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components:checkup:ProgressBar:CurrentTopic:TopicQuestions matches the snapshot 1`] = `
-.c0 {
-  background-color: #ededed;
-  font-weight: normal;
-  margin-top: -55px;
-  margin-bottom: 20px;
-  margin-left: -5px;
-  margin-right: 5px;
-  background-color: transparent;
-  display: inline-block;
-  color: #ededed;
-}
-
 <div
-  className="c0"
+  className="sc-bdVaJa cykwNz"
 >
   TopicQuestions
 </div>

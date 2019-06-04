@@ -1,17 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`components:results:AboutButton matches the snapshot when format is desktop 1`] = `
-.c0 {
-  width: 450px;
-  height: 58px;
-  border-radius: 5px;
-  border: solid 3px #ffffff;
-  font-family: 'Museo Sans Cyrl 900',sans-serif;
-  font-size: 16px;
-}
-
 <button
-  className="c0"
+  className="sc-bdVaJa iHWtpO"
   format="desktop"
   onClick={[Function]}
 >
@@ -20,17 +11,8 @@ exports[`components:results:AboutButton matches the snapshot when format is desk
 `;
 
 exports[`components:results:AboutButton matches the snapshot when format is mobile 1`] = `
-.c0 {
-  width: 260px;
-  height: 58px;
-  border-radius: 5px;
-  border: solid 3px #ffffff;
-  font-family: 'Museo Sans Cyrl 900',sans-serif;
-  font-size: 16px;
-}
-
 <button
-  className="c0"
+  className="sc-bdVaJa iqaiid"
   format="mobile"
   onClick={[Function]}
 >
@@ -39,17 +21,8 @@ exports[`components:results:AboutButton matches the snapshot when format is mobi
 `;
 
 exports[`components:results:AboutButton matches the snapshot when format is tablet 1`] = `
-.c0 {
-  width: 260px;
-  height: 58px;
-  border-radius: 5px;
-  border: solid 3px #ffffff;
-  font-family: 'Museo Sans Cyrl 900',sans-serif;
-  font-size: 16px;
-}
-
 <button
-  className="c0"
+  className="sc-bdVaJa iqaiid"
   format="tablet"
   onClick={[Function]}
 >

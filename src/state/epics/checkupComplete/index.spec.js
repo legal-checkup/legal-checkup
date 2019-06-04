@@ -1,5 +1,3 @@
-import { navigate } from 'gatsby'
-
 import { TestScheduler } from 'rxjs/testing'
 
 import { CHECKUP_COMPLETE, RESULTS_PATH } from '../../constants'
